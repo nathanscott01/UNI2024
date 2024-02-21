@@ -113,5 +113,6 @@ if __name__ == "__main__":
     import doctest
     doctest.testmod()
     
- 	
-print(find(list(range(0,51)), 50))
+ 
+print(squares([1, 13, 9, -11])) 	
+#print(find(list(range(0,51)), 50))
