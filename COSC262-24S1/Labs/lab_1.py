@@ -103,9 +103,32 @@ def find(data, value):
     if data[0] == value:
         return 0
     else:
-        if find(data[1:], value) is not None:
-            return 1 + find(data[1:], value)
+        index = find(data[1:], value)
+        if index is not None:
+            return 1 + index
         return None
+    
+def almost_all(numbers):
+    """Asymptotically most efficient
+    >>> almost_all([1, 2, 3])
+    [5, 4, 3]
+    """
+    total = sum(numbers)
+    return[total - x for x in numbers]
+
+def foo(numbers):
+    """Something something
+    >>> foo([1, 2, 3, 3])
+    [1, 2, 3, 3]
+    """
+    max_num = float('-inf')
+    result = []
+    for num in reversed(numbers):
+        max_num = max(num, max_num)
+        result.append(max_num)
+    return result[::-1]
+    
+            
     ### Major run time, is searching recursive tree twice for each comparison
     
     
@@ -114,5 +137,13 @@ if __name__ == "__main__":
     doctest.testmod()
     
  
-print(squares([1, 13, 9, -11])) 	
-#print(find(list(range(0,51)), 50))
+# print(squares([1, 13, 9, -11])) 	
+# print(find(list(range(0,51)), 50))
+# print(almost_all(list(range(10**5))))
+# print("ok")
+# print(foo(list(range(10**5))))
+# print(foo(list(range(10))))
+# print("ok")
+# print(list(range(10)))
+alpha = [5, 0, 6, 1, 7, 2, 8, 3, 9, 4]
+print(foo(alpha))
