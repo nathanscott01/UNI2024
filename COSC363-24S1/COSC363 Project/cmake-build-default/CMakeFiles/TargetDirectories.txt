@@ -1,4 +1,4 @@
-/csse/users/nsc70/Desktop/COSC363 Project/cmake-build-default/CMakeFiles/Teapot.out.dir
-/csse/users/nsc70/Desktop/COSC363 Project/cmake-build-default/CMakeFiles/Model3d.out.dir
-/csse/users/nsc70/Desktop/COSC363 Project/cmake-build-default/CMakeFiles/edit_cache.dir
-/csse/users/nsc70/Desktop/COSC363 Project/cmake-build-default/CMakeFiles/rebuild_cache.dir
+/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-default/CMakeFiles/Teapot.out.dir
+/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-default/CMakeFiles/Model3d.out.dir
+/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-default/CMakeFiles/edit_cache.dir
+/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-default/CMakeFiles/rebuild_cache.dir

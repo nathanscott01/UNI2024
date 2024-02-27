@@ -8,6 +8,10 @@
 #include <cmath>
 #include <GL/freeglut.h>
 
+//Global Variables
+int cam_hgt = 10;
+float theta = 0;
+float rads = 0;
 
 //--Draws a grid of lines on the floor plane -------------------------------
 void drawFloor()
@@ -36,7 +40,7 @@ void display(void)
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();
 
-    gluLookAt(0, 0, 12, 0, 0, 0, 0, 1, 0);  //Camera position and orientation
+    gluLookAt(12 * sin(rads), cam_hgt, 12 * cos(rads), 0, 0, 0, 0, 1, 0);  //Camera position and orientation
 
 	glLightfv(GL_LIGHT0,GL_POSITION, lpos);   //Set light position
 
@@ -45,6 +49,7 @@ void display(void)
 
 	glEnable(GL_LIGHTING);			//Enable lighting when drawing the teapot
     glColor3f(0.0, 1.0, 1.0);
+//    glRotatef(60, 1, 0, 0);
     glutSolidTeapot(1.0);
 
 	glFlush(); 
@@ -63,9 +68,23 @@ void initialize(void)
 
 	glMatrixMode(GL_PROJECTION);
 	glLoadIdentity();
-	gluPerspective(50, 1, 10.0, 1000.0);   //Camera Frustum
+	gluPerspective(30, 1, 10.0, 1000.0);   //Camera Frustum
 }
 
+void move_camera(int key, int x, int y)
+{
+    if ((key == GLUT_KEY_UP) && (cam_hgt < 20)) cam_hgt++;
+    else if ((key == GLUT_KEY_DOWN) && (cam_hgt > 2)) cam_hgt--;
+    glutPostRedisplay();
+}
+
+void my_timer(int value)
+{
+    theta++;
+    rads = theta * M_PI / 180;
+    glutPostRedisplay();
+    glutTimerFunc(50, my_timer, 0);
+}
 
 //  ------- Main: Initialize glut window and register call backs -------
 int main(int argc, char **argv) 
@@ -77,6 +96,8 @@ int main(int argc, char **argv)
 	glutCreateWindow("Teapot");
 	initialize();
 	glutDisplayFunc(display);
+    glutTimerFunc(50, my_timer, 0);
+    glutSpecialFunc(move_camera);
 	glutMainLoop();
 	return 0; 
 }

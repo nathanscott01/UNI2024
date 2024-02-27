@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/csse/users/nsc70/Desktop/COSC363 Project/cmake-build-default"
+			"value" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-default"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -543,7 +543,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/csse/users/nsc70/Desktop/COSC363 Project/cmake-build-default/CMakeFiles/pkgRedirects"
+			"value" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-default/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -603,7 +603,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/csse/users/nsc70/Desktop/COSC363 Project"
+			"value" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/COSC363 Project"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -1851,7 +1851,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/csse/users/nsc70/Desktop/COSC363 Project/cmake-build-default"
+			"value" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-default"
 		},
 		{
 			"name" : "lab1_IS_TOP_LEVEL",
@@ -1875,7 +1875,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/csse/users/nsc70/Desktop/COSC363 Project"
+			"value" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/COSC363 Project"
 		}
 	],
 	"kind" : "cache",

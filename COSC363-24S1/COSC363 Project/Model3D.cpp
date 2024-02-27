@@ -133,7 +133,7 @@ void display()
 void initialize()
 {
 	float model_wid, model_hgt;
-    loadMeshFile("Octahedron.off");			//Specify mesh file name here
+    loadMeshFile("Cow.off");			//Specify mesh file name here
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);	//Background colour
 
 	glEnable(GL_LIGHTING);					//Enable OpenGL states
