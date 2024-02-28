@@ -8,7 +8,8 @@
 //  Assumptions: 
 //      1.  Each polygon has 3 or 4 vertices.
 //      2.  The file does not contain any additional comment lines.
-//  ========================================================================
+//  ============================
+//  ============================================
  
 #include <iostream>
 #include <fstream>
