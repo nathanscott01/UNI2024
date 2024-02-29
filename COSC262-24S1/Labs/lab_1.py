@@ -3,6 +3,9 @@ Nathan Scott
 COSC262 Lab 1
 """
 
+import sys
+sys.setrecursionlimit(100000)
+
 def concat_list(strings):
     """Take a list of strings and return them concatenated together
     >>> ans = concat_list(['a', 'hot', 'day'])
@@ -120,13 +123,21 @@ def foo(numbers):
     """Something something
     >>> foo([1, 2, 3, 3])
     [1, 2, 3, 3]
+    >>> foo([8, 7])
+    [7, 7]
+    >>> foo([])
+    []
     """
-    max_num = float('-inf')
+    if not numbers:
+        return []
     result = []
-    for num in reversed(numbers):
-        max_num = max(num, max_num)
-        result.append(max_num)
+    minimum = numbers[-1]
+    for element in reversed(numbers):
+        minimum = min(minimum, element)
+        result.append(minimum)
     return result[::-1]
+        
+        
     
             
     ### Major run time, is searching recursive tree twice for each comparison
@@ -145,5 +156,5 @@ if __name__ == "__main__":
 # print(foo(list(range(10))))
 # print("ok")
 # print(list(range(10)))
-alpha = [5, 0, 6, 1, 7, 2, 8, 3, 9, 4]
-print(foo(alpha))
+foo(list(range(10**5)))
+print("ok")

@@ -132,11 +132,79 @@ def fib(n):
          
     return matrix_power(A, n)[0][1]
 
+def all_pairs(list1, list2):
+    """Return all possible tuples made from pairing elements from
+    list 1 with list 2
+    >>> all_pairs([1, 2], [10, 20, 30])
+    [(1, 10), (1, 20), (1, 30), (2, 10), (2, 20), (2, 30)]
+    >>> all_pairs([], [1, 2, 3])
+    []
+    >>> all_pairs([1, 2], [])
+    []
+    >>> all_pairs([1, 2], [1, 2])
+    [(1, 1), (1, 2), (2, 1), (2, 2)]
+    """
+    if not list1:
+        return []
+    else:
+        return list2_tuples(list1[0], list2) + all_pairs(list1[1:], list2)
 
+def list2_tuples(element, list2):
+    """Return all pairs of each element in list2 with element"""
+    if not list2:
+        return []
+    else:
+        return [(element, list2[0])] + list2_tuples(element, list2[1:])
 
+def perms(items):
+    """Return all permutations of items"""
+    permutations = []
+    
+    def create_permutations(current, remaining):
+        if not remaining:
+            permutations.append(tuple(current))
+            return
+        
+        for i in range(len(remaining)):
+            current.append(remaining[i])
+            create_permutations(current, remaining[:i] + remaining[i+1:])
+            current.pop()
+            
+    create_permutations([], items)
+    return permutations
+
+def combinations(items, r):
+    """Return all permutaions of items with the length r"""
+    if r == 0:
+        return [()]
+    elif r == 1:
+        return [(item,) for item in items]
+    else:
+        permutations = set()
+        for i, element in enumerate(items):
+            remaining = items[:i] + items[i + 1:]
+            shorter_perms = combinations(remaining, r - 1)
+            for short in shorter_perms:
+                new_tuple = tuple(sorted((element,) + tuple(short)))
+                permutations.add(new_tuple)
+        return list(permutations)
+    
     
     
 if __name__ == "__main__":
     import doctest
     doctest.testmod()
 
+
+# for perm in sorted(perms([1, 2, 3])):
+#     print(perm)
+
+ans = []
+for combo in combinations([1, 2, 3, 4], 3):
+    ans.append(tuple(sorted(combo)))
+print(sorted(ans))
+ 	
+
+print(sorted(combinations([1, 2, 3], 1)))
+print(sorted(combinations([1], 0)))
+print(sorted(combinations([1], 1)))
