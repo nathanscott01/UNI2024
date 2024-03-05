@@ -5,9 +5,8 @@ Adjacency List
 """
 
 
-def adjacency_list(graph_str):
-    """Create an adjacency list from graph_str which is a textual
-    representation of a graph"""
+def process_graph(graph_str):
+    """Process graph info"""
     directed = False
     weighted = False
 
@@ -25,6 +24,16 @@ def adjacency_list(graph_str):
     # Extract each element and make tuples representing each edge
     edges = [tuple(map(int, line.split())) for line in lines[1:]]
 
+    return directed, weighted, edges, v
+
+
+def adjacency_list(graph_str):
+    """Create an adjacency list from graph_str which is a textual
+    representation of a graph"""
+
+    # Call the helper function to process the textual graph
+    directed, weighted, edges, v = process_graph(graph_str)
+
     # Build adjacency list
     adj_list = [[] for _ in range(v)]       # Initialise adjacency list
     for edge in edges:
@@ -37,17 +46,24 @@ def adjacency_list(graph_str):
     return adj_list
 
 
-from pprint import pprint
+def adjacency_matrix(graph_str):
+    """Create an adjacency matrix from graph_str which is a textual
+    representation of a graph"""
 
-graph_string = """\
-U 17
-1 2
-1 15
-1 6
-12 13
-2 15
-13 4
-4 5
-"""
+    # Call the helper function to process the textual graph
+    directed, weighted, edges, v = process_graph(graph_str)
 
-pprint(adjacency_list(graph_string))
+    # Build adjacency matrix
+    if weighted:
+        adj_matrix = [[None for _ in range(v)] for _ in range(v)]
+        for edge in edges:
+            adj_matrix[edge[0]][edge[1]] = edge[2]
+            if not directed:
+                adj_matrix[edge[1]][edge[0]] = edge[2]
+    else:
+        adj_matrix = [[0 for _ in range(v)] for _ in range(v)]
+        for edge in edges:
+            adj_matrix[edge[0]][edge[1]] = 1
+            if not directed:
+                adj_matrix[edge[1]][edge[0]] = 1
+    return adj_matrix
