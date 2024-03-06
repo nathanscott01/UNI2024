@@ -13,6 +13,12 @@ using namespace std;
 //--Globals ---------------------------------------------------------------
 int cam_hgt = 4; //Camera height
 float angle = 10.0;  //Rotation angle for viewing
+float theta = 20;
+float theta_delta = 1;
+float lpos[4] = {10., 10., 10., 1.0};  //light's position
+float shadowMat[16] = {lpos[1], 0, 0, 0, -lpos[0],0,
+                       -lpos[2], -1, 0, 0, lpos[1], 0,
+                       0, 0, 0, lpos[1]};
 
 //--Draws a grid of lines on the floor plane -------------------------------
 void drawFloor()
@@ -29,49 +35,138 @@ void drawFloor()
 	}
 }
 
+
+
 //--Draws a character model constructed using GLUT objects ------------------
 void drawModel()
 {
 	glColor3f(1., 0.78, 0.06);		//Head
 	glPushMatrix();
-	  glTranslatef(0, 7.7, 0);
-	  glutSolidCube(1.4);
+        glTranslatef(0, 7.7, 0);
+        glutSolidCube(1.4);
 	glPopMatrix();
+
+    // Draw Shadow Head
+    glDisable(GL_LIGHTING);
+    glColor3f(0.2, 0.2, 0.2);
+    glPushMatrix();
+        glMultMatrixf(shadowMat);
+        glTranslatef(0, 7.7, 0);
+        glutSolidCube(1.4);
+    glPopMatrix();
 
 	glColor3f(1., 0., 0.);			//Torso
 	glPushMatrix();
-	  glTranslatef(0, 5.5, 0);
-	  glScalef(3, 3, 1.4);
-	  glutSolidCube(1);
+        glTranslatef(0, 5.5, 0);
+        glScalef(3, 3, 1.4);
+        glutSolidCube(1);
 	glPopMatrix();
+
+    // Draw Shadow Torso
+    glDisable(GL_LIGHTING);
+    glColor3f(0.2, 0.2, 0.2);
+    glPushMatrix();
+        glMultMatrixf(shadowMat);
+        glTranslatef(0, 5.5, 0);
+        glScalef(3, 3, 1.4);
+        glutSolidCube(1);
+    glPopMatrix();
 
 	glColor3f(0., 0., 1.);			//Right leg
 	glPushMatrix();
-	  glTranslatef(-0.8, 2.2, 0);
-	  glScalef(1, 4.4, 1);
-	  glutSolidCube(1);
+        glTranslatef(-0.8, 4, 0);
+        glRotatef(-theta, 1, 0, 0);
+        glTranslatef(0.8, -4, 0);
+        glTranslatef(-0.8, 2.2, 0);
+        glScalef(1, 4.4, 1);
+        glutSolidCube(1);
 	glPopMatrix();
+
+    // Draw shadow Right Leg
+    glDisable(GL_LIGHTING);
+    glColor3f(0.2, 0.2, 0.2);
+    glPushMatrix();
+        glMultMatrixf(shadowMat);
+        glTranslatef(-0.8, 4, 0);
+        glRotatef(theta, 1, 0, 0);
+        glTranslatef(0.8, -4, 0);
+        glTranslatef(-0.8, 2.2, 0);
+        glScalef(1, 4, 1);
+        glutSolidCube(1);
+    glPopMatrix();
+
 
 	glColor3f(0., 0., 1.);			//Left leg
 	glPushMatrix();
-	  glTranslatef(0.8, 2.2, 0);
-	  glScalef(1, 4.4, 1);
-	  glutSolidCube(1);
+        glTranslatef(0.8, 4, 0);
+        glRotatef(theta, 1, 0, 0);
+        glTranslatef(-0.8, -4, 0);
+        glTranslatef(0.8, 2.2, 0);
+        glScalef(1, 4.4, 1);
+        glutSolidCube(1);
 	glPopMatrix();
+
+    // Draw shadow Left Leg
+    glDisable(GL_LIGHTING);
+    glColor3f(0.2, 0.2, 0.2);
+    glPushMatrix();
+        glMultMatrixf(shadowMat);
+        glTranslatef(0.8, 4, 0);
+        glRotatef(theta, 1, 0, 0);
+        glTranslatef(-0.8, -4, 0);
+        glTranslatef(0.8, 2.2, 0);
+        glScalef(1, 4, 1);
+        glutSolidCube(1);
+    glPopMatrix();
+
 
 	glColor3f(0., 0., 1.);			//Right arm
 	glPushMatrix();
-	  glTranslatef(-2, 5, 0);
-	  glScalef(1, 4, 1);
-	  glutSolidCube(1);
+        glTranslatef(-2, 6.5, 0);
+        glRotatef(theta, 1, 0, 0);
+        glTranslatef(2, -6.5, 0);
+        glTranslatef(-2, 5, 0);
+        glScalef(1, 4, 1);
+        glutSolidCube(1);
 	glPopMatrix();
+
+    // Draw shadow Right Arm
+    glDisable(GL_LIGHTING);
+    glColor3f(0.2, 0.2, 0.2);
+    glPushMatrix();
+        glMultMatrixf(shadowMat);
+        glTranslatef(-2, 6.5, 0);
+        glRotatef(theta, 1, 0, 0);
+        glTranslatef(2, -6.5, 0);
+        glTranslatef(-2, 5, 0);
+        glScalef(1, 4, 1);
+        glutSolidCube(1);
+    glPopMatrix();
+
 
 	glColor3f(0., 0., 1.);			//Left arm
 	glPushMatrix();
-	  glTranslatef(2, 5, 0);
-	  glScalef(1, 4, 1);
-	  glutSolidCube(1);
+        glTranslatef(2, 6.5, 0);
+        glRotatef(-theta, 1, 0, 0);
+        glTranslatef(-2, -6.5, 0);
+        glTranslatef(2, 5, 0);
+        glScalef(1, 4, 1);
+        glutSolidCube(1);
 	glPopMatrix();
+
+    // Draw shadow Left Arm
+    glDisable(GL_LIGHTING);
+    glColor3f(0.2, 0.2, 0.2);
+    glPushMatrix();
+        glMultMatrixf(shadowMat);
+        glTranslatef(2, 6.5, 0);
+        glRotatef(-theta, 1, 0, 0);
+        glTranslatef(-2, -6.5, 0);
+        glTranslatef(2, 5, 0);
+        glScalef(1, 4, 1);
+        glutSolidCube(1);
+    glPopMatrix();
+
 }
 
 
@@ -80,7 +175,7 @@ void drawModel()
 //--the scene.
 void display()  
 {
-	float lpos[4] = {10., 10., 10., 1.0};  //light's position
+//	float lpos[4] = {10., 10., 10., 1.0};  //light's position
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
 	glMatrixMode(GL_MODELVIEW);
@@ -124,6 +219,19 @@ void special(int key, int x, int y)
     glutPostRedisplay();
 }
 
+void theta_limit()
+{
+    if ((theta > 20) || (theta < -20)) theta_delta = theta_delta * -1;
+}
+
+void myTimer(int value)
+{
+    theta = theta + theta_delta;
+    theta_limit();
+    glutPostRedisplay();
+    glutTimerFunc(50, myTimer, 0);
+}
+
 //  ------- Main: Initialize glut window and register call backs -----------
 int main(int argc, char** argv)
 {
@@ -135,6 +243,7 @@ int main(int argc, char** argv)
    initialize();
 
    glutDisplayFunc(display);
+   glutTimerFunc(50, myTimer, 0);
    glutSpecialFunc(special); 
    glutMainLoop();
    return 0;

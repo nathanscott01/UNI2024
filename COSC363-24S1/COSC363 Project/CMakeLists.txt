@@ -5,6 +5,9 @@ project(lab1)
 add_executable(Teapot.out Teapot.cpp)
 add_executable(Model3d.out Model3D.cpp)
 
+add_executable(Cannon.out Cannon.cpp)
+add_executable(Humanoid.out Humanoid.cpp)
+
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 include_directories( ${OPENGL_INCLUDE_DIRS}  ${GLUT_INCLUDE_DIRS} )

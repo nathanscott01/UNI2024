@@ -14,3 +14,11 @@ Run the following command to compile the teapot component:
 Run the following command to compile the Model3D component:
 
     ./bash\ scripts/compile_Model3D.sh
+
+Run the following command to compile the cannon component:
+
+    ./bash\ scripts/compile_cannon.sh
+
+Run the following command to compile the humanoid component:
+
+    ./bash\ scripts/compile_humanoid.sh

@@ -82,15 +82,21 @@ void drawCannon()
 	glColor3f(0.4, 0.5, 0.4);
 
     //Construct the object model here using triangles read from OFF file
-	glBegin(GL_TRIANGLES);
-		for(int tindx = 0; tindx < ntri; tindx++)
-		{
-		   normal(tindx);
-		   glVertex3d(x[t1[tindx]], y[t1[tindx]], z[t1[tindx]]);
-		   glVertex3d(x[t2[tindx]], y[t2[tindx]], z[t2[tindx]]);
-		   glVertex3d(x[t3[tindx]], y[t3[tindx]], z[t3[tindx]]);
-		}
-	glEnd();
+    glPushMatrix();
+        glTranslatef(-20, 30, 0);               //Send to origin
+        glRotatef(30, 0, 0, 1);
+        glTranslatef(20, -30, 0);               //Send to original position
+        glBegin(GL_TRIANGLES);
+            for(int tindx = 0; tindx < ntri; tindx++)
+            {
+               normal(tindx);
+               glVertex3d(x[t1[tindx]], y[t1[tindx]], z[t1[tindx]]);
+               glVertex3d(x[t2[tindx]], y[t2[tindx]], z[t2[tindx]]);
+               glVertex3d(x[t3[tindx]], y[t3[tindx]], z[t3[tindx]]);
+            }
+        glEnd();
+    glPopMatrix();
+
 }
 
 //----------draw a floor plane-------------------
@@ -137,6 +143,42 @@ void display()
     drawCannon();
 
     //--start here
+
+    // Mounting Brackets
+
+    glColor3f(.5, .2, .5);
+
+    glPushMatrix();
+        glTranslatef(-10, 5, 17);
+        glScalef(80, 10, 6);
+        glutSolidCube((1));
+    glPopMatrix();
+
+    glPushMatrix();
+        glTranslatef(-20, 25, 17);
+        glScalef(40, 30, 6);
+        glutSolidCube(1);
+    glPopMatrix();
+
+    glPushMatrix();
+        glTranslatef(-10, 5, -17);
+        glScalef(80, 10, 6);
+        glutSolidCube((1));
+    glPopMatrix();
+
+    glPushMatrix();
+        glTranslatef(-20, 25, -17);
+        glScalef(40, 30, 6);
+        glutSolidCube(1);
+    glPopMatrix();
+
+    // Create Cannonball
+
+    glPushMatrix();
+        glTranslatef(38.88, 64, 0);
+        glColor3f(0, 0, 1)
+        glutSolidSphere(5, 36, 18);
+    glPopMatrix();
 
 	glFlush();
 }
