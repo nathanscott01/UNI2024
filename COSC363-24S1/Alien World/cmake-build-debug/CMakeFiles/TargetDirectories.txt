@@ -1,0 +1,3 @@
+/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug/CMakeFiles/Alien_World.dir
+/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug/CMakeFiles/edit_cache.dir
+/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug/CMakeFiles/rebuild_cache.dir

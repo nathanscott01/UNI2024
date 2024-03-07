@@ -5,6 +5,7 @@
 //  See Lab01.pdf for details
 //  ========================================================================
 
+#include <iostream>
 #include <cmath>
 #include <GL/freeglut.h>
 
@@ -86,9 +87,9 @@ void my_timer(int value)
     glutTimerFunc(50, my_timer, 0);
 }
 
-//  ------- Main: Initialize glut window and register call backs -------
+//  ------- Main: Initialize glut window and register call backs ------
 int main(int argc, char **argv) 
-{ 
+{
 	glutInit(&argc, argv);            
 	glutInitDisplayMode(GLUT_SINGLE | GLUT_DEPTH);  
 	glutInitWindowSize(600, 600);
