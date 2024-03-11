@@ -5,8 +5,6 @@ BFS and DFS Trees
 """
 
 from collections import deque
-from adjacency import *
-from pprint import pprint
 
 
 def bfs_loop(adj_list, queue, state, parent):
