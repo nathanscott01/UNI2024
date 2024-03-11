@@ -1,6 +1,6 @@
 import unittest
 from Labs.adjacency import *
-from Labs.lab_3 import *
+from Labs.lab_4 import *
 
 # Strongly Connected Examples
 connected_example1 = """\

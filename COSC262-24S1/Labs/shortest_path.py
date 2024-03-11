@@ -21,3 +21,16 @@ def next_vertex(in_tree, distance):
 
 def dijkstra(adj, s):
     """Use Dijkstra's Algorithm to find the shortest path"""
+    n = len(adj)
+    in_tree = [False for _ in range(n)]
+    distance = [float('inf') for _ in range(n)]
+    parent = [None for _ in range(n)]
+    distance[s] = 0
+    while not all(in_tree):
+        u = next_vertex(in_tree, distance)
+        in_tree[u] = True
+        for v, weight in adj[u]:
+            if not in_tree[v] and ((distance[u] + weight) < distance[v]):
+                distance[v] = distance[u] + weight
+                parent[v] = u
+    return parent, distance
