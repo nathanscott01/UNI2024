@@ -14,8 +14,12 @@ void initialize(void)
 {
     float white[4]  = {1.0, 1.0, 1.0, 1.0};
 
-//	glEnable(GL_LIGHTING);
+	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
+    glEnable(GL_COLOR_MATERIAL);
+
+    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+    glMaterialf(GL_FRONT, GL_SHININESS, 50);
 
 //	Define light's diffuse, specular properties
     glLightfv(GL_LIGHT0, GL_DIFFUSE, white);    //Default, only for LIGHT0
