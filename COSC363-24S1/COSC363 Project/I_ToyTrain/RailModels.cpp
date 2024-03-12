@@ -22,6 +22,7 @@ void floor()
 	glNormal3f(0.0, 1.0, 0.0);		//Normal vector of the floor
 
 	//The floor is made up of several tiny squares on a 400 x 400 grid. Each square has a unit size.
+    glMaterialfv(GL_FRONT, GL_SPECULAR, black);
 	glBegin(GL_QUADS);
 	for(int i = -200; i < 200; i++)
 	{
@@ -34,6 +35,7 @@ void floor()
 		}
 	}
 	glEnd();
+    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
 
 }
 
