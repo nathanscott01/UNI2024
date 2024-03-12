@@ -22,3 +22,15 @@ Run the following command to compile the cannon component:
 Run the following command to compile the humanoid component:
 
     ./bash\ scripts/compile_humanoid.sh
+
+Run the following command to compile the toytrain component:
+
+    ./bash\ scripts/compile_toytrain.sh
+
+Run the following command to compile the yard component:
+
+    ./bash\ scripts/compile_yard.sh
+
+Run the following command to compile the earth component:
+
+    ./bash\ scripts/compile_earth.sh

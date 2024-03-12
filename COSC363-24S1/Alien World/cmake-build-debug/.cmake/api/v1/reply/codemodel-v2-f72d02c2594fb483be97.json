@@ -49,8 +49,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug",
-		"source" : "/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World"
+		"build" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug",
+		"source" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/Alien World"
 	},
 	"version" : 
 	{

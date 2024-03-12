@@ -50,8 +50,8 @@ void display()
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     glColor3f(0.0, 0.5, 1.0);
-    glutSolidSphere(5, 36, 18);
-//    std::cout << "Thanks for viewing my code!" << std::flush;
+    glutSolidSphere(1);
+    glFlush();
 }
 
 
