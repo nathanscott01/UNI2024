@@ -1,4 +1,4 @@
-# Install script for directory: /csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/Alien World
+# Install script for directory: /home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World
 
 # Set the install prefix
 if(NOT DEFINED CMAKE_INSTALL_PREFIX)
@@ -50,5 +50,5 @@ endif()
 
 string(REPLACE ";" "\n" CMAKE_INSTALL_MANIFEST_CONTENT
        "${CMAKE_INSTALL_MANIFEST_FILES}")
-file(WRITE "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
+file(WRITE "/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug/${CMAKE_INSTALL_MANIFEST}"
      "${CMAKE_INSTALL_MANIFEST_CONTENT}")

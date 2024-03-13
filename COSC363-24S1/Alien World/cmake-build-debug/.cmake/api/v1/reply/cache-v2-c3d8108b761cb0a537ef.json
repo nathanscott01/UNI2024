@@ -11,7 +11,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug"
+			"value" : "/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug"
 		},
 		{
 			"name" : "Alien_World_IS_TOP_LEVEL",
@@ -35,7 +35,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/Alien World"
+			"value" : "/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World"
 		},
 		{
 			"name" : "CMAKE_ADDR2LINE",
@@ -91,7 +91,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug"
+			"value" : "/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -127,7 +127,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "0"
+			"value" : "8"
 		},
 		{
 			"name" : "CMAKE_COLOR_DIAGNOSTICS",
@@ -151,7 +151,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/local/clion-2023.3/bin/cmake/linux/x64/bin/cmake"
+			"value" : "/home/nathan/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cmake"
 		},
 		{
 			"name" : "CMAKE_CPACK_COMMAND",
@@ -163,7 +163,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/local/clion-2023.3/bin/cmake/linux/x64/bin/cpack"
+			"value" : "/home/nathan/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/cpack"
 		},
 		{
 			"name" : "CMAKE_CTEST_COMMAND",
@@ -175,7 +175,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/local/clion-2023.3/bin/cmake/linux/x64/bin/ctest"
+			"value" : "/home/nathan/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/bin/ctest"
 		},
 		{
 			"name" : "CMAKE_CXX_COMPILER",
@@ -579,7 +579,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug/CMakeFiles/pkgRedirects"
+			"value" : "/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World/cmake-build-debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -639,7 +639,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/csse/users/nsc70/Desktop/UNI2024/COSC363-24S1/Alien World"
+			"value" : "/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World"
 		},
 		{
 			"name" : "CMAKE_INSTALL_PREFIX",
@@ -691,7 +691,7 @@
 				}
 			],
 			"type" : "UNINITIALIZED",
-			"value" : "/usr/local/clion-2023.3/bin/ninja/linux/x64/ninja"
+			"value" : "/home/nathan/.local/share/JetBrains/Toolbox/apps/clion/bin/ninja/linux/x64/ninja"
 		},
 		{
 			"name" : "CMAKE_MODULE_LINKER_FLAGS",
@@ -923,7 +923,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/usr/local/clion-2023.3/bin/cmake/linux/x64/share/cmake-3.27"
+			"value" : "/home/nathan/.local/share/JetBrains/Toolbox/apps/clion/bin/cmake/linux/x64/share/cmake-3.27"
 		},
 		{
 			"name" : "CMAKE_SHARED_LINKER_FLAGS",
