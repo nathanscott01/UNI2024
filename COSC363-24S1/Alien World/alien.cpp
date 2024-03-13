@@ -5,6 +5,12 @@
 //  Author: Nathan Scott
 //  Student ID: 81357713
 //  FILENAME: alien.cpp
+//
+//  COMMENTS: Set this up so that the drawAlien() function can be accessed from another file.
+//	      Add an angle parameter that is pre-defined to 0 degrees so that function is 
+//	      drawAlien(angle=0) so that if needed, an animation can be added for movement of
+//	      arms and legs.
+//
 //  ========================================================================
 
 #include <iostream>
