@@ -13,18 +13,19 @@ using namespace std;
 GLuint txId[2];
 GLUquadricObj*	q;
 float rotnEarthAxis = 0;  //Rotation of the Earth about its own axis
+float rotnSunAxis = 0;      // Rotation of Earth about the sun
 
 //--------------------------------------------------------------------------------
 void loadTexture()	 
 {
 	glGenTextures(2, txId);   //Get 2 texture IDs 
 	glBindTexture(GL_TEXTURE_2D, txId[0]);  //Use this texture name for the following OpenGL texture
-	loadBMP("Earth.bmp");
+	loadBMP("III_Earth/Earth.bmp");
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);	// Linear Filtering
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	
 	glBindTexture(GL_TEXTURE_2D, txId[1]);  //Use this texture name for the following OpenGL texture
-	loadBMP("Sun.bmp");
+	loadBMP("III_Earth/Sun.bmp");
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 }
@@ -59,17 +60,21 @@ void initialise()
 //============================================================
 void display()  
 {
+    float light[] = {0.0f, 0.0f, 0.0f, 1.0f};  //Light's position (directly at origin)
+
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
 	glMatrixMode(GL_MODELVIEW);
 	glLoadIdentity();  	
 	gluLookAt(0., 0., 40., 0., 0., 0., 0., 1., 0.);
+    glLightfv(GL_LIGHT0, GL_POSITION, light);
 	
 	glColor4f(1.0, 1.0, 1.0, 1.0);        //Base colour
 	
 	//Earth
 	glBindTexture(GL_TEXTURE_2D, txId[0]);
-	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);	
+	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);
 	glPushMatrix();
+        glRotatef(rotnSunAxis, 0.0, 1.0, 0.0);      // Rotate the earth about the Sun (origin)
 	    glTranslatef(20.0, 0.0, 0.0);			//Translate Earth along x-axis by 20 units	
 	    glRotatef(rotnEarthAxis, 0, 1, 0);       //Rotate about polar axis of the Earth
 	    glRotatef(-90., 1.0, 0., 0.0);			//make the sphere axis vertical
@@ -93,6 +98,8 @@ void timer(int value)
 {
 	rotnEarthAxis += 2;
 	if(rotnEarthAxis > 360) rotnEarthAxis = 0;
+    rotnSunAxis += 1;
+    if (rotnSunAxis > 360) rotnSunAxis = 0;
 	glutTimerFunc(50, timer, value);
 	glutPostRedisplay();
 }

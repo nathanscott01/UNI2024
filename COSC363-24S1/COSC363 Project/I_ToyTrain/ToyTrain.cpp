@@ -14,7 +14,7 @@
 int angle = 0;
 int zoom = 280;
 int pivot = -80;
-
+GLfloat spotExponent = 2.0f; // Make sure it's a float
 //---------------------------------------------------------------------
 void initialize(void) 
 {
@@ -76,6 +76,7 @@ void display(void)
     engine();                //Toy train locomotive
     glLightfv(GL_LIGHT1, GL_SPOT_DIRECTION, spotDir);
     glLightfv(GL_LIGHT1, GL_POSITION, spotPosn);
+    glLightfv(GL_LIGHT1, GL_SPOT_EXPONENT, &spotExponent);
    glPopMatrix();
 
    for (int i = 1; i < 5; i++)
@@ -104,6 +105,8 @@ void move_camera(int key, int x, int y)
     else if ((key == GLUT_KEY_DOWN) && (zoom > 100)) zoom--;
     else if ((key == GLUT_KEY_LEFT) && (pivot > -150)) pivot--;
     else if ((key == GLUT_KEY_RIGHT) && (pivot < 150)) pivot++;
+    else if ((key == GLUT_KEY_SHIFT_L) && (spotExponent > 1)) spotExponent--;
+    else if ((key == GLUT_KEY_SHIFT_R) && (spotExponent < 128)) spotExponent++;
     glutPostRedisplay();
 }
 
