@@ -56,7 +56,8 @@ def backwards(s):
         return s
     else:
         return ''
-    
+
+
 def odds(data):
     """Return the a list of the odd elements within data
     >>> odds([0, 1, 12, 13, 14, 9, -11, -20])
