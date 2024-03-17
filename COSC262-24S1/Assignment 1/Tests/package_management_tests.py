@@ -1,6 +1,5 @@
 import unittest
-from ..package_management import *
-
+from package_management import *
 
 # Package Management Examples
 example1 = """\
