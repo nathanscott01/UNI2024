@@ -2,7 +2,7 @@ import unittest
 from bubbles import *
 
 
-# Converters Examples
+# Bubbles Examples
 example1 = """\
 U 2
 0 1

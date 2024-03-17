@@ -1,5 +1,12 @@
+"""
+Nathan Scott
+Student ID: 87357713
+COSC262 Assignment 1
+Used to test the adjacency list method for each file
+"""
+
 import unittest
-from ..bubbles import adjacency_list
+from ..package_management import adjacency_list
 
 
 # Adjacency String Examples
