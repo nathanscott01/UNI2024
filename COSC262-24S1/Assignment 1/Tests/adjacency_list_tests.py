@@ -6,7 +6,7 @@ Used to test the adjacency list method for each file
 """
 
 import unittest
-from ..package_management import adjacency_list
+from ..snow import adjacency_list
 
 
 # Adjacency String Examples
@@ -86,19 +86,19 @@ outcome4 = [[],
 class TestAdjacencyListFunction(unittest.TestCase):
     def test_example1(self):
         result = adjacency_list(example1)
-        self.assertEqual(result, outcome1)
+        self.assertEqual(outcome1, result)
 
     def test_example2(self):
         result = adjacency_list(example2)
-        self.assertEqual(result, outcome2)
+        self.assertEqual(outcome2, result)
 
     def test_example3(self):
         result = adjacency_list(example3)
-        self.assertEqual(result, outcome3)
+        self.assertEqual(outcome3, result)
 
     def test_example4(self):
         result = adjacency_list(example4)
-        self.assertEqual(result, outcome4)
+        self.assertEqual(outcome4, result)
 
 
 if __name__ == '__main__':

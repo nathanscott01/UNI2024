@@ -6,6 +6,7 @@ Package Management
 """
 
 
+# noinspection DuplicatedCode
 def process_graph(graph_string):
     """Process the graph"""
     directed = False

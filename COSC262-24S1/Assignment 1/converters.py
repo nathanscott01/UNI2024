@@ -8,6 +8,7 @@ Converters
 from queue import Queue
 
 
+# noinspection DuplicatedCode
 def process_graph(graph_str):
     """Helped function for adjacency_list, this will determine if the graph is
     directed or undirected, and if it is weighted or unweighted, determine the

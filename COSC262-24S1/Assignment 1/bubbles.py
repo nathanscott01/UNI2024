@@ -7,6 +7,7 @@ Bubbles
 from queue import Queue
 
 
+# noinspection DuplicatedCode
 def process_graph(graph_string):
     """Process the graph string"""
     directed = False
