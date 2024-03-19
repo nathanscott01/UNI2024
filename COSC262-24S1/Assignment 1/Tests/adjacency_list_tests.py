@@ -6,7 +6,7 @@ Used to test the adjacency list method for each file
 """
 
 import unittest
-from ..snow import adjacency_list
+from ..batteries import adjacency_list
 
 
 # Adjacency String Examples

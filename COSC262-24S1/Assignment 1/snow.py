@@ -68,7 +68,10 @@ def find_segments(parent_array):
     segments = list()
     for i in range(len(parent_array)):
         if parent_array[i] is not None:
-            segment = tuple((parent_array[i], i))
+            if parent_array[i] < i:
+                segment = tuple((parent_array[i], i))
+            else:
+                segment = tuple((i, parent_array[i]))
             segments.append(segment)
     return segments
 
