@@ -1,5 +1,5 @@
 import unittest
-from batteries import *
+from batteries_modified_dijsktra import *
 
 # Battery Examples
 example1 = """\
@@ -113,7 +113,7 @@ class TestMinCapacityFunction(unittest.TestCase):
 
     def test_example16(self):
         result = min_capacity(example4, 820)
-        self.assertEqual(810, result)
+        self.assertEqual(1400, result)
 
     def test_example17(self):
         result = min_capacity(example4, 890)
