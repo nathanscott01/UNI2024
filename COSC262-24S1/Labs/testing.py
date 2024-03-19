@@ -51,7 +51,7 @@ D 7
 4 5
 """
 
-pprint(adjacency_list(graph_string3))
+# pprint(adjacency_list(graph_string3))
 
 # print(just_tuple(graph_string1))
 # print(mapped_tuples(graph_string1))

@@ -1,6 +1,6 @@
 import unittest
 from pprint import pprint
-from Labs.adjacency import *
+from adjacency import *
 
 # Global Examples
 example1 = """\
