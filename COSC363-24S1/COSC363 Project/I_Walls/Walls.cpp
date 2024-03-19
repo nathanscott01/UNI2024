@@ -23,22 +23,22 @@ void loadTexture()
 	glGenTextures(4, txId); 	// Create 4 texture ids
 
 	glBindTexture(GL_TEXTURE_2D, txId[0]);
-    loadTGA("Brick_Texture.tga");
+    loadTGA("I_Walls/Brick_Texture.tga");
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
-	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);	
+	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
 
 	glBindTexture(GL_TEXTURE_2D, txId[1]);
-    loadTGA("Floor_Texture.tga");
+    loadTGA("I_Walls/Floor_Texture.tga");
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);	
 
 	glBindTexture(GL_TEXTURE_2D, txId[2]);
-	loadTGA("Stone_Texture.tga");
+	loadTGA("I_Walls/Stone_Texture.tga");
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
 	glBindTexture(GL_TEXTURE_2D, txId[3]);
-	loadTGA("Tree_Texture.tga");
+	loadTGA("I_Walls/Tree_Texture.tga");
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
@@ -71,9 +71,11 @@ void special(int key, int x, int y)
 void initialise()
 { 
 	glEnable(GL_TEXTURE_2D);
+    glEnable(GL_ALPHA_TEST);
+    glAlphaFunc(GL_GREATER, 0);
 	loadTexture();
 
-	glClearColor(0., 1., 1., 1.);  //Background colour 	 
+	glClearColor(0., 0., 0., 0.);  //Background colour
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_NORMALIZE);
 	glEnable(GL_LIGHTING);
@@ -111,11 +113,11 @@ void brickWalls()
 	glBegin(GL_QUADS);
 	glTexCoord2f(0, 0);
 	glVertex3f(-15, 0, -15);
-	glTexCoord2f(1, 0);
+	glTexCoord2f(4, 0);
 	glVertex3f(0, 0, -15);
-	glTexCoord2f(1, 1);
+	glTexCoord2f(4, 2);
 	glVertex3f(0, 4, -15);
-	glTexCoord2f(0, 1);
+	glTexCoord2f(0, 2);
 	glVertex3f(-15, 4, -15);
 	glEnd();
 
@@ -124,11 +126,11 @@ void brickWalls()
 	glBegin(GL_QUADS);
 	glTexCoord2f(0, 0);
 	glVertex3f(-15, 0, 15);
-	glTexCoord2f(1, 0);
+	glTexCoord2f(8, 0);
 	glVertex3f(-15, 0, -15);
-	glTexCoord2f(1, 1);
+	glTexCoord2f(8, 2);
 	glVertex3f(-15, 4, -15);
-	glTexCoord2f(0, 1);
+	glTexCoord2f(0, 2);
 	glVertex3f(-15, 4, 15);
 	glEnd();
 }
@@ -136,14 +138,18 @@ void brickWalls()
 //---- Draws a curved wall ----
 void  curvedWall()
 {
+    float r = 4;
 	glBindTexture(GL_TEXTURE_2D, txId[2]);
-	glColor3f(0, 0, 1);
+	glColor3f(1, 1, 1);
 	glLineWidth(2.0);
-	glBegin(GL_LINE_STRIP);
+	glBegin(GL_QUAD_STRIP);
 		for (int i = 0; i < 13; i++)
 		{
 			normal(i);
+            glTexCoord2f(i * r / 12, 0);
 			glVertex3f(xpts[i], 0, zpts[i]);
+            glTexCoord2f(i * r / 12, 1);
+            glVertex3f(xpts[i], 4, zpts[i]);
 		}
 	glEnd();
 }
@@ -171,12 +177,16 @@ void floor()
 void tree()
 {
 	glBindTexture(GL_TEXTURE_2D, txId[3]);
-	glColor3f(0.8, 1, 0.8);
+	glColor3f(1, 1, 1);
 	glNormal3f(0, 0, 1);
 	glBegin(GL_QUADS);				//A single quad
+        glTexCoord2f(0, 0);
 	   glVertex3f(6, 0, -12);
+       glTexCoord2f(1, 0);
 	   glVertex3f(14, 0, -8);
+       glTexCoord2f(1, 1);
 	   glVertex3f(14, 10, -8);
+       glTexCoord2f(0, 1);
 	   glVertex3f(6, 10, -12);
 	glEnd();
 }
@@ -189,7 +199,7 @@ void display()
 
 	glMatrixMode(GL_MODELVIEW);								
 	glLoadIdentity();
-	gluLookAt(0, 10, 50, 0, 0, 0, 0, 1, 0);
+	gluLookAt(eye_x, 5, eye_z, look_x, 3, look_z, 0, 1, 0);
 
 	glLightfv(GL_LIGHT0, GL_POSITION, light_pos);
 	

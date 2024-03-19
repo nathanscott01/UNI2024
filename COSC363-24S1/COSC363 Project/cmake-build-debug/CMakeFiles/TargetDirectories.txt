@@ -1,6 +1,0 @@
-/home/nathan/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-debug/CMakeFiles/Teapot.out.dir
-/home/nathan/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-debug/CMakeFiles/Model3d.out.dir
-/home/nathan/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-debug/CMakeFiles/Cannon.out.dir
-/home/nathan/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-debug/CMakeFiles/Humanoid.out.dir
-/home/nathan/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-debug/CMakeFiles/edit_cache.dir
-/home/nathan/Desktop/UNI2024/COSC363-24S1/COSC363 Project/cmake-build-debug/CMakeFiles/rebuild_cache.dir

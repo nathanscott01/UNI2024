@@ -37,7 +37,7 @@ void loadTexture()
 	glGenTextures(1, &txId); 				// Create a Texture object
 	glEnable(GL_TEXTURE_2D);
 	glBindTexture(GL_TEXTURE_2D, txId);		//Use this texture
-	loadBMP("VaseTexture.bmp");
+	loadBMP("II_Vase/VaseTexture.bmp");
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);	//Set texture parameters
 	glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 	glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_MODULATE);

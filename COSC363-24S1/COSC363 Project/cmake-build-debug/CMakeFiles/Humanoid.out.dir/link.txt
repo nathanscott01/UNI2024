@@ -1,1 +1,0 @@
-/usr/bin/c++ -g -rdynamic CMakeFiles/Humanoid.out.dir/Humanoid.cpp.o -o Humanoid.out 
