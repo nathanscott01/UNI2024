@@ -67,12 +67,13 @@ void initialise(void)
     float grey[4] = {0.2, 0.2, 0.2, 1.0};
     float white[4]  = {1.0, 1.0, 1.0, 1.0};
 
-//	loadTexture();
+	loadTexture();
 
 	glEnable(GL_DEPTH_TEST);
 	glEnable(GL_NORMALIZE);
 	glEnable(GL_LIGHTING);
 	glEnable(GL_LIGHT0);
+    glLightfv(GL_LIGHT0, GL_AMBIENT, grey);
 
 	glEnable(GL_COLOR_MATERIAL);
     glMaterialfv(GL_FRONT_AND_BACK, GL_SPECULAR, white);
@@ -112,7 +113,7 @@ void display(void)
 	glLoadIdentity();
 	gluLookAt(0., cam_hgt, 100.0, 0., 20., 0., 0., 1., 0.);
 
-	glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
+	glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
 
 	glRotatef(angle, 0, 1, 0);		//Rotate the entire scene
 
@@ -121,8 +122,8 @@ void display(void)
 	drawFloor();
 
 	glColor3f(1, 0.75, 0.5);
-	glDisable(GL_LIGHTING);
-	glDisable(GL_TEXTURE_2D);
+    glEnable(GL_LIGHTING);
+    glEnable(GL_TEXTURE_2D);
 
 	for (int j = 0; j < nSlices; j++)
 	{
@@ -131,12 +132,19 @@ void display(void)
 			wx[i] = cos(angStep) * vx[i] + sin(angStep) * vz[i];
 			wy[i] = vy[i];
 			wz[i] = -sin(angStep) * vx[i] + cos(angStep) * vz[i];
+            mx[i] = cos(angStep) * nx[i] + sin(angStep) * nz[i];
+            my[i] = ny[i];
+            mz[i] = -sin(angStep) * nx[i] + cos(angStep) * nz[i];
 		}
 
 		glBegin(GL_QUAD_STRIP);
 		for (int i = 0; i < N; i++)
 		{
+            glNormal3f(nx[i], ny[i], nz[i]);
+            glTexCoord2f((float)j/nSlices, (float)i/(N-1));
 			glVertex3f(vx[i], vy[i], vz[i]);
+            glNormal3f(mx[i], my[i], mz[i]);
+            glTexCoord2f((float)(j+1)/nSlices, (float)i/(N-1));
 			glVertex3f(wx[i], wy[i], wz[i]);
 		}
 		glEnd();
@@ -146,9 +154,11 @@ void display(void)
 			vx[i] = wx[i];
 			vy[i] = wy[i];
 			vz[i] = wz[i];
+            nx[i] = mx[i];
+            ny[i] = my[i];
+            nz[i] = mz[i];
 		}
 	}
-
 	glFlush();
 }
 
