@@ -1,5 +1,30 @@
 
 ™Scenario: AC1 - A pet has a unique non-empty name, a strictly positive attack, and positive health stats. [90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:3[0m
-:  [33mGiven [0m[33mThere is no pet with name "Ant"[0m
-Q  [36mWhen [0m[36mI create a pet named "Ant" with attack: 2 and health: 2[0m
-U  [36mThen [0m[36mThe pet is created with the correct name, attack and health[0m
+â  [32mGiven [0m[32mThere is no pet with name [0m[32m[1m"Ant"[0m                                                                   [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)[0m
+Î  [32mWhen [0m[32mI create a pet named [0m[32m[1m"Ant"[0m[32m with attack: [0m[32m[1m2[0m[32m and health: [0m[32m[1m2[0m                                            [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_a_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)[0m
+ç  [32mThen [0m[32mThe pet is created with the correct name, attack and health[0m                                        [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.the_pet_is_created_with_the_correct_name_attack_and_health()[0m
+
+úScenario Outline: AC2 - A pet name cannot contain non-alphanumeric or numeric-only values. [90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:14[0m
+˙  [32mGiven [0m[32mThere is no pet with name [0m[32m[1m"673975"[0m                                                 [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)[0m
+Â  [32mWhen [0m[32mI create an invalid pet named [0m[32m[1m"673975"[0m[32m with attack: [0m[32m[1m2[0m[32m and health: [0m[32m[1m2[0m                 [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)[0m
+⁄  [32mThen [0m[32mAn exception is thrown[0m                                                              [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()[0m
+
+úScenario Outline: AC2 - A pet name cannot contain non-alphanumeric or numeric-only values. [90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:15[0m
+˙  [32mGiven [0m[32mThere is no pet with name [0m[32m[1m"$*&ynsl"[0m                                                [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)[0m
+Â  [32mWhen [0m[32mI create an invalid pet named [0m[32m[1m"$*&ynsl"[0m[32m with attack: [0m[32m[1m2[0m[32m and health: [0m[32m[1m2[0m                [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)[0m
+⁄  [32mThen [0m[32mAn exception is thrown[0m                                                              [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()[0m
+
+ñScenario Outline: AC3 - A pet has a strictly positive attack, and a positive health. [90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:23[0m
+Ù  [32mGiven [0m[32mThere is no pet with name [0m[32m[1m"harry"[0m                                            [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)[0m
+ﬂ  [32mWhen [0m[32mI create an invalid pet named [0m[32m[1m"harry"[0m[32m with attack: [0m[32m[1m2[0m[32m and health: [0m[32m[1m-1[0m           [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)[0m
+‘  [32mThen [0m[32mAn exception is thrown[0m                                                        [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()[0m
+
+ñScenario Outline: AC3 - A pet has a strictly positive attack, and a positive health. [90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:24[0m
+Ù  [32mGiven [0m[32mThere is no pet with name [0m[32m[1m"mick"[0m                                             [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)[0m
+ﬂ  [32mWhen [0m[32mI create an invalid pet named [0m[32m[1m"mick"[0m[32m with attack: [0m[32m[1m-1[0m[32m and health: [0m[32m[1m2[0m            [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)[0m
+‘  [32mThen [0m[32mAn exception is thrown[0m                                                        [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()[0m
+
+ñScenario Outline: AC3 - A pet has a strictly positive attack, and a positive health. [90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:25[0m
+Ù  [32mGiven [0m[32mThere is no pet with name [0m[32m[1m"zoe"[0m                                              [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)[0m
+ﬂ  [32mWhen [0m[32mI create an invalid pet named [0m[32m[1m"zoe"[0m[32m with attack: [0m[32m[1m0[0m[32m and health: [0m[32m[1m2[0m              [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)[0m
+‘  [32mThen [0m[32mAn exception is thrown[0m                                                        [90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()[0m

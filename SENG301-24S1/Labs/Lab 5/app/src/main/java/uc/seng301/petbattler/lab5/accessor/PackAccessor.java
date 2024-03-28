@@ -8,6 +8,7 @@ import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 
+import org.junit.jupiter.api.Assertions;
 import uc.seng301.petbattler.lab5.model.Pack;
 import uc.seng301.petbattler.lab5.model.Pet;
 import uc.seng301.petbattler.lab5.model.Player;
@@ -44,6 +45,18 @@ public class PackAccessor {
      */
     public Pack createPack(String name, Player player, List<Pet> pets) {
         // FIXME
+        if (null == name || name.isEmpty()) {
+            throw new IllegalArgumentException("Name cannot be empty.");
+        }
+        if (name.matches("[0-9]+") || !name.matches("[a-zA-Z0-9]+")) {
+            throw new IllegalArgumentException("Name be alphanumerical but cannot only be numeric");
+        }
+        if (player.getPlayerId() == null) {
+            throw new IllegalArgumentException("Cannot retrieve player with null id");
+        }
+        if (pets == null) {
+            throw new IllegalArgumentException("");
+        }
         Pack pack = new Pack();
         pack.setPlayer(player);
         pack.setName(name);

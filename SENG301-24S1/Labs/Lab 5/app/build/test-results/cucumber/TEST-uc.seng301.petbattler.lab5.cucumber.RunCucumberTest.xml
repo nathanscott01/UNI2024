@@ -1,44 +1,42 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="uc.seng301.petbattler.lab5.cucumber.RunCucumberTest" tests="1" skipped="0" failures="1" errors="0" timestamp="2024-03-28T03:16:35" hostname="nathan-OMEN-Laptop-15-ek1xxx" time="0.093">
+<testsuite name="uc.seng301.petbattler.lab5.cucumber.RunCucumberTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2024-03-28T05:58:20" hostname="nathan-OMEN-Laptop-15-ek1xxx" time="0.32">
   <properties/>
-  <testcase name="AC1 - A pet has a unique non-empty name, a strictly positive attack, and positive health stats." classname="uc.seng301.petbattler.lab5.cucumber.RunCucumberTest" time="0.093">
-    <failure message="io.cucumber.junit.platform.engine.UndefinedStepException: The step 'There is no pet with name &quot;Ant&quot;' and 2 other step(s) are undefined.&#10;You can implement these steps using the snippet(s) below:&#10;&#10;@Given(&quot;There is no pet with name {string}&quot;)&#10;public void there_is_no_pet_with_name(String string) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@When(&quot;I create a pet named {string} with attack: {int} and health: {int}&quot;)&#10;public void i_create_a_pet_named_with_attack_and_health(String string, Integer int1, Integer int2) {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;@Then(&quot;The pet is created with the correct name, attack and health&quot;)&#10;public void the_pet_is_created_with_the_correct_name_attack_and_health() {&#10;    // Write code here that turns the phrase above into concrete actions&#10;    throw new io.cucumber.java.PendingException();&#10;}&#10;" type="io.cucumber.junit.platform.engine.UndefinedStepException">io.cucumber.junit.platform.engine.UndefinedStepException: The step 'There is no pet with name &quot;Ant&quot;' and 2 other step(s) are undefined.
-You can implement these steps using the snippet(s) below:
-
-@Given(&quot;There is no pet with name {string}&quot;)
-public void there_is_no_pet_with_name(String string) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@When(&quot;I create a pet named {string} with attack: {int} and health: {int}&quot;)
-public void i_create_a_pet_named_with_attack_and_health(String string, Integer int1, Integer int2) {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-@Then(&quot;The pet is created with the correct name, attack and health&quot;)
-public void the_pet_is_created_with_the_correct_name_attack_and_health() {
-    // Write code here that turns the phrase above into concrete actions
-    throw new io.cucumber.java.PendingException();
-}
-
-	at app//io.cucumber.core.runtime.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:69)
-	at app//io.cucumber.junit.platform.engine.TestCaseResultObserver.assertTestCasePassed(TestCaseResultObserver.java:22)
-	at app//io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:114)
-	at app//io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137)
-	at app//io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23)
-	at app//io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137)
-	at app//io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109)
-	at app//io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168)
-	at app//io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90)
-	at java.base@17.0.10/java.util.ArrayList.forEach(ArrayList.java:1511)
-	at java.base@17.0.10/java.util.ArrayList.forEach(ArrayList.java:1511)
-</failure>
-  </testcase>
+  <testcase name="AC1 - A pet has a unique non-empty name, a strictly positive attack, and positive health stats." classname="uc.seng301.petbattler.lab5.cucumber.RunCucumberTest" time="0.281"/>
+  <testcase name="Example #1.1" classname="uc.seng301.petbattler.lab5.cucumber.RunCucumberTest" time="0.008"/>
+  <testcase name="Example #1.2" classname="uc.seng301.petbattler.lab5.cucumber.RunCucumberTest" time="0.006"/>
+  <testcase name="Example #1.1" classname="uc.seng301.petbattler.lab5.cucumber.RunCucumberTest" time="0.006"/>
+  <testcase name="Example #1.2" classname="uc.seng301.petbattler.lab5.cucumber.RunCucumberTest" time="0.006"/>
+  <testcase name="Example #1.3" classname="uc.seng301.petbattler.lab5.cucumber.RunCucumberTest" time="0.007"/>
   <system-out><![CDATA[
 Scenario: AC1 - A pet has a unique non-empty name, a strictly positive attack, and positive health stats. ?[90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:3?[0m
-  ?[33mGiven ?[0m?[33mThere is no pet with name "Ant"?[0m
-  ?[36mWhen ?[0m?[36mI create a pet named "Ant" with attack: 2 and health: 2?[0m
-  ?[36mThen ?[0m?[36mThe pet is created with the correct name, attack and health?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"Ant"?[0m                                                                   ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a pet named ?[0m?[32m?[1m"Ant"?[0m?[32m with attack: ?[0m?[32m?[1m2?[0m?[32m and health: ?[0m?[32m?[1m2?[0m                                            ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_a_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mThe pet is created with the correct name, attack and health?[0m                                        ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.the_pet_is_created_with_the_correct_name_attack_and_health()?[0m
+
+Scenario Outline: AC2 - A pet name cannot contain non-alphanumeric or numeric-only values. ?[90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:14?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"673975"?[0m                                                 ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create an invalid pet named ?[0m?[32m?[1m"673975"?[0m?[32m with attack: ?[0m?[32m?[1m2?[0m?[32m and health: ?[0m?[32m?[1m2?[0m                 ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mAn exception is thrown?[0m                                                              ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()?[0m
+
+Scenario Outline: AC2 - A pet name cannot contain non-alphanumeric or numeric-only values. ?[90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:15?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"$*&ynsl"?[0m                                                ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create an invalid pet named ?[0m?[32m?[1m"$*&ynsl"?[0m?[32m with attack: ?[0m?[32m?[1m2?[0m?[32m and health: ?[0m?[32m?[1m2?[0m                ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mAn exception is thrown?[0m                                                              ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()?[0m
+
+Scenario Outline: AC3 - A pet has a strictly positive attack, and a positive health. ?[90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:23?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"harry"?[0m                                            ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create an invalid pet named ?[0m?[32m?[1m"harry"?[0m?[32m with attack: ?[0m?[32m?[1m2?[0m?[32m and health: ?[0m?[32m?[1m-1?[0m           ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mAn exception is thrown?[0m                                                        ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()?[0m
+
+Scenario Outline: AC3 - A pet has a strictly positive attack, and a positive health. ?[90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:24?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"mick"?[0m                                             ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create an invalid pet named ?[0m?[32m?[1m"mick"?[0m?[32m with attack: ?[0m?[32m?[1m-1?[0m?[32m and health: ?[0m?[32m?[1m2?[0m            ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mAn exception is thrown?[0m                                                        ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()?[0m
+
+Scenario Outline: AC3 - A pet has a strictly positive attack, and a positive health. ?[90m# uc/seng301/petbattler/lab5/cucumber/u1-pet.feature:25?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"zoe"?[0m                                              ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create an invalid pet named ?[0m?[32m?[1m"zoe"?[0m?[32m with attack: ?[0m?[32m?[1m0?[0m?[32m and health: ?[0m?[32m?[1m2?[0m              ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mAn exception is thrown?[0m                                                        ?[90m# uc.seng301.petbattler.lab5.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()?[0m
 ]]></system-out>
   <system-err><![CDATA[]]></system-err>
 </testsuite>
