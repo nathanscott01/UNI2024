@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2024-03-31T06:39:00" hostname="nathan-OMEN-Laptop-15-ek1xxx" time="1.32">
+  <properties/>
+  <testcase name="AC1 - A pet has a unique non-empty name, a strictly positive attack, and positive health stats." classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.313"/>
+  <testcase name="Example #1.1" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.01"/>
+  <testcase name="Example #1.2" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.009"/>
+  <testcase name="Example #1.1" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.012"/>
+  <testcase name="Example #1.2" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.007"/>
+  <testcase name="Example #1.3" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.006"/>
+  <testcase name="AC1.1 - A pack has non-empty alphanumeric name" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.055"/>
+  <testcase name="Example #1.1" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.011"/>
+  <testcase name="Example #1.2" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.011"/>
+  <testcase name="Example #1.3" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.011"/>
+  <testcase name="AC2 - A must pack have a unique name" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.026"/>
+  <testcase name="AC3 - A pack must be able to store many pets" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.075"/>
+  <testcase name="AC1 - I can draw a random pet that has a valid name, attack, health, and tier" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.408"/>
+  <testcase name="AC2 - If I find a suitable pet, I can add the pet to my pack" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.113"/>
+  <testcase name="AC3 - I can decide to ignore a pet and not add it to my pack" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.108"/>
+  <testcase name="AC4 - A pack cannot contain the same pet twice" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.131"/>
+  <system-out><![CDATA[
+Scenario: AC1 - A pet has a unique non-empty name, a strictly positive attack, and positive health stats. ?[90m# uc/seng301/petbattler/lab6/cucumber/u1-pet.feature:3?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"Ant"?[0m                                                                   ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create a pet named ?[0m?[32m?[1m"Ant"?[0m?[32m with attack: ?[0m?[32m?[1m2?[0m?[32m and health: ?[0m?[32m?[1m2?[0m                                            ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.i_create_a_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mThe pet is created with the correct name, attack and health?[0m                                        ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.the_pet_is_created_with_the_correct_name_attack_and_health()?[0m
+
+Scenario Outline: AC2 - A pet name cannot contain non-alphanumeric or numeric-only values. ?[90m# uc/seng301/petbattler/lab6/cucumber/u1-pet.feature:14?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"673975"?[0m                                                 ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create an invalid pet named ?[0m?[32m?[1m"673975"?[0m?[32m with attack: ?[0m?[32m?[1m2?[0m?[32m and health: ?[0m?[32m?[1m2?[0m                 ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mAn exception is thrown?[0m                                                              ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()?[0m
+
+Scenario Outline: AC2 - A pet name cannot contain non-alphanumeric or numeric-only values. ?[90m# uc/seng301/petbattler/lab6/cucumber/u1-pet.feature:15?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"$*&ynsl"?[0m                                                ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create an invalid pet named ?[0m?[32m?[1m"$*&ynsl"?[0m?[32m with attack: ?[0m?[32m?[1m2?[0m?[32m and health: ?[0m?[32m?[1m2?[0m                ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mAn exception is thrown?[0m                                                              ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()?[0m
+
+Scenario Outline: AC3 - A pet cannot have negative values for the attack or health stats. ?[90m# uc/seng301/petbattler/lab6/cucumber/u1-pet.feature:23?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"Kererū"?[0m                                                ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create an invalid pet named ?[0m?[32m?[1m"Kererū"?[0m?[32m with attack: ?[0m?[32m?[1m2?[0m?[32m and health: ?[0m?[32m?[1m-1?[0m               ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mAn exception is thrown?[0m                                                             ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()?[0m
+
+Scenario Outline: AC3 - A pet cannot have negative values for the attack or health stats. ?[90m# uc/seng301/petbattler/lab6/cucumber/u1-pet.feature:24?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"Kererū"?[0m                                                ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create an invalid pet named ?[0m?[32m?[1m"Kererū"?[0m?[32m with attack: ?[0m?[32m?[1m-1?[0m?[32m and health: ?[0m?[32m?[1m2?[0m               ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mAn exception is thrown?[0m                                                             ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()?[0m
+
+Scenario Outline: AC3 - A pet cannot have negative values for the attack or health stats. ?[90m# uc/seng301/petbattler/lab6/cucumber/u1-pet.feature:25?[0m
+  ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"Kererū"?[0m                                                ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create an invalid pet named ?[0m?[32m?[1m"Kererū"?[0m?[32m with attack: ?[0m?[32m?[1m0?[0m?[32m and health: ?[0m?[32m?[1m2?[0m                ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.i_create_an_invalid_pet_named_with_attack_and_health(java.lang.String,java.lang.Integer,java.lang.Integer)?[0m
+  ?[32mThen ?[0m?[32mAn exception is thrown?[0m                                                             ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.an_exception_is_thrown()?[0m
+
+Scenario: AC1.1 - A pack has non-empty alphanumeric name            ?[90m# uc/seng301/petbattler/lab6/cucumber/u2-pack.feature:2?[0m
+  ?[32mGiven ?[0m?[32mI create a player named ?[0m?[32m?[1m"Te Ariki"?[0m                          ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_create_a_player_named(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mPlayer ?[0m?[32m?[1m"Te Ariki"?[0m?[32m has no packs with the name ?[0m?[32m?[1m"My first pack"?[0m  ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.player_has_no_packs_with_the_name(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create the pack with name ?[0m?[32m?[1m"My first pack"?[0m?[32m for ?[0m?[32m?[1m"Te Ariki"?[0m   ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_create_the_pack_with_name_for(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mThe pack is created with name ?[0m?[32m?[1m"My first pack"?[0m?[32m for ?[0m?[32m?[1m"Te Ariki"?[0m ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.the_pack_is_created_with_name_for(java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: AC1.2 - A pack cannot have an empty, non-alphanumeric, or numeric only name ?[90m# uc/seng301/petbattler/lab6/cucumber/u2-pack.feature:13?[0m
+  ?[32mGiven ?[0m?[32mPlayer ?[0m?[32m?[1m"Te Ariki"?[0m?[32m exists?[0m                                                              ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.player_exists(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI am not allowed to create the pack with name ?[0m?[32m?[1m""?[0m?[32m for ?[0m?[32m?[1m"Te Ariki"?[0m                        ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_am_not_allowed_to_create_the_pack_with_name_for(java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: AC1.2 - A pack cannot have an empty, non-alphanumeric, or numeric only name ?[90m# uc/seng301/petbattler/lab6/cucumber/u2-pack.feature:14?[0m
+  ?[32mGiven ?[0m?[32mPlayer ?[0m?[32m?[1m"Te Ariki"?[0m?[32m exists?[0m                                                              ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.player_exists(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI am not allowed to create the pack with name ?[0m?[32m?[1m")(^$%^"?[0m?[32m for ?[0m?[32m?[1m"Te Ariki"?[0m                  ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_am_not_allowed_to_create_the_pack_with_name_for(java.lang.String,java.lang.String)?[0m
+
+Scenario Outline: AC1.2 - A pack cannot have an empty, non-alphanumeric, or numeric only name ?[90m# uc/seng301/petbattler/lab6/cucumber/u2-pack.feature:15?[0m
+  ?[32mGiven ?[0m?[32mPlayer ?[0m?[32m?[1m"Te Ariki"?[0m?[32m exists?[0m                                                              ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.player_exists(java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI am not allowed to create the pack with name ?[0m?[32m?[1m"12345"?[0m?[32m for ?[0m?[32m?[1m"Te Ariki"?[0m                   ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_am_not_allowed_to_create_the_pack_with_name_for(java.lang.String,java.lang.String)?[0m
+
+Scenario: AC2 - A must pack have a unique name                                    ?[90m# uc/seng301/petbattler/lab6/cucumber/u2-pack.feature:17?[0m
+  ?[32mGiven ?[0m?[32mI create a player named ?[0m?[32m?[1m"Yiyang"?[0m                                          ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_create_a_player_named(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mPlayer ?[0m?[32m?[1m"Yiyang"?[0m?[32m already has a pack with the name ?[0m?[32m?[1m"My first pack"?[0m            ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.player_already_has_a_pack_with_the_name(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI am not allowed to create the pack with name ?[0m?[32m?[1m"My first pack"?[0m?[32m for ?[0m?[32m?[1m"Yiyang"?[0m ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_am_not_allowed_to_create_the_pack_with_name_for(java.lang.String,java.lang.String)?[0m
+
+Scenario: AC3 - A pack must be able to store many pets                                           ?[90m# uc/seng301/petbattler/lab6/cucumber/u2-pack.feature:22?[0m
+  ?[32mGiven ?[0m?[32mI create a player named ?[0m?[32m?[1m"Rohan"?[0m                                                          ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_create_a_player_named(java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI create the pack with name ?[0m?[32m?[1m"My first pack"?[0m?[32m for ?[0m?[32m?[1m"Rohan"?[0m                                   ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_create_the_pack_with_name_for(java.lang.String,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI add a pet named ?[0m?[32m?[1m"Kererū"?[0m?[32m with attack ?[0m?[32m?[1m7?[0m?[32m and health ?[0m?[32m?[1m3?[0m?[32m in pack ?[0m?[32m?[1m"My first pack"?[0m?[32m for ?[0m?[32m?[1m"Rohan"?[0m  ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_add_a_pet_named_with_attack_and_health_in_pack_for(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mI add a pet named ?[0m?[32m?[1m"Hamster"?[0m?[32m with attack ?[0m?[32m?[1m2?[0m?[32m and health ?[0m?[32m?[1m1?[0m?[32m in pack ?[0m?[32m?[1m"My first pack"?[0m?[32m for ?[0m?[32m?[1m"Rohan"?[0m ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_add_a_pet_named_with_attack_and_health_in_pack_for(java.lang.String,java.lang.Integer,java.lang.Integer,java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mThe pack ?[0m?[32m?[1m"My first pack"?[0m?[32m of ?[0m?[32m?[1m"Rohan"?[0m?[32m includes a pet named ?[0m?[32m?[1m"Kererū"?[0m                         ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.the_pack_of_includes_a_pet_named(java.lang.String,java.lang.String,java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mThe pack ?[0m?[32m?[1m"My first pack"?[0m?[32m of ?[0m?[32m?[1m"Rohan"?[0m?[32m includes a pet named ?[0m?[32m?[1m"Hamster"?[0m                         ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.the_pack_of_includes_a_pet_named(java.lang.String,java.lang.String,java.lang.String)?[0m
+
+Scenario: AC1 - I can draw a random pet that has a valid name, attack, health, and tier ?[90m# uc/seng301/petbattler/lab6/cucumber/u3-add-pet.feature:3?[0m
+  ?[32mGiven ?[0m?[32mI create a player named ?[0m?[32m?[1m"George"?[0m                                                ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_create_a_player_named(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mPlayer ?[0m?[32m?[1m"George"?[0m?[32m has an empty pack with the name ?[0m?[32m?[1m"My first pack"?[0m                   ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.player_has_an_empty_pack_with_the_name(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI draw a randomly selected pet?[0m                                                   ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.i_draw_a_randomly_selected_pet()?[0m
+  ?[32mThen ?[0m?[32mThe pet has a valid name, attack, health and tier?[0m                                ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.the_pet_has_a_valid_name_attack_health_and_tier()?[0m
+
+Scenario: AC2 - If I find a suitable pet, I can add the pet to my pack    ?[90m# uc/seng301/petbattler/lab6/cucumber/u3-add-pet.feature:9?[0m
+  ?[32mGiven ?[0m?[32mI create a player named ?[0m?[32m?[1m"Maia"?[0m                                    ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_create_a_player_named(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mPlayer ?[0m?[32m?[1m"Maia"?[0m?[32m has an empty pack with the name ?[0m?[32m?[1m"My first pack"?[0m       ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.player_has_an_empty_pack_with_the_name(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI draw a randomly selected pet?[0m                                     ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.i_draw_a_randomly_selected_pet()?[0m
+  ?[32mAnd ?[0m?[32mI confirm I want to keep the pet in pack ?[0m?[32m?[1m"My first pack"?[0m?[32m for ?[0m?[32m?[1m"Maia"?[0m ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.i_confirm_i_want_to_jeep_the_pet_in_pack_for(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mThe pet is added to the pack ?[0m?[32m?[1m"My first pack"?[0m?[32m of ?[0m?[32m?[1m"Maia"?[0m             ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.the_pet_is_added_to_the_pack_of(java.lang.String,java.lang.String)?[0m
+
+Scenario: AC3 - I can decide to ignore a pet and not add it to my pack        ?[90m# uc/seng301/petbattler/lab6/cucumber/u3-add-pet.feature:16?[0m
+  ?[32mGiven ?[0m?[32mI create a player named ?[0m?[32m?[1m"Li"?[0m                                          ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_create_a_player_named(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mPlayer ?[0m?[32m?[1m"Li"?[0m?[32m has an empty pack with the name ?[0m?[32m?[1m"My first pack"?[0m             ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.player_has_an_empty_pack_with_the_name(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI draw a randomly selected pet?[0m                                         ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.i_draw_a_randomly_selected_pet()?[0m
+  ?[32mAnd ?[0m?[32mI confirm I do not want to keep the pet in pack ?[0m?[32m?[1m"My first pack"?[0m?[32m of ?[0m?[32m?[1m"Li"?[0m ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.i_confirm_i_do_not_want_to_keep_the_pet_in_pack_of(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mThe pet is not added to the pack ?[0m?[32m?[1m"My first pack"?[0m?[32m of ?[0m?[32m?[1m"Li"?[0m               ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.the_pet_is_not_added_to_the_pack_of(java.lang.String,java.lang.String)?[0m
+
+Scenario: AC4 - A pack cannot contain the same pet twice                           ?[90m# uc/seng301/petbattler/lab6/cucumber/u3-add-pet.feature:23?[0m
+  ?[32mGiven ?[0m?[32mI create a player named ?[0m?[32m?[1m"Alya"?[0m                                             ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPackFeature.i_create_a_player_named(java.lang.String)?[0m
+  ?[32mAnd ?[0m?[32mPlayer ?[0m?[32m?[1m"Alya"?[0m?[32m has an empty pack with the name ?[0m?[32m?[1m"My first pack"?[0m                ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.player_has_an_empty_pack_with_the_name(java.lang.String,java.lang.String)?[0m
+  ?[32mWhen ?[0m?[32mI draw a randomly selected pet?[0m                                              ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.i_draw_a_randomly_selected_pet()?[0m
+  ?[32mAnd ?[0m?[32mI confirm I want to keep the pet in pack ?[0m?[32m?[1m"My first pack"?[0m?[32m for ?[0m?[32m?[1m"Alya"?[0m          ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.i_confirm_i_want_to_jeep_the_pet_in_pack_for(java.lang.String,java.lang.String)?[0m
+  ?[32mThen ?[0m?[32mI cannot add a pet with the same name in the pack ?[0m?[32m?[1m"My first pack"?[0m?[32m of ?[0m?[32m?[1m"Alya"?[0m ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.DrawNewPetFeature.i_cannot_add_a_pet_with_the_same_name_in_the_pack_of(java.lang.String,java.lang.String)?[0m
+]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
