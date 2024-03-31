@@ -2967,3 +2967,166 @@
 19:39:01.757 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Persisting pet Crab -- Atk: 3 Health: 3 Tier: 2
 19:39:01.762 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with id 55 from persistence
 19:39:01.773 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Update existing pack object { packId='55', player='Alya', pets='[]', name='My first pack'}
+20:19:42.144 [main] INFO  uc.seng301.petbattler.lab6.App - Starting application...
+20:31:32.986 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with name Ant from persistence
+20:31:33.230 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Creating pet with name Ant, attack 2, health 2
+20:31:33.238 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Persisting pet Ant -- Atk: 2 Health: 2 Tier: 1
+20:31:33.265 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with id 1 from persistence
+20:31:33.291 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with name 673975 from persistence
+20:31:33.297 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Creating pet with name 673975, attack 2, health 2
+20:31:33.305 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with name $*&ynsl from persistence
+20:31:33.309 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Creating pet with name $*&ynsl, attack 2, health 2
+20:31:33.316 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with name Kererū from persistence
+20:31:33.323 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Creating pet with name Kererū, attack 2, health -1
+20:31:33.331 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with name Kererū from persistence
+20:31:33.333 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Creating pet with name Kererū, attack -1, health 2
+20:31:33.341 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with name Kererū from persistence
+20:31:33.343 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Creating pet with name Kererū, attack 0, health 2
+20:31:33.351 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Creating player with name Te Ariki
+20:31:33.352 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Save player Player (null): Te Ariki
+	Packs:
+ to persistence
+20:31:33.352 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Te Ariki from persistence
+20:31:33.370 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with id 1 from persistence
+20:31:33.385 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Te Ariki from persistence
+20:31:33.388 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Te Ariki from persistence
+20:31:33.391 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Creating pack name My first pack for player Player (1): Te Ariki
+	Packs:
+
+20:31:33.393 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Persisting pack { packId='null', player='Te Ariki', pets='[]', name='My first pack'}
+20:31:33.396 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Getting pack with id 1 from persistence
+20:31:33.410 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Te Ariki from persistence
+20:31:33.421 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Te Ariki from persistence
+20:31:33.426 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Te Ariki from persistence
+20:31:33.430 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Creating pack name  for player Player (1): Te Ariki
+	Packs:
+		Pack (1): My first pack
+			Pets:
+
+20:31:33.436 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Te Ariki from persistence
+20:31:33.440 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Te Ariki from persistence
+20:31:33.444 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Creating pack name )(^$%^ for player Player (1): Te Ariki
+	Packs:
+		Pack (1): My first pack
+			Pets:
+
+20:31:33.449 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Te Ariki from persistence
+20:31:33.454 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Te Ariki from persistence
+20:31:33.458 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Creating pack name 12345 for player Player (1): Te Ariki
+	Packs:
+		Pack (1): My first pack
+			Pets:
+
+20:31:33.463 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Creating player with name Yiyang
+20:31:33.463 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Save player Player (null): Yiyang
+	Packs:
+ to persistence
+20:31:33.463 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Yiyang from persistence
+20:31:33.469 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with id 2 from persistence
+20:31:33.474 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Yiyang from persistence
+20:31:33.477 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Creating pack name My first pack for player Player (2): Yiyang
+	Packs:
+
+20:31:33.477 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Persisting pack { packId='null', player='Yiyang', pets='[]', name='My first pack'}
+20:31:33.480 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Getting pack with id 2 from persistence
+20:31:33.488 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Yiyang from persistence
+20:31:33.495 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Creating pack name My first pack for player Player (2): Yiyang
+	Packs:
+		Pack (2): My first pack
+			Pets:
+
+20:31:33.502 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Creating player with name Rohan
+20:31:33.502 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Save player Player (null): Rohan
+	Packs:
+ to persistence
+20:31:33.502 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Rohan from persistence
+20:31:33.507 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with id 3 from persistence
+20:31:33.513 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Rohan from persistence
+20:31:33.515 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Creating pack name My first pack for player Player (3): Rohan
+	Packs:
+
+20:31:33.515 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Persisting pack { packId='null', player='Rohan', pets='[]', name='My first pack'}
+20:31:33.517 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Getting pack with id 3 from persistence
+20:31:33.525 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Creating pet with name Kererū, attack 7, health 3
+20:31:33.526 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Persisting pet Kererū -- Atk: 7 Health: 3 Tier: 1
+20:31:33.529 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with id 2 from persistence
+20:31:33.533 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Rohan from persistence
+20:31:33.537 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Update existing pack object { packId='3', player='Rohan', pets='[Kererū -- Atk: 7 Health: 3 Tier: 1]', name='My first pack'}
+20:31:33.553 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Creating pet with name Hamster, attack 2, health 1
+20:31:33.553 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Persisting pet Hamster -- Atk: 2 Health: 1 Tier: 1
+20:31:33.555 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with id 3 from persistence
+20:31:33.560 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Rohan from persistence
+20:31:33.564 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Update existing pack object { packId='3', player='Rohan', pets='[Kererū -- Atk: 7 Health: 3 Tier: 1, Hamster -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
+20:31:33.573 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Rohan from persistence
+20:31:33.579 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Rohan from persistence
+20:31:33.591 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Creating player with name George
+20:31:33.591 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Save player Player (null): George
+	Packs:
+ to persistence
+20:31:33.591 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name George from persistence
+20:31:33.595 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with id 4 from persistence
+20:31:33.599 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name George from persistence
+20:31:33.604 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Creating pack name My first pack for player Player (4): George
+	Packs:
+
+20:31:33.604 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Persisting pack { packId='null', player='George', pets='[]', name='My first pack'}
+20:31:33.607 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Getting pack with id 52 from persistence
+20:31:33.613 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - Fetching pet with id: 69
+20:31:33.993 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - Api responded with status code: 200
+20:31:34.104 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - {"id":69,"name":"Turkey","attack":3,"health":4,"tier":5}
+20:31:34.135 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Persisting pet Turkey -- Atk: 3 Health: 4 Tier: 5
+20:31:34.137 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with id 52 from persistence
+20:31:34.145 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Creating player with name Maia
+20:31:34.145 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Save player Player (null): Maia
+	Packs:
+ to persistence
+20:31:34.145 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Maia from persistence
+20:31:34.149 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with id 5 from persistence
+20:31:34.152 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Maia from persistence
+20:31:34.156 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Creating pack name My first pack for player Player (5): Maia
+	Packs:
+
+20:31:34.156 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Persisting pack { packId='null', player='Maia', pets='[]', name='My first pack'}
+20:31:34.158 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Getting pack with id 53 from persistence
+20:31:34.164 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - Fetching pet with id: 26
+20:31:34.182 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - Api responded with status code: 200
+20:31:34.231 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - {"id":26,"name":"Swan","attack":1,"health":3,"tier":2}
+20:31:34.231 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Persisting pet Swan -- Atk: 1 Health: 3 Tier: 2
+20:31:34.233 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with id 53 from persistence
+20:31:34.237 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Update existing pack object { packId='53', player='Maia', pets='[Swan -- Atk: 1 Health: 3 Tier: 2]', name='My first pack'}
+20:31:34.249 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Creating player with name Li
+20:31:34.249 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Save player Player (null): Li
+	Packs:
+ to persistence
+20:31:34.249 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Li from persistence
+20:31:34.254 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with id 6 from persistence
+20:31:34.258 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Li from persistence
+20:31:34.262 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Creating pack name My first pack for player Player (6): Li
+	Packs:
+
+20:31:34.262 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Persisting pack { packId='null', player='Li', pets='[]', name='My first pack'}
+20:31:34.264 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Getting pack with id 54 from persistence
+20:31:34.269 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - Fetching pet with id: 32
+20:31:34.286 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - Api responded with status code: 200
+20:31:34.338 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - {"id":32,"name":"Hatching Chick","attack":1,"health":1,"tier":3}
+20:31:34.338 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Persisting pet Hatching Chick -- Atk: 1 Health: 1 Tier: 3
+20:31:34.340 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with id 54 from persistence
+20:31:34.344 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Update existing pack object { packId='54', player='Li', pets='[]', name='My first pack'}
+20:31:34.353 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Creating player with name Alya
+20:31:34.353 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Save player Player (null): Alya
+	Packs:
+ to persistence
+20:31:34.353 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Alya from persistence
+20:31:34.358 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with id 7 from persistence
+20:31:34.361 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PlayerAccessor - Getting player with name Alya from persistence
+20:31:34.364 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Creating pack name My first pack for player Player (7): Alya
+	Packs:
+
+20:31:34.364 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Persisting pack { packId='null', player='Alya', pets='[]', name='My first pack'}
+20:31:34.366 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Getting pack with id 55 from persistence
+20:31:34.371 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - Fetching pet with id: 14
+20:31:34.386 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - Api responded with status code: 200
+20:31:34.434 [Test worker] INFO  uc.seng301.petbattler.lab6.pets.PetService - {"id":14,"name":"Bat","attack":1,"health":2,"tier":2}
+20:31:34.434 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Persisting pet Bat -- Atk: 1 Health: 2 Tier: 2
+20:31:34.435 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PetAccessor - Getting pet with id 55 from persistence
+20:31:34.439 [Test worker] INFO  uc.seng301.petbattler.lab6.accessor.PackAccessor - Update existing pack object { packId='55', player='Alya', pets='[]', name='My first pack'}

@@ -1,22 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2024-03-31T06:39:00" hostname="nathan-OMEN-Laptop-15-ek1xxx" time="1.32">
+<testsuite name="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" tests="16" skipped="0" failures="0" errors="0" timestamp="2024-03-31T07:31:32" hostname="nathan-OMEN-Laptop-15-ek1xxx" time="1.501">
   <properties/>
-  <testcase name="AC1 - A pet has a unique non-empty name, a strictly positive attack, and positive health stats." classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.313"/>
-  <testcase name="Example #1.1" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.01"/>
-  <testcase name="Example #1.2" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.009"/>
-  <testcase name="Example #1.1" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.012"/>
-  <testcase name="Example #1.2" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.007"/>
-  <testcase name="Example #1.3" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.006"/>
-  <testcase name="AC1.1 - A pack has non-empty alphanumeric name" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.055"/>
-  <testcase name="Example #1.1" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.011"/>
+  <testcase name="AC1 - A pet has a unique non-empty name, a strictly positive attack, and positive health stats." classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.337"/>
+  <testcase name="Example #1.1" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.016"/>
   <testcase name="Example #1.2" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.011"/>
-  <testcase name="Example #1.3" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.011"/>
-  <testcase name="AC2 - A must pack have a unique name" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.026"/>
-  <testcase name="AC3 - A pack must be able to store many pets" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.075"/>
-  <testcase name="AC1 - I can draw a random pet that has a valid name, attack, health, and tier" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.408"/>
-  <testcase name="AC2 - If I find a suitable pet, I can add the pet to my pack" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.113"/>
-  <testcase name="AC3 - I can decide to ignore a pet and not add it to my pack" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.108"/>
-  <testcase name="AC4 - A pack cannot contain the same pet twice" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.131"/>
+  <testcase name="Example #1.1" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.013"/>
+  <testcase name="Example #1.2" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.008"/>
+  <testcase name="Example #1.3" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.009"/>
+  <testcase name="AC1.1 - A pack has non-empty alphanumeric name" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.068"/>
+  <testcase name="Example #1.1" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.014"/>
+  <testcase name="Example #1.2" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.014"/>
+  <testcase name="Example #1.3" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.013"/>
+  <testcase name="AC2 - A must pack have a unique name" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.036"/>
+  <testcase name="AC3 - A pack must be able to store many pets" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.091"/>
+  <testcase name="AC1 - I can draw a random pet that has a valid name, attack, health, and tier" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.553"/>
+  <testcase name="AC2 - If I find a suitable pet, I can add the pet to my pack" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.105"/>
+  <testcase name="AC3 - I can decide to ignore a pet and not add it to my pack" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.103"/>
+  <testcase name="AC4 - A pack cannot contain the same pet twice" classname="uc.seng301.petbattler.lab6.cucumber.RunCucumberTest" time="0.094"/>
   <system-out><![CDATA[
 Scenario: AC1 - A pet has a unique non-empty name, a strictly positive attack, and positive health stats. ?[90m# uc/seng301/petbattler/lab6/cucumber/u1-pet.feature:3?[0m
   ?[32mGiven ?[0m?[32mThere is no pet with name ?[0m?[32m?[1m"Ant"?[0m                                                                   ?[90m# uc.seng301.petbattler.lab6.cucumber.step_definitions.CreateNewPetFeature.there_is_no_pet_with_name(java.lang.String)?[0m

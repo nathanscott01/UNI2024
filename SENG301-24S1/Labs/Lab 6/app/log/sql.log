@@ -3669,3 +3669,215 @@
 19:39:01.768 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.id_pet=55
 19:39:01.775 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p2_0.id_player,p2_0.name,p3_0.id_pack,p3_0.id_pet,p3_0.attack,p3_0.health,p3_0.name,p3_0.tier from pack p1_0 left join player p2_0 on p2_0.id_player=p1_0.id_player left join pet p3_0 on p1_0.id_pack=p3_0.id_pack where p1_0.id_pack=?
 19:39:01.778 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:19:43.291 [main] DEBUG org.hibernate.SQL - create table HTE_pet(attack integer, health integer, rn_ integer not null, tier integer, id_pack bigint, id_pet bigint, hib_sess_id char(36) not null, name varchar(255), primary key (rn_, hib_sess_id))
+20:19:43.293 [main] DEBUG org.hibernate.SQL - create table HTE_player(rn_ integer not null, id_player bigint, hib_sess_id char(36) not null, name varchar(255), primary key (rn_, hib_sess_id))
+20:19:43.293 [main] DEBUG org.hibernate.SQL - create table HTE_pack(rn_ integer not null, id_pack bigint, id_player bigint, hib_sess_id char(36) not null, name varchar(255), primary key (rn_, hib_sess_id))
+20:19:43.402 [main] DEBUG org.hibernate.SQL - drop table if exists pack
+20:19:43.409 [main] DEBUG org.hibernate.SQL - drop table if exists pack_SEQ
+20:19:43.413 [main] DEBUG org.hibernate.SQL - drop table if exists pet
+20:19:43.417 [main] DEBUG org.hibernate.SQL - drop table if exists pet_SEQ
+20:19:43.420 [main] DEBUG org.hibernate.SQL - drop table if exists player
+20:19:43.425 [main] DEBUG org.hibernate.SQL - drop table if exists player_SEQ
+20:19:43.431 [main] DEBUG org.hibernate.SQL - create table pack (id_pack bigint not null, id_player bigint, name varchar(255), primary key (id_pack))
+20:19:43.436 [main] DEBUG org.hibernate.SQL - create table pack_SEQ (next_val bigint)
+20:19:43.441 [main] DEBUG org.hibernate.SQL - insert into pack_SEQ values ( 1 )
+20:19:43.445 [main] DEBUG org.hibernate.SQL - create table pet (attack integer not null, health integer not null, tier integer not null, id_pack bigint, id_pet bigint not null, name varchar(255), primary key (id_pet))
+20:19:43.449 [main] DEBUG org.hibernate.SQL - create table pet_SEQ (next_val bigint)
+20:19:43.453 [main] DEBUG org.hibernate.SQL - insert into pet_SEQ values ( 1 )
+20:19:43.456 [main] DEBUG org.hibernate.SQL - create table player (id_player bigint not null, name varchar(255), primary key (id_player))
+20:19:43.460 [main] DEBUG org.hibernate.SQL - create table player_SEQ (next_val bigint)
+20:19:43.465 [main] DEBUG org.hibernate.SQL - insert into player_SEQ values ( 1 )
+20:31:32.704 [Test worker] DEBUG org.hibernate.SQL - drop table if exists pack cascade 
+20:31:32.706 [Test worker] DEBUG org.hibernate.SQL - drop table if exists pet cascade 
+20:31:32.706 [Test worker] DEBUG org.hibernate.SQL - drop table if exists player cascade 
+20:31:32.706 [Test worker] DEBUG org.hibernate.SQL - drop sequence if exists pack_SEQ
+20:31:32.706 [Test worker] DEBUG org.hibernate.SQL - drop sequence if exists pet_SEQ
+20:31:32.706 [Test worker] DEBUG org.hibernate.SQL - drop sequence if exists player_SEQ
+20:31:32.711 [Test worker] DEBUG org.hibernate.SQL - create sequence pack_SEQ start with 1 increment by 50
+20:31:32.712 [Test worker] DEBUG org.hibernate.SQL - create sequence pet_SEQ start with 1 increment by 50
+20:31:32.712 [Test worker] DEBUG org.hibernate.SQL - create sequence player_SEQ start with 1 increment by 50
+20:31:32.714 [Test worker] DEBUG org.hibernate.SQL - create table pack (id_pack bigint not null, id_player bigint, name varchar(255), primary key (id_pack))
+20:31:32.716 [Test worker] DEBUG org.hibernate.SQL - create table pet (attack integer not null, health integer not null, tier integer not null, id_pack bigint, id_pet bigint not null, name varchar(255), primary key (id_pet))
+20:31:32.717 [Test worker] DEBUG org.hibernate.SQL - create table player (id_player bigint not null, name varchar(255), primary key (id_player))
+20:31:32.718 [Test worker] DEBUG org.hibernate.SQL - alter table if exists pack add constraint FK4lpjwtxeytbdr4ou56oyurnm9 foreign key (id_player) references player
+20:31:32.722 [Test worker] DEBUG org.hibernate.SQL - alter table if exists pet add constraint FK1tl5d7pkert776yasnymalq8a foreign key (id_pack) references pack
+20:31:32.821 [Test worker] DEBUG org.hibernate.SQL - drop table if exists pack cascade 
+20:31:32.823 [Test worker] DEBUG org.hibernate.SQL - drop table if exists pet cascade 
+20:31:32.823 [Test worker] DEBUG org.hibernate.SQL - drop table if exists player cascade 
+20:31:32.823 [Test worker] DEBUG org.hibernate.SQL - drop sequence if exists pack_SEQ
+20:31:32.824 [Test worker] DEBUG org.hibernate.SQL - drop sequence if exists pet_SEQ
+20:31:32.824 [Test worker] DEBUG org.hibernate.SQL - drop sequence if exists player_SEQ
+20:31:32.824 [Test worker] DEBUG org.hibernate.SQL - create sequence pack_SEQ start with 1 increment by 50
+20:31:32.824 [Test worker] DEBUG org.hibernate.SQL - create sequence pet_SEQ start with 1 increment by 50
+20:31:32.825 [Test worker] DEBUG org.hibernate.SQL - create sequence player_SEQ start with 1 increment by 50
+20:31:32.825 [Test worker] DEBUG org.hibernate.SQL - create table pack (id_pack bigint not null, id_player bigint, name varchar(255), primary key (id_pack))
+20:31:32.826 [Test worker] DEBUG org.hibernate.SQL - create table pet (attack integer not null, health integer not null, tier integer not null, id_pack bigint, id_pet bigint not null, name varchar(255), primary key (id_pet))
+20:31:32.826 [Test worker] DEBUG org.hibernate.SQL - create table player (id_player bigint not null, name varchar(255), primary key (id_player))
+20:31:32.827 [Test worker] DEBUG org.hibernate.SQL - alter table if exists pack add constraint FK4lpjwtxeytbdr4ou56oyurnm9 foreign key (id_player) references player
+20:31:32.828 [Test worker] DEBUG org.hibernate.SQL - alter table if exists pet add constraint FK1tl5d7pkert776yasnymalq8a foreign key (id_pack) references pack
+20:31:32.914 [Test worker] DEBUG org.hibernate.SQL - drop table if exists pack cascade 
+20:31:32.914 [Test worker] DEBUG org.hibernate.SQL - drop table if exists pet cascade 
+20:31:32.915 [Test worker] DEBUG org.hibernate.SQL - drop table if exists player cascade 
+20:31:32.915 [Test worker] DEBUG org.hibernate.SQL - drop sequence if exists pack_SEQ
+20:31:32.915 [Test worker] DEBUG org.hibernate.SQL - drop sequence if exists pet_SEQ
+20:31:32.915 [Test worker] DEBUG org.hibernate.SQL - drop sequence if exists player_SEQ
+20:31:32.916 [Test worker] DEBUG org.hibernate.SQL - create sequence pack_SEQ start with 1 increment by 50
+20:31:32.916 [Test worker] DEBUG org.hibernate.SQL - create sequence pet_SEQ start with 1 increment by 50
+20:31:32.916 [Test worker] DEBUG org.hibernate.SQL - create sequence player_SEQ start with 1 increment by 50
+20:31:32.916 [Test worker] DEBUG org.hibernate.SQL - create table pack (id_pack bigint not null, id_player bigint, name varchar(255), primary key (id_pack))
+20:31:32.917 [Test worker] DEBUG org.hibernate.SQL - create table pet (attack integer not null, health integer not null, tier integer not null, id_pack bigint, id_pet bigint not null, name varchar(255), primary key (id_pet))
+20:31:32.917 [Test worker] DEBUG org.hibernate.SQL - create table player (id_player bigint not null, name varchar(255), primary key (id_player))
+20:31:32.918 [Test worker] DEBUG org.hibernate.SQL - alter table if exists pack add constraint FK4lpjwtxeytbdr4ou56oyurnm9 foreign key (id_player) references player
+20:31:32.919 [Test worker] DEBUG org.hibernate.SQL - alter table if exists pet add constraint FK1tl5d7pkert776yasnymalq8a foreign key (id_pack) references pack
+20:31:33.220 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.name='Ant'
+20:31:33.242 [Test worker] DEBUG org.hibernate.SQL - select next value for pet_SEQ
+20:31:33.260 [Test worker] DEBUG org.hibernate.SQL - insert into pet (attack,health,name,id_pack,tier,id_pet) values (?,?,?,?,?,?)
+20:31:33.270 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.id_pet=1
+20:31:33.295 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.name='673975'
+20:31:33.308 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.name='$*&ynsl'
+20:31:33.322 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.name='Kererū'
+20:31:33.332 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.name='Kererū'
+20:31:33.342 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.name='Kererū'
+20:31:33.356 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Te Ariki'
+20:31:33.359 [Test worker] DEBUG org.hibernate.SQL - select next value for player_SEQ
+20:31:33.366 [Test worker] DEBUG org.hibernate.SQL - insert into player (name,id_player) values (?,?)
+20:31:33.373 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=1
+20:31:33.382 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.385 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Te Ariki'
+20:31:33.387 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.389 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Te Ariki'
+20:31:33.390 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.393 [Test worker] DEBUG org.hibernate.SQL - select next value for pack_SEQ
+20:31:33.395 [Test worker] DEBUG org.hibernate.SQL - insert into pack (name,id_player,id_pack) values (?,?,?)
+20:31:33.400 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p1_0.id_player from pack p1_0 where p1_0.id_pack=1
+20:31:33.404 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name,p2_0.id_player,p2_0.id_pack,p2_0.name from player p1_0 left join pack p2_0 on p1_0.id_player=p2_0.id_player where p1_0.id_player=?
+20:31:33.409 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.410 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Te Ariki'
+20:31:33.411 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.413 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.422 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Te Ariki'
+20:31:33.423 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.424 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.426 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Te Ariki'
+20:31:33.427 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.429 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.436 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Te Ariki'
+20:31:33.438 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.439 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.441 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Te Ariki'
+20:31:33.442 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.444 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.450 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Te Ariki'
+20:31:33.451 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.453 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.454 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Te Ariki'
+20:31:33.455 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.457 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.466 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Yiyang'
+20:31:33.467 [Test worker] DEBUG org.hibernate.SQL - select next value for player_SEQ
+20:31:33.468 [Test worker] DEBUG org.hibernate.SQL - insert into player (name,id_player) values (?,?)
+20:31:33.472 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=2
+20:31:33.473 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.475 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Yiyang'
+20:31:33.476 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.477 [Test worker] DEBUG org.hibernate.SQL - select next value for pack_SEQ
+20:31:33.479 [Test worker] DEBUG org.hibernate.SQL - insert into pack (name,id_player,id_pack) values (?,?,?)
+20:31:33.483 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p1_0.id_player from pack p1_0 where p1_0.id_pack=2
+20:31:33.485 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name,p2_0.id_player,p2_0.id_pack,p2_0.name from player p1_0 left join pack p2_0 on p1_0.id_player=p2_0.id_player where p1_0.id_player=?
+20:31:33.487 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.489 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Yiyang'
+20:31:33.490 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.494 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.505 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Rohan'
+20:31:33.506 [Test worker] DEBUG org.hibernate.SQL - insert into player (name,id_player) values (?,?)
+20:31:33.510 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=3
+20:31:33.512 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.513 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Rohan'
+20:31:33.514 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.516 [Test worker] DEBUG org.hibernate.SQL - insert into pack (name,id_player,id_pack) values (?,?,?)
+20:31:33.519 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p1_0.id_player from pack p1_0 where p1_0.id_pack=3
+20:31:33.520 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name,p2_0.id_player,p2_0.id_pack,p2_0.name from player p1_0 left join pack p2_0 on p1_0.id_player=p2_0.id_player where p1_0.id_player=?
+20:31:33.522 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.526 [Test worker] DEBUG org.hibernate.SQL - select next value for pet_SEQ
+20:31:33.527 [Test worker] DEBUG org.hibernate.SQL - insert into pet (attack,health,name,id_pack,tier,id_pet) values (?,?,?,?,?,?)
+20:31:33.531 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.id_pet=2
+20:31:33.533 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Rohan'
+20:31:33.534 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.536 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.542 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p2_0.id_player,p2_0.name,p3_0.id_pack,p3_0.id_pet,p3_0.attack,p3_0.health,p3_0.name,p3_0.tier from pack p1_0 left join player p2_0 on p2_0.id_player=p1_0.id_player left join pet p3_0 on p1_0.id_pack=p3_0.id_pack where p1_0.id_pack=?
+20:31:33.544 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.545 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p2_0.id_pack,p2_0.name,p3_0.id_player,p3_0.name,p1_0.tier from pet p1_0 left join pack p2_0 on p2_0.id_pack=p1_0.id_pack left join player p3_0 on p3_0.id_player=p2_0.id_player where p1_0.id_pet=?
+20:31:33.550 [Test worker] DEBUG org.hibernate.SQL - update pet set id_pack=? where id_pet=?
+20:31:33.554 [Test worker] DEBUG org.hibernate.SQL - insert into pet (attack,health,name,id_pack,tier,id_pet) values (?,?,?,?,?,?)
+20:31:33.558 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.id_pet=3
+20:31:33.560 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Rohan'
+20:31:33.561 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.562 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.565 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p2_0.id_player,p2_0.name,p3_0.id_pack,p3_0.id_pet,p3_0.attack,p3_0.health,p3_0.name,p3_0.tier from pack p1_0 left join player p2_0 on p2_0.id_player=p1_0.id_player left join pet p3_0 on p1_0.id_pack=p3_0.id_pack where p1_0.id_pack=?
+20:31:33.567 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.569 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p2_0.id_pack,p2_0.name,p3_0.id_player,p3_0.name,p1_0.tier from pet p1_0 left join pack p2_0 on p2_0.id_pack=p1_0.id_pack left join player p3_0 on p3_0.id_player=p2_0.id_player where p1_0.id_pet=?
+20:31:33.571 [Test worker] DEBUG org.hibernate.SQL - update pet set id_pack=? where id_pet=?
+20:31:33.574 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Rohan'
+20:31:33.575 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.576 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.579 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Rohan'
+20:31:33.581 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.582 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:33.593 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='George'
+20:31:33.595 [Test worker] DEBUG org.hibernate.SQL - insert into player (name,id_player) values (?,?)
+20:31:33.597 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=4
+20:31:33.598 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.602 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='George'
+20:31:33.604 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:33.605 [Test worker] DEBUG org.hibernate.SQL - select next value for pack_SEQ
+20:31:33.606 [Test worker] DEBUG org.hibernate.SQL - insert into pack (name,id_player,id_pack) values (?,?,?)
+20:31:33.609 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p1_0.id_player from pack p1_0 where p1_0.id_pack=52
+20:31:33.610 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name,p2_0.id_player,p2_0.id_pack,p2_0.name from player p1_0 left join pack p2_0 on p1_0.id_player=p2_0.id_player where p1_0.id_player=?
+20:31:33.612 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:34.135 [Test worker] DEBUG org.hibernate.SQL - select next value for pet_SEQ
+20:31:34.136 [Test worker] DEBUG org.hibernate.SQL - insert into pet (attack,health,name,id_pack,tier,id_pet) values (?,?,?,?,?,?)
+20:31:34.139 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.id_pet=52
+20:31:34.147 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Maia'
+20:31:34.148 [Test worker] DEBUG org.hibernate.SQL - insert into player (name,id_player) values (?,?)
+20:31:34.151 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=5
+20:31:34.152 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:34.154 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Maia'
+20:31:34.155 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:34.157 [Test worker] DEBUG org.hibernate.SQL - insert into pack (name,id_player,id_pack) values (?,?,?)
+20:31:34.160 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p1_0.id_player from pack p1_0 where p1_0.id_pack=53
+20:31:34.161 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name,p2_0.id_player,p2_0.id_pack,p2_0.name from player p1_0 left join pack p2_0 on p1_0.id_player=p2_0.id_player where p1_0.id_player=?
+20:31:34.163 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:34.232 [Test worker] DEBUG org.hibernate.SQL - insert into pet (attack,health,name,id_pack,tier,id_pet) values (?,?,?,?,?,?)
+20:31:34.235 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.id_pet=53
+20:31:34.239 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p2_0.id_player,p2_0.name,p3_0.id_pack,p3_0.id_pet,p3_0.attack,p3_0.health,p3_0.name,p3_0.tier from pack p1_0 left join player p2_0 on p2_0.id_player=p1_0.id_player left join pet p3_0 on p1_0.id_pack=p3_0.id_pack where p1_0.id_pack=?
+20:31:34.241 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:34.242 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p2_0.id_pack,p2_0.name,p3_0.id_player,p3_0.name,p1_0.tier from pet p1_0 left join pack p2_0 on p2_0.id_pack=p1_0.id_pack left join player p3_0 on p3_0.id_player=p2_0.id_player where p1_0.id_pet=?
+20:31:34.244 [Test worker] DEBUG org.hibernate.SQL - update pet set id_pack=? where id_pet=?
+20:31:34.252 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Li'
+20:31:34.253 [Test worker] DEBUG org.hibernate.SQL - insert into player (name,id_player) values (?,?)
+20:31:34.256 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=6
+20:31:34.257 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:34.260 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Li'
+20:31:34.261 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:34.263 [Test worker] DEBUG org.hibernate.SQL - insert into pack (name,id_player,id_pack) values (?,?,?)
+20:31:34.266 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p1_0.id_player from pack p1_0 where p1_0.id_pack=54
+20:31:34.267 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name,p2_0.id_player,p2_0.id_pack,p2_0.name from player p1_0 left join pack p2_0 on p1_0.id_player=p2_0.id_player where p1_0.id_player=?
+20:31:34.268 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:34.339 [Test worker] DEBUG org.hibernate.SQL - insert into pet (attack,health,name,id_pack,tier,id_pet) values (?,?,?,?,?,?)
+20:31:34.342 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.id_pet=54
+20:31:34.345 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p2_0.id_player,p2_0.name,p3_0.id_pack,p3_0.id_pet,p3_0.attack,p3_0.health,p3_0.name,p3_0.tier from pack p1_0 left join player p2_0 on p2_0.id_player=p1_0.id_player left join pet p3_0 on p1_0.id_pack=p3_0.id_pack where p1_0.id_pack=?
+20:31:34.346 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:34.355 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Alya'
+20:31:34.357 [Test worker] DEBUG org.hibernate.SQL - insert into player (name,id_player) values (?,?)
+20:31:34.359 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=7
+20:31:34.360 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:34.363 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Alya'
+20:31:34.364 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+20:31:34.365 [Test worker] DEBUG org.hibernate.SQL - insert into pack (name,id_player,id_pack) values (?,?,?)
+20:31:34.368 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p1_0.id_player from pack p1_0 where p1_0.id_pack=55
+20:31:34.368 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.name,p2_0.id_player,p2_0.id_pack,p2_0.name from player p1_0 left join pack p2_0 on p1_0.id_player=p2_0.id_player where p1_0.id_player=?
+20:31:34.370 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.tier from pet p1_0 where p1_0.id_pack=?
+20:31:34.435 [Test worker] DEBUG org.hibernate.SQL - insert into pet (attack,health,name,id_pack,tier,id_pet) values (?,?,?,?,?,?)
+20:31:34.437 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pet,p1_0.attack,p1_0.health,p1_0.name,p1_0.id_pack,p1_0.tier from pet p1_0 where p1_0.id_pet=55
+20:31:34.440 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_pack,p1_0.name,p2_0.id_player,p2_0.name,p3_0.id_pack,p3_0.id_pet,p3_0.attack,p3_0.health,p3_0.name,p3_0.tier from pack p1_0 left join player p2_0 on p2_0.id_player=p1_0.id_player left join pet p3_0 on p1_0.id_pack=p3_0.id_pack where p1_0.id_pack=?
+20:31:34.442 [Test worker] DEBUG org.hibernate.SQL - select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
