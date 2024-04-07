@@ -1,18 +1,9 @@
 package uc.seng301.petbattler.lab6.model;
 
+import jakarta.persistence.*;
+
 import java.util.Arrays;
 import java.util.List;
-
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.JoinColumn;
-import jakarta.persistence.ManyToOne;
-import jakarta.persistence.OneToMany;
-import jakarta.persistence.Table;
 
 @Entity
 @Table(name = "pack")
@@ -74,6 +65,13 @@ public class Pack {
 	 * @param pets an array of pets to add to current pack
 	 */
 	public void addPets(Pet... pets) throws IllegalArgumentException {
+		for (Pet newPet : pets)	{
+			for (Pet existingPet : getPets()) {
+				if (existingPet.getName().equals(newPet.getName())) {
+					throw new IllegalArgumentException("Pet already exists in the pack: " + newPet);
+				}
+			}
+		}
 		this.pets.addAll(Arrays.asList(pets));
 	}
 

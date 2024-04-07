@@ -7,7 +7,7 @@
 //  FILENAME: alien.cpp
 //
 //  COMMENTS: Set this up so that the drawAlien() function can be accessed from another file.
-//	      Add an angle parameter that is pre-defined to 0 degrees so that function is 
+//	      Add an angle parameter that is pre-defined to 0 degrees so that function is
 //	      drawAlien(angle=0) so that if needed, an animation can be added for movement of
 //	      arms and legs.
 //
@@ -17,26 +17,6 @@
 #include <GL/freeglut.h>
 #include <cmath>
 
-
-//Global Variables
-int cam_hgt = 10;
-float angle = 0;
-
-
-void drawFloor()
-{
-    glColor3f(0.8, 0.5, 0.);
-
-    for (int i = -500; i <= 500; i++)
-    {
-        glBegin(GL_LINES);
-            glVertex3f(-50, 0, i);
-			glVertex3f(50, 0, i);
-			glVertex3f(i, 0, -50);
-			glVertex3f(i, 0, 50);
-        glEnd();
-    }
-}
 
 void drawLegs()
 {
@@ -80,7 +60,6 @@ void drawLegs()
 void drawBody()
 {
     glColor3f(1., 0.78, 0.06);
-
     glPushMatrix();
     glTranslatef(0, 10, 0);
     glScalef(2.5, 5, 2.5);
@@ -192,68 +171,4 @@ void drawAlien()
     drawBody();
     drawArms();
     drawHead();
-}
-
-
-void display()
-{
-    float light_position[4] = {100., 100., 100., 1.0};
-
-    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-    glMatrixMode(GL_MODELVIEW);
-    glLoadIdentity();
-    gluLookAt(0, cam_hgt, 12, 0, 0, 0, 0, 1, 0);    // Camera Position
-    glLightfv(GL_LIGHT0, GL_POSITION, light_position);                          // Set position of the light
-
-    glRotatef(angle, 0, 1, 0);
-
-    glDisable(GL_LIGHTING);                                                                    // Disable lighting when drawing floor
-    drawFloor();
-
-    drawAlien();
-
-    glEnable(GL_LIGHTING);
-    glEnable(GL_LIGHT0);
-    glColor3f(0.0, 0.5, 1.0);
-    glFlush();
-}
-
-
-void initialise()
-{
-    glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
-    glEnable(GL_LIGHTING);
-    glEnable(GL_LIGHT0);
-    glEnable(GL_COLOR_MATERIAL);
-    glEnable(GL_DEPTH_TEST);
-    glEnable(GL_NORMALIZE);
-
-    glMatrixMode(GL_PROJECTION);
-    glLoadIdentity();
-    gluPerspective(60, 1, 10, 100);
-}
-
-
-void move_camera(int key, int x, int y)
-{
-    if ((key == GLUT_KEY_UP) && (cam_hgt < 200)) cam_hgt++;
-    else if ((key == GLUT_KEY_DOWN) && (cam_hgt > 2)) cam_hgt--;
-    else if (key == GLUT_KEY_LEFT) angle--;
-    else if (key == GLUT_KEY_RIGHT) angle++;
-    glutPostRedisplay();
-}
-
-
-// ------- Initialise main window -------
-int main(int argc, char **argv) {
-    glutInit(&argc, argv);
-    glutInitDisplayMode(GLUT_SINGLE | GLUT_DEPTH);
-    glutInitWindowSize(600, 600);
-    glutInitWindowPosition(0, 0);
-    glutCreateWindow("Alien");
-    initialise();
-    glutDisplayFunc(display);
-    glutSpecialFunc(move_camera);
-    glutMainLoop();
-    return 0;
 }

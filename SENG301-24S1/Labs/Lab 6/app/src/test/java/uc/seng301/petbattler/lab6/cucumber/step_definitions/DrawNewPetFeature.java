@@ -91,10 +91,7 @@ public class DrawNewPetFeature {
         Player player = playerAccessor.getPlayerByName(playerName);
         Pack pack = player.getPacks().stream().filter(p -> packName.equals(p.getName())).findFirst().get();
         Assertions.assertNotNull(pack);
-        String petName = randomPet.getName();
-        pack.addPets(randomPet);
-        packAccessor.updatePack(pack);
-        Assertions.assertTrue(pack.getPets().stream().anyMatch(pet -> petName.equals(pet.getName())));
+        Assertions.assertTrue(pack.getPets().stream().anyMatch(pet -> randomPet.getName().equals(pet.getName())));
     }
 
     //Unsure
@@ -107,14 +104,11 @@ public class DrawNewPetFeature {
         Assertions.assertFalse(pack.getPets().stream().anyMatch(pet -> petName.equals(pet.getName())));
     }
 
-    //Unsure
     @Then("I cannot add a pet with the same name in the pack {string} of {string}")
     public void i_cannot_add_a_pet_with_the_same_name_in_the_pack_of(String packName, String playerName) {
         Pack pack = playerAccessor.getPlayerByName(playerName).getPacks().stream().filter(p -> packName.equals(p.getName())).findFirst().get();
         Assertions.assertNotNull(pack);
         Assertions.assertTrue(pack.getPets().stream().anyMatch(pet -> randomPet.getName().equals(pet.getName())));
-        pack.addPets(randomPet);
-        packAccessor.updatePack(pack);
         Assertions.assertThrows(IllegalArgumentException.class, () -> pack.addPets(randomPet));
     }
 }
