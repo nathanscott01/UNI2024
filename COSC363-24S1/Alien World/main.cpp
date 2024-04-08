@@ -17,18 +17,20 @@
 #include "alien.h"
 #include "skybox.h"
 #include "floor.h"
+#include "spaceship.h"
 using namespace std;
 
 #define GL_CLAMP_TO_EDGE 0x812F
 
 //Global Variables
-GLuint txId[7];     //Texture ID's
+GLuint txId[8];     //Texture ID's
 float angle = 0;
+float rads;
 float look_x, look_z = -1., eye_x, eye_z;
 
 void loadGLTextures()
 {
-    glGenTextures(6, txId);
+    glGenTextures(8, txId);
 
     //Load Left
     glBindTexture(GL_TEXTURE_2D, txId[0]);
@@ -84,36 +86,48 @@ void loadGLTextures()
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
 
+    //Load Metal
+    glBindTexture(GL_TEXTURE_2D, txId[7]);
+    loadTGA("Textures/metal_plate.tga");
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+    glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+
     glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
 }
 
 void display()
 {
-    float light_position[4] = {10., 50., 10., 1.0};
+    float lgt_pos[] = { 5.0f, 50.0f, 100.0f, 1.0f };
 
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     gluLookAt(eye_x, 0, eye_z, look_x, 0, look_z, 0, 1, 0);    // Camera Position
-    glLightfv(GL_LIGHT0, GL_POSITION, light_position);                          // Set position of the light
+    glLightfv(GL_LIGHT0, GL_POSITION, lgt_pos);                          // Set position of the light
 
     //  Draw Floor
+    glDisable(GL_LIGHTING);
     glPushMatrix();
         glTranslatef(0, -5, 0);
         drawFloor(txId);
     glPopMatrix();
+    glEnable(GL_LIGHTING);
 
 //    glPushMatrix();
 //    drawAlien();
 //    glPopMatrix();
 
     //  Draw Skybox
-    glDisable(GL_LIGHTING);
     glPushMatrix();
         glTranslatef(0, -500, 0);
         skyBox(txId);
     glPopMatrix();
-    glEnable(GL_LIGHTING);
+
+    // Draw Spaceship
+    glPushMatrix();
+        glTranslatef(-40, 0, -40);
+        drawSpaceship(txId);
+    glPopMatrix();
 
     glutSwapBuffers();
 }
@@ -125,23 +139,23 @@ void initialise()
     float white[4] = {1.0, 1.0, 1.0, 1.0};
     loadGLTextures();
 
-    glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
-    glEnable(GL_COLOR_MATERIAL);
-
-    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
-    glMaterialf(GL_FRONT, GL_SHININESS, 50);
-
     glEnable(GL_LIGHTING);
     glEnable(GL_LIGHT0);
     glEnable(GL_LIGHT1);
 
     glLightfv(GL_LIGHT0, GL_AMBIENT, grey);
-	glLightfv(GL_LIGHT0, GL_DIFFUSE, white);
-	glLightfv(GL_LIGHT0, GL_SPECULAR, white);
+    glLightfv(GL_LIGHT0, GL_DIFFUSE, white);
+    glLightfv(GL_LIGHT0, GL_SPECULAR, white);
 
-	glLightfv(GL_LIGHT1, GL_AMBIENT, grey);
-	glLightfv(GL_LIGHT1, GL_DIFFUSE, white);
-	glLightfv(GL_LIGHT1, GL_SPECULAR, white);
+    glLightfv(GL_LIGHT1, GL_AMBIENT, grey);
+    glLightfv(GL_LIGHT1, GL_DIFFUSE, white);
+    glLightfv(GL_LIGHT1, GL_SPECULAR, white);
+
+    glColorMaterial(GL_FRONT, GL_AMBIENT_AND_DIFFUSE);
+
+    glEnable(GL_COLOR_MATERIAL);
+    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+    glMaterialf(GL_FRONT, GL_SHININESS, 50);
 
     glEnable(GL_DEPTH_TEST);
     glEnable(GL_TEXTURE_2D);
@@ -156,37 +170,45 @@ void initialise()
 
 void move_camera(int key, int x, int y)
 {
-	if (key == GLUT_KEY_LEFT) angle -= 0.1; //Change direction
-	else if (key == GLUT_KEY_RIGHT) angle += 0.1;
+	if (key == GLUT_KEY_LEFT)
+    {
+        angle -= 5; //Change direction
+        rads = angle * M_PI / 180;
+    }
+	else if (key == GLUT_KEY_RIGHT)
+    {
+        angle += 5;
+        rads = angle * M_PI / 180;
+    }
 	else if (key == GLUT_KEY_DOWN)
 	{
 		//Move backward
 		if (eye_x > -100 && eye_x < 100 && eye_z > -100 && eye_z < 100) {
-			eye_x -= 1 * sin(angle);
-			eye_z += 1 * cos(angle);
+			eye_x -= 1 * sin(rads);
+			eye_z += 1 * cos(rads);
 		}
 		else
 		{
-			eye_x = 0 * sin(angle);
-			eye_z = 0 * cos(angle);
+			eye_x = 0 * sin(rads);
+			eye_z = 0 * cos(rads);
 		}
 	}
 	else if (key == GLUT_KEY_UP)
 	{
 		//Move forward
 		if (eye_x > -100 && eye_x < 100 && eye_z > -100 && eye_z < 100) {
-			eye_x += 1 * sin(angle);
-			eye_z -= 1 * cos(angle);
+			eye_x += 1 * sin(rads);
+			eye_z -= 1 * cos(rads);
 		}
 		else
 		{
-			eye_x = 0 * sin(angle);
-			eye_z = 0 * cos(angle);
+			eye_x = 0 * sin(rads);
+			eye_z = 0 * cos(rads);
 		}
 	}
 
-	look_x = eye_x + 100 * sin(angle);
-	look_z = eye_z - 100 * cos(angle);
+	look_x = eye_x + 100 * sin(rads);
+	look_z = eye_z - 100 * cos(rads);
 	glutPostRedisplay();
 }
 

@@ -89,12 +89,12 @@ void initialise(void)
 //-------------------------------------------------------------------
 void display(void)
 {
-	float toRadians = M_PI / 180.0;   //Conversion from degrees to radians
-	float angStep = 10.0 * toRadians;  //Rotate base curve in 10 deg steps
-	int nSlices = 36;				  //36 slices at 10 deg intervals
-	float lgt_pos[] = { 5.0f, 50.0f, 100.0f, 1.0f };  //light0 position (above the origin)
-	float vx[N], vy[N], vz[N];   //vertex positions
-	float wx[N], wy[N], wz[N];
+    float toRadians = M_PI / 180.0;   //Conversion from degrees to radians
+    float angStep = 10.0 * toRadians;  //Rotate base curve in 10 deg steps
+    int nSlices = 36;				  //36 slices at 10 deg intervals
+    float lgt_pos[] = { 5.0f, 50.0f, 100.0f, 1.0f };  //light0 position (above the origin)
+    float vx[N], vy[N], vz[N];   //vertex positions
+    float wx[N], wy[N], wz[N];
 	float nx[N], ny[N], nz[N];   //normal vectors
 	float mx[N], my[N], mz[N];
 
