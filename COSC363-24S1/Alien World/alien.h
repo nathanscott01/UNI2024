@@ -4,6 +4,6 @@
 
 #include <GL/freeglut.h>
 
-void drawAlien();
+void drawAlien(float theta_r);
 
 #endif //ALIEN_H

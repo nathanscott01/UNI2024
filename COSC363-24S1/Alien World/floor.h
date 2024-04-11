@@ -3,6 +3,6 @@
 
 #include <GL/freeglut.h>
 
-void drawFloor(GLuint txId[6]);
+void drawFloor(GLuint* txId);
 
 #endif //FLOOR_H

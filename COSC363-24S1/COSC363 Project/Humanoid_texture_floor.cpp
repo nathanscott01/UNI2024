@@ -8,32 +8,52 @@
 #include <iostream>
 #include <fstream>
 #include <GL/freeglut.h>
+#include "I_Walls/loadTGA.h"
 using namespace std;
+
+
 
 //--Globals ---------------------------------------------------------------
 int cam_hgt = 4; //Camera height
+GLuint txId[1];   //Texture ids
 float angle = 10.0;  //Rotation angle for viewing
 float theta = 20;
 float theta_delta = 1;
-int height = 0;
 float lpos[4] = {10., 10., 10., 1.0};  //light's position
 float shadowMat[16] = {lpos[1], 0, 0, 0, -lpos[0],0,
                        -lpos[2], -1, 0, 0, lpos[1], 0,
                        0, 0, 0, lpos[1]};
 
+
+//---- Function to load textures ----
+void loadTexture()
+{
+	glGenTextures(1, txId); 	// Create 4 texture ids
+
+	glBindTexture(GL_TEXTURE_2D, txId[0]);
+    loadTGA("I_Walls/Floor_Texture.tga");
+	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MIN_FILTER,GL_LINEAR);
+	glTexParameteri(GL_TEXTURE_2D,GL_TEXTURE_MAG_FILTER,GL_LINEAR);
+
+	glTexEnvi(GL_TEXTURE_ENV,GL_TEXTURE_ENV_MODE,GL_MODULATE);
+}
+
 //--Draws a grid of lines on the floor plane -------------------------------
 void drawFloor()
 {
-	glColor3f(0., 0.5, 0.);			//Floor colour
-	for(float i = -50; i <= 50; i ++)
-	{
-		glBegin(GL_LINES);			//A set of grid lines on the xz-plane
-			glVertex3f(-50, 0, i);
-			glVertex3f(50, 0, i);
-			glVertex3f(i, 0, -50);
-			glVertex3f(i, 0, 50);
-		glEnd();
-	}
+	glBindTexture(GL_TEXTURE_2D,  txId[0]);
+	glColor3f(1, 1, 1);
+	glNormal3f(0, 1, 0);
+	glBegin(GL_QUADS);				//A single quad
+	    glTexCoord2f(0, 0);
+		glVertex3f(-16, -0.1, 16);
+		glTexCoord2f(1, 0);
+		glVertex3f(16, -0.1, 16);
+		glTexCoord2f(1, 1);
+		glVertex3f(16, -0.1, -16);
+		glTexCoord2f(0, 1);
+		glVertex3f(-16, -0.1, -16);
+	glEnd();
 }
 
 
@@ -47,61 +67,6 @@ void drawModel()
         glutSolidCube(1.4);
 	glPopMatrix();
 
-
-	glColor3f(1., 0., 0.);			//Torso
-	glPushMatrix();
-        glTranslatef(0, 5.5, 0);
-        glScalef(3, 3, 1.4);
-        glutSolidCube(1);
-	glPopMatrix();
-
-	glColor3f(0., 0., 1.);			//Right leg
-	glPushMatrix();
-        glTranslatef(-0.8, 4, 0);
-        glRotatef(-theta, 1, 0, 0);
-        glTranslatef(0.8, -4, 0);
-        glTranslatef(-0.8, 2.2, 0);
-        glScalef(1, 4.4, 1);
-        glutSolidCube(1);
-	glPopMatrix();
-
-
-	glColor3f(0., 0., 1.);			//Left leg
-	glPushMatrix();
-        glTranslatef(0.8, 4, 0);
-        glRotatef(theta, 1, 0, 0);
-        glTranslatef(-0.8, -4, 0);
-        glTranslatef(0.8, 2.2, 0);
-        glScalef(1, 4.4, 1);
-        glutSolidCube(1);
-	glPopMatrix();
-
-
-	glColor3f(0., 0., 1.);			//Right arm
-	glPushMatrix();
-        glTranslatef(-2, 6.5, 0);
-        glRotatef(theta, 1, 0, 0);
-        glTranslatef(2, -6.5, 0);
-        glTranslatef(-2, 5, 0);
-        glScalef(1, 4, 1);
-        glutSolidCube(1);
-	glPopMatrix();
-
-
-	glColor3f(0., 0., 1.);			//Left arm
-	glPushMatrix();
-        glTranslatef(2, 6.5, 0);
-        glRotatef(-theta, 1, 0, 0);
-        glTranslatef(-2, -6.5, 0);
-        glTranslatef(2, 5, 0);
-        glScalef(1, 4, 1);
-        glutSolidCube(1);
-	glPopMatrix();
-
-}
-
-void drawModelShadow()
-{
     // Draw Shadow Head
     glDisable(GL_LIGHTING);
     glColor3f(0.2, 0.2, 0.2);
@@ -111,6 +76,12 @@ void drawModelShadow()
         glutSolidCube(1.4);
     glPopMatrix();
 
+	glColor3f(1., 0., 0.);			//Torso
+	glPushMatrix();
+        glTranslatef(0, 5.5, 0);
+        glScalef(3, 3, 1.4);
+        glutSolidCube(1);
+	glPopMatrix();
 
     // Draw Shadow Torso
     glDisable(GL_LIGHTING);
@@ -122,6 +93,15 @@ void drawModelShadow()
         glutSolidCube(1);
     glPopMatrix();
 
+	glColor3f(0., 0., 1.);			//Right leg
+	glPushMatrix();
+        glTranslatef(-0.8, 4, 0);
+        glRotatef(-theta, 1, 0, 0);
+        glTranslatef(0.8, -4, 0);
+        glTranslatef(-0.8, 2.2, 0);
+        glScalef(1, 4.4, 1);
+        glutSolidCube(1);
+	glPopMatrix();
 
     // Draw shadow Right Leg
     glDisable(GL_LIGHTING);
@@ -137,6 +117,16 @@ void drawModelShadow()
     glPopMatrix();
 
 
+	glColor3f(0., 0., 1.);			//Left leg
+	glPushMatrix();
+        glTranslatef(0.8, 4, 0);
+        glRotatef(theta, 1, 0, 0);
+        glTranslatef(-0.8, -4, 0);
+        glTranslatef(0.8, 2.2, 0);
+        glScalef(1, 4.4, 1);
+        glutSolidCube(1);
+	glPopMatrix();
+
     // Draw shadow Left Leg
     glDisable(GL_LIGHTING);
     glColor3f(0.2, 0.2, 0.2);
@@ -151,6 +141,16 @@ void drawModelShadow()
     glPopMatrix();
 
 
+	glColor3f(0., 0., 1.);			//Right arm
+	glPushMatrix();
+        glTranslatef(-2, 6.5, 0);
+        glRotatef(theta, 1, 0, 0);
+        glTranslatef(2, -6.5, 0);
+        glTranslatef(-2, 5, 0);
+        glScalef(1, 4, 1);
+        glutSolidCube(1);
+	glPopMatrix();
+
     // Draw shadow Right Arm
     glDisable(GL_LIGHTING);
     glColor3f(0.2, 0.2, 0.2);
@@ -164,6 +164,16 @@ void drawModelShadow()
         glutSolidCube(1);
     glPopMatrix();
 
+
+	glColor3f(0., 0., 1.);			//Left arm
+	glPushMatrix();
+        glTranslatef(2, 6.5, 0);
+        glRotatef(-theta, 1, 0, 0);
+        glTranslatef(-2, -6.5, 0);
+        glTranslatef(2, 5, 0);
+        glScalef(1, 4, 1);
+        glutSolidCube(1);
+	glPopMatrix();
 
     // Draw shadow Left Arm
     glDisable(GL_LIGHTING);
@@ -186,7 +196,7 @@ void drawModelShadow()
 //--the scene.
 void display()  
 {
-//	float lpos[4] = {10., 10., 10., 1.0};  //light's position
+	float lpos[4] = {10., 10., 10., 1.0};  //light's position
 
 	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT); 
 	glMatrixMode(GL_MODELVIEW);
@@ -200,15 +210,7 @@ void display()
     drawFloor();
 
 	glEnable(GL_LIGHTING);	       //Enable lighting when drawing the model
-    glPushMatrix();
-        glTranslatef(0, height, 0);
-        drawModel();
-    glPopMatrix();
-
-    glPushMatrix();
-//        glTranslatef(0, height, 0);
-        drawModelShadow();
-    glPopMatrix();
+	drawModel();
 
 	glFlush();
 }
@@ -216,6 +218,12 @@ void display()
 //------- Initialize OpenGL parameters -----------------------------------
 void initialize()
 {
+
+    glEnable(GL_TEXTURE_2D);
+    glEnable(GL_ALPHA_TEST);
+    glAlphaFunc(GL_GREATER, 0);
+	loadTexture();
+
 	glClearColor(1.0f, 1.0f, 1.0f, 1.0f);	//Background colour
 
 	glEnable(GL_LIGHTING);					//Enable OpenGL states
@@ -235,8 +243,6 @@ void special(int key, int x, int y)
 {
     if(key == GLUT_KEY_LEFT) angle--;
     else if(key == GLUT_KEY_RIGHT) angle++;
-    else if (key == GLUT_KEY_UP) height++;
-    else if (key == GLUT_KEY_DOWN) height--;
     glutPostRedisplay();
 }
 

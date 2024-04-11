@@ -24,8 +24,6 @@ void initialize(void)
 	glEnable(GL_LIGHT0);
     glEnable(GL_COLOR_MATERIAL);
 
-
-
     glMaterialfv(GL_FRONT, GL_SPECULAR, white);
     glMaterialf(GL_FRONT, GL_SHININESS, 50);
 

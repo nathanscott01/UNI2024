@@ -18,13 +18,14 @@
 #include <cmath>
 
 
-void drawLegs()
+void drawLegs(float theta_r)
 {
     glColor3f(.5, .2, .5);
 
     // Draw right leg
     glPushMatrix();
         glTranslatef(-4.5, 4, 0);
+        glRotatef(-theta_r, 1, 0, 0);
         glScalef(1, 8, 1);
         glutSolidCube(1);
     glPopMatrix();
@@ -42,6 +43,7 @@ void drawLegs()
     // Draw left leg
     glPushMatrix();
         glTranslatef(4.5, 4, 0);
+        glRotatef(theta_r, 1, 0, 0);
         glScalef(1, 8, 1);
         glutSolidCube(1);
     glPopMatrix();
@@ -68,7 +70,7 @@ void drawBody()
 }
 
 
-void drawArms()
+void drawArms(float theta_r)
 {
     glColor3f(.5, .2, .5);
 
@@ -81,21 +83,10 @@ void drawArms()
     // Right Arm
     glPushMatrix();
         glTranslatef(-3, 12, 0);
-        glScalef(1, 4, 1);
+        glRotatef(theta_r, 1, 0, 0);
+        glScalef(1, 6, 1);
         glutSolidCube(1);
     glPopMatrix();
-
-    // Define the offsets for each ball for hand relative to the center point
-    float offsets[4][2] = {{-0.7, 0}, {0.7, 0}, {0, 0.7}, {0, -0.7}};
-
-    // Right Hand
-    // Draw four balls symmetrically around the center point
-    for (int i = 0; i < 4; ++i) {
-        glPushMatrix();
-            glTranslatef(-3 + offsets[i][0], 10, offsets[i][1]); // Apply the offset
-            glutSolidSphere(0.5, 36, 36);
-        glPopMatrix();
-    }
 
     // Left Shoulder
     glPushMatrix();
@@ -106,18 +97,11 @@ void drawArms()
     // Left Arm
     glPushMatrix();
         glTranslatef(3, 12, 0);
-        glScalef(1, 4, 1);
+        glRotatef(-theta_r, 1, 0, 0);
+        glScalef(1, 6, 1);
         glutSolidCube(1);
     glPopMatrix();
 
-    // Left Hand
-    // Draw four balls symmetrically around the center point
-    for (int i = 0; i < 4; ++i) {
-        glPushMatrix();
-            glTranslatef(3 + offsets[i][0], 10, offsets[i][1]); // Apply the offset
-            glutSolidSphere(0.5, 36, 36);
-        glPopMatrix();
-    }
 }
 
 
@@ -135,40 +119,73 @@ void drawHead()
 
     glPushMatrix();
     glTranslatef(-2.5, 25, 0);
-    glutSolidSphere(0.25, 36, 36);
+    glutSolidSphere(0.5, 36, 36);
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(-3, 26, 0);
-    glutSolidSphere(0.25, 36, 36);
+    glutSolidSphere(0.5, 36, 36);
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(-3.5, 27, 0);
-    glutSolidSphere(0.25, 36, 36);
+    glutSolidSphere(0.5, 36, 36);
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(-3.5, 28, 0);
-    glutSolidSphere(0.25, 36, 36);
+    glutSolidSphere(0.5, 36, 36);
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(-4, 28, 0);
-    glutSolidSphere(0.25, 36, 36);
+    glutSolidSphere(0.5, 36, 36);
     glPopMatrix();
 
     glPushMatrix();
     glTranslatef(-4.5, 27, 0);
-    glutSolidSphere(0.25, 36, 36);
+    glutSolidSphere(0.5, 36, 36);
+    glPopMatrix();
+
+    // Draw Right Antenna
+    glColor3f(0, 0.66, 0.34);
+
+    glPushMatrix();
+    glTranslatef(2.5, 25, 0);
+    glutSolidSphere(0.5, 36, 36);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(3, 26, 0);
+    glutSolidSphere(0.5, 36, 36);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(3.5, 27, 0);
+    glutSolidSphere(0.5, 36, 36);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(3.5, 28, 0);
+    glutSolidSphere(0.5, 36, 36);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(4, 28, 0);
+    glutSolidSphere(0.5, 36, 36);
+    glPopMatrix();
+
+    glPushMatrix();
+    glTranslatef(4.5, 27, 0);
+    glutSolidSphere(0.5, 36, 36);
     glPopMatrix();
 }
 
 
-void drawAlien()
+void drawAlien(float theta_r)
 {
-    drawLegs();
+    drawLegs(theta_r);
     drawBody();
-    drawArms();
+    drawArms(theta_r);
     drawHead();
 }

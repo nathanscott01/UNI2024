@@ -135,24 +135,44 @@ void brickWalls()
 	glEnd();
 }
 
+////---- Draws a curved wall ----
+//void  curvedWall()
+//{
+//    float r = 4;
+//	glBindTexture(GL_TEXTURE_2D, txId[2]);
+//	glColor3f(1, 1, 1);
+//	glLineWidth(2.0);
+//	glBegin(GL_QUAD_STRIP);
+//		for (int i = 0; i < 13; i++)
+//		{
+//			normal(i);
+//            glTexCoord2f(i * r / 12, 0);
+//			glVertex3f(xpts[i], 0, zpts[i]);
+//            glTexCoord2f(i * r / 12, 1);
+//            glVertex3f(xpts[i], 4, zpts[i]);
+//		}
+//	glEnd();
+//}
+
 //---- Draws a curved wall ----
 void  curvedWall()
 {
     float r = 4;
-	glBindTexture(GL_TEXTURE_2D, txId[2]);
-	glColor3f(1, 1, 1);
-	glLineWidth(2.0);
-	glBegin(GL_QUAD_STRIP);
-		for (int i = 0; i < 13; i++)
-		{
-			normal(i);
-            glTexCoord2f(i * r / 12, 0);
-			glVertex3f(xpts[i], 0, zpts[i]);
-            glTexCoord2f(i * r / 12, 1);
-            glVertex3f(xpts[i], 4, zpts[i]);
-		}
-	glEnd();
+    glColor3f(1, 1, 1);
+    glLineWidth(2.0);
+    glBegin(GL_QUADS);
+    for (int i = 0; i < 12; i++)
+    {
+        normal(i);
+        // Bottom face
+        glVertex3f(xpts[i], 0, zpts[i]); // Bottom-left vertex
+        glVertex3f(xpts[i + 1], 0, zpts[i + 1]); // Bottom-right vertex
+        glVertex3f(xpts[i + 1], 4, zpts[i + 1]); // Top-right vertex
+        glVertex3f(xpts[i], 4, zpts[i]); // Top-left vertex
+    }
+    glEnd();
 }
+
 
 
 //----- Draws a simple floor plane -----

@@ -17,6 +17,7 @@ void skyBox(GLuint* txId)
 
     // Left Wall
     glBindTexture(GL_TEXTURE_2D, txId[0]);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
     glBegin(GL_QUADS);
     glTexCoord2f(0, 0); glVertex3f(-1000, 0, 1000);
 	glTexCoord2f(1, 0); glVertex3f(-1000, 0, -1000);
@@ -26,6 +27,7 @@ void skyBox(GLuint* txId)
 
     //Back Wall
     glBindTexture(GL_TEXTURE_2D, txId[1]);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
     glBegin(GL_QUADS);
     glTexCoord2f(0, 0); glVertex3f(-1000, 0, -1000);
 	glTexCoord2f(1, 0); glVertex3f(1000, 0, -1000);
@@ -35,6 +37,7 @@ void skyBox(GLuint* txId)
 
     //Right Wall
     glBindTexture(GL_TEXTURE_2D, txId[2]);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
     glBegin(GL_QUADS);
     glTexCoord2f(0, 0); glVertex3f(1000, 0, -1000);
 	glTexCoord2f(1, 0); glVertex3f(1000, 0, 1000);
@@ -44,6 +47,7 @@ void skyBox(GLuint* txId)
 
     //Front Wall
     glBindTexture(GL_TEXTURE_2D, txId[3]);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
     glBegin(GL_QUADS);
     glTexCoord2f(0, 0); glVertex3f(1000, 0, 1000);
 	glTexCoord2f(1, 0); glVertex3f(-1000, 0, 1000);
@@ -53,6 +57,7 @@ void skyBox(GLuint* txId)
 
     //Up
     glBindTexture(GL_TEXTURE_2D, txId[4]);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
     glBegin(GL_QUADS);
     glTexCoord2f(0, 0); glVertex3f(1000, 1000, -1000);
 	glTexCoord2f(1, 0); glVertex3f(1000, 1000, 1000);
@@ -62,10 +67,13 @@ void skyBox(GLuint* txId)
 
     //Down
     glBindTexture(GL_TEXTURE_2D, txId[5]);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
     glBegin(GL_QUADS);
     glTexCoord2f(1, 0); glVertex3f(-1000, 0, 1000);
 	glTexCoord2f(1, 1); glVertex3f(1000, 0, 1000);
 	glTexCoord2f(0, 1); glVertex3f(1000, 0, -1000);
 	glTexCoord2f(0, 0); glVertex3f(-1000, 0, -1000);
     glEnd();
+
+    glDisable(GL_TEXTURE_2D);
 }

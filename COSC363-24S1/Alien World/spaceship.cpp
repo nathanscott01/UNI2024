@@ -6,7 +6,8 @@
 //  Student ID: 81357713
 //  FILENAME: spaceship.cpp
 //
-//  COMMENTS:
+//  COMMENTS: Shadows dont work like i thought they did, not for objects moving
+//              up and down y axis
 //
 //  ========================================================================
 
@@ -16,6 +17,7 @@
 
 const int N = 131;
 float theta;
+//GLfloat spotExponent = 2.0f; // Make sure it's a float
 
 float vx_init[N] = { -17.46, -17.28, -17.11, -16.93, -16.75, -16.58, -16.4, -16.23,
                     -16.05, -15.87, -15.7, -15.52, -15.34, -15.17, -14.99, -14.81,
@@ -95,40 +97,19 @@ void drawCockpit()
     glutSolidSphere(4, 36, 36);
 }
 
-void drawLights()
+void drawSweepCurve(GLuint* txId)
 {
-    glEnable(GL_LIGHTING);
-    glColor3f(1, 0, 0);
-    for (int i = 0; i < 4; i++)
-    {
-        theta = 90 * i;
-        glPushMatrix();
-        glRotatef(theta, 0, 1, 0);
-        glTranslatef(14, 0, 0);
-        glutSolidSphere(1, 36, 36);
-        glPopMatrix();
-    }
-}
-
-void drawSpaceship(GLuint txId[7])
-{
-
-    computeNormal();
-
-    for (int i = 0; i < N; i++)		//Initialize data everytime the frame is refreshed
-	{
-		vx[i] = vx_init[i];
-		vy[i] = vy_init[i];
-		vz[i] = 0;
-		nz[i] = 0;
-	}
+    float white[4] = { 1., 1., 1., 1. };
+    glDisable(GL_TEXTURE_2D);
+    glNormal3f(0.0, 1.0, 0.0);
 
     glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
-    glColor3f(1, 0.75, 0.5);
-    glEnable(GL_TEXTURE_2D);
 
     // Set texture parameters for repeating texture
-    glBindTexture(GL_TEXTURE_2D, txId[7]);
+    glBindTexture(GL_TEXTURE_2D, *txId);
+    glTexEnvi(GL_TEXTURE_ENV, GL_TEXTURE_ENV_MODE, GL_REPLACE);
+    glEnable(GL_TEXTURE_2D);
+
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S, GL_REPEAT);
     glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_REPEAT);
 
@@ -147,15 +128,11 @@ void drawSpaceship(GLuint txId[7])
         bool bottom = true;
         int s_coord;
 
-        for (int i = 0; i < N; i++)
-        {
-            if (bottom)
-            {
+        for (int i = 0; i < N; i++) {
+            if (bottom) {
                 s_coord = 0;
                 bottom = false;
-            }
-            else
-            {
+            } else {
                 s_coord = 1;
                 bottom = true;
             }
@@ -168,8 +145,7 @@ void drawSpaceship(GLuint txId[7])
         }
         glEnd();
 
-        for (int i = 0; i < N; i++)
-        {
+        for (int i = 0; i < N; i++) {
             vx[i] = wx[i];
             vy[i] = wy[i];
             vz[i] = wz[i];
@@ -179,14 +155,82 @@ void drawSpaceship(GLuint txId[7])
         }
     }
 
+    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+	glDisable(GL_TEXTURE_2D);
+}
+
+void drawSweepCurveShadow()
+{
+    glDisable(GL_TEXTURE_2D); // Disable texture mapping
+
+    float white[4] = { 1., 1., 1., 1. };
+    glMaterialfv(GL_FRONT, GL_SPECULAR, white);
+
+    // Set the normal for the sweep surface
+    glNormal3f(0.0, 1.0, 0.0);
+
+    glPolygonMode(GL_FRONT_AND_BACK, GL_FILL);
+
+    for (int j = 0; j < nSlices; j++) {
+        for (int i = 0; i < N; i++) {
+            wx[i] = cos(angStep) * vx[i] + sin(angStep) * vz[i];
+            wy[i] = vy[i];
+            wz[i] = -sin(angStep) * vx[i] + cos(angStep) * vz[i];
+            mx[i] = cos(angStep) * nx[i] + sin(angStep) * nz[i];
+            my[i] = ny[i];
+            mz[i] = -sin(angStep) * nx[i] + cos(angStep) * nz[i];
+        }
+
+        glBegin(GL_QUAD_STRIP);
+
+        bool bottom = true;
+
+        for (int i = 0; i < N; i++) {
+            if (bottom) {
+                bottom = false;
+            } else {
+                bottom = true;
+            }
+            // Set the normal for each vertex
+            glNormal3f(nx[i], ny[i], nz[i]);
+            glVertex3f(vx[i], vy[i], vz[i]);
+            glNormal3f(mx[i], my[i], mz[i]);
+            glVertex3f(wx[i], wy[i], wz[i]);
+        }
+        glEnd();
+
+        // Update vertex and normal arrays for the next slice
+        for (int i = 0; i < N; i++) {
+            vx[i] = wx[i];
+            vy[i] = wy[i];
+            vz[i] = wz[i];
+            nx[i] = mx[i];
+            ny[i] = my[i];
+            nz[i] = mz[i];
+        }
+    }
+}
+
+void drawSpaceship(GLuint* txId, float shadowMat[16])
+{
+    computeNormal();
+
+    for (int i = 0; i < N; i++)		//Initialize data everytime the frame is refreshed
+	{
+		vx[i] = vx_init[i];
+		vy[i] = vy_init[i];
+		vz[i] = 0;
+		nz[i] = 0;
+	}
+
+    glPushMatrix();
+        drawSweepCurve(txId);
+    glPopMatrix();
+
+    glColor3f(1, 0, 0.8);
     glPushMatrix();
         glTranslatef(0, 6.2, 0);
         drawCockpit();
-    glPopMatrix();
-
-    glPushMatrix();
-        glTranslatef(0, -2, 0);
-        drawLights();
     glPopMatrix();
 
     glFlush();

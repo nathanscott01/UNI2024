@@ -21,15 +21,60 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3ecb182-b8cf-424b-b094-8194e2af2a82" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Textures/metal.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Textures/metal_plate.tga" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spaceship.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/spaceship.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/train.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COSC363 Project/Humanoid_texture_floor.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COSC363 Project/bash scripts/compile_humanoid_texture.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COSC363 Project/earth" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COSC363 Project/humanoid_floor" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alien.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/alien.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/alien.h" beforeDir="false" afterPath="$PROJECT_DIR$/alien.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/bash scripts/compile_main.sh" beforeDir="false" afterPath="$PROJECT_DIR$/bash scripts/compile_main.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cache-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/cmakeFiles-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/codemodel-v2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/query/toolchains-v1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cache-v2-c3d8108b761cb0a537ef.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/cmakeFiles-v1-6c2d46eb5008ac9ff050.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/codemodel-v2-2456c6a507d623fbd1f1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/directory-.-Debug-f5ebdc15457944623624.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/index-2024-04-07T09-38-05-0387.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/target-Alien_World-Debug-3cbab215ecbb651848ec.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.cmake/api/v1/reply/toolchains-v1-7096c62e23c342eb06a8.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_deps" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/.ninja_log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeCache.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeCCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeCXXCompiler.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_C.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeDetermineCompilerABI_CXX.bin" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CMakeSystem.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/CMakeCCompilerId.c" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdC/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/CMakeCXXCompilerId.cpp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/3.27.8/CompilerIdCXX/a.out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/CMakeConfigureLog.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/TargetDirectories.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-Debug-log.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/clion-environment.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/cmake.check_cache" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/CMakeFiles/rules.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/Testing/Temporary/LastTest.log" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/build.ninja" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/cmake-build-debug/cmake_install.cmake" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/floor.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/floor.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/floor.h" beforeDir="false" afterPath="$PROJECT_DIR$/floor.h" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../COSC363 Project/II_Vase/Vase.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../COSC363 Project/II_Vase/Vase.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/skybox.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/skybox.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spaceship.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/spaceship.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/spaceship.h" beforeDir="false" afterPath="$PROJECT_DIR$/spaceship.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COSC363 Project/Humanoid.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../COSC363 Project/Humanoid.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COSC363 Project/I_ToyTrain/ToyTrain.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../COSC363 Project/I_ToyTrain/ToyTrain.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COSC363 Project/I_Walls/Walls.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../COSC363 Project/I_Walls/Walls.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COSC363 Project/humanoid" beforeDir="false" afterPath="$PROJECT_DIR$/../COSC363 Project/humanoid" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../COSC363 Project/walls" beforeDir="false" afterPath="$PROJECT_DIR$/../COSC363 Project/walls" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -56,43 +101,58 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "RunOnceActivity.cidr.known.project.marker": "true",
-    "RunOnceActivity.readMode.enableVisualFormatting": "true",
-    "Shell Script.Alien World.executor": "Run",
-    "Shell Script.Alien.executor": "Run",
-    "Shell Script.Unnamed.executor": "Run",
-    "cf.first.check.clang-format": "false",
-    "cidr.known.project.marker": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World/Textures",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "CMakeSettings",
-    "structure.view.defaults.are.configured": "true",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.readMode.enableVisualFormatting&quot;: &quot;true&quot;,
+    &quot;Shell Script.Alien World.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.Alien.executor&quot;: &quot;Run&quot;,
+    &quot;Shell Script.Unnamed.executor&quot;: &quot;Run&quot;,
+    &quot;cf.first.check.clang-format&quot;: &quot;false&quot;,
+    &quot;cidr.known.project.marker&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nathan/Desktop/UNI2024/COSC363-24S1/Alien World&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;CMakeSettings&quot;,
+    &quot;structure.view.defaults.are.configured&quot;: &quot;true&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Textures" />
       <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/Textures" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
       </method>
+    </configuration>
+    <configuration name="Alien World" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/bash scripts/compile_main.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
     </configuration>
     <configuration name="Alien World" type="ShConfigurationType">
       <option name="SCRIPT_TEXT" value="" />
@@ -127,6 +187,11 @@
       <workItem from="1712115524784" duration="3035000" />
       <workItem from="1712384326237" duration="2385000" />
       <workItem from="1712469494714" duration="29916000" />
+      <workItem from="1712624663955" duration="1870000" />
+      <workItem from="1712643428655" duration="54439000" />
+      <workItem from="1712788094263" duration="1322000" />
+      <workItem from="1712790473837" duration="16000" />
+      <workItem from="1712790884609" duration="5243000" />
     </task>
     <servers />
   </component>
