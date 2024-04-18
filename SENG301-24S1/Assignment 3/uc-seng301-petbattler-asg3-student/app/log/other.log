@@ -1,0 +1,1400 @@
+18:41:05.363 [Test worker] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (p1 : uc.seng301.petbattler.asg3.model.Player(2337519185837)) {
+          primaryTableReference : player as p1_0
+        }
+      }
+    }
+
+18:41:05.364 [Test worker] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+18:41:05.364 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337519185837).packs)
+18:41:05.364 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337519185837))
+18:41:05.364 [Test worker] DEBUG org.hibernate.orm.results - Initializer list:
+	  uc.seng301.petbattler.asg3.model.Player(2337519185837).packs -> SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337519185837).packs)@1915050045 (PluralAttribute(uc.seng301.petbattler.asg3.model.Player.packs))
+	  uc.seng301.petbattler.asg3.model.Player(2337519185837) -> EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337519185837))@1608992076 (SingleTableEntityPersister(uc.seng301.petbattler.asg3.model.Player))
+
+18:41:05.364 [Test worker] TRACE org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess - Executing query to retrieve ResultSet : select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=8
+18:41:05.365 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep195: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=8]
+18:41:05.365 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Registering last query statement [prep195: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=8]
+18:41:05.365 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [rs227: org.h2.result.LocalResult@297db6ad columns: 2 rows: 1 pos: -1]
+18:41:05.365 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterStatement
+18:41:05.365 [Test worker] TRACE org.hibernate.orm.results.loading - StandardRowReader#readRow
+18:41:05.365 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (o.h.s.r.g.e.i.EntityResultInitializer) Beginning Initializer#resolveKey process for entity : uc.seng301.petbattler.asg3.model.Player(2337519185837)
+18:41:05.365 [Test worker] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [8]
+18:41:05.365 [Test worker] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [8]
+18:41:05.365 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (uc.seng301.petbattler.asg3.model.Player(2337519185837)): 8
+18:41:05.365 [Test worker] DEBUG org.hibernate.orm.results.loading.org.hibernate.orm.results.loading.collection - (SelectEagerCollectionInitializer) Current row collection key : uc.seng301.petbattler.asg3.model.Player(2337519185837).packs#8
+18:41:05.365 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (o.h.s.r.g.e.i.EntityResultInitializer) Beginning Initializer#resolveInstance process for entity (uc.seng301.petbattler.asg3.model.Player(2337519185837)) : 8
+18:41:05.365 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [uc.seng301.petbattler.asg3.model.Player(2337519185837)#8] : 342425950
+18:41:05.365 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Beginning Initializer#initializeInstance process for entity uc.seng301.petbattler.asg3.model.Player(2337519185837)#8
+18:41:05.365 [Test worker] TRACE org.hibernate.orm.jdbc.extract - extracted value (2:VARCHAR) -> [Monica Bing-Geller]
+18:41:05.365 [Test worker] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [Monica Bing-Geller]
+18:41:05.365 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : uc.seng301.petbattler.asg3.model.Player(2337519185837)#8
+18:41:05.365 [Test worker] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@1c11a496
+18:41:05.365 [Test worker] TRACE org.hibernate.orm.results.loading - StandardRowReader#afterRow
+18:41:05.365 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing result set [rs227: org.h2.result.LocalResult@297db6ad columns: 2 rows: 1 pos: 1]
+18:41:05.365 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [rs227: org.h2.result.LocalResult@297db6ad columns: 2 rows: 1 pos: 1]
+18:41:05.365 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep195: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=8]
+18:41:05.365 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep195: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=8]
+18:41:05.365 [Test worker] TRACE org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+18:41:05.365 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Initializing collection [uc.seng301.petbattler.asg3.model.Player.packs#8]
+18:41:05.365 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Checking second-level cache
+18:41:05.365 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Collection not cached
+18:41:05.365 [Test worker] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+18:41:05.365 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets)
+18:41:05.365 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntitySelectFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.player)
+18:41:05.365 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntityJoinedFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element})
+18:41:05.365 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : BagInitializer(uc.seng301.petbattler.asg3.model.Player.packs)
+18:41:05.365 [Test worker] DEBUG org.hibernate.orm.results - Initializer list:
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element}.player -> EntitySelectFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.player)@1654047108 (ToOneAttributeMapping(NavigableRole[uc.seng301.petbattler.asg3.model.Pack.player])@2117653154)
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets -> SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets)@1051287417 (PluralAttribute(uc.seng301.petbattler.asg3.model.Pack.pets))
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element} -> EntityJoinedFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element})@198087635 (EntityCollectionPart(uc.seng301.petbattler.asg3.model.Player.packs#{element})@1606672321)
+	  uc.seng301.petbattler.asg3.model.Player.packs -> BagInitializer(uc.seng301.petbattler.asg3.model.Player.packs)@443200296 (PluralAttribute(uc.seng301.petbattler.asg3.model.Player.packs))
+
+18:41:05.366 [Test worker] TRACE org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess - Executing query to retrieve ResultSet : select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep196: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?]
+18:41:05.366 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Registering last query statement [prep196: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?]
+18:41:05.366 [Test worker] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [8]
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [rs228: org.h2.result.LocalResult@3a02172a columns: 3 rows: 0 pos: -1]
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterStatement
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing result set [rs228: org.h2.result.LocalResult@3a02172a columns: 3 rows: 0 pos: 0]
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [rs228: org.h2.result.LocalResult@3a02172a columns: 3 rows: 0 pos: 0]
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep196: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=? {1: CAST(8 AS BIGINT)}]
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep196: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=? {1: CAST(8 AS BIGINT)}]
+18:41:05.366 [Test worker] DEBUG org.hibernate.sql.results.internal.ResultsHelper - Collection fully initialized: [uc.seng301.petbattler.asg3.model.Player.packs#8]
+18:41:05.366 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Collection initialized
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.366 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.366 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.366 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.366 [Test worker] TRACE org.hibernate.internal.SessionImpl - Closing session [702160b2-f119-4b8e-9d3e-c8eb17e08a72]
+18:41:05.366 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@a1143cc]
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Closing logical connection
+18:41:05.366 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Logical connection closed
+18:41:05.367 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor - Getting player with name Monica Bing-Geller from persistence
+18:41:05.367 [Test worker] TRACE org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl - Opening Hibernate Session.  tenant=null
+18:41:05.367 [Test worker] TRACE org.hibernate.internal.SessionImpl - Opened Session [5f06ff66-cfda-40e4-8d9c-7222d8e63311] at timestamp: 1713422465367
+18:41:05.367 [Test worker] TRACE org.hibernate.orm.query.plan.cache - QueryPlan#resolveHqlInterpretation( `FROM Player where name='Monica Bing-Geller'` )
+18:41:05.367 [Test worker] DEBUG org.hibernate.orm.query.hql - HQL : FROM Player where name='Monica Bing-Geller'
+18:41:05.367 [Test worker] TRACE org.hibernate.orm.query.sqm.creation - SqmProcessingIndex#register(SqmPath) : uc.seng301.petbattler.asg3.model.Player(2337524322822)
+18:41:05.367 [Test worker] TRACE org.hibernate.orm.query.hql - BasicDotIdentifierHandler#consumeIdentifier( name, true, true ) - name
+18:41:05.367 [Test worker] TRACE org.hibernate.orm.query.hql - BaseLocalSequencePart#consumeIdentifier( name, true, true ) - name
+18:41:05.367 [Test worker] DEBUG org.hibernate.orm.query.hql - Unable to resolve unqualified attribute [name] in local from-clause
+18:41:05.367 [Test worker] DEBUG org.hibernate.orm.query.sqm.ast - SqmStatement Tree :
+    -> [select]
+      -> [query-spec]
+        -> [select]
+          -> [selection]
+            -> [root] - `uc.seng301.petbattler.asg3.model.Player(2337524322822)`
+            <- [root] - `uc.seng301.petbattler.asg3.model.Player(2337524322822)`
+          <- [selection]
+        <- [select]
+        -> [from]
+          -> [root] - `uc.seng301.petbattler.asg3.model.Player(2337524322822)`
+          <- [root] - `uc.seng301.petbattler.asg3.model.Player(2337524322822)`
+        <- [from]
+        -> [where]
+          -> [EQUAL]
+              -> [basic-path] - `uc.seng301.petbattler.asg3.model.Player(2337524322822).name`
+          <- [EQUAL]
+        <- [where]
+      <- [query-spec]
+    <- [select]
+
+18:41:05.367 [Test worker] TRACE org.hibernate.orm.query.plan.cache - QueryPlan#getSelectQueryPlan(org.hibernate.query.sqm.internal.SqmInterpretationsKey@a8275d7d)
+18:41:05.367 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolving SqmRoot [uc.seng301.petbattler.asg3.model.Player] to TableGroup
+18:41:05.367 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolving SqmRoot [uc.seng301.petbattler.asg3.model.Player] to TableGroup
+18:41:05.367 [Test worker] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : p1_0
+18:41:05.368 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolved SqmRoot [uc.seng301.petbattler.asg3.model.Player] to new TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337524322822))]
+18:41:05.368 [Test worker] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337524322822))] with identifierForTableGroup [uc.seng301.petbattler.asg3.model.Player] for NavigablePath [uc.seng301.petbattler.asg3.model.Player] 
+18:41:05.368 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Visiting explicit joins for `uc.seng301.petbattler.asg3.model.Player(2337524322822)`
+18:41:05.368 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - SqmRoot [uc.seng301.petbattler.asg3.model.Player] resolved to existing TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337524322822))]
+18:41:05.368 [Test worker] TRACE org.hibernate.persister.entity.AbstractEntityPersister - #findSubPart(`name`)
+18:41:05.368 [Test worker] DEBUG org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(uc.seng301.petbattler.asg3.model.Player(2337524322822).name) 
+18:41:05.368 [Test worker] TRACE org.hibernate.persister.entity.AbstractEntityPersister - #findSubPart(`name`)
+18:41:05.368 [Test worker] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
+ \-EntityResultImpl [uc.seng301.petbattler.asg3.model.Player(2337524322822)]
+ |  +-BasicFetch [uc.seng301.petbattler.asg3.model.Player(2337524322822).name]
+ |  \-SelectEagerCollectionFetch [uc.seng301.petbattler.asg3.model.Player(2337524322822).packs]
+
+18:41:05.368 [Test worker] TRACE org.hibernate.orm.results.graph.AST - Stack trace calling DomainResultGraphPrinter
+java.lang.Exception: null
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.visitDomainResults(DomainResultGraphPrinter.java:70) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.logDomainResultGraph(DomainResultGraphPrinter.java:46) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.logDomainResultGraph(DomainResultGraphPrinter.java:37) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.ast.spi.AbstractSqlAstTranslator.translateSelect(AbstractSqlAstTranslator.java:858) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.ast.spi.AbstractSqlAstTranslator.translate(AbstractSqlAstTranslator.java:811) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.buildCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:433) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:327) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:303) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at uc.seng301.petbattler.asg3.accessor.PlayerAccessor.getPlayerByName(PlayerAccessor.java:70) ~[main/:?]
+	at uc.seng301.petbattler.asg3.cucumber.step_definitions.AddPetFeature.player_has_an_empty_pack_with_the_name(AddPetFeature.java:84) ~[test/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) [gradle-testing-base-8.6.jar:8.6]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) [gradle-messaging-8.6.jar:8.6]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) [?:?]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.6.jar:8.6]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
+18:41:05.368 [Test worker] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (p1 : uc.seng301.petbattler.asg3.model.Player(2337524322822)) {
+          primaryTableReference : player as p1_0
+        }
+      }
+    }
+
+18:41:05.369 [Test worker] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+18:41:05.369 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337524322822).packs)
+18:41:05.369 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337524322822))
+18:41:05.369 [Test worker] DEBUG org.hibernate.orm.results - Initializer list:
+	  uc.seng301.petbattler.asg3.model.Player(2337524322822) -> EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337524322822))@1732978435 (SingleTableEntityPersister(uc.seng301.petbattler.asg3.model.Player))
+	  uc.seng301.petbattler.asg3.model.Player(2337524322822).packs -> SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337524322822).packs)@1732515589 (PluralAttribute(uc.seng301.petbattler.asg3.model.Player.packs))
+
+18:41:05.369 [Test worker] TRACE org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess - Executing query to retrieve ResultSet : select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Monica Bing-Geller'
+18:41:05.369 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep197: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Monica Bing-Geller']
+18:41:05.369 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Registering last query statement [prep197: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Monica Bing-Geller']
+18:41:05.369 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [rs229: org.h2.result.LocalResult@4271960c columns: 2 rows: 1 pos: -1]
+18:41:05.369 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterStatement
+18:41:05.369 [Test worker] TRACE org.hibernate.orm.results.loading - StandardRowReader#readRow
+18:41:05.369 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (o.h.s.r.g.e.i.EntityResultInitializer) Beginning Initializer#resolveKey process for entity : uc.seng301.petbattler.asg3.model.Player(2337524322822)
+18:41:05.369 [Test worker] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [8]
+18:41:05.369 [Test worker] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [8]
+18:41:05.369 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (uc.seng301.petbattler.asg3.model.Player(2337524322822)): 8
+18:41:05.369 [Test worker] DEBUG org.hibernate.orm.results.loading.org.hibernate.orm.results.loading.collection - (SelectEagerCollectionInitializer) Current row collection key : uc.seng301.petbattler.asg3.model.Player(2337524322822).packs#8
+18:41:05.369 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (o.h.s.r.g.e.i.EntityResultInitializer) Beginning Initializer#resolveInstance process for entity (uc.seng301.petbattler.asg3.model.Player(2337524322822)) : 8
+18:41:05.369 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [uc.seng301.petbattler.asg3.model.Player(2337524322822)#8] : 998706899
+18:41:05.369 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Beginning Initializer#initializeInstance process for entity uc.seng301.petbattler.asg3.model.Player(2337524322822)#8
+18:41:05.369 [Test worker] TRACE org.hibernate.orm.jdbc.extract - extracted value (2:VARCHAR) -> [Monica Bing-Geller]
+18:41:05.369 [Test worker] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [Monica Bing-Geller]
+18:41:05.369 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : uc.seng301.petbattler.asg3.model.Player(2337524322822)#8
+18:41:05.369 [Test worker] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@4cd886b7
+18:41:05.369 [Test worker] TRACE org.hibernate.orm.results.loading - StandardRowReader#afterRow
+18:41:05.369 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing result set [rs229: org.h2.result.LocalResult@4271960c columns: 2 rows: 1 pos: 1]
+18:41:05.369 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [rs229: org.h2.result.LocalResult@4271960c columns: 2 rows: 1 pos: 1]
+18:41:05.369 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep197: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Monica Bing-Geller']
+18:41:05.369 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep197: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Monica Bing-Geller']
+18:41:05.369 [Test worker] TRACE org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+18:41:05.369 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Initializing collection [uc.seng301.petbattler.asg3.model.Player.packs#8]
+18:41:05.369 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Checking second-level cache
+18:41:05.369 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Collection not cached
+18:41:05.370 [Test worker] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+18:41:05.370 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets)
+18:41:05.370 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntitySelectFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.player)
+18:41:05.370 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntityJoinedFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element})
+18:41:05.370 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : BagInitializer(uc.seng301.petbattler.asg3.model.Player.packs)
+18:41:05.370 [Test worker] DEBUG org.hibernate.orm.results - Initializer list:
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element}.player -> EntitySelectFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.player)@1458410096 (ToOneAttributeMapping(NavigableRole[uc.seng301.petbattler.asg3.model.Pack.player])@464345779)
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets -> SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets)@1428156392 (PluralAttribute(uc.seng301.petbattler.asg3.model.Pack.pets))
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element} -> EntityJoinedFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element})@1795138389 (EntityCollectionPart(uc.seng301.petbattler.asg3.model.Player.packs#{element})@1529178805)
+	  uc.seng301.petbattler.asg3.model.Player.packs -> BagInitializer(uc.seng301.petbattler.asg3.model.Player.packs)@1645903235 (PluralAttribute(uc.seng301.petbattler.asg3.model.Player.packs))
+
+18:41:05.370 [Test worker] TRACE org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess - Executing query to retrieve ResultSet : select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep198: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?]
+18:41:05.370 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Registering last query statement [prep198: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?]
+18:41:05.370 [Test worker] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [8]
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [rs230: org.h2.result.LocalResult@7294c9fe columns: 3 rows: 0 pos: -1]
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterStatement
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing result set [rs230: org.h2.result.LocalResult@7294c9fe columns: 3 rows: 0 pos: 0]
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [rs230: org.h2.result.LocalResult@7294c9fe columns: 3 rows: 0 pos: 0]
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep198: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=? {1: CAST(8 AS BIGINT)}]
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep198: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=? {1: CAST(8 AS BIGINT)}]
+18:41:05.370 [Test worker] DEBUG org.hibernate.sql.results.internal.ResultsHelper - Collection fully initialized: [uc.seng301.petbattler.asg3.model.Player.packs#8]
+18:41:05.370 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Collection initialized
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.370 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.370 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.370 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.370 [Test worker] TRACE org.hibernate.internal.SessionImpl - Closing session [5f06ff66-cfda-40e4-8d9c-7222d8e63311]
+18:41:05.370 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@54a1a6a8]
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Closing logical connection
+18:41:05.370 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Logical connection closed
+18:41:05.370 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor - Creating pack name My Empty Pack for player Player (8): Monica Bing-Geller
+	Packs:
+
+18:41:05.370 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor - Persisting pack { packId='null', player='Monica Bing-Geller', pets='[]', name='My Empty Pack'}
+18:41:05.370 [Test worker] TRACE org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl - Opening Hibernate Session.  tenant=null
+18:41:05.371 [Test worker] TRACE org.hibernate.internal.SessionImpl - Opened Session [c74f2261-cdb7-41a3-93d9-19fcc9f27e00] at timestamp: 1713422465371
+18:41:05.371 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+18:41:05.371 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+18:41:05.371 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Preparing to begin transaction via JDBC Connection.setAutoCommit(false)
+18:41:05.371 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Transaction begun via JDBC Connection.setAutoCommit(false)
+18:41:05.371 [Test worker] TRACE org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#afterBeginCallback
+18:41:05.371 [Test worker] TRACE org.hibernate.event.internal.EntityState - Transient instance of: uc.seng301.petbattler.asg3.model.Pack
+18:41:05.371 [Test worker] TRACE org.hibernate.event.internal.DefaultPersistEventListener - Saving transient instance
+18:41:05.371 [Test worker] DEBUG org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 56, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+18:41:05.371 [Test worker] TRACE org.hibernate.event.internal.AbstractSaveEventListener - Saving [uc.seng301.petbattler.asg3.model.Pack#56]
+18:41:05.371 [Test worker] TRACE org.hibernate.event.internal.WrapVisitor - Wrapped collection in role: uc.seng301.petbattler.asg3.model.Pack.pets
+18:41:05.371 [Test worker] TRACE org.hibernate.engine.spi.ActionQueue - Adding an EntityInsertAction for [uc.seng301.petbattler.asg3.model.Pack] object
+18:41:05.371 [Test worker] TRACE org.hibernate.engine.spi.ActionQueue - Adding insert with no non-nullable, transient entities: [EntityInsertAction[uc.seng301.petbattler.asg3.model.Pack#56]]
+18:41:05.371 [Test worker] TRACE org.hibernate.engine.spi.ActionQueue - Adding resolved non-early insert action.
+18:41:05.371 [Test worker] TRACE org.hibernate.engine.spi.IdentifierValue - ID unsaved-value: null
+18:41:05.371 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+18:41:05.371 [Test worker] TRACE org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#beforeCompletionCallback
+18:41:05.371 [Test worker] TRACE org.hibernate.internal.SessionImpl - SessionImpl#beforeTransactionCompletion()
+18:41:05.371 [Test worker] TRACE org.hibernate.internal.SessionImpl - Automatically flushing session
+18:41:05.371 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Flushing session
+18:41:05.371 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+18:41:05.371 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+18:41:05.371 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+18:41:05.371 [Test worker] DEBUG org.hibernate.engine.internal.Collections - Collection found: [uc.seng301.petbattler.asg3.model.Pack.pets#56], was: [<unreferenced>] (initialized)
+18:41:05.371 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Processing unreferenced collections
+18:41:05.371 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+18:41:05.371 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+18:41:05.371 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
+18:41:05.371 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+18:41:05.371 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - uc.seng301.petbattler.asg3.model.Pack{packId=56, pets=[], name=My Empty Pack, player=uc.seng301.petbattler.asg3.model.Player#8}
+18:41:05.371 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Executing flush
+18:41:05.371 [Test worker] TRACE org.hibernate.engine.spi.IdentifierValue - ID unsaved-value: null
+18:41:05.371 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep199: insert into pack (name,id_player,id_pack) values (?,?,?)]
+18:41:05.371 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [null]
+18:41:05.371 [Test worker] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [My Empty Pack]
+18:41:05.371 [Test worker] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [8]
+18:41:05.371 [Test worker] TRACE org.hibernate.orm.jdbc.bind - binding parameter (3:BIGINT) <- [56]
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep199: insert into pack (name,id_player,id_pack) values (?,?,?) {1: 'My Empty Pack', 2: CAST(8 AS BIGINT), 3: CAST(56 AS BIGINT)}]
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [null]
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep199: insert into pack (name,id_player,id_pack) values (?,?,?) {1: 'My Empty Pack', 2: CAST(8 AS BIGINT), 3: CAST(56 AS BIGINT)}]
+18:41:05.372 [Test worker] DEBUG org.hibernate.orm.jdbc.mutation - Inserting collection rows - uc.seng301.petbattler.asg3.model.Pack.pets : 56
+18:41:05.372 [Test worker] DEBUG org.hibernate.orm.jdbc.mutation - No collection rows to insert - uc.seng301.petbattler.asg3.model.Pack.pets : 56
+18:41:05.372 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Starting after statement execution processing [AFTER_TRANSACTION]
+18:41:05.372 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Post flush
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#beforeTransactionCompletion
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.transaction.internal.SynchronizationRegistryStandardImpl - SynchronizationRegistryStandardImpl.notifySynchronizationsBeforeTransactionCompletion
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Preparing to commit transaction via JDBC Connection.commit()
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Transaction committed via JDBC Connection.commit()
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.372 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#afterCompletionCallback(true)
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.transaction.internal.SynchronizationRegistryStandardImpl - SynchronizationRegistryStandardImpl.notifySynchronizationsAfterTransactionCompletion(3)
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.372 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.372 [Test worker] TRACE org.hibernate.internal.SessionImpl - SessionImpl#afterTransactionCompletion(successful=true, delayed=false)
+18:41:05.372 [Test worker] TRACE org.hibernate.internal.SessionImpl - Closing session [c74f2261-cdb7-41a3-93d9-19fcc9f27e00]
+18:41:05.372 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@25058759]
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Closing logical connection
+18:41:05.372 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Logical connection closed
+18:41:05.383 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor - Creating player with name Ross
+18:41:05.383 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor - Save player Player (null): Ross
+	Packs:
+ to persistence
+18:41:05.383 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor - Getting player with name Ross from persistence
+18:41:05.383 [Test worker] TRACE org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl - Opening Hibernate Session.  tenant=null
+18:41:05.384 [Test worker] TRACE org.hibernate.internal.SessionImpl - Opened Session [02671580-f5a2-4b0d-92cc-a16c14f9a804] at timestamp: 1713422465384
+18:41:05.384 [Test worker] TRACE org.hibernate.orm.query.plan.cache - QueryPlan#resolveHqlInterpretation( `FROM Player where name='Ross'` )
+18:41:05.384 [Test worker] DEBUG org.hibernate.orm.query.hql - HQL : FROM Player where name='Ross'
+18:41:05.384 [Test worker] TRACE org.hibernate.orm.query.sqm.creation - SqmProcessingIndex#register(SqmPath) : uc.seng301.petbattler.asg3.model.Player(2337541234401)
+18:41:05.384 [Test worker] TRACE org.hibernate.orm.query.hql - BasicDotIdentifierHandler#consumeIdentifier( name, true, true ) - name
+18:41:05.384 [Test worker] TRACE org.hibernate.orm.query.hql - BaseLocalSequencePart#consumeIdentifier( name, true, true ) - name
+18:41:05.384 [Test worker] DEBUG org.hibernate.orm.query.hql - Unable to resolve unqualified attribute [name] in local from-clause
+18:41:05.384 [Test worker] DEBUG org.hibernate.orm.query.sqm.ast - SqmStatement Tree :
+    -> [select]
+      -> [query-spec]
+        -> [select]
+          -> [selection]
+            -> [root] - `uc.seng301.petbattler.asg3.model.Player(2337541234401)`
+            <- [root] - `uc.seng301.petbattler.asg3.model.Player(2337541234401)`
+          <- [selection]
+        <- [select]
+        -> [from]
+          -> [root] - `uc.seng301.petbattler.asg3.model.Player(2337541234401)`
+          <- [root] - `uc.seng301.petbattler.asg3.model.Player(2337541234401)`
+        <- [from]
+        -> [where]
+          -> [EQUAL]
+              -> [basic-path] - `uc.seng301.petbattler.asg3.model.Player(2337541234401).name`
+          <- [EQUAL]
+        <- [where]
+      <- [query-spec]
+    <- [select]
+
+18:41:05.384 [Test worker] TRACE org.hibernate.orm.query.plan.cache - QueryPlan#getSelectQueryPlan(org.hibernate.query.sqm.internal.SqmInterpretationsKey@7c35d2b3)
+18:41:05.384 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolving SqmRoot [uc.seng301.petbattler.asg3.model.Player] to TableGroup
+18:41:05.384 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolving SqmRoot [uc.seng301.petbattler.asg3.model.Player] to TableGroup
+18:41:05.384 [Test worker] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : p1_0
+18:41:05.384 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolved SqmRoot [uc.seng301.petbattler.asg3.model.Player] to new TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337541234401))]
+18:41:05.384 [Test worker] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337541234401))] with identifierForTableGroup [uc.seng301.petbattler.asg3.model.Player] for NavigablePath [uc.seng301.petbattler.asg3.model.Player] 
+18:41:05.384 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Visiting explicit joins for `uc.seng301.petbattler.asg3.model.Player(2337541234401)`
+18:41:05.384 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - SqmRoot [uc.seng301.petbattler.asg3.model.Player] resolved to existing TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337541234401))]
+18:41:05.384 [Test worker] TRACE org.hibernate.persister.entity.AbstractEntityPersister - #findSubPart(`name`)
+18:41:05.385 [Test worker] DEBUG org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(uc.seng301.petbattler.asg3.model.Player(2337541234401).name) 
+18:41:05.385 [Test worker] TRACE org.hibernate.persister.entity.AbstractEntityPersister - #findSubPart(`name`)
+18:41:05.385 [Test worker] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
+ \-EntityResultImpl [uc.seng301.petbattler.asg3.model.Player(2337541234401)]
+ |  +-BasicFetch [uc.seng301.petbattler.asg3.model.Player(2337541234401).name]
+ |  \-SelectEagerCollectionFetch [uc.seng301.petbattler.asg3.model.Player(2337541234401).packs]
+
+18:41:05.385 [Test worker] TRACE org.hibernate.orm.results.graph.AST - Stack trace calling DomainResultGraphPrinter
+java.lang.Exception: null
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.visitDomainResults(DomainResultGraphPrinter.java:70) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.logDomainResultGraph(DomainResultGraphPrinter.java:46) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.logDomainResultGraph(DomainResultGraphPrinter.java:37) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.ast.spi.AbstractSqlAstTranslator.translateSelect(AbstractSqlAstTranslator.java:858) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.ast.spi.AbstractSqlAstTranslator.translate(AbstractSqlAstTranslator.java:811) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.buildCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:433) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:327) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:303) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at uc.seng301.petbattler.asg3.accessor.PlayerAccessor.getPlayerByName(PlayerAccessor.java:70) ~[main/:?]
+	at uc.seng301.petbattler.asg3.accessor.PlayerAccessor.persistPlayer(PlayerAccessor.java:114) ~[main/:?]
+	at uc.seng301.petbattler.asg3.cucumber.step_definitions.CreateNewPackFeature.i_create_a_player_named(CreateNewPackFeature.java:42) ~[test/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) [gradle-testing-base-8.6.jar:8.6]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) [gradle-messaging-8.6.jar:8.6]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) [?:?]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.6.jar:8.6]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
+18:41:05.385 [Test worker] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (p1 : uc.seng301.petbattler.asg3.model.Player(2337541234401)) {
+          primaryTableReference : player as p1_0
+        }
+      }
+    }
+
+18:41:05.385 [Test worker] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+18:41:05.385 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337541234401).packs)
+18:41:05.385 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337541234401))
+18:41:05.385 [Test worker] DEBUG org.hibernate.orm.results - Initializer list:
+	  uc.seng301.petbattler.asg3.model.Player(2337541234401) -> EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337541234401))@1214118601 (SingleTableEntityPersister(uc.seng301.petbattler.asg3.model.Player))
+	  uc.seng301.petbattler.asg3.model.Player(2337541234401).packs -> SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337541234401).packs)@1679389295 (PluralAttribute(uc.seng301.petbattler.asg3.model.Player.packs))
+
+18:41:05.385 [Test worker] TRACE org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess - Executing query to retrieve ResultSet : select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Ross'
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep200: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Ross']
+18:41:05.386 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Registering last query statement [prep200: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Ross']
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [rs231: org.h2.result.LocalResult@63f093a columns: 2 rows: 0 pos: -1]
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterStatement
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing result set [rs231: org.h2.result.LocalResult@63f093a columns: 2 rows: 0 pos: 0]
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [rs231: org.h2.result.LocalResult@63f093a columns: 2 rows: 0 pos: 0]
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep200: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Ross']
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep200: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Ross']
+18:41:05.386 [Test worker] TRACE org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.386 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.386 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.386 [Test worker] TRACE org.hibernate.internal.SessionImpl - Closing session [02671580-f5a2-4b0d-92cc-a16c14f9a804]
+18:41:05.386 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@e36a4c1]
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Closing logical connection
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Logical connection closed
+18:41:05.386 [Test worker] TRACE org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl - Opening Hibernate Session.  tenant=null
+18:41:05.386 [Test worker] TRACE org.hibernate.internal.SessionImpl - Opened Session [574d7adc-d2ba-4faa-a211-782ac58519b8] at timestamp: 1713422465386
+18:41:05.386 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+18:41:05.386 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Preparing to begin transaction via JDBC Connection.setAutoCommit(false)
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Transaction begun via JDBC Connection.setAutoCommit(false)
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#afterBeginCallback
+18:41:05.386 [Test worker] TRACE org.hibernate.event.internal.EntityState - Transient instance of: uc.seng301.petbattler.asg3.model.Player
+18:41:05.386 [Test worker] TRACE org.hibernate.event.internal.DefaultPersistEventListener - Saving transient instance
+18:41:05.386 [Test worker] DEBUG org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 9, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+18:41:05.386 [Test worker] TRACE org.hibernate.event.internal.AbstractSaveEventListener - Saving [uc.seng301.petbattler.asg3.model.Player#9]
+18:41:05.386 [Test worker] TRACE org.hibernate.event.internal.WrapVisitor - Wrapped collection in role: uc.seng301.petbattler.asg3.model.Player.packs
+18:41:05.386 [Test worker] TRACE org.hibernate.engine.spi.ActionQueue - Adding an EntityInsertAction for [uc.seng301.petbattler.asg3.model.Player] object
+18:41:05.386 [Test worker] TRACE org.hibernate.engine.spi.ActionQueue - Adding insert with no non-nullable, transient entities: [EntityInsertAction[uc.seng301.petbattler.asg3.model.Player#9]]
+18:41:05.386 [Test worker] TRACE org.hibernate.engine.spi.ActionQueue - Adding resolved non-early insert action.
+18:41:05.386 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+18:41:05.386 [Test worker] TRACE org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#beforeCompletionCallback
+18:41:05.386 [Test worker] TRACE org.hibernate.internal.SessionImpl - SessionImpl#beforeTransactionCompletion()
+18:41:05.386 [Test worker] TRACE org.hibernate.internal.SessionImpl - Automatically flushing session
+18:41:05.386 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Flushing session
+18:41:05.386 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+18:41:05.386 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+18:41:05.387 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+18:41:05.387 [Test worker] DEBUG org.hibernate.engine.internal.Collections - Collection found: [uc.seng301.petbattler.asg3.model.Player.packs#9], was: [<unreferenced>] (initialized)
+18:41:05.387 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Processing unreferenced collections
+18:41:05.387 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+18:41:05.387 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+18:41:05.387 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
+18:41:05.387 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+18:41:05.387 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - uc.seng301.petbattler.asg3.model.Player{name=Ross, packs=[], playerId=9}
+18:41:05.387 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Executing flush
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep201: insert into player (name,id_player) values (?,?)]
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [null]
+18:41:05.387 [Test worker] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Ross]
+18:41:05.387 [Test worker] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [9]
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep201: insert into player (name,id_player) values (?,?) {1: 'Ross', 2: CAST(9 AS BIGINT)}]
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [null]
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep201: insert into player (name,id_player) values (?,?) {1: 'Ross', 2: CAST(9 AS BIGINT)}]
+18:41:05.387 [Test worker] DEBUG org.hibernate.orm.jdbc.mutation - Inserting collection rows - uc.seng301.petbattler.asg3.model.Player.packs : 9
+18:41:05.387 [Test worker] DEBUG org.hibernate.orm.jdbc.mutation - No collection rows to insert - uc.seng301.petbattler.asg3.model.Player.packs : 9
+18:41:05.387 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Starting after statement execution processing [AFTER_TRANSACTION]
+18:41:05.387 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Post flush
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#beforeTransactionCompletion
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.transaction.internal.SynchronizationRegistryStandardImpl - SynchronizationRegistryStandardImpl.notifySynchronizationsBeforeTransactionCompletion
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Preparing to commit transaction via JDBC Connection.commit()
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Transaction committed via JDBC Connection.commit()
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.387 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#afterCompletionCallback(true)
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.transaction.internal.SynchronizationRegistryStandardImpl - SynchronizationRegistryStandardImpl.notifySynchronizationsAfterTransactionCompletion(3)
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.387 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.387 [Test worker] TRACE org.hibernate.internal.SessionImpl - SessionImpl#afterTransactionCompletion(successful=true, delayed=false)
+18:41:05.387 [Test worker] TRACE org.hibernate.internal.SessionImpl - Closing session [574d7adc-d2ba-4faa-a211-782ac58519b8]
+18:41:05.387 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@7e147828]
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Closing logical connection
+18:41:05.387 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Logical connection closed
+18:41:05.387 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor - Getting player with id 9 from persistence
+18:41:05.388 [Test worker] TRACE org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl - Opening Hibernate Session.  tenant=null
+18:41:05.388 [Test worker] TRACE org.hibernate.internal.SessionImpl - Opened Session [a04edfcd-7a15-4599-81cb-e983e8fd0849] at timestamp: 1713422465388
+18:41:05.388 [Test worker] TRACE org.hibernate.orm.query.plan.cache - QueryPlan#resolveHqlInterpretation( `FROM Player WHERE playerId =9` )
+18:41:05.388 [Test worker] DEBUG org.hibernate.orm.query.hql - HQL : FROM Player WHERE playerId =9
+18:41:05.388 [Test worker] TRACE org.hibernate.orm.query.sqm.creation - SqmProcessingIndex#register(SqmPath) : uc.seng301.petbattler.asg3.model.Player(2337545356587)
+18:41:05.388 [Test worker] TRACE org.hibernate.orm.query.hql - BasicDotIdentifierHandler#consumeIdentifier( playerId, true, true ) - playerId
+18:41:05.388 [Test worker] TRACE org.hibernate.orm.query.hql - BaseLocalSequencePart#consumeIdentifier( playerId, true, true ) - playerId
+18:41:05.388 [Test worker] DEBUG org.hibernate.orm.query.hql - Unable to resolve unqualified attribute [playerId] in local from-clause
+18:41:05.388 [Test worker] DEBUG org.hibernate.orm.query.sqm.ast - SqmStatement Tree :
+    -> [select]
+      -> [query-spec]
+        -> [select]
+          -> [selection]
+            -> [root] - `uc.seng301.petbattler.asg3.model.Player(2337545356587)`
+            <- [root] - `uc.seng301.petbattler.asg3.model.Player(2337545356587)`
+          <- [selection]
+        <- [select]
+        -> [from]
+          -> [root] - `uc.seng301.petbattler.asg3.model.Player(2337545356587)`
+          <- [root] - `uc.seng301.petbattler.asg3.model.Player(2337545356587)`
+        <- [from]
+        -> [where]
+          -> [EQUAL]
+              -> [basic-path] - `uc.seng301.petbattler.asg3.model.Player(2337545356587).playerId`
+          <- [EQUAL]
+        <- [where]
+      <- [query-spec]
+    <- [select]
+
+18:41:05.388 [Test worker] TRACE org.hibernate.orm.query.plan.cache - QueryPlan#getSelectQueryPlan(org.hibernate.query.sqm.internal.SqmInterpretationsKey@83fa40de)
+18:41:05.388 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolving SqmRoot [uc.seng301.petbattler.asg3.model.Player] to TableGroup
+18:41:05.388 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolving SqmRoot [uc.seng301.petbattler.asg3.model.Player] to TableGroup
+18:41:05.388 [Test worker] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : p1_0
+18:41:05.388 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolved SqmRoot [uc.seng301.petbattler.asg3.model.Player] to new TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337545356587))]
+18:41:05.388 [Test worker] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337545356587))] with identifierForTableGroup [uc.seng301.petbattler.asg3.model.Player] for NavigablePath [uc.seng301.petbattler.asg3.model.Player] 
+18:41:05.388 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Visiting explicit joins for `uc.seng301.petbattler.asg3.model.Player(2337545356587)`
+18:41:05.388 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - SqmRoot [uc.seng301.petbattler.asg3.model.Player] resolved to existing TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337545356587))]
+18:41:05.389 [Test worker] TRACE org.hibernate.persister.entity.AbstractEntityPersister - #findSubPart(`playerId`)
+18:41:05.389 [Test worker] DEBUG org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(uc.seng301.petbattler.asg3.model.Player(2337545356587).playerId) 
+18:41:05.389 [Test worker] TRACE org.hibernate.persister.entity.AbstractEntityPersister - #findSubPart(`playerId`)
+18:41:05.389 [Test worker] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
+ \-EntityResultImpl [uc.seng301.petbattler.asg3.model.Player(2337545356587)]
+ |  +-BasicFetch [uc.seng301.petbattler.asg3.model.Player(2337545356587).name]
+ |  \-SelectEagerCollectionFetch [uc.seng301.petbattler.asg3.model.Player(2337545356587).packs]
+
+18:41:05.389 [Test worker] TRACE org.hibernate.orm.results.graph.AST - Stack trace calling DomainResultGraphPrinter
+java.lang.Exception: null
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.visitDomainResults(DomainResultGraphPrinter.java:70) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.logDomainResultGraph(DomainResultGraphPrinter.java:46) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.logDomainResultGraph(DomainResultGraphPrinter.java:37) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.ast.spi.AbstractSqlAstTranslator.translateSelect(AbstractSqlAstTranslator.java:858) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.ast.spi.AbstractSqlAstTranslator.translate(AbstractSqlAstTranslator.java:811) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.buildCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:433) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:327) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:303) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at uc.seng301.petbattler.asg3.accessor.PlayerAccessor.getPlayerById(PlayerAccessor.java:91) ~[main/:?]
+	at uc.seng301.petbattler.asg3.cucumber.step_definitions.CreateNewPackFeature.i_create_a_player_named(CreateNewPackFeature.java:43) ~[test/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) [gradle-testing-base-8.6.jar:8.6]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) [gradle-messaging-8.6.jar:8.6]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) [?:?]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.6.jar:8.6]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
+18:41:05.389 [Test worker] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (p1 : uc.seng301.petbattler.asg3.model.Player(2337545356587)) {
+          primaryTableReference : player as p1_0
+        }
+      }
+    }
+
+18:41:05.389 [Test worker] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+18:41:05.390 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337545356587).packs)
+18:41:05.390 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337545356587))
+18:41:05.390 [Test worker] DEBUG org.hibernate.orm.results - Initializer list:
+	  uc.seng301.petbattler.asg3.model.Player(2337545356587) -> EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337545356587))@2117613330 (SingleTableEntityPersister(uc.seng301.petbattler.asg3.model.Player))
+	  uc.seng301.petbattler.asg3.model.Player(2337545356587).packs -> SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337545356587).packs)@590398917 (PluralAttribute(uc.seng301.petbattler.asg3.model.Player.packs))
+
+18:41:05.390 [Test worker] TRACE org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess - Executing query to retrieve ResultSet : select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=9
+18:41:05.390 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep202: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=9]
+18:41:05.390 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Registering last query statement [prep202: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=9]
+18:41:05.390 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [rs232: org.h2.result.LocalResult@36c763cd columns: 2 rows: 1 pos: -1]
+18:41:05.390 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterStatement
+18:41:05.390 [Test worker] TRACE org.hibernate.orm.results.loading - StandardRowReader#readRow
+18:41:05.390 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (o.h.s.r.g.e.i.EntityResultInitializer) Beginning Initializer#resolveKey process for entity : uc.seng301.petbattler.asg3.model.Player(2337545356587)
+18:41:05.390 [Test worker] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [9]
+18:41:05.390 [Test worker] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [9]
+18:41:05.390 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (uc.seng301.petbattler.asg3.model.Player(2337545356587)): 9
+18:41:05.390 [Test worker] DEBUG org.hibernate.orm.results.loading.org.hibernate.orm.results.loading.collection - (SelectEagerCollectionInitializer) Current row collection key : uc.seng301.petbattler.asg3.model.Player(2337545356587).packs#9
+18:41:05.390 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (o.h.s.r.g.e.i.EntityResultInitializer) Beginning Initializer#resolveInstance process for entity (uc.seng301.petbattler.asg3.model.Player(2337545356587)) : 9
+18:41:05.390 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [uc.seng301.petbattler.asg3.model.Player(2337545356587)#9] : 751022247
+18:41:05.390 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Beginning Initializer#initializeInstance process for entity uc.seng301.petbattler.asg3.model.Player(2337545356587)#9
+18:41:05.390 [Test worker] TRACE org.hibernate.orm.jdbc.extract - extracted value (2:VARCHAR) -> [Ross]
+18:41:05.390 [Test worker] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [Ross]
+18:41:05.390 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : uc.seng301.petbattler.asg3.model.Player(2337545356587)#9
+18:41:05.390 [Test worker] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@4cb641a5
+18:41:05.390 [Test worker] TRACE org.hibernate.orm.results.loading - StandardRowReader#afterRow
+18:41:05.390 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing result set [rs232: org.h2.result.LocalResult@36c763cd columns: 2 rows: 1 pos: 1]
+18:41:05.390 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [rs232: org.h2.result.LocalResult@36c763cd columns: 2 rows: 1 pos: 1]
+18:41:05.390 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep202: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=9]
+18:41:05.390 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep202: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=9]
+18:41:05.390 [Test worker] TRACE org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+18:41:05.390 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Initializing collection [uc.seng301.petbattler.asg3.model.Player.packs#9]
+18:41:05.390 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Checking second-level cache
+18:41:05.390 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Collection not cached
+18:41:05.390 [Test worker] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+18:41:05.390 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets)
+18:41:05.391 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntitySelectFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.player)
+18:41:05.391 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntityJoinedFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element})
+18:41:05.391 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : BagInitializer(uc.seng301.petbattler.asg3.model.Player.packs)
+18:41:05.391 [Test worker] DEBUG org.hibernate.orm.results - Initializer list:
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element}.player -> EntitySelectFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.player)@118519761 (ToOneAttributeMapping(NavigableRole[uc.seng301.petbattler.asg3.model.Pack.player])@2117653154)
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets -> SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets)@921155868 (PluralAttribute(uc.seng301.petbattler.asg3.model.Pack.pets))
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element} -> EntityJoinedFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element})@1661625468 (EntityCollectionPart(uc.seng301.petbattler.asg3.model.Player.packs#{element})@1606672321)
+	  uc.seng301.petbattler.asg3.model.Player.packs -> BagInitializer(uc.seng301.petbattler.asg3.model.Player.packs)@500153041 (PluralAttribute(uc.seng301.petbattler.asg3.model.Player.packs))
+
+18:41:05.391 [Test worker] TRACE org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess - Executing query to retrieve ResultSet : select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep203: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?]
+18:41:05.391 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Registering last query statement [prep203: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?]
+18:41:05.391 [Test worker] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [9]
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [rs233: org.h2.result.LocalResult@12418d3f columns: 3 rows: 0 pos: -1]
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterStatement
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing result set [rs233: org.h2.result.LocalResult@12418d3f columns: 3 rows: 0 pos: 0]
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [rs233: org.h2.result.LocalResult@12418d3f columns: 3 rows: 0 pos: 0]
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep203: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=? {1: CAST(9 AS BIGINT)}]
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep203: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=? {1: CAST(9 AS BIGINT)}]
+18:41:05.391 [Test worker] DEBUG org.hibernate.sql.results.internal.ResultsHelper - Collection fully initialized: [uc.seng301.petbattler.asg3.model.Player.packs#9]
+18:41:05.391 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Collection initialized
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.391 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.391 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.391 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.391 [Test worker] TRACE org.hibernate.internal.SessionImpl - Closing session [a04edfcd-7a15-4599-81cb-e983e8fd0849]
+18:41:05.391 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@42210d27]
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Closing logical connection
+18:41:05.391 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Logical connection closed
+18:41:05.400 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor - Creating player with name Rachel
+18:41:05.400 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor - Save player Player (null): Rachel
+	Packs:
+ to persistence
+18:41:05.400 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor - Getting player with name Rachel from persistence
+18:41:05.400 [Test worker] TRACE org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl - Opening Hibernate Session.  tenant=null
+18:41:05.400 [Test worker] TRACE org.hibernate.internal.SessionImpl - Opened Session [14bc9486-8eaa-4f68-8530-f0ef6151f7e8] at timestamp: 1713422465400
+18:41:05.400 [Test worker] TRACE org.hibernate.orm.query.plan.cache - QueryPlan#resolveHqlInterpretation( `FROM Player where name='Rachel'` )
+18:41:05.400 [Test worker] DEBUG org.hibernate.orm.query.hql - HQL : FROM Player where name='Rachel'
+18:41:05.401 [Test worker] TRACE org.hibernate.orm.query.sqm.creation - SqmProcessingIndex#register(SqmPath) : uc.seng301.petbattler.asg3.model.Player(2337558153874)
+18:41:05.401 [Test worker] TRACE org.hibernate.orm.query.hql - BasicDotIdentifierHandler#consumeIdentifier( name, true, true ) - name
+18:41:05.401 [Test worker] TRACE org.hibernate.orm.query.hql - BaseLocalSequencePart#consumeIdentifier( name, true, true ) - name
+18:41:05.401 [Test worker] DEBUG org.hibernate.orm.query.hql - Unable to resolve unqualified attribute [name] in local from-clause
+18:41:05.401 [Test worker] DEBUG org.hibernate.orm.query.sqm.ast - SqmStatement Tree :
+    -> [select]
+      -> [query-spec]
+        -> [select]
+          -> [selection]
+            -> [root] - `uc.seng301.petbattler.asg3.model.Player(2337558153874)`
+            <- [root] - `uc.seng301.petbattler.asg3.model.Player(2337558153874)`
+          <- [selection]
+        <- [select]
+        -> [from]
+          -> [root] - `uc.seng301.petbattler.asg3.model.Player(2337558153874)`
+          <- [root] - `uc.seng301.petbattler.asg3.model.Player(2337558153874)`
+        <- [from]
+        -> [where]
+          -> [EQUAL]
+              -> [basic-path] - `uc.seng301.petbattler.asg3.model.Player(2337558153874).name`
+          <- [EQUAL]
+        <- [where]
+      <- [query-spec]
+    <- [select]
+
+18:41:05.401 [Test worker] TRACE org.hibernate.orm.query.plan.cache - QueryPlan#getSelectQueryPlan(org.hibernate.query.sqm.internal.SqmInterpretationsKey@2d429715)
+18:41:05.401 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolving SqmRoot [uc.seng301.petbattler.asg3.model.Player] to TableGroup
+18:41:05.401 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolving SqmRoot [uc.seng301.petbattler.asg3.model.Player] to TableGroup
+18:41:05.401 [Test worker] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : p1_0
+18:41:05.401 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolved SqmRoot [uc.seng301.petbattler.asg3.model.Player] to new TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337558153874))]
+18:41:05.401 [Test worker] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337558153874))] with identifierForTableGroup [uc.seng301.petbattler.asg3.model.Player] for NavigablePath [uc.seng301.petbattler.asg3.model.Player] 
+18:41:05.402 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Visiting explicit joins for `uc.seng301.petbattler.asg3.model.Player(2337558153874)`
+18:41:05.402 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - SqmRoot [uc.seng301.petbattler.asg3.model.Player] resolved to existing TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337558153874))]
+18:41:05.402 [Test worker] TRACE org.hibernate.persister.entity.AbstractEntityPersister - #findSubPart(`name`)
+18:41:05.402 [Test worker] DEBUG org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(uc.seng301.petbattler.asg3.model.Player(2337558153874).name) 
+18:41:05.402 [Test worker] TRACE org.hibernate.persister.entity.AbstractEntityPersister - #findSubPart(`name`)
+18:41:05.402 [Test worker] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
+ \-EntityResultImpl [uc.seng301.petbattler.asg3.model.Player(2337558153874)]
+ |  +-BasicFetch [uc.seng301.petbattler.asg3.model.Player(2337558153874).name]
+ |  \-SelectEagerCollectionFetch [uc.seng301.petbattler.asg3.model.Player(2337558153874).packs]
+
+18:41:05.402 [Test worker] TRACE org.hibernate.orm.results.graph.AST - Stack trace calling DomainResultGraphPrinter
+java.lang.Exception: null
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.visitDomainResults(DomainResultGraphPrinter.java:70) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.logDomainResultGraph(DomainResultGraphPrinter.java:46) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.logDomainResultGraph(DomainResultGraphPrinter.java:37) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.ast.spi.AbstractSqlAstTranslator.translateSelect(AbstractSqlAstTranslator.java:858) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.ast.spi.AbstractSqlAstTranslator.translate(AbstractSqlAstTranslator.java:811) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.buildCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:433) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:327) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:303) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at uc.seng301.petbattler.asg3.accessor.PlayerAccessor.getPlayerByName(PlayerAccessor.java:70) ~[main/:?]
+	at uc.seng301.petbattler.asg3.accessor.PlayerAccessor.persistPlayer(PlayerAccessor.java:114) ~[main/:?]
+	at uc.seng301.petbattler.asg3.cucumber.step_definitions.CreateNewPackFeature.i_create_a_player_named(CreateNewPackFeature.java:42) ~[test/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) [gradle-testing-base-8.6.jar:8.6]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) [gradle-messaging-8.6.jar:8.6]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) [?:?]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.6.jar:8.6]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
+18:41:05.403 [Test worker] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (p1 : uc.seng301.petbattler.asg3.model.Player(2337558153874)) {
+          primaryTableReference : player as p1_0
+        }
+      }
+    }
+
+18:41:05.403 [Test worker] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+18:41:05.403 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337558153874).packs)
+18:41:05.403 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337558153874))
+18:41:05.403 [Test worker] DEBUG org.hibernate.orm.results - Initializer list:
+	  uc.seng301.petbattler.asg3.model.Player(2337558153874) -> EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337558153874))@915793138 (SingleTableEntityPersister(uc.seng301.petbattler.asg3.model.Player))
+	  uc.seng301.petbattler.asg3.model.Player(2337558153874).packs -> SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337558153874).packs)@1541385794 (PluralAttribute(uc.seng301.petbattler.asg3.model.Player.packs))
+
+18:41:05.403 [Test worker] TRACE org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess - Executing query to retrieve ResultSet : select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Rachel'
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep204: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Rachel']
+18:41:05.404 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Registering last query statement [prep204: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Rachel']
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [rs234: org.h2.result.LocalResult@7a98f106 columns: 2 rows: 0 pos: -1]
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterStatement
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing result set [rs234: org.h2.result.LocalResult@7a98f106 columns: 2 rows: 0 pos: 0]
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [rs234: org.h2.result.LocalResult@7a98f106 columns: 2 rows: 0 pos: 0]
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep204: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Rachel']
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep204: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.name='Rachel']
+18:41:05.404 [Test worker] TRACE org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.404 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.404 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.404 [Test worker] TRACE org.hibernate.internal.SessionImpl - Closing session [14bc9486-8eaa-4f68-8530-f0ef6151f7e8]
+18:41:05.404 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@45382749]
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Closing logical connection
+18:41:05.404 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Logical connection closed
+18:41:05.404 [Test worker] TRACE org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl - Opening Hibernate Session.  tenant=null
+18:41:05.404 [Test worker] TRACE org.hibernate.internal.SessionImpl - Opened Session [c47d5cfe-b4ed-4d87-bd9b-f65711cdceea] at timestamp: 1713422465404
+18:41:05.404 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - On TransactionImpl creation, JpaCompliance#isJpaTransactionComplianceEnabled == false
+18:41:05.405 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - begin
+18:41:05.405 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Preparing to begin transaction via JDBC Connection.setAutoCommit(false)
+18:41:05.405 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Transaction begun via JDBC Connection.setAutoCommit(false)
+18:41:05.405 [Test worker] TRACE org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#afterBeginCallback
+18:41:05.405 [Test worker] TRACE org.hibernate.event.internal.EntityState - Transient instance of: uc.seng301.petbattler.asg3.model.Player
+18:41:05.405 [Test worker] TRACE org.hibernate.event.internal.DefaultPersistEventListener - Saving transient instance
+18:41:05.405 [Test worker] DEBUG org.hibernate.event.internal.AbstractSaveEventListener - Generated identifier: 10, using strategy: org.hibernate.id.enhanced.SequenceStyleGenerator
+18:41:05.405 [Test worker] TRACE org.hibernate.event.internal.AbstractSaveEventListener - Saving [uc.seng301.petbattler.asg3.model.Player#10]
+18:41:05.405 [Test worker] TRACE org.hibernate.event.internal.WrapVisitor - Wrapped collection in role: uc.seng301.petbattler.asg3.model.Player.packs
+18:41:05.405 [Test worker] TRACE org.hibernate.engine.spi.ActionQueue - Adding an EntityInsertAction for [uc.seng301.petbattler.asg3.model.Player] object
+18:41:05.405 [Test worker] TRACE org.hibernate.engine.spi.ActionQueue - Adding insert with no non-nullable, transient entities: [EntityInsertAction[uc.seng301.petbattler.asg3.model.Player#10]]
+18:41:05.405 [Test worker] TRACE org.hibernate.engine.spi.ActionQueue - Adding resolved non-early insert action.
+18:41:05.405 [Test worker] DEBUG org.hibernate.engine.transaction.internal.TransactionImpl - committing
+18:41:05.405 [Test worker] TRACE org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#beforeCompletionCallback
+18:41:05.405 [Test worker] TRACE org.hibernate.internal.SessionImpl - SessionImpl#beforeTransactionCompletion()
+18:41:05.405 [Test worker] TRACE org.hibernate.internal.SessionImpl - Automatically flushing session
+18:41:05.405 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Flushing session
+18:41:05.405 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Processing flush-time cascades
+18:41:05.405 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Dirty checking collections
+18:41:05.405 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Flushing entities and processing referenced collections
+18:41:05.405 [Test worker] DEBUG org.hibernate.engine.internal.Collections - Collection found: [uc.seng301.petbattler.asg3.model.Player.packs#10], was: [<unreferenced>] (initialized)
+18:41:05.405 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Processing unreferenced collections
+18:41:05.405 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Scheduling collection removes/(re)creates/updates
+18:41:05.405 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 1 insertions, 0 updates, 0 deletions to 1 objects
+18:41:05.405 [Test worker] DEBUG org.hibernate.event.internal.AbstractFlushingEventListener - Flushed: 1 (re)creations, 0 updates, 0 removals to 1 collections
+18:41:05.405 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - Listing entities:
+18:41:05.405 [Test worker] DEBUG org.hibernate.internal.util.EntityPrinter - uc.seng301.petbattler.asg3.model.Player{name=Rachel, packs=[], playerId=10}
+18:41:05.405 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Executing flush
+18:41:05.405 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep205: insert into player (name,id_player) values (?,?)]
+18:41:05.405 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [null]
+18:41:05.405 [Test worker] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:VARCHAR) <- [Rachel]
+18:41:05.406 [Test worker] TRACE org.hibernate.orm.jdbc.bind - binding parameter (2:BIGINT) <- [10]
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep205: insert into player (name,id_player) values (?,?) {1: 'Rachel', 2: CAST(10 AS BIGINT)}]
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [null]
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep205: insert into player (name,id_player) values (?,?) {1: 'Rachel', 2: CAST(10 AS BIGINT)}]
+18:41:05.406 [Test worker] DEBUG org.hibernate.orm.jdbc.mutation - Inserting collection rows - uc.seng301.petbattler.asg3.model.Player.packs : 10
+18:41:05.406 [Test worker] DEBUG org.hibernate.orm.jdbc.mutation - No collection rows to insert - uc.seng301.petbattler.asg3.model.Player.packs : 10
+18:41:05.406 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Starting after statement execution processing [AFTER_TRANSACTION]
+18:41:05.406 [Test worker] TRACE org.hibernate.event.internal.AbstractFlushingEventListener - Post flush
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#beforeTransactionCompletion
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.transaction.internal.SynchronizationRegistryStandardImpl - SynchronizationRegistryStandardImpl.notifySynchronizationsBeforeTransactionCompletion
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Preparing to commit transaction via JDBC Connection.commit()
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - Transaction committed via JDBC Connection.commit()
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.406 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.transaction.backend.jdbc.internal.JdbcResourceLocalTransactionCoordinatorImpl - ResourceLocalTransactionCoordinatorImpl#afterCompletionCallback(true)
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.transaction.internal.SynchronizationRegistryStandardImpl - SynchronizationRegistryStandardImpl.notifySynchronizationsAfterTransactionCompletion(3)
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.406 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.406 [Test worker] TRACE org.hibernate.internal.SessionImpl - SessionImpl#afterTransactionCompletion(successful=true, delayed=false)
+18:41:05.406 [Test worker] TRACE org.hibernate.internal.SessionImpl - Closing session [c47d5cfe-b4ed-4d87-bd9b-f65711cdceea]
+18:41:05.406 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@3c88db1]
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Closing logical connection
+18:41:05.406 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Logical connection closed
+18:41:05.406 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor - Getting player with id 10 from persistence
+18:41:05.407 [Test worker] TRACE org.hibernate.internal.SessionFactoryImpl$SessionBuilderImpl - Opening Hibernate Session.  tenant=null
+18:41:05.407 [Test worker] TRACE org.hibernate.internal.SessionImpl - Opened Session [36c4ad90-a65d-4cd4-92cb-573f35a8c2a8] at timestamp: 1713422465407
+18:41:05.407 [Test worker] TRACE org.hibernate.orm.query.plan.cache - QueryPlan#resolveHqlInterpretation( `FROM Player WHERE playerId =10` )
+18:41:05.407 [Test worker] DEBUG org.hibernate.orm.query.hql - HQL : FROM Player WHERE playerId =10
+18:41:05.407 [Test worker] TRACE org.hibernate.orm.query.sqm.creation - SqmProcessingIndex#register(SqmPath) : uc.seng301.petbattler.asg3.model.Player(2337564574225)
+18:41:05.407 [Test worker] TRACE org.hibernate.orm.query.hql - BasicDotIdentifierHandler#consumeIdentifier( playerId, true, true ) - playerId
+18:41:05.407 [Test worker] TRACE org.hibernate.orm.query.hql - BaseLocalSequencePart#consumeIdentifier( playerId, true, true ) - playerId
+18:41:05.407 [Test worker] DEBUG org.hibernate.orm.query.hql - Unable to resolve unqualified attribute [playerId] in local from-clause
+18:41:05.407 [Test worker] DEBUG org.hibernate.orm.query.sqm.ast - SqmStatement Tree :
+    -> [select]
+      -> [query-spec]
+        -> [select]
+          -> [selection]
+            -> [root] - `uc.seng301.petbattler.asg3.model.Player(2337564574225)`
+            <- [root] - `uc.seng301.petbattler.asg3.model.Player(2337564574225)`
+          <- [selection]
+        <- [select]
+        -> [from]
+          -> [root] - `uc.seng301.petbattler.asg3.model.Player(2337564574225)`
+          <- [root] - `uc.seng301.petbattler.asg3.model.Player(2337564574225)`
+        <- [from]
+        -> [where]
+          -> [EQUAL]
+              -> [basic-path] - `uc.seng301.petbattler.asg3.model.Player(2337564574225).playerId`
+          <- [EQUAL]
+        <- [where]
+      <- [query-spec]
+    <- [select]
+
+18:41:05.408 [Test worker] TRACE org.hibernate.orm.query.plan.cache - QueryPlan#getSelectQueryPlan(org.hibernate.query.sqm.internal.SqmInterpretationsKey@fb4dda1a)
+18:41:05.408 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolving SqmRoot [uc.seng301.petbattler.asg3.model.Player] to TableGroup
+18:41:05.408 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolving SqmRoot [uc.seng301.petbattler.asg3.model.Player] to TableGroup
+18:41:05.408 [Test worker] DEBUG org.hibernate.orm.sql.ast.create - Created new SQL alias : p1_0
+18:41:05.408 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Resolved SqmRoot [uc.seng301.petbattler.asg3.model.Player] to new TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337564574225))]
+18:41:05.408 [Test worker] DEBUG org.hibernate.orm.sql.ast.create - Registration of TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337564574225))] with identifierForTableGroup [uc.seng301.petbattler.asg3.model.Player] for NavigablePath [uc.seng301.petbattler.asg3.model.Player] 
+18:41:05.408 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Visiting explicit joins for `uc.seng301.petbattler.asg3.model.Player(2337564574225)`
+18:41:05.408 [Test worker] TRACE org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - SqmRoot [uc.seng301.petbattler.asg3.model.Player] resolved to existing TableGroup [StandardTableGroup(uc.seng301.petbattler.asg3.model.Player(2337564574225))]
+18:41:05.408 [Test worker] TRACE org.hibernate.persister.entity.AbstractEntityPersister - #findSubPart(`playerId`)
+18:41:05.408 [Test worker] DEBUG org.hibernate.query.sqm.sql.BaseSqmToSqlAstConverter - Determining mapping-model type for SqmPath : SqmBasicValuedSimplePath(uc.seng301.petbattler.asg3.model.Player(2337564574225).playerId) 
+18:41:05.408 [Test worker] TRACE org.hibernate.persister.entity.AbstractEntityPersister - #findSubPart(`playerId`)
+18:41:05.408 [Test worker] DEBUG org.hibernate.orm.results.graph.AST - DomainResult Graph:
+ \-EntityResultImpl [uc.seng301.petbattler.asg3.model.Player(2337564574225)]
+ |  +-BasicFetch [uc.seng301.petbattler.asg3.model.Player(2337564574225).name]
+ |  \-SelectEagerCollectionFetch [uc.seng301.petbattler.asg3.model.Player(2337564574225).packs]
+
+18:41:05.408 [Test worker] TRACE org.hibernate.orm.results.graph.AST - Stack trace calling DomainResultGraphPrinter
+java.lang.Exception: null
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.visitDomainResults(DomainResultGraphPrinter.java:70) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.logDomainResultGraph(DomainResultGraphPrinter.java:46) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.results.graph.DomainResultGraphPrinter.logDomainResultGraph(DomainResultGraphPrinter.java:37) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.ast.spi.AbstractSqlAstTranslator.translateSelect(AbstractSqlAstTranslator.java:858) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.sql.ast.spi.AbstractSqlAstTranslator.translate(AbstractSqlAstTranslator.java:811) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.buildCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:433) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.withCacheableSqmInterpretation(ConcreteSqmSelectQueryPlan.java:327) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.ConcreteSqmSelectQueryPlan.performList(ConcreteSqmSelectQueryPlan.java:303) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.sqm.internal.QuerySqmImpl.doList(QuerySqmImpl.java:509) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.list(AbstractSelectionQuery.java:427) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at uc.seng301.petbattler.asg3.accessor.PlayerAccessor.getPlayerById(PlayerAccessor.java:91) ~[main/:?]
+	at uc.seng301.petbattler.asg3.cucumber.step_definitions.CreateNewPackFeature.i_create_a_player_named(CreateNewPackFeature.java:43) ~[test/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) [gradle-testing-base-8.6.jar:8.6]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) [gradle-messaging-8.6.jar:8.6]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) [?:?]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.6.jar:8.6]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
+18:41:05.409 [Test worker] DEBUG org.hibernate.orm.sql.ast.tree - SQL AST Tree:
+    SelectStatement {
+      FromClause {
+        StandardTableGroup (p1 : uc.seng301.petbattler.asg3.model.Player(2337564574225)) {
+          primaryTableReference : player as p1_0
+        }
+      }
+    }
+
+18:41:05.409 [Test worker] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = NORMAL
+18:41:05.409 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337564574225).packs)
+18:41:05.409 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337564574225))
+18:41:05.409 [Test worker] DEBUG org.hibernate.orm.results - Initializer list:
+	  uc.seng301.petbattler.asg3.model.Player(2337564574225) -> EntityResultInitializer(uc.seng301.petbattler.asg3.model.Player(2337564574225))@541434985 (SingleTableEntityPersister(uc.seng301.petbattler.asg3.model.Player))
+	  uc.seng301.petbattler.asg3.model.Player(2337564574225).packs -> SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player(2337564574225).packs)@1730613461 (PluralAttribute(uc.seng301.petbattler.asg3.model.Player.packs))
+
+18:41:05.410 [Test worker] TRACE org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess - Executing query to retrieve ResultSet : select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=10
+18:41:05.410 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep206: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=10]
+18:41:05.410 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Registering last query statement [prep206: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=10]
+18:41:05.410 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [rs235: org.h2.result.LocalResult@17224bad columns: 2 rows: 1 pos: -1]
+18:41:05.410 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterStatement
+18:41:05.410 [Test worker] TRACE org.hibernate.orm.results.loading - StandardRowReader#readRow
+18:41:05.410 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (o.h.s.r.g.e.i.EntityResultInitializer) Beginning Initializer#resolveKey process for entity : uc.seng301.petbattler.asg3.model.Player(2337564574225)
+18:41:05.410 [Test worker] TRACE org.hibernate.orm.jdbc.extract - extracted value (1:BIGINT) -> [10]
+18:41:05.410 [Test worker] DEBUG org.hibernate.orm.results - Extracted JDBC value [0] - [10]
+18:41:05.410 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Hydrated EntityKey (uc.seng301.petbattler.asg3.model.Player(2337564574225)): 10
+18:41:05.410 [Test worker] DEBUG org.hibernate.orm.results.loading.org.hibernate.orm.results.loading.collection - (SelectEagerCollectionInitializer) Current row collection key : uc.seng301.petbattler.asg3.model.Player(2337564574225).packs#10
+18:41:05.410 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (o.h.s.r.g.e.i.EntityResultInitializer) Beginning Initializer#resolveInstance process for entity (uc.seng301.petbattler.asg3.model.Player(2337564574225)) : 10
+18:41:05.410 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Created new entity instance [uc.seng301.petbattler.asg3.model.Player(2337564574225)#10] : 1161284088
+18:41:05.410 [Test worker] TRACE org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Beginning Initializer#initializeInstance process for entity uc.seng301.petbattler.asg3.model.Player(2337564574225)#10
+18:41:05.410 [Test worker] TRACE org.hibernate.orm.jdbc.extract - extracted value (2:VARCHAR) -> [Rachel]
+18:41:05.410 [Test worker] DEBUG org.hibernate.orm.results - Extracted JDBC value [1] - [Rachel]
+18:41:05.410 [Test worker] DEBUG org.hibernate.orm.results.loading.entity - (EntityResultInitializer) Done materializing entityInstance : uc.seng301.petbattler.asg3.model.Player(2337564574225)#10
+18:41:05.410 [Test worker] DEBUG org.hibernate.orm.results.loading - Calling top-level assembler (0 / 1) : org.hibernate.sql.results.graph.entity.internal.EntityAssembler@6cf47d05
+18:41:05.410 [Test worker] TRACE org.hibernate.orm.results.loading - StandardRowReader#afterRow
+18:41:05.410 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing result set [rs235: org.h2.result.LocalResult@17224bad columns: 2 rows: 1 pos: 1]
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [rs235: org.h2.result.LocalResult@17224bad columns: 2 rows: 1 pos: 1]
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep206: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=10]
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep206: select p1_0.id_player,p1_0.name from player p1_0 where p1_0.id_player=10]
+18:41:05.411 [Test worker] TRACE org.hibernate.engine.internal.StatefulPersistenceContext - Initializing non-lazy collections
+18:41:05.411 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Initializing collection [uc.seng301.petbattler.asg3.model.Player.packs#10]
+18:41:05.411 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Checking second-level cache
+18:41:05.411 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Collection not cached
+18:41:05.411 [Test worker] DEBUG org.hibernate.orm.sql.exec - Skipping reading Query result cache data: cache-enabled = false, cache-mode = IGNORE
+18:41:05.411 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets)
+18:41:05.411 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntitySelectFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.player)
+18:41:05.411 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : EntityJoinedFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element})
+18:41:05.411 [Test worker] TRACE org.hibernate.orm.results - Registering initializer : BagInitializer(uc.seng301.petbattler.asg3.model.Player.packs)
+18:41:05.411 [Test worker] DEBUG org.hibernate.orm.results - Initializer list:
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element}.player -> EntitySelectFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.player)@955712756 (ToOneAttributeMapping(NavigableRole[uc.seng301.petbattler.asg3.model.Pack.player])@2117653154)
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets -> SelectEagerCollectionInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element}.pets)@1140089371 (PluralAttribute(uc.seng301.petbattler.asg3.model.Pack.pets))
+	  uc.seng301.petbattler.asg3.model.Player.packs.{element} -> EntityJoinedFetchInitializer(uc.seng301.petbattler.asg3.model.Player.packs.{element})@1527213347 (EntityCollectionPart(uc.seng301.petbattler.asg3.model.Player.packs#{element})@1606672321)
+	  uc.seng301.petbattler.asg3.model.Player.packs -> BagInitializer(uc.seng301.petbattler.asg3.model.Player.packs)@349454099 (PluralAttribute(uc.seng301.petbattler.asg3.model.Player.packs))
+
+18:41:05.411 [Test worker] TRACE org.hibernate.sql.results.jdbc.internal.DeferredResultSetAccess - Executing query to retrieve ResultSet : select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering statement [prep207: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?]
+18:41:05.411 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Registering last query statement [prep207: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=?]
+18:41:05.411 [Test worker] TRACE org.hibernate.orm.jdbc.bind - binding parameter (1:BIGINT) <- [10]
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Registering result set [rs236: org.h2.result.LocalResult@748015f8 columns: 3 rows: 0 pos: -1]
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterStatement
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing result set [rs236: org.h2.result.LocalResult@748015f8 columns: 3 rows: 0 pos: 0]
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing result set [rs236: org.h2.result.LocalResult@748015f8 columns: 3 rows: 0 pos: 0]
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing statement [prep207: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=? {1: CAST(10 AS BIGINT)}]
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Closing prepared statement [prep207: select p1_0.id_player,p1_0.id_pack,p1_0.name from pack p1_0 where p1_0.id_player=? {1: CAST(10 AS BIGINT)}]
+18:41:05.411 [Test worker] DEBUG org.hibernate.sql.results.internal.ResultsHelper - Collection fully initialized: [uc.seng301.petbattler.asg3.model.Player.packs#10]
+18:41:05.411 [Test worker] TRACE org.hibernate.event.internal.DefaultInitializeCollectionEventListener - Collection initialized
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.411 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.411 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.AbstractLogicalConnectionImplementor - LogicalConnection#afterTransaction
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.411 [Test worker] DEBUG org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Initiating JDBC connection release from afterTransaction
+18:41:05.411 [Test worker] TRACE org.hibernate.internal.SessionImpl - Closing session [36c4ad90-a65d-4cd4-92cb-573f35a8c2a8]
+18:41:05.411 [Test worker] TRACE org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl - Closing JDBC container [org.hibernate.engine.jdbc.internal.JdbcCoordinatorImpl@2197990b]
+18:41:05.411 [Test worker] TRACE org.hibernate.resource.jdbc.internal.ResourceRegistryStandardImpl - Releasing JDBC resources
+18:41:05.412 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Closing logical connection
+18:41:05.412 [Test worker] TRACE org.hibernate.resource.jdbc.internal.LogicalConnectionManagedImpl - Logical connection closed
