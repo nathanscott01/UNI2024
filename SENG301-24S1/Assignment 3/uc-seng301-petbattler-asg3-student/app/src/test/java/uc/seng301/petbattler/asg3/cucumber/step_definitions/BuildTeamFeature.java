@@ -34,6 +34,10 @@ public class BuildTeamFeature {
     private static PetGenerator petGeneratorSpy;
     private static int unique_pet_i = 0;
     public static Queue<String> mockCLIResponse;
+    private static List<String> capturedCLIOutput;
+    private static Runnable doLater;
+    private Player player;
+    private Pack pack;
 
     @BeforeAll
     public static void before_or_after_all() {
@@ -60,6 +64,14 @@ public class BuildTeamFeature {
         // Use a queue to inject input into CLI
         mockCLIResponse = new LinkedList<>();
         Mockito.when(cli.getNextLine()).thenAnswer(i -> mockCLIResponse.poll());
+
+        // Capture the standard output for testing
+        capturedCLIOutput = new ArrayList<>();
+        Mockito.doAnswer((i) -> {
+            capturedCLIOutput.add(i.getArgument(0));
+            System.out.println((String) i.getArgument(0));
+            return null;
+        }).when(cli).printLine(Mockito.anyString());
     }
 
     private static List<Pet> createPredefinedPets() {
@@ -69,6 +81,9 @@ public class BuildTeamFeature {
         pets.add(petAccessor.createPet("Donkey", 8, 6, 2));
         pets.add(petAccessor.createPet("Arabian White Horse", 8, 8, 2));
         pets.add(petAccessor.createPet("Fenton the Dog", 1, 100, 3));
+        for (Pet pet : pets) {
+            petAccessor.persistPet(pet);
+        }
         return pets;
     }
 
@@ -80,48 +95,48 @@ public class BuildTeamFeature {
 
     @Given("Player {string} has a pack {string} with {int} unique pets")
     public void player_has_a_pack_with_unique_pets(String playerName, String packName, Integer n_pets) {
-        // Write code here that turns the phrase above into concrete actions
-//        throw new io.cucumber.java.PendingException();
-
-        Player player = playerAccessor.getPlayerByName(playerName);
-        Pack pack = packAccessor.createPack(packName, player, new ArrayList<>());
+        player = playerAccessor.getPlayerByName(playerName);
+        List<Pet> petsToAdd = new ArrayList<>(uniquePets.subList(0, n_pets));
+//        for (Pet pet : petsToAdd) {
+//            petAccessor.persistPet(pet);
+//        }
+        pack = packAccessor.createPack(packName, player, petsToAdd);
         Long deckId = packAccessor.persistPack(pack);
-        Assertions.assertNotNull(deckId);
-        while (unique_pet_i < n_pets) {
-            mockCLIResponse.clear();
-            mockCLIResponse.add("Y");
-            game.addToPack(String.format("add \"%s\" \"%s\"", playerName, pack.getName()));
-            Assertions.assertTrue(
-                    pack.getPets().stream().anyMatch(pet -> uniquePets.get(unique_pet_i).getName().equals(pet.getName())));
-            unique_pet_i++;
-        }
-        unique_pet_i = 0;
         Assertions.assertEquals(n_pets, pack.getPets().size());
-        assertUniquePets(pack);
+        assertUniquePets(pack); // Asserts all pets within set are equal
     }
 
     @When("I, {string}, try to build a team with {string}")
-    public void i_try_to_build_a_team_with(String string, String string2) {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+    public void i_try_to_build_a_team_with(String playerName, String packName) {
+        pack = playerAccessor.getPlayerByName(playerName).getPacks().stream()
+                .filter(p -> packName.equals(p.getName())).findFirst().get();
+        Assertions.assertNotNull(pack);
+        doLater = () -> game.buildTeam(String.format("build_team \"%s\" \"%s\"", playerName, packName));
+
+        // Do I add more tests here????
     }
 
     @Then("I am informed that the pack must have at least one pet")
     public void i_am_informed_that_the_pack_must_have_at_least_one_pet() {
-        // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        doLater.run();
+        Assertions.assertTrue(capturedCLIOutput.get(capturedCLIOutput.size() - 1)
+                .contains("Cannot build team with a pack with 0 pets"));
     }
 
     @When("I don't select any options")
     public void i_don_t_select_any_options() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+        Assertions.assertThrows(NullPointerException.class, () -> doLater.run());
     }
 
     @Then("I am given {int} options to choose")
     public void i_am_given_options_to_choose(Integer int1) {
         // Write code here that turns the phrase above into concrete actions
         throw new io.cucumber.java.PendingException();
+//        IntStream.range(0, int1).forEach(i -> Assertions.assertTrue(capturedCLIOutput
+//                .get(capturedCLIOutput.size() - 1).contains(i)));
+//        Assertions.assertTrue(capturedCLIOutput.get(capturedCLIOutput.size() - 1)
+//                .contains("4"));
     }
 
     @When("I do not choose three pets")

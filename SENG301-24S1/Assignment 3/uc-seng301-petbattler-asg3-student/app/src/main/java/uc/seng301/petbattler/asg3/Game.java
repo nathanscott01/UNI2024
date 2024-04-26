@@ -1,12 +1,5 @@
 package uc.seng301.petbattler.asg3;
 
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Random;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-import java.util.stream.IntStream;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.hibernate.SessionFactory;
@@ -21,6 +14,14 @@ import uc.seng301.petbattler.asg3.model.Pet;
 import uc.seng301.petbattler.asg3.model.Player;
 import uc.seng301.petbattler.asg3.pets.PetGenerator;
 import uc.seng301.petbattler.asg3.pets.PetProxy;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+import java.util.Random;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+import java.util.stream.IntStream;
 
 /**
  * This class manages the Super Auto Pet game, including the menu items
