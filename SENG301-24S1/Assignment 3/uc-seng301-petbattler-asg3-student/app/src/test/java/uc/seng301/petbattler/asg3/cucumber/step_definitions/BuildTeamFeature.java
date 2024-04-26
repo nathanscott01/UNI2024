@@ -97,9 +97,6 @@ public class BuildTeamFeature {
     public void player_has_a_pack_with_unique_pets(String playerName, String packName, Integer n_pets) {
         player = playerAccessor.getPlayerByName(playerName);
         List<Pet> petsToAdd = new ArrayList<>(uniquePets.subList(0, n_pets));
-//        for (Pet pet : petsToAdd) {
-//            petAccessor.persistPet(pet);
-//        }
         pack = packAccessor.createPack(packName, player, petsToAdd);
         Long deckId = packAccessor.persistPack(pack);
         Assertions.assertEquals(n_pets, pack.getPets().size());
@@ -118,6 +115,7 @@ public class BuildTeamFeature {
 
     @Then("I am informed that the pack must have at least one pet")
     public void i_am_informed_that_the_pack_must_have_at_least_one_pet() {
+
         doLater.run();
         Assertions.assertTrue(capturedCLIOutput.get(capturedCLIOutput.size() - 1)
                 .contains("Cannot build team with a pack with 0 pets"));
@@ -126,23 +124,49 @@ public class BuildTeamFeature {
     @When("I don't select any options")
     public void i_don_t_select_any_options() {
         // Write code here that turns the phrase above into concrete actions
-        Assertions.assertThrows(NullPointerException.class, () -> doLater.run());
+
+        // Prepare the CLI mock to simulate no selection
+        mockCLIResponse.clear();
+        mockCLIResponse.add("!q");
+
+        doLater.run();
+
+        // The pets shown here are not the pets I chose or simulated API
     }
 
     @Then("I am given {int} options to choose")
     public void i_am_given_options_to_choose(Integer int1) {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
-//        IntStream.range(0, int1).forEach(i -> Assertions.assertTrue(capturedCLIOutput
-//                .get(capturedCLIOutput.size() - 1).contains(i)));
+
+        // I want to count the number of options printed by the console
+        // I could count this by counting the number of times cli.printline is called
+
 //        Assertions.assertTrue(capturedCLIOutput.get(capturedCLIOutput.size() - 1)
 //                .contains("4"));
+
+        // Count the number of lines that match the expected option format
+        long count = capturedCLIOutput.stream()
+                .filter(line -> line.matches("\\[\\d+\\] .*")) // Regex to match lines like [0] Option Name
+                .count();
+
+        // Assert that the number of options is as expected
+        Assertions.assertEquals(int1.intValue(), count, "The number of options given does not match the expected count.");
     }
 
     @When("I do not choose three pets")
     public void i_do_not_choose_three_pets() {
         // Write code here that turns the phrase above into concrete actions
-        throw new io.cucumber.java.PendingException();
+//        throw new io.cucumber.java.PendingException();
+
+        mockCLIResponse.clear();
+        mockCLIResponse.add("1 2");
+
+        doLater.run();
+
+        Assertions.assertTrue(capturedCLIOutput.get(capturedCLIOutput.size() - 1)
+                .contains("Must enter 3 pets space separated"));
+
+
     }
 
 }
