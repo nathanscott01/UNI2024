@@ -1,46 +1,16 @@
-20:02:26.688 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Corgy -- Atk: 2 Health: 1 Tier: 1
-20:02:26.691 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='53', player='Maia', pets='[Corgy -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
-20:02:26.699 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Maia from persistence
-20:02:26.708 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Li
-20:02:26.708 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Li
-	Packs:
- to persistence
-20:02:26.708 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
-20:02:26.712 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 6 from persistence
-20:02:26.716 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
-20:02:26.720 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (6): Li
-	Packs:
-
-20:02:26.720 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Li', pets='[]', name='My first pack'}
-20:02:26.722 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
-20:02:26.723 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Li" "My first pack"
-20:02:26.723 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Li and pack name My first pack
-20:02:26.727 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
-20:02:26.729 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
-20:02:26.737 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Alya
-20:02:26.737 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Alya
-	Packs:
- to persistence
-20:02:26.737 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
-20:02:26.741 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 7 from persistence
-20:02:26.745 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
-20:02:26.748 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (7): Alya
-	Packs:
-
-20:02:26.748 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Alya', pets='[]', name='My first pack'}
-20:02:26.750 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
-20:02:26.750 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Alya" "My first pack"
-20:02:26.750 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Alya and pack name My first pack
-20:02:26.755 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
-20:02:26.755 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My first pack and ppet name Corgy
-20:02:26.775 [Test worker] ERROR uc.seng301.petbattler.asg3.accessor.PetAccessor:131 - Unable to open session or transaction
-org.hibernate.NonUniqueResultException: Query did not return a unique result: 7 results were returned
+17:43:13.406 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Arabian White Horse -- Atk: 2 Health: 1 Tier: 1
+17:43:13.408 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='103', player='Rachel', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 1 Tier: 1, Pig -- Atk: 2 Health: 1 Tier: 1, Donkey -- Atk: 2 Health: 1 Tier: 1, Arabian White Horse -- Atk: 2 Health: 1 Tier: 1]', name='My 5 Pet Pack'}
+17:43:13.417 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Rachel" "My 5 Pet Pack"
+17:43:13.417 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Rachel and pack name My 5 Pet Pack
+17:43:13.422 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Fenton the Dog, attack 2, health 1
+17:43:13.423 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My 5 Pet Pack and ppet name Fenton the Dog
+17:43:13.432 [Test worker] ERROR uc.seng301.petbattler.asg3.accessor.PetAccessor:131 - Unable to open session or transaction
+org.hibernate.NonUniqueResultException: Query did not return a unique result: 2 results were returned
 	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueElement(AbstractSelectionQuery.java:586) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
 	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
 	at uc.seng301.petbattler.asg3.accessor.PetAccessor.getPetByPackNameAndPetName(PetAccessor.java:124) ~[main/:?]
 	at uc.seng301.petbattler.asg3.Game.addToPack(Game.java:186) ~[main/:?]
-	at uc.seng301.petbattler.asg3.cucumber.step_definitions.AddPetFeature.lambda$i_confirm_i_want_to_keep_the_pet_in_pack_for$3(AddPetFeature.java:114) ~[test/:?]
-	at uc.seng301.petbattler.asg3.cucumber.step_definitions.AddPetFeature.i_confirm_i_want_to_keep_the_pet_in_pack_for(AddPetFeature.java:115) ~[test/:?]
+	at uc.seng301.petbattler.asg3.cucumber.step_definitions.BuildTeamFeature.player_has_a_pack_with_unique_pets(BuildTeamFeature.java:126) ~[test/:?]
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
 	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.15.0.jar:7.15.0]
@@ -140,204 +110,151 @@ org.hibernate.NonUniqueResultException: Query did not return a unique result: 7 
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.6.jar:8.6]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
-20:02:26.775 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Corgy -- Atk: 2 Health: 1 Tier: 1
-20:02:26.777 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='55', player='Alya', pets='[Corgy -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
-20:02:26.783 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
-20:02:26.792 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Monica Bing-Geller
-20:02:26.792 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Monica Bing-Geller
+17:43:13.433 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Fenton the Dog -- Atk: 2 Health: 1 Tier: 1
+17:43:13.435 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='103', player='Rachel', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 1 Tier: 1, Pig -- Atk: 2 Health: 1 Tier: 1, Donkey -- Atk: 2 Health: 1 Tier: 1, Arabian White Horse -- Atk: 2 Health: 1 Tier: 1, Fenton the Dog -- Atk: 2 Health: 1 Tier: 1]', name='My 5 Pet Pack'}
+17:44:09.864 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:62 - Fetching pet with id: 72
+17:44:10.255 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:69 - Api responded with status code: 200
+17:44:10.278 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:97 - {"id":72,"name":"Dragon","attack":6,"health":8,"tier":6}
+17:44:10.544 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:62 - Fetching pet with id: 34
+17:44:10.551 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:69 - Api responded with status code: 200
+17:44:10.569 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:97 - {"id":34,"name":"Kangaroo","attack":1,"health":2,"tier":3}
+17:44:10.954 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name 72363 from persistence
+17:44:11.296 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name 72363
+17:44:11.320 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name - from persistence
+17:44:11.326 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name -
+17:44:11.335 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name -&%#@ from persistence
+17:44:11.340 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name -&%#@
+17:44:11.349 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name   from persistence
+17:44:11.354 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name  
+17:44:11.365 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Ant from persistence
+17:44:11.379 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Ant, attack 2, health 2
+17:44:11.379 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Ant -- Atk: 2 Health: 2 Tier: 1
+17:44:11.443 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:84 - Getting pet with id 1 from persistence
+17:44:11.471 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name 673975 from persistence
+17:44:11.478 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name 673975, attack 2, health 2
+17:44:11.486 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name $*&ynsl from persistence
+17:44:11.492 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name $*&ynsl, attack 2, health 2
+17:44:11.500 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name    from persistence
+17:44:11.506 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name   , attack 2, health 2
+17:44:11.516 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Kererū from persistence
+17:44:11.524 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack 2, health -1
+17:44:11.533 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Kererū from persistence
+17:44:11.536 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack -1, health 2
+17:44:11.544 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Kererū from persistence
+17:44:11.547 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack 0, health 2
+17:44:11.558 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Te Ariki
+17:44:11.558 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Te Ariki
 	Packs:
  to persistence
-20:02:26.792 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
-20:02:26.796 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 8 from persistence
-20:02:26.799 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
-20:02:26.803 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My Empty Pack for player Player (8): Monica Bing-Geller
+17:44:11.558 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.582 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 1 from persistence
+17:44:11.600 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.605 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.609 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (1): Te Ariki
 	Packs:
 
-20:02:26.803 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Monica Bing-Geller', pets='[]', name='My Empty Pack'}
-20:02:26.805 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
-20:02:26.810 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:220 - building team arguments: build_team "Monica Bing-Geller" "My Empty Pack"
-20:02:26.810 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Monica Bing-Geller and pack name My Empty Pack
-20:02:26.819 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Ross
-20:02:26.819 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Ross
-	Packs:
- to persistence
-20:02:26.820 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Ross from persistence
-20:02:26.824 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 9 from persistence
-20:02:26.831 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Ross from persistence
-20:02:26.835 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My 5 Pet Pack for player Player (9): Ross
-	Packs:
-
-20:02:26.835 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Ross', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 2 Tier: 1, Pig -- Atk: 6 Health: 4 Tier: 1, Donkey -- Atk: 8 Health: 6 Tier: 2, Arabian White Horse -- Atk: 8 Health: 8 Tier: 2, Fenton the Dog -- Atk: 1 Health: 100 Tier: 3]', name='My 5 Pet Pack'}
-20:02:26.838 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Ross from persistence
-20:02:26.843 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:220 - building team arguments: build_team "Ross" "My 5 Pet Pack"
-20:02:26.843 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Ross and pack name My 5 Pet Pack
-20:02:26.868 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Rachel
-20:02:26.868 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Rachel
-	Packs:
- to persistence
-20:02:26.868 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rachel from persistence
-20:02:26.872 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 10 from persistence
-20:02:26.875 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rachel from persistence
-20:02:26.877 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My 5 Pet Pack for player Player (10): Rachel
-	Packs:
-
-20:02:26.878 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Rachel', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 2 Tier: 1, Pig -- Atk: 6 Health: 4 Tier: 1, Donkey -- Atk: 8 Health: 6 Tier: 2, Arabian White Horse -- Atk: 8 Health: 8 Tier: 2, Fenton the Dog -- Atk: 1 Health: 100 Tier: 3]', name='My 5 Pet Pack'}
-20:02:26.880 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rachel from persistence
-20:02:35.795 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:220 - building team arguments: build_team "Rachel" "My 5 Pet Pack"
-20:02:36.700 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Rachel and pack name My 5 Pet Pack
-22:42:14.731 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:62 - Fetching pet with id: 48
-22:42:15.182 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:69 - Api responded with status code: 200
-22:42:15.258 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:97 - {"id":48,"name":"Hippo","attack":4,"health":7,"tier":4}
-22:42:15.512 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Ziggy the Corgi Cat, attack 2, health 2
-22:42:15.518 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Pig, attack 6, health 4
-22:42:15.518 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Donkey, attack 8, health 6
-22:42:15.518 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Arabian White Horse, attack 8, health 8
-22:42:15.518 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Fenton the Dog, attack 1, health 100
-22:42:15.518 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Ziggy the Corgi Cat -- Atk: 2 Health: 2 Tier: 1
-22:42:15.581 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Pig -- Atk: 6 Health: 4 Tier: 1
-22:42:15.584 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Donkey -- Atk: 8 Health: 6 Tier: 2
-22:42:15.585 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Arabian White Horse -- Atk: 8 Health: 8 Tier: 2
-22:42:15.587 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Fenton the Dog -- Atk: 1 Health: 100 Tier: 3
-22:42:15.589 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:62 - Fetching pet with id: 47
-22:42:15.615 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:69 - Api responded with status code: 200
-22:42:15.685 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:97 - {"id":47,"name":"Dolphin","attack":4,"health":6,"tier":4}
-22:42:15.961 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name 72363 from persistence
-22:42:16.198 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name 72363
-22:42:16.212 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name - from persistence
-22:42:16.216 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name -
-22:42:16.225 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name -&%#@ from persistence
-22:42:16.230 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name -&%#@
-22:42:16.239 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name   from persistence
-22:42:16.243 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name  
-22:42:16.253 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Ant from persistence
-22:42:16.265 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Ant, attack 2, health 2
-22:42:16.265 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Ant -- Atk: 2 Health: 2 Tier: 1
-22:42:16.267 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:84 - Getting pet with id 1 from persistence
-22:42:16.286 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name 673975 from persistence
-22:42:16.291 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name 673975, attack 2, health 2
-22:42:16.301 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name $*&ynsl from persistence
-22:42:16.324 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name $*&ynsl, attack 2, health 2
-22:42:16.333 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name    from persistence
-22:42:16.339 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name   , attack 2, health 2
-22:42:16.348 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Kererū from persistence
-22:42:16.359 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack 2, health -1
-22:42:16.367 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Kererū from persistence
-22:42:16.373 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack -1, health 2
-22:42:16.379 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Kererū from persistence
-22:42:16.382 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack 0, health 2
-22:42:16.391 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Te Ariki
-22:42:16.391 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Te Ariki
-	Packs:
- to persistence
-22:42:16.391 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.415 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 1 from persistence
-22:42:16.431 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.435 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.438 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (1): Te Ariki
-	Packs:
-
-22:42:16.442 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Te Ariki', pets='[]', name='My first pack'}
-22:42:16.446 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:77 - Getting pack with id 1 from persistence
-22:42:16.457 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.467 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.470 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.474 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name  for player Player (1): Te Ariki
+17:44:11.612 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Te Ariki', pets='[]', name='My first pack'}
+17:44:11.616 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:77 - Getting pack with id 1 from persistence
+17:44:11.635 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.652 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.659 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.664 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name  for player Player (1): Te Ariki
 	Packs:
 		Pack (1): My first pack
 			Pets:
 
-22:42:16.477 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.481 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.484 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name )(^$%^ for player Player (1): Te Ariki
+17:44:11.671 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.677 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.682 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name )(^$%^ for player Player (1): Te Ariki
 	Packs:
 		Pack (1): My first pack
 			Pets:
 
-22:42:16.488 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.494 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.498 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name 12345 for player Player (1): Te Ariki
+17:44:11.689 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.695 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.700 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name 12345 for player Player (1): Te Ariki
 	Packs:
 		Pack (1): My first pack
 			Pets:
 
-22:42:16.503 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.508 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
-22:42:16.512 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name     for player Player (1): Te Ariki
+17:44:11.707 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.713 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:44:11.717 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name     for player Player (1): Te Ariki
 	Packs:
 		Pack (1): My first pack
 			Pets:
 
-22:42:16.517 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Yiyang
-22:42:16.517 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Yiyang
+17:44:11.724 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Yiyang
+17:44:11.724 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Yiyang
 	Packs:
  to persistence
-22:42:16.518 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Yiyang from persistence
-22:42:16.524 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 2 from persistence
-22:42:16.531 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Yiyang from persistence
-22:42:16.534 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (2): Yiyang
+17:44:11.725 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Yiyang from persistence
+17:44:11.731 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 2 from persistence
+17:44:11.737 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Yiyang from persistence
+17:44:11.740 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (2): Yiyang
 	Packs:
 
-22:42:16.534 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Yiyang', pets='[]', name='My first pack'}
-22:42:16.537 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:77 - Getting pack with id 2 from persistence
-22:42:16.546 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Yiyang from persistence
-22:42:16.551 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (2): Yiyang
+17:44:11.741 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Yiyang', pets='[]', name='My first pack'}
+17:44:11.744 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:77 - Getting pack with id 2 from persistence
+17:44:11.752 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Yiyang from persistence
+17:44:11.757 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (2): Yiyang
 	Packs:
 		Pack (2): My first pack
 			Pets:
 
-22:42:16.556 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Rohan
-22:42:16.557 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Rohan
+17:44:11.764 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Rohan
+17:44:11.765 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Rohan
 	Packs:
  to persistence
-22:42:16.557 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
-22:42:16.562 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 3 from persistence
-22:42:16.568 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
-22:42:16.571 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (3): Rohan
+17:44:11.765 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:44:11.772 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 3 from persistence
+17:44:11.778 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:44:11.781 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (3): Rohan
 	Packs:
 
-22:42:16.571 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Rohan', pets='[]', name='My first pack'}
-22:42:16.573 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:77 - Getting pack with id 3 from persistence
-22:42:16.585 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack 7, health 3
-22:42:16.585 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Kererū -- Atk: 7 Health: 3 Tier: 1
-22:42:16.588 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:84 - Getting pet with id 2 from persistence
-22:42:16.593 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
-22:42:16.598 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='3', player='Rohan', pets='[Kererū -- Atk: 7 Health: 3 Tier: 1]', name='My first pack'}
-22:42:16.618 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Hamster, attack 2, health 1
-22:42:16.618 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Hamster -- Atk: 2 Health: 1 Tier: 1
-22:42:16.620 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:84 - Getting pet with id 3 from persistence
-22:42:16.624 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
-22:42:16.628 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='3', player='Rohan', pets='[Kererū -- Atk: 7 Health: 3 Tier: 1, Hamster -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
-22:42:16.634 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
-22:42:16.640 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
-22:42:16.648 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name George
-22:42:16.649 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): George
+17:44:11.781 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Rohan', pets='[]', name='My first pack'}
+17:44:11.784 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:77 - Getting pack with id 3 from persistence
+17:44:11.797 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack 7, health 3
+17:44:11.798 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Kererū -- Atk: 7 Health: 3 Tier: 1
+17:44:11.800 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:84 - Getting pet with id 2 from persistence
+17:44:11.805 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:44:11.812 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='3', player='Rohan', pets='[Kererū -- Atk: 7 Health: 3 Tier: 1]', name='My first pack'}
+17:44:11.835 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Hamster, attack 2, health 1
+17:44:11.835 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Hamster -- Atk: 2 Health: 1 Tier: 1
+17:44:11.838 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:84 - Getting pet with id 3 from persistence
+17:44:11.843 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:44:11.848 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='3', player='Rohan', pets='[Kererū -- Atk: 7 Health: 3 Tier: 1, Hamster -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
+17:44:11.859 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:44:11.865 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:44:11.879 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name George
+17:44:11.879 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): George
 	Packs:
  to persistence
-22:42:16.649 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name George from persistence
-22:42:16.653 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 4 from persistence
-22:42:16.658 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name George from persistence
-22:42:16.664 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (4): George
+17:44:11.880 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name George from persistence
+17:44:11.887 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 4 from persistence
+17:44:11.893 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name George from persistence
+17:44:11.900 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (4): George
 	Packs:
 
-22:42:16.664 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='George', pets='[]', name='My first pack'}
-22:42:16.667 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
-22:42:16.673 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Maia
-22:42:16.673 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Maia
+17:44:11.900 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='George', pets='[]', name='My first pack'}
+17:44:11.905 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:44:11.911 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Maia
+17:44:11.911 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Maia
 	Packs:
  to persistence
-22:42:16.673 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Maia from persistence
-22:42:16.678 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 5 from persistence
-22:42:16.682 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Maia from persistence
-22:42:16.687 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (5): Maia
+17:44:11.911 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Maia from persistence
+17:44:11.917 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 5 from persistence
+17:44:11.923 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Maia from persistence
+17:44:11.929 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (5): Maia
 	Packs:
 
-22:42:16.687 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Maia', pets='[]', name='My first pack'}
-22:42:16.689 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
-22:42:16.691 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Maia" "My first pack"
-22:42:16.691 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Maia and pack name My first pack
-22:42:16.697 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
-22:42:16.698 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My first pack and ppet name Corgy
-22:42:16.715 [Test worker] ERROR uc.seng301.petbattler.asg3.accessor.PetAccessor:131 - Unable to open session or transaction
+17:44:11.929 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Maia', pets='[]', name='My first pack'}
+17:44:11.932 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:44:11.933 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Maia" "My first pack"
+17:44:11.933 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Maia and pack name My first pack
+17:44:11.940 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:44:11.942 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My first pack and ppet name Corgy
+17:44:11.963 [Test worker] ERROR uc.seng301.petbattler.asg3.accessor.PetAccessor:131 - Unable to open session or transaction
 org.hibernate.NonUniqueResultException: Query did not return a unique result: 5 results were returned
 	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueElement(AbstractSelectionQuery.java:586) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
 	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
@@ -444,42 +361,42 @@ org.hibernate.NonUniqueResultException: Query did not return a unique result: 5 
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.6.jar:8.6]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
-22:42:16.715 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Corgy -- Atk: 2 Health: 1 Tier: 1
-22:42:16.718 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='53', player='Maia', pets='[Corgy -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
-22:42:16.728 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Maia from persistence
-22:42:16.737 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Li
-22:42:16.737 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Li
+17:44:11.964 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Corgy -- Atk: 2 Health: 1 Tier: 1
+17:44:11.967 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='53', player='Maia', pets='[Corgy -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
+17:44:11.980 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Maia from persistence
+17:44:11.992 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Li
+17:44:11.992 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Li
 	Packs:
  to persistence
-22:42:16.738 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
-22:42:16.743 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 6 from persistence
-22:42:16.747 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
-22:42:16.752 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (6): Li
+17:44:11.992 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
+17:44:11.997 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 6 from persistence
+17:44:12.002 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
+17:44:12.007 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (6): Li
 	Packs:
 
-22:42:16.752 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Li', pets='[]', name='My first pack'}
-22:42:16.754 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
-22:42:16.755 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Li" "My first pack"
-22:42:16.755 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Li and pack name My first pack
-22:42:16.760 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
-22:42:16.762 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
-22:42:16.772 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Alya
-22:42:16.772 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Alya
+17:44:12.007 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Li', pets='[]', name='My first pack'}
+17:44:12.010 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:44:12.012 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Li" "My first pack"
+17:44:12.012 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Li and pack name My first pack
+17:44:12.018 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:44:12.020 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
+17:44:12.031 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Alya
+17:44:12.031 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Alya
 	Packs:
  to persistence
-22:42:16.772 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
-22:42:16.777 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 7 from persistence
-22:42:16.782 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
-22:42:16.786 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (7): Alya
+17:44:12.031 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
+17:44:12.036 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 7 from persistence
+17:44:12.043 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
+17:44:12.047 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (7): Alya
 	Packs:
 
-22:42:16.787 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Alya', pets='[]', name='My first pack'}
-22:42:16.789 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
-22:42:16.789 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Alya" "My first pack"
-22:42:16.789 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Alya and pack name My first pack
-22:42:16.797 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
-22:42:16.798 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My first pack and ppet name Corgy
-22:42:16.818 [Test worker] ERROR uc.seng301.petbattler.asg3.accessor.PetAccessor:131 - Unable to open session or transaction
+17:44:12.047 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Alya', pets='[]', name='My first pack'}
+17:44:12.050 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:44:12.051 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Alya" "My first pack"
+17:44:12.051 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Alya and pack name My first pack
+17:44:12.057 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:44:12.058 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My first pack and ppet name Corgy
+17:44:12.082 [Test worker] ERROR uc.seng301.petbattler.asg3.accessor.PetAccessor:131 - Unable to open session or transaction
 org.hibernate.NonUniqueResultException: Query did not return a unique result: 7 results were returned
 	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueElement(AbstractSelectionQuery.java:586) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
 	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
@@ -586,48 +503,507 @@ org.hibernate.NonUniqueResultException: Query did not return a unique result: 7 
 	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.6.jar:8.6]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
 	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
-22:42:16.819 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Corgy -- Atk: 2 Health: 1 Tier: 1
-22:42:16.821 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='55', player='Alya', pets='[Corgy -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
-22:42:16.829 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
-22:42:16.837 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Monica Bing-Geller
-22:42:16.837 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Monica Bing-Geller
+17:44:12.083 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Corgy -- Atk: 2 Health: 1 Tier: 1
+17:44:12.086 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='55', player='Alya', pets='[Corgy -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
+17:44:12.094 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
+17:44:12.106 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Monica Bing-Geller
+17:44:12.107 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Monica Bing-Geller
 	Packs:
  to persistence
-22:42:16.837 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
-22:42:16.840 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 8 from persistence
-22:42:16.844 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
-22:42:16.846 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My Empty Pack for player Player (8): Monica Bing-Geller
+17:44:12.107 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
+17:44:12.112 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 8 from persistence
+17:44:12.117 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
+17:44:12.122 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My Empty Pack for player Player (8): Monica Bing-Geller
 	Packs:
 
-22:42:16.847 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Monica Bing-Geller', pets='[]', name='My Empty Pack'}
-22:42:16.848 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
-22:42:16.854 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:220 - building team arguments: build_team "Monica Bing-Geller" "My Empty Pack"
-22:42:16.854 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Monica Bing-Geller and pack name My Empty Pack
-22:42:16.861 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Ross
-22:42:16.861 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Ross
+17:44:12.123 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Monica Bing-Geller', pets='[]', name='My Empty Pack'}
+17:44:12.126 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
+17:44:12.135 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:220 - building team arguments: build_team "Monica Bing-Geller" "My Empty Pack"
+17:44:12.135 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Monica Bing-Geller and pack name My Empty Pack
+17:44:12.147 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Ross
+17:44:12.148 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Ross
 	Packs:
  to persistence
-22:42:16.861 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Ross from persistence
-22:42:16.865 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 9 from persistence
-22:42:16.869 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Ross from persistence
-22:42:16.873 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My 5 Pet Pack for player Player (9): Ross
+17:44:12.148 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Ross from persistence
+17:44:12.154 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 9 from persistence
+17:44:12.161 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Ross from persistence
+17:44:23.847 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My 5 Pet Pack for player Player (9): Ross
 	Packs:
 
-22:42:16.873 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Ross', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 2 Tier: 1, Pig -- Atk: 6 Health: 4 Tier: 1, Donkey -- Atk: 8 Health: 6 Tier: 2, Arabian White Horse -- Atk: 8 Health: 8 Tier: 2, Fenton the Dog -- Atk: 1 Health: 100 Tier: 3]', name='My 5 Pet Pack'}
-22:42:16.876 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Ross from persistence
-22:42:16.880 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:220 - building team arguments: build_team "Ross" "My 5 Pet Pack"
-22:42:16.880 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Ross and pack name My 5 Pet Pack
-22:42:16.903 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Rachel
-22:42:16.903 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Rachel
+17:44:30.218 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Ross', pets='[]', name='My 5 Pet Pack'}
+17:44:39.243 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Ross" "My 5 Pet Pack"
+17:44:39.244 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Ross and pack name My 5 Pet Pack
+17:44:39.324 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Ziggy the Corgi Cat, attack 2, health 1
+17:44:39.331 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My 5 Pet Pack and ppet name Ziggy the Corgi Cat
+17:44:39.413 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Ziggy the Corgi Cat -- Atk: 2 Health: 1 Tier: 1
+17:44:39.437 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='102', player='Ross', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 1 Tier: 1]', name='My 5 Pet Pack'}
+17:44:45.758 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Ross" "My 5 Pet Pack"
+17:44:45.760 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Ross and pack name My 5 Pet Pack
+17:44:45.821 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Pig, attack 2, health 1
+17:44:45.828 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My 5 Pet Pack and ppet name Pig
+17:44:45.891 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Pig -- Atk: 2 Health: 1 Tier: 1
+17:44:45.912 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='102', player='Ross', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 1 Tier: 1, Pig -- Atk: 2 Health: 1 Tier: 1]', name='My 5 Pet Pack'}
+17:44:48.627 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Ross" "My 5 Pet Pack"
+17:44:48.628 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Ross and pack name My 5 Pet Pack
+17:44:48.702 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Donkey, attack 2, health 1
+17:44:48.707 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My 5 Pet Pack and ppet name Donkey
+17:44:48.778 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Donkey -- Atk: 2 Health: 1 Tier: 1
+17:44:48.799 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='102', player='Ross', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 1 Tier: 1, Pig -- Atk: 2 Health: 1 Tier: 1, Donkey -- Atk: 2 Health: 1 Tier: 1]', name='My 5 Pet Pack'}
+17:45:00.789 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Ross" "My 5 Pet Pack"
+17:45:03.173 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Ross and pack name My 5 Pet Pack
+17:45:14.247 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Arabian White Horse, attack 2, health 1
+17:45:21.966 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My 5 Pet Pack and ppet name Arabian White Horse
+17:45:23.006 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Arabian White Horse -- Atk: 2 Health: 1 Tier: 1
+17:45:26.072 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='102', player='Ross', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 1 Tier: 1, Pig -- Atk: 2 Health: 1 Tier: 1, Donkey -- Atk: 2 Health: 1 Tier: 1, Arabian White Horse -- Atk: 2 Health: 1 Tier: 1]', name='My 5 Pet Pack'}
+17:45:57.725 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Ross" "My 5 Pet Pack"
+17:45:57.727 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Ross and pack name My 5 Pet Pack
+17:45:57.819 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Fenton the Dog, attack 2, health 1
+17:45:57.826 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My 5 Pet Pack and ppet name Fenton the Dog
+17:45:57.918 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Fenton the Dog -- Atk: 2 Health: 1 Tier: 1
+17:45:57.943 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='102', player='Ross', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 1 Tier: 1, Pig -- Atk: 2 Health: 1 Tier: 1, Donkey -- Atk: 2 Health: 1 Tier: 1, Arabian White Horse -- Atk: 2 Health: 1 Tier: 1, Fenton the Dog -- Atk: 2 Health: 1 Tier: 1]', name='My 5 Pet Pack'}
+17:49:58.502 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:62 - Fetching pet with id: 58
+17:49:58.851 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:69 - Api responded with status code: 200
+17:49:58.875 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:97 - {"id":58,"name":"Chicken","attack":1,"health":2,"tier":5}
+17:49:59.118 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Ziggy the Corgi Cat, attack 2, health 2
+17:49:59.124 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Pig, attack 6, health 4
+17:49:59.125 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Donkey, attack 8, health 6
+17:49:59.125 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Arabian White Horse, attack 8, health 8
+17:49:59.125 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Fenton the Dog, attack 1, health 100
+17:49:59.125 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Ziggy the Corgi Cat -- Atk: 2 Health: 2 Tier: 1
+17:49:59.190 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Pig -- Atk: 6 Health: 4 Tier: 1
+17:49:59.193 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Donkey -- Atk: 8 Health: 6 Tier: 2
+17:49:59.195 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Arabian White Horse -- Atk: 8 Health: 8 Tier: 2
+17:49:59.198 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Fenton the Dog -- Atk: 1 Health: 100 Tier: 3
+17:49:59.200 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:62 - Fetching pet with id: 40
+17:49:59.208 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:69 - Api responded with status code: 200
+17:49:59.225 [Test worker] INFO  uc.seng301.petbattler.asg3.pets.PetService:97 - {"id":40,"name":"Snail","attack":2,"health":2,"tier":3}
+17:49:59.536 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name 72363 from persistence
+17:49:59.793 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name 72363
+17:49:59.811 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name - from persistence
+17:49:59.816 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name -
+17:49:59.830 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name -&%#@ from persistence
+17:49:59.836 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name -&%#@
+17:49:59.849 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name   from persistence
+17:49:59.853 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name  
+17:49:59.864 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Ant from persistence
+17:49:59.900 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Ant, attack 2, health 2
+17:49:59.901 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Ant -- Atk: 2 Health: 2 Tier: 1
+17:49:59.906 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:84 - Getting pet with id 1 from persistence
+17:49:59.928 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name 673975 from persistence
+17:49:59.933 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name 673975, attack 2, health 2
+17:49:59.943 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name $*&ynsl from persistence
+17:49:59.947 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name $*&ynsl, attack 2, health 2
+17:49:59.955 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name    from persistence
+17:49:59.961 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name   , attack 2, health 2
+17:49:59.970 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Kererū from persistence
+17:49:59.978 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack 2, health -1
+17:49:59.986 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Kererū from persistence
+17:49:59.989 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack -1, health 2
+17:49:59.996 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:101 - Getting pet with name Kererū from persistence
+17:49:59.999 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack 0, health 2
+17:50:00.010 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Te Ariki
+17:50:00.010 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Te Ariki
 	Packs:
  to persistence
-22:42:16.903 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rachel from persistence
-22:42:16.907 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 10 from persistence
-22:42:16.910 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rachel from persistence
-22:42:16.912 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My 5 Pet Pack for player Player (10): Rachel
+17:50:00.010 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.029 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 1 from persistence
+17:50:00.042 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.046 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.048 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (1): Te Ariki
 	Packs:
 
-22:42:16.912 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Rachel', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 2 Tier: 1, Pig -- Atk: 6 Health: 4 Tier: 1, Donkey -- Atk: 8 Health: 6 Tier: 2, Arabian White Horse -- Atk: 8 Health: 8 Tier: 2, Fenton the Dog -- Atk: 1 Health: 100 Tier: 3]', name='My 5 Pet Pack'}
-22:42:16.915 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rachel from persistence
-22:42:16.918 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:220 - building team arguments: build_team "Rachel" "My 5 Pet Pack"
-22:42:16.918 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Rachel and pack name My 5 Pet Pack
+17:50:00.051 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Te Ariki', pets='[]', name='My first pack'}
+17:50:00.056 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:77 - Getting pack with id 1 from persistence
+17:50:00.070 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.085 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.091 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.095 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name  for player Player (1): Te Ariki
+	Packs:
+		Pack (1): My first pack
+			Pets:
+
+17:50:00.102 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.108 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.112 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name )(^$%^ for player Player (1): Te Ariki
+	Packs:
+		Pack (1): My first pack
+			Pets:
+
+17:50:00.119 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.125 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.129 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name 12345 for player Player (1): Te Ariki
+	Packs:
+		Pack (1): My first pack
+			Pets:
+
+17:50:00.136 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.141 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Te Ariki from persistence
+17:50:00.145 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name     for player Player (1): Te Ariki
+	Packs:
+		Pack (1): My first pack
+			Pets:
+
+17:50:00.152 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Yiyang
+17:50:00.152 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Yiyang
+	Packs:
+ to persistence
+17:50:00.152 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Yiyang from persistence
+17:50:00.160 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 2 from persistence
+17:50:00.165 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Yiyang from persistence
+17:50:00.168 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (2): Yiyang
+	Packs:
+
+17:50:00.168 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Yiyang', pets='[]', name='My first pack'}
+17:50:00.171 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:77 - Getting pack with id 2 from persistence
+17:50:00.179 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Yiyang from persistence
+17:50:00.183 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (2): Yiyang
+	Packs:
+		Pack (2): My first pack
+			Pets:
+
+17:50:00.191 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Rohan
+17:50:00.191 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Rohan
+	Packs:
+ to persistence
+17:50:00.191 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:50:00.196 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 3 from persistence
+17:50:00.205 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:50:00.208 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (3): Rohan
+	Packs:
+
+17:50:00.208 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Rohan', pets='[]', name='My first pack'}
+17:50:00.210 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:77 - Getting pack with id 3 from persistence
+17:50:00.220 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Kererū, attack 7, health 3
+17:50:00.221 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Kererū -- Atk: 7 Health: 3 Tier: 1
+17:50:00.223 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:84 - Getting pet with id 2 from persistence
+17:50:00.227 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:50:00.233 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='3', player='Rohan', pets='[Kererū -- Atk: 7 Health: 3 Tier: 1]', name='My first pack'}
+17:50:00.253 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Hamster, attack 2, health 1
+17:50:00.253 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Hamster -- Atk: 2 Health: 1 Tier: 1
+17:50:00.256 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:84 - Getting pet with id 3 from persistence
+17:50:00.259 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:50:00.264 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='3', player='Rohan', pets='[Kererū -- Atk: 7 Health: 3 Tier: 1, Hamster -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
+17:50:00.273 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:50:00.280 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rohan from persistence
+17:50:00.294 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name George
+17:50:00.295 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): George
+	Packs:
+ to persistence
+17:50:00.295 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name George from persistence
+17:50:00.301 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 4 from persistence
+17:50:00.307 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name George from persistence
+17:50:00.313 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (4): George
+	Packs:
+
+17:50:00.313 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='George', pets='[]', name='My first pack'}
+17:50:00.317 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:50:00.324 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Maia
+17:50:00.325 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Maia
+	Packs:
+ to persistence
+17:50:00.325 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Maia from persistence
+17:50:00.330 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 5 from persistence
+17:50:00.334 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Maia from persistence
+17:50:00.339 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (5): Maia
+	Packs:
+
+17:50:00.340 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Maia', pets='[]', name='My first pack'}
+17:50:00.343 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:50:00.345 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Maia" "My first pack"
+17:50:00.345 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Maia and pack name My first pack
+17:50:00.351 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:50:00.353 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My first pack and ppet name Corgy
+17:50:00.375 [Test worker] ERROR uc.seng301.petbattler.asg3.accessor.PetAccessor:131 - Unable to open session or transaction
+org.hibernate.NonUniqueResultException: Query did not return a unique result: 5 results were returned
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueElement(AbstractSelectionQuery.java:586) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at uc.seng301.petbattler.asg3.accessor.PetAccessor.getPetByPackNameAndPetName(PetAccessor.java:124) ~[main/:?]
+	at uc.seng301.petbattler.asg3.Game.addToPack(Game.java:186) ~[main/:?]
+	at uc.seng301.petbattler.asg3.cucumber.step_definitions.AddPetFeature.lambda$i_confirm_i_want_to_keep_the_pet_in_pack_for$3(AddPetFeature.java:114) ~[test/:?]
+	at uc.seng301.petbattler.asg3.cucumber.step_definitions.AddPetFeature.i_confirm_i_want_to_keep_the_pet_in_pack_for(AddPetFeature.java:115) ~[test/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) [gradle-testing-base-8.6.jar:8.6]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) [gradle-messaging-8.6.jar:8.6]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) [?:?]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.6.jar:8.6]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
+17:50:00.376 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Corgy -- Atk: 2 Health: 1 Tier: 1
+17:50:00.380 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='53', player='Maia', pets='[Corgy -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
+17:50:00.390 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Maia from persistence
+17:50:00.402 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Li
+17:50:00.402 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Li
+	Packs:
+ to persistence
+17:50:00.403 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
+17:50:00.408 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 6 from persistence
+17:50:00.413 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
+17:50:00.417 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (6): Li
+	Packs:
+
+17:50:00.417 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Li', pets='[]', name='My first pack'}
+17:50:00.420 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:50:00.421 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Li" "My first pack"
+17:50:00.421 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Li and pack name My first pack
+17:50:00.426 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:50:00.428 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Li from persistence
+17:50:00.439 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Alya
+17:50:00.439 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Alya
+	Packs:
+ to persistence
+17:50:00.440 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
+17:50:00.445 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 7 from persistence
+17:50:00.450 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
+17:50:00.455 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My first pack for player Player (7): Alya
+	Packs:
+
+17:50:00.455 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Alya', pets='[]', name='My first pack'}
+17:50:00.458 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:50:00.459 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:164 - add to pack with arguments: add "Alya" "My first pack"
+17:50:00.459 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Alya and pack name My first pack
+17:50:00.465 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:51 - Creating pet with name Corgy, attack 2, health 1
+17:50:00.466 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:119 - Getting pet from persistence by pack name My first pack and ppet name Corgy
+17:50:00.487 [Test worker] ERROR uc.seng301.petbattler.asg3.accessor.PetAccessor:131 - Unable to open session or transaction
+org.hibernate.NonUniqueResultException: Query did not return a unique result: 7 results were returned
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueElement(AbstractSelectionQuery.java:586) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at org.hibernate.query.spi.AbstractSelectionQuery.uniqueResult(AbstractSelectionQuery.java:558) ~[hibernate-core-6.4.3.Final.jar:6.4.3.Final]
+	at uc.seng301.petbattler.asg3.accessor.PetAccessor.getPetByPackNameAndPetName(PetAccessor.java:124) ~[main/:?]
+	at uc.seng301.petbattler.asg3.Game.addToPack(Game.java:186) ~[main/:?]
+	at uc.seng301.petbattler.asg3.cucumber.step_definitions.AddPetFeature.lambda$i_confirm_i_want_to_keep_the_pet_in_pack_for$3(AddPetFeature.java:114) ~[test/:?]
+	at uc.seng301.petbattler.asg3.cucumber.step_definitions.AddPetFeature.i_confirm_i_want_to_keep_the_pet_in_pack_for(AddPetFeature.java:115) ~[test/:?]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at io.cucumber.java.Invoker.doInvoke(Invoker.java:66) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.Invoker.invoke(Invoker.java:24) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.AbstractGlueDefinition.invokeMethod(AbstractGlueDefinition.java:47) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.java.JavaStepDefinition.execute(JavaStepDefinition.java:29) ~[cucumber-java-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.CoreStepDefinition.execute(CoreStepDefinition.java:66) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepDefinitionMatch.runStep(PickleStepDefinitionMatch.java:63) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.ExecutionMode$1.execute(ExecutionMode.java:10) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.executeStep(TestStep.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestStep.run(TestStep.java:56) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.PickleStepTestStep.run(PickleStepTestStep.java:51) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.TestCase.run(TestCase.java:84) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runner.Runner.runPickle(Runner.java:75) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.lambda$runTestCase$4(CucumberEngineExecutionContext.java:112) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.core.runtime.CucumberExecutionContext.lambda$runTestCase$5(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.RethrowingThrowableCollector.executeAndThrow(RethrowingThrowableCollector.java:23) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.core.runtime.CucumberExecutionContext.runTestCase(CucumberExecutionContext.java:137) ~[cucumber-core-7.15.0.jar:7.15.0]
+	at io.cucumber.junit.platform.engine.CucumberEngineExecutionContext.runTestCase(CucumberEngineExecutionContext.java:109) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:168) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at io.cucumber.junit.platform.engine.NodeDescriptor$PickleDescriptor.execute(NodeDescriptor.java:90) ~[cucumber-junit-platform-engine-7.15.0.jar:?]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:151) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596) ~[?:?]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.invokeAll(SameThreadHierarchicalTestExecutorService.java:41) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$6(NodeTestTask.java:155) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$8(NodeTestTask.java:141) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.Node.around(Node.java:137) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.lambda$executeRecursively$9(NodeTestTask.java:139) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.ThrowableCollector.execute(ThrowableCollector.java:73) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.executeRecursively(NodeTestTask.java:138) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.NodeTestTask.execute(NodeTestTask.java:95) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.SameThreadHierarchicalTestExecutorService.submit(SameThreadHierarchicalTestExecutorService.java:35) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestExecutor.execute(HierarchicalTestExecutor.java:57) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.engine.support.hierarchical.HierarchicalTestEngine.execute(HierarchicalTestEngine.java:54) ~[junit-platform-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:76) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteLauncher.execute(SuiteLauncher.java:63) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestDescriptor.execute(SuiteTestDescriptor.java:128) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.suite.engine.SuiteTestEngine.lambda$execute$0(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.accept(ForEachOps.java:184) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:197) ~[?:?]
+	at java.base/java.util.Iterator.forEachRemaining(Iterator.java:133) ~[?:?]
+	at java.base/java.util.Spliterators$IteratorSpliterator.forEachRemaining(Spliterators.java:1939) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:509) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:499) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp.evaluateSequential(ForEachOps.java:151) ~[?:?]
+	at java.base/java.util.stream.ForEachOps$ForEachOp$OfRef.evaluateSequential(ForEachOps.java:174) ~[?:?]
+	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:234) ~[?:?]
+	at java.base/java.util.stream.ReferencePipeline.forEach(ReferencePipeline.java:596) ~[?:?]
+	at org.junit.platform.suite.engine.SuiteTestEngine.execute(SuiteTestEngine.java:73) ~[junit-platform-suite-engine-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:198) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:169) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:93) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.lambda$execute$0(EngineExecutionOrchestrator.java:58) ~[junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.withInterceptedStreams(EngineExecutionOrchestrator.java:141) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.EngineExecutionOrchestrator.execute(EngineExecutionOrchestrator.java:57) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:103) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DefaultLauncher.execute(DefaultLauncher.java:85) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.junit.platform.launcher.core.DelegatingLauncher.execute(DelegatingLauncher.java:47) [junit-platform-launcher-1.10.2.jar:1.10.2]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.processAllTestClasses(JUnitPlatformTestClassProcessor.java:119) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor$CollectAllTestClassesExecutor.access$000(JUnitPlatformTestClassProcessor.java:94) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.junitplatform.JUnitPlatformTestClassProcessor.stop(JUnitPlatformTestClassProcessor.java:89) [gradle-testing-junit-platform-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.SuiteTestClassProcessor.stop(SuiteTestClassProcessor.java:62) [gradle-testing-base-8.6.jar:8.6]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[?:?]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[?:?]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:36) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ReflectionDispatch.dispatch(ReflectionDispatch.java:24) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ContextClassLoaderDispatch.dispatch(ContextClassLoaderDispatch.java:33) [gradle-messaging-8.6.jar:8.6]
+	at org.gradle.internal.dispatch.ProxyDispatchAdapter$DispatchingInvocationHandler.invoke(ProxyDispatchAdapter.java:94) [gradle-messaging-8.6.jar:8.6]
+	at jdk.proxy1/jdk.proxy1.$Proxy2.stop(Unknown Source) [?:?]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker$3.run(TestWorker.java:193) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.executeAndMaintainThreadName(TestWorker.java:129) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:100) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.api.internal.tasks.testing.worker.TestWorker.execute(TestWorker.java:60) [gradle-testing-base-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.ActionExecutionWorker.execute(ActionExecutionWorker.java:56) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:113) [gradle-worker-processes-8.6.jar:8.6]
+	at org.gradle.process.internal.worker.child.SystemApplicationClassLoaderWorker.call(SystemApplicationClassLoaderWorker.java:65) [gradle-worker-processes-8.6.jar:8.6]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.run(GradleWorkerMain.java:69) [gradle-worker.jar:?]
+	at worker.org.gradle.process.internal.worker.GradleWorkerMain.main(GradleWorkerMain.java:74) [gradle-worker.jar:?]
+17:50:00.488 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PetAccessor:161 - Persisting pet Corgy -- Atk: 2 Health: 1 Tier: 1
+17:50:00.490 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:182 - Update existing pack object { packId='55', player='Alya', pets='[Corgy -- Atk: 2 Health: 1 Tier: 1]', name='My first pack'}
+17:50:00.497 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Alya from persistence
+17:50:00.509 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Monica Bing-Geller
+17:50:00.509 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Monica Bing-Geller
+	Packs:
+ to persistence
+17:50:00.509 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
+17:50:00.514 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 8 from persistence
+17:50:00.518 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
+17:50:00.522 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My Empty Pack for player Player (8): Monica Bing-Geller
+	Packs:
+
+17:50:00.522 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Monica Bing-Geller', pets='[]', name='My Empty Pack'}
+17:50:00.525 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Monica Bing-Geller from persistence
+17:50:00.531 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:220 - building team arguments: build_team "Monica Bing-Geller" "My Empty Pack"
+17:50:00.532 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Monica Bing-Geller and pack name My Empty Pack
+17:50:00.544 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Ross
+17:50:00.544 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Ross
+	Packs:
+ to persistence
+17:50:00.545 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Ross from persistence
+17:50:00.549 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 9 from persistence
+17:50:00.555 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Ross from persistence
+17:50:00.560 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My 5 Pet Pack for player Player (9): Ross
+	Packs:
+
+17:50:00.560 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Ross', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 2 Tier: 1, Pig -- Atk: 6 Health: 4 Tier: 1, Donkey -- Atk: 8 Health: 6 Tier: 2, Arabian White Horse -- Atk: 8 Health: 8 Tier: 2, Fenton the Dog -- Atk: 1 Health: 100 Tier: 3]', name='My 5 Pet Pack'}
+17:50:00.564 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Ross from persistence
+17:50:00.571 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:220 - building team arguments: build_team "Ross" "My 5 Pet Pack"
+17:50:00.571 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Ross and pack name My 5 Pet Pack
+17:50:00.592 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:44 - Creating player with name Rachel
+17:50:00.592 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:109 - Save player Player (null): Rachel
+	Packs:
+ to persistence
+17:50:00.592 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rachel from persistence
+17:50:00.598 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:84 - Getting player with id 10 from persistence
+17:50:00.602 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rachel from persistence
+17:50:00.605 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:45 - Creating pack name My 5 Pet Pack for player Player (10): Rachel
+	Packs:
+
+17:50:00.606 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:114 - Persisting pack { packId='null', player='Rachel', pets='[Ziggy the Corgi Cat -- Atk: 2 Health: 2 Tier: 1, Pig -- Atk: 6 Health: 4 Tier: 1, Donkey -- Atk: 8 Health: 6 Tier: 2, Arabian White Horse -- Atk: 8 Health: 8 Tier: 2, Fenton the Dog -- Atk: 1 Health: 100 Tier: 3]', name='My 5 Pet Pack'}
+17:50:00.609 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PlayerAccessor:67 - Getting player with name Rachel from persistence
+17:50:00.615 [Test worker] INFO  uc.seng301.petbattler.asg3.Game:220 - building team arguments: build_team "Rachel" "My 5 Pet Pack"
+17:50:00.615 [Test worker] INFO  uc.seng301.petbattler.asg3.accessor.PackAccessor:157 - Getting pack from persistence by player name Rachel and pack name My 5 Pet Pack

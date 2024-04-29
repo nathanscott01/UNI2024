@@ -32,12 +32,11 @@ public class BuildTeamFeature {
     private static PetAccessor petAccessor;
     private static List<Pet> uniquePets;
     private static PetGenerator petGeneratorSpy;
-    private static int unique_pet_i = 0;
     public static Queue<String> mockCLIResponse;
     private static List<String> capturedCLIOutput;
     private static Runnable doLater;
-    private Player player;
-    private Pack pack;
+//    private Player player;
+//    private Pack pack;
 
     @BeforeAll
     public static void before_or_after_all() {
@@ -49,21 +48,27 @@ public class BuildTeamFeature {
         packAccessor = new PackAccessor(sessionFactory);
         petAccessor = new PetAccessor(sessionFactory);
 
+
         uniquePets = createPredefinedPets();
 
         // Mockito to mock overwritten calls to API
         petGeneratorSpy = Mockito.spy(new PetService());
         Mockito.when(petGeneratorSpy.getRandomPet()).thenAnswer(i ->
-                uniquePets.get(unique_pet_i)
+                // create a new mocked pet each time since an instance of a pet can only exist in one pack at a time
+                petAccessor.createPet("Corgy", 2, 1, 1)
         );
 
         // Mock the command line to inject user interactions
         cli = Mockito.mock(CommandLineInterface.class);
         game = new Game(petGeneratorSpy, cli, sessionFactory);
 
-        // Use a queue to inject input into CLI
+        // using a queue to inject input into the CLI
         mockCLIResponse = new LinkedList<>();
-        Mockito.when(cli.getNextLine()).thenAnswer(i -> mockCLIResponse.poll());
+        Mockito.when(cli.getNextLine()).thenAnswer(i -> {
+            String response = mockCLIResponse.poll();
+            System.out.println("mocked input provided: " + response);
+            return response;
+        });
 
         // Capture the standard output for testing
         capturedCLIOutput = new ArrayList<>();
@@ -87,6 +92,7 @@ public class BuildTeamFeature {
         return pets;
     }
 
+
     public void assertUniquePets(Pack pack) {
         List<Pet> pets = pack.getPets();
         Set<Pet> petSet = new HashSet<>(pets);
@@ -95,18 +101,21 @@ public class BuildTeamFeature {
 
     @Given("Player {string} has a pack {string} with {int} unique pets")
     public void player_has_a_pack_with_unique_pets(String playerName, String packName, Integer n_pets) {
-        player = playerAccessor.getPlayerByName(playerName);
+        Player player = playerAccessor.getPlayerByName(playerName);
         List<Pet> petsToAdd = new ArrayList<>(uniquePets.subList(0, n_pets));
-        pack = packAccessor.createPack(packName, player, petsToAdd);
+        Pack pack = packAccessor.createPack(packName, player, petsToAdd);
         Long deckId = packAccessor.persistPack(pack);
+        Assertions.assertNotNull(deckId);
         Assertions.assertEquals(n_pets, pack.getPets().size());
         assertUniquePets(pack); // Asserts all pets within set are equal
     }
 
     @When("I, {string}, try to build a team with {string}")
     public void i_try_to_build_a_team_with(String playerName, String packName) {
-        pack = playerAccessor.getPlayerByName(playerName).getPacks().stream()
-                .filter(p -> packName.equals(p.getName())).findFirst().get();
+//        Pack pack = playerAccessor.getPlayerByName(playerName).getPacks().stream()
+//                .filter(p -> packName.equals(p.getName())).findFirst().get();
+        Player player = playerAccessor.getPlayerByName(playerName);
+        Pack pack = player.getPacks().stream().filter(p -> packName.equals(p.getName())).findFirst().get();
         Assertions.assertNotNull(pack);
         doLater = () -> game.buildTeam(String.format("build_team \"%s\" \"%s\"", playerName, packName));
 
@@ -115,7 +124,6 @@ public class BuildTeamFeature {
 
     @Then("I am informed that the pack must have at least one pet")
     public void i_am_informed_that_the_pack_must_have_at_least_one_pet() {
-
         doLater.run();
         Assertions.assertTrue(capturedCLIOutput.get(capturedCLIOutput.size() - 1)
                 .contains("Cannot build team with a pack with 0 pets"));
@@ -123,50 +131,35 @@ public class BuildTeamFeature {
 
     @When("I don't select any options")
     public void i_don_t_select_any_options() {
-        // Write code here that turns the phrase above into concrete actions
-
-        // Prepare the CLI mock to simulate no selection
         mockCLIResponse.clear();
         mockCLIResponse.add("!q");
-
-        doLater.run();
 
         // The pets shown here are not the pets I chose or simulated API
     }
 
     @Then("I am given {int} options to choose")
     public void i_am_given_options_to_choose(Integer int1) {
-        // Write code here that turns the phrase above into concrete actions
-
-        // I want to count the number of options printed by the console
-        // I could count this by counting the number of times cli.printline is called
-
-//        Assertions.assertTrue(capturedCLIOutput.get(capturedCLIOutput.size() - 1)
-//                .contains("4"));
-
+        doLater.run();
         // Count the number of lines that match the expected option format
         long count = capturedCLIOutput.stream()
                 .filter(line -> line.matches("\\[\\d+\\] .*")) // Regex to match lines like [0] Option Name
                 .count();
-
         // Assert that the number of options is as expected
         Assertions.assertEquals(int1.intValue(), count, "The number of options given does not match the expected count.");
     }
 
     @When("I do not choose three pets")
     public void i_do_not_choose_three_pets() {
-        // Write code here that turns the phrase above into concrete actions
-//        throw new io.cucumber.java.PendingException();
-
         mockCLIResponse.clear();
         mockCLIResponse.add("1 2");
+        mockCLIResponse.add("!q");
+    }
 
+    @Then("I am informed I must choose three pets")
+    public void i_am_informed_i_must_choose_three_pets() {
         doLater.run();
-
         Assertions.assertTrue(capturedCLIOutput.get(capturedCLIOutput.size() - 1)
                 .contains("Must enter 3 pets space separated"));
-
-
     }
 
 }

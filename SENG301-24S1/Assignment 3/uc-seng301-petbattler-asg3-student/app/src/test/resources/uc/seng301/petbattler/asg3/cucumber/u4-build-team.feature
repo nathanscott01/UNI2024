@@ -20,3 +20,25 @@ Feature: U4 As Alex, I want to create a Team from the pets in one of my packs so
     And I do not choose three pets
     Then I am informed I must choose three pets
 
+  Scenario: AC4 - When building a team I must select 3 unique options
+    Given I create a player named "Nathan"
+    And Player "Nathan" has a pack "My 5 Pet Pack" with 5 unique pets
+    When I, "Nathan", try to build a team with "My 5 Pet Pack"
+    And I do not choose three unique pets
+    Then I am informed I must choose three unique pets
+
+  Scenario: AC5 - When building a team and I select 3 unique options then my team is ordered the same way I entered
+  my options
+    Given I create a player named "Nathan"
+    And Player "Nathan" has a pack "My 5 Pet Pack" with 5 unique pets
+    When I, "Nathan", try to build a team with "My 5 Pet Pack"
+    And I choose three unique pets
+    Then My team is ordered in the same way I selected my options
+
+    Scenario: AC6 - When building a team and I select 3 options of all the same pet type they are discrete copies from those
+    in my pack
+      Given I create a player named "Nathan"
+      And Player "Nathan" has a pack "My 5 Pet Pack" with 5 unique pets
+      When I, "Nathan", try to build a team with "My 5 Pet Pack"
+      And I choose three options
+      Then The pets within my team are all discrete copies of those in my pack
