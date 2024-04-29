@@ -9,12 +9,22 @@
 #include <fstream>
 #include <cmath> 
 #include <GL/freeglut.h>
+#include <glm/glm.hpp>
+#include <glm/gtc/matrix_transform.hpp>
 using namespace std;
 
 float angle = -40;		//Scene rotation angle
 const int NPTS = 70;	//Number of points on the flight path
 int option = 1;			//View modes:  1 = model view, 2 = room view
 float ptx[NPTS], pty[NPTS], ptz[NPTS];
+int indx = 0;
+//float P[3];
+//float Q[3];
+float v_dir[3];
+float u_dir[3] = {1, 0, 0};
+float w[3];
+float theta_rad;
+float theta_deg;
 GLUquadric *q;
 
 
@@ -22,7 +32,7 @@ GLUquadric *q;
 void loadFlightPath()
 {
 	ifstream ifile;
-	ifile.open("FlightPath.txt");
+	ifile.open("I_FlightPath/FlightPath.txt");
 	for (int i = 0; i < NPTS; i++)
 		ifile >> ptx[i] >> pty[i] >> ptz[i];
 		
@@ -172,7 +182,29 @@ void display(void)
 
 	drawRoom();
 	drawFlightPath();
+
+    float P[3] = {ptx[indx], pty[indx], ptz[indx]};
+    if (indx < (NPTS - 1))
+    {
+         float Q[3] = {ptx[indx + 1] ,pty[indx + 1], ptz[indx + 1]};
+    }
+    else
+    {
+        float Q[3] = {ptx[0], pty[0], ptz[0]};
+    }
+    v_dir = Q - P;
+    glm::vec3 v_norm = glm::normalize(v_dir);
+    float dprod = glm::dot(u, v_norm);
+    theta_rad = acos(dprod);
+    theta_deg = theta_rad * 180 / M_PI;
+    glm::vec3 w = glm::cross(u, v_norm);
+
+    glPushMatrix();
+    glTranslatef(P[0], P[1], P[2]);
+    glRotatef(theta_deg, w[0], w[1], w[2]);
 	drawModel();
+    glPopMatrix();
+    u = v_norm;
 
 	glutSwapBuffers();
 }
@@ -198,6 +230,15 @@ void special(int key, int x, int y)
 	glutPostRedisplay();
 }
 
+//--------------------------------------------------------------------
+void timer(int value)
+{
+    if (indx == NPTS - 1) indx = 0;
+    else indx++;
+    glutTimerFunc(50, timer, value);
+    glutPostRedisplay();
+}
+
 //----------------------------------------------
 int main(int argc, char** argv)
 {
@@ -208,6 +249,7 @@ int main(int argc, char** argv)
    glutCreateWindow ("Flight");
    initialise ();
    glutDisplayFunc(display);
+   glutTimerFunc(50, timer, 0);
    glutSpecialFunc(special);
    glutKeyboardFunc(keyboard);
    glutMainLoop();
