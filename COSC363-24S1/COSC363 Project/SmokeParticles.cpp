@@ -9,12 +9,17 @@
 #include <list>
 #include <GL/freeglut.h>
 #include "loadBMP.h"
+#include <climits>
 using namespace std;
 
 //====Globals====
 GLUquadric *q;		//Quadric object (required for drawing a cylinder)
 GLuint txId;		//Texture id
 int tick = 0;		//Timer counter
+float x_pos;
+float z_pos;
+float x_vel;
+float z_vel;
 
 struct particle		//A particle 
 {
@@ -143,13 +148,19 @@ void newParticle()
 {
 	particle p = { 0 };
 
-	p.pos[0] = 0;
-	p.pos[1] = 91.5;    //This point is at the top end of the smoke stack
-	p.pos[2] = 0;
+    x_pos = 2 * rand() / (float)RAND_MAX - 1;
+    z_pos = 2 * rand() / (float)RAND_MAX - 1;
 
-	p.vel[0] = 0;
+	p.pos[0] = x_pos;
+	p.pos[1] = 91.5;    //This point is at the top end of the smoke stack
+	p.pos[2] = z_pos;
+
+    x_vel = 0.3 * (2 * rand() / (float)RAND_MAX);
+    z_vel = 0.3 * (2 * rand() / (float)RAND_MAX);
+
+	p.vel[0] = x_vel;
 	p.vel[1] = 0.3;
-	p.vel[2] = 0;
+	p.vel[2] = z_vel;
 
 	p.col = 1;
 	p.size = 5;
@@ -166,6 +177,7 @@ void updateQueue()
 	particle p;
 	int tval;
 	float delta;
+    float wind_fac = 0.004;
 	//Remove particles that have passed lifetime
 
 	if (!parList.empty())
@@ -181,13 +193,18 @@ void updateQueue()
 		delta = (float)tval / (float)LIFETIME;
 
 		for (int i = 0; i < 3; i++)
-			(it->pos[i]) += it->vel[i];
+        {
+            if (i == 0)
+                (it->pos[i]) += it->vel[i] + it->pos[1] * wind_fac;
+            else
+                (it->pos[i]) += it->vel[i];
+        }
 
 		it->size = delta * 20 + 5;	//(5 - 25)
 		it->col = 1 - delta;		// (1 - 0)
 	}
 
-    if(tick % 20 == 0) newParticle();   //Create a new particle every sec.
+    if(tick % 2 == 0) newParticle();   //Create a new particle every sec.
 }
 
 //---------------------------------------------------------------------
@@ -204,7 +221,7 @@ void initialize(void)
     gluQuadricDrawStyle(q, GLU_FILL);
 	glClearColor (0.28, 0.48, 0.67, 1);  //Background colour
 	glBlendFunc(GL_SRC_COLOR, GL_ONE_MINUS_SRC_COLOR);
-
+//    glBlendFunc(GL_ONE, GL_ONE);
     glMatrixMode (GL_PROJECTION);
     glLoadIdentity ();
     gluPerspective(60., 1.0, 10.0, 1000.0);
@@ -260,7 +277,7 @@ int main(int argc, char** argv)
    initialize ();
 
    glutDisplayFunc(display);
-//   glutTimerFunc(50, timer, 0);
+   glutTimerFunc(50, timer, 0);
    glutMainLoop();
    return 0;
 }
