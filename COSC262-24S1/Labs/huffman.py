@@ -74,22 +74,51 @@ class HuffmanTree:
            the tree should then be built using one of the build methods.
         """
         self.root = root
+        self.tree_dictionary = {}
+        if self.root is not None:
+            self.build_dict(self.root, "")
+
+    def build_dict(self, node, current_binary):
+        """Build a dictionary for this node"""
+        if node is None:
+            return
+        if node.is_leaf():
+            self.tree_dictionary[node.char] = current_binary
+        else:
+            if node.left:
+                self.build_dict(node.left, current_binary + "0")
+            if node.right:
+                self.build_dict(node.right, current_binary + "1")
 
     def encode(self, text):
         """Return the binary string of '0' and '1' characters that encodes the
            given string text using this tree.
         """
-        raise NotImplementedError  # *** TO BE IMPLEMENTED
+        output = ""
+        for char in text:
+            if char in self.tree_dictionary:
+                output += self.tree_dictionary[char]
+            else:
+                raise ValueError(f"Character '{char}' not in Huffman tree")
+        return output
 
     def decode(self, binary):
         """Return the text string that corresponds the given binary string of
            0s and 1s
         """
-        # raise NotImplementedError  # *** TO BE IMPLEMENTED
-        binary_list = [element for element in binary]
-        while binary_list:
-            element = binary_list.pop(0)
-            if self.root.is_leaf:
+        current_node = self.root
+        output = ""
+        for bit in binary:
+            if bit == '0':
+                current_node = current_node.left
+            else:
+                current_node = current_node.right
+
+            if current_node.is_leaf():
+                output += current_node.char
+                current_node = self.root
+
+        return output
 
     def plot(self):
         """Plot the tree using graphviz, rendering to a PNG image and
@@ -157,9 +186,10 @@ def main():
           Leaf(5, 'e')),
         Leaf(15, 'c'))))
     # print(tree2)
-    # tree2.plot()
+    tree2.plot()
 
-    print(tree2.decode('0110011100'))
+    # print(tree2.decode('0110011100'))
+    print(tree2.encode("adcb"))
 
 
 main()
