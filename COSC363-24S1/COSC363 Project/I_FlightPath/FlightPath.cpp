@@ -10,7 +10,6 @@
 #include <cmath> 
 #include <GL/freeglut.h>
 #include <glm/glm.hpp>
-#include <glm/gtc/matrix_transform.hpp>
 using namespace std;
 
 float angle = -40;		//Scene rotation angle
@@ -18,11 +17,8 @@ const int NPTS = 70;	//Number of points on the flight path
 int option = 1;			//View modes:  1 = model view, 2 = room view
 float ptx[NPTS], pty[NPTS], ptz[NPTS];
 int indx = 0;
-//float P[3];
-//float Q[3];
-float v_dir[3];
-float u_dir[3] = {1, 0, 0};
-float w[3];
+glm::vec3 P, Q;
+glm::vec3 u(1, 0, 0);
 float theta_rad;
 float theta_deg;
 GLUquadric *q;
@@ -183,28 +179,32 @@ void display(void)
 	drawRoom();
 	drawFlightPath();
 
-    float P[3] = {ptx[indx], pty[indx], ptz[indx]};
-    if (indx < (NPTS - 1))
-    {
-         float Q[3] = {ptx[indx + 1] ,pty[indx + 1], ptz[indx + 1]};
+    // --------------Start computing vectors here--------------
+    P = glm::vec3(ptx[indx], pty[indx], ptz[indx]);
+    if (indx == (NPTS - 1)){
+        Q = glm::vec3 (ptx[0], pty[0], ptz[0]);
+    } else {
+        Q = glm::vec3(ptx[indx + 1], pty[indx + 1], ptz[indx + 1]);
     }
-    else
-    {
-        float Q[3] = {ptx[0], pty[0], ptz[0]};
-    }
-    v_dir = Q - P;
-    glm::vec3 v_norm = glm::normalize(v_dir);
+    glm::vec3 v = Q - P;
+    glm::vec3 v_norm = glm::normalize(v);
+
+    glm::vec3 w = glm::cross(u, v_norm);
+
+    // --------------Start computing angles here--------------
     float dprod = glm::dot(u, v_norm);
     theta_rad = acos(dprod);
     theta_deg = theta_rad * 180 / M_PI;
-    glm::vec3 w = glm::cross(u, v_norm);
+
+    // Reassign v_norm to u for the next iteration
+//    u = v_norm;
 
     glPushMatrix();
-    glTranslatef(P[0], P[1], P[2]);
-    glRotatef(theta_deg, w[0], w[1], w[2]);
-	drawModel();
+        glTranslatef(P[0], P[1], P[2]);
+        glRotatef(theta_deg, w[0], w[1], w[2]);
+        drawModel();
     glPopMatrix();
-    u = v_norm;
+
 
 	glutSwapBuffers();
 }
@@ -235,7 +235,7 @@ void timer(int value)
 {
     if (indx == NPTS - 1) indx = 0;
     else indx++;
-    glutTimerFunc(50, timer, value);
+    glutTimerFunc(50, timer, 0);
     glutPostRedisplay();
 }
 
