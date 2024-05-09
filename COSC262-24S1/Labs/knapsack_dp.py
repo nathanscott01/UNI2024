@@ -27,14 +27,26 @@ def max_value(item_list, max_capacity):
     n_items = len(item_list)
     weight_table = np.zeros((n_items + 1, max_capacity + 1), dtype=int)
 
+    # Fill out Table
     for i in range(1, n_items + 1):
         for j in range(1, max_capacity + 1):
-            if item_list[i].weight <= j:
-                weight_table[i, j] = max(weight_table[i - 1, j],
-                                         weight_table[i - 1, j - item_list[i].weight] + item_list[i].value)
+            if j - item_list[i - 1].weight >= 0:
+                weight_table[i, j] = max(weight_table[i - 1, j], weight_table[i - 1, j - item_list[i - 1].weight] +
+                                         item_list[i - 1].value)
+            else:
+                weight_table[i, j] = weight_table[i - 1, j]
 
-    return weight_table[-1, -1]
+    # Find the items needed to make up the max value
+    items_used = []
+    i = len(item_list)
+    j = max_capacity
+    while i > 0 and j > 0:
+        if weight_table[i, j] != weight_table[i - 1, j]:
+            items_used.append(item_list[i - 1])
+            j -= item_list[i - 1].weight
+        i -= 1
 
+    return weight_table[-1, -1], items_used
 
     # def knapsack_topdown(n, capacity):
     #     """Use top down algorithm to find max value"""
@@ -51,5 +63,17 @@ def max_value(item_list, max_capacity):
     #                          knapsack_topdown(n-1, capacity-item_list[n-1].weight))
     #     weight_table[n, capacity] = result
     #     return result
-
+    #
     # return knapsack_topdown(n_items, max_capacity)
+
+
+items = [Item(45, 3),
+         Item(45, 3),
+         Item(80, 4),
+         Item(80, 5),
+         Item(100, 8)]
+# print(max_value(items, 10))
+
+maximum, selected = max_value(items, 10)
+print(maximum)
+print(selected)
