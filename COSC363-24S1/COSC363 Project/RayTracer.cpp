@@ -43,8 +43,18 @@ glm::vec3 trace(Ray ray, int step)
 	obj = sceneObjects[ray.index];					//object on which the closest point of intersection is found
 
 
-	color = obj->getColor();						//Object's colour
+//	color = obj->getColor();						//Object's colour
+    color = obj->lighting(lightPos, -ray.dir, ray.hit);
 
+    // Shadows
+    glm::vec3 lightVec = lightPos - ray.hit;
+    Ray shadowRay(ray.hit, lightVec);
+    shadowRay.closestPt(sceneObjects);
+    float lightDist = glm::length(lightVec);
+    if ((shadowRay.index > -1) && (shadowRay.dist < lightDist))
+    {
+        color = 0.2f * obj->getColor();
+    }
 
 	return color;
 }
@@ -105,10 +115,24 @@ void initialize()
 
     glClearColor(0, 0, 0, 1);
 
-//	Sphere *sphere1 = new Sphere(glm::vec3(-5.0, 0.0, -90.0), 15.0);
-//	sphere1->setColor(glm::vec3(0, 0, 1));   //Set colour to blue
-//	sceneObjects.push_back(sphere1);		 //Add sphere to scene objects
+    // Draw Spheres
+	Sphere *sphere1 = new Sphere(glm::vec3(-5.0, 0.0, -90.0), 15.0);
+	sphere1->setColor(glm::vec3(0, 0, 1));   //Set colour to blue
+    sphere1->setSpecularity(false);
+    sphere1->setShininess(5);
+    sceneObjects.push_back(sphere1);		 //Add sphere to scene objects
 
+    Sphere *sphere2 = new Sphere(glm::vec3(5, -10, -60), 5);
+    sphere2->setColor(glm::vec3(0, 1, 0));
+    sceneObjects.push_back(sphere2);
+
+    Sphere *sphere3 = new Sphere(glm::vec3(5, 5, -70), 4);
+    sphere3->setColor(glm::vec3(1, 0, 0));
+    sceneObjects.push_back(sphere3);
+
+    Sphere *sphere4 = new Sphere(glm::vec3(10, 10, -60), 3);
+    sphere4->setColor(glm::vec3(0, 1, 1));
+    sceneObjects.push_back(sphere4);
 }
 
 
