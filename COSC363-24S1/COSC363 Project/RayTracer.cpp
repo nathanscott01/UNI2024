@@ -14,6 +14,8 @@
 #include "SceneObject.h"
 #include "Ray.h"
 #include <GL/freeglut.h>
+#include "Plane.h"
+#include "TextureBMP.h"
 using namespace std;
 
 const float EDIST = 40.0;
@@ -23,6 +25,7 @@ const float XMIN = -10.0;
 const float XMAX = 10.0;
 const float YMIN = -10.0;
 const float YMAX = 10.0;
+TextureBMP texture;
 
 vector<SceneObject*> sceneObjects;
 
@@ -42,6 +45,33 @@ glm::vec3 trace(Ray ray, int step)
     if(ray.index == -1) return backgroundCol;		//no intersection
 	obj = sceneObjects[ray.index];					//object on which the closest point of intersection is found
 
+    if (ray.index == 4)
+    {
+        // Stripe Pattern
+        int stripWidth = 5;
+        int iz = (ray.hit.z) / stripWidth;
+        int k = iz % 2;
+        if (k == 0) color = glm::vec3(0, 1, 0);
+        else color = glm::vec3(1, 1, 0.5);
+        obj->setColor(color);
+
+        // Texture Mapping
+        int a1 = -60;
+        int a2 = -90;
+        int b1 = -15;
+        int b2 = 5;
+
+        float texcoords = (ray.hit.z - a1)/(a2 - a1);
+        float texcoordt = (ray.hit.x - b1)/(b2 - b1);
+
+        if (texcoords > 0 && texcoords < 1 && texcoordt > 0 && texcoordt < 1)
+        {
+            color = texture.getColorAt(texcoords, texcoordt);
+            obj->setColor(color);
+        }
+
+    }
+
 
 //	color = obj->getColor();						//Object's colour
     color = obj->lighting(lightPos, -ray.dir, ray.hit);
@@ -54,6 +84,17 @@ glm::vec3 trace(Ray ray, int step)
     if ((shadowRay.index > -1) && (shadowRay.dist < lightDist))
     {
         color = 0.2f * obj->getColor();
+    }
+
+    // Reflection
+    if (obj->isReflective() && step < MAX_STEPS)
+    {
+        float rho = obj->getReflectionCoeff();
+        glm::vec3 normalVec = obj->normal(ray.hit);
+        glm::vec3 reflectedDir = glm::reflect(ray.dir, normalVec);
+        Ray reflectedRay(ray.hit, reflectedDir);
+        glm::vec3 reflectedColor = trace(reflectedRay, step + 1);
+        color = color + (rho * reflectedColor);
     }
 
 	return color;
@@ -115,11 +156,15 @@ void initialize()
 
     glClearColor(0, 0, 0, 1);
 
+    // Texture
+    texture = TextureBMP("Butterfly.bmp");
+
     // Draw Spheres
 	Sphere *sphere1 = new Sphere(glm::vec3(-5.0, 0.0, -90.0), 15.0);
 	sphere1->setColor(glm::vec3(0, 0, 1));   //Set colour to blue
     sphere1->setSpecularity(false);
     sphere1->setShininess(5);
+    sphere1->setReflectivity(true, 0.8);
     sceneObjects.push_back(sphere1);		 //Add sphere to scene objects
 
     Sphere *sphere2 = new Sphere(glm::vec3(5, -10, -60), 5);
@@ -133,6 +178,16 @@ void initialize()
     Sphere *sphere4 = new Sphere(glm::vec3(10, 10, -60), 3);
     sphere4->setColor(glm::vec3(0, 1, 1));
     sceneObjects.push_back(sphere4);
+
+    // Plane
+    Plane *plane = new Plane (glm::vec3(-20, -15, -14),
+                              glm::vec3(20, -15, -14),
+                              glm::vec3(20, -15, -200),
+                              glm::vec3(-20, -15, -200));
+    plane->setColor(glm::vec3(0.8, 0.8, 0));
+    plane->setSpecularity(false);
+    sceneObjects.push_back(plane);
+
 }
 
 
