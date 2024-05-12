@@ -1,0 +1,99 @@
+@startuml
+
+hide circle
+'hide empty members
+skinparam groupInheritance 2
+
+skinparam classAttributeIconSize 0
+
+ class Bank {
+  + code
+  + address
+  + manages()
+  + maintains()
+}
+
+class ATM {
+  + Location
+  + managedBy
+  + identifies()
+  + transactions()
+}
+
+class "ATM Transaction" {
+  + transactionId
+  + date
+  + type
+  + update()
+}
+
+class "Withdrawal Transaction" {
+  + amount
+  + withdrawal()
+}
+
+class "Transfer Transaction" {
+  + amount
+  + accountNo
+}
+
+class "Debit Card" {
+  + cardNo
+  + ownedBy
+  + access()
+}
+
+class Customer {
+  + name
+  + address
+  + dob
+  + owns()
+}
+
+abstract class Account {
+  + type
+  + owner
+  + checkBalance()
+}
+
+class "Saving Account" {
+  + accountNo
+  + debit()
+  +credit()
+}
+
+class "Checking Account" {
+  + accountNo
+  + debit()
+  + credit()
+}
+
+together {
+  class Bank
+  class "Debit Card"
+  class Customer
+  class Account
+}
+
+together {
+  class ATM
+  class "ATM Transaction"
+}
+
+
+Bank "1" -down- "1..*" "Debit Card" : manages
+Bank "1" -down- "1..*" Customer : +has
+"Debit Card" "1..*" -right--- "0..*" Customer : +owns
+"Debit Card" "*" -down- "1..*" Account : +Provides access to
+
+Account <|-down- "Saving Account"
+Account <|-down- "Checking Account"
+
+Bank "1" -right- "1" ATM
+ATM "1" -down-- "*" "ATM Transaction" : +identifies
+"ATM Transaction" "*" -left-> "1" Account
+
+"ATM Transaction" <|-down- "Withdrawal Transaction"
+"ATM Transaction" <|-down- "Transfer Transaction"
+
+@enduml
