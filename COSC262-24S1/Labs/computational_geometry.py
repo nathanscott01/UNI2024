@@ -5,6 +5,9 @@ Computational Geometry Basics
 """
 
 
+import matplotlib.pyplot as plt
+
+
 class Vec:
     """A simple vector in 2D. Also used as a position vector for points"""
 
@@ -30,6 +33,27 @@ class Vec:
 
     def __str__(self):
         return "({}, {})".format(self.x, self.y)
+
+
+class PointSortKey:
+    """A class for use as a key when sorting points wrt bottommost point"""
+
+    def __init__(self, p, bottommost):
+        """Construct an instance of the sort key"""
+        self.direction = p - bottommost
+        self.is_bottommost = self.direction.lensq() == 0  # True if p == bottommost
+
+    def __lt__(self, other):
+        """Compares two sort keys. p1 < p2 means the vector the from bottommost point
+           to p2 is to the left of the vector from the bottommost to p1.
+        """
+        if self.is_bottommost:
+            return True  # Ensure bottommost point is less than all other points
+        elif other.is_bottommost:
+            return False  # Ensure no other point is less than the bottommost
+        else:
+            area = self.direction.x * other.direction.y - other.direction.x * self.direction.y
+            return area > 0
 
 
 def signed_area(a, b, c):
@@ -112,29 +136,58 @@ def gift_wrap(points):
         for p in points:
             if p is hull[-1]:
                 continue
-            if candidate is None:
-                if len(hull) == 1:
-                    if hull[0].x < p.x:
-                        candidate = p
-                elif is_ccw(hull[-2], hull[-1], p):  # ** FIXME **
-                    candidate = p
+
+            # Conditions
+            if candidate is None:  # ** FIXME **
+                candidate = p
+            elif is_ccw(hull[-1], candidate, p) is False:
+                candidate = p
         if candidate is bottommost:
-            done = True  # We've closed the hull
+            done = True    # We've closed the hull
         else:
             hull.append(candidate)
 
     return hull
 
 
+def plot_hull(points, hull):
+    """Plot the given set of points and the computed convex hull"""
+    plt.scatter([p.x for p in points], [p.y for p in points])
+    plt.plot([v.x for v in hull + [hull[0]]], [v.y for v in hull + [hull[0]]])
+    plt.show()
+
+
+def plot_poly(points):
+    """Plot the given set of points as a closed polygon"""
+    plt.plot([v.x for v in points + [points[0]]], [v.y for v in points + [points[0]]])
+    plt.show()
+
+
+def simple_polygon(points):
+    """Take a list of points and return a simple polygon passing through all points"""
+    anchor = min(points, key=lambda p: (p.y, p.x))
+    return sorted(points, key=lambda p: PointSortKey(p, anchor))
+
+
+def graham_scan(points):
+    """Take a list of 3 or more vectors and return the convex hull as a list of vectors"""
+    assert len(points) >= 3
+    ordered_points = simple_polygon(points)
+    h_stack = ordered_points[:3]
+    for i in range(3, len(ordered_points)):
+        while not is_ccw(h_stack[-2], h_stack[-1], ordered_points[i]):
+            h_stack.pop()
+        h_stack.append(ordered_points[i])
+    return h_stack
+
+
 points = [
-    Vec(1, 99),
-    Vec(0, 100),
-    Vec(50, 0),
-    Vec(50, 1),
-    Vec(50, 99),
-    Vec(50, 50),
     Vec(100, 100),
-    Vec(99, 99)]
-verts = gift_wrap(points)
+    Vec(0, 100),
+    Vec(100, 0),
+    Vec(0, 0),
+    Vec(49, 50)]
+verts = graham_scan(points)
 for v in verts:
     print(v)
+
