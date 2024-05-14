@@ -29,7 +29,7 @@ void loadTextures()
     glGenTextures(1, &texID);   //Generate 1 texture ID
     glActiveTexture(GL_TEXTURE0);  //Texture unit 0
     glBindTexture(GL_TEXTURE_2D, texID);
-	loadTGA("Dots.tga");
+	loadTGA("I_Cube/Dots.tga");
 
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
@@ -38,7 +38,7 @@ void loadTextures()
 void initialise()
 {
 	loadTextures();
-	GLuint program = createShaderProg("Cube.vert", "Cube.frag");
+	GLuint program = createShaderProg("I_Cube/Cube.vert", "I_Cube/Cube.frag");
 	mvMatrixLoc = glGetUniformLocation(program, "mvMatrix");
 	mvpMatrixLoc = glGetUniformLocation(program, "mvpMatrix");
 	norMatrixLoc = glGetUniformLocation(program, "norMatrix");

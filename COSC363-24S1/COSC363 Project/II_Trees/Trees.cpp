@@ -27,14 +27,14 @@ void loadTextures()
    // Load road texture
     glActiveTexture(GL_TEXTURE0);
     glBindTexture(GL_TEXTURE_2D, texID[0]);
-	loadTGA("Road.tga");
+	loadTGA("II_Trees/Road.tga");
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 
     // Load tree texture
     glActiveTexture(GL_TEXTURE1);
     glBindTexture(GL_TEXTURE_2D, texID[1]);
-    loadTGA("Tree.tga");
+    loadTGA("II_Trees/Tree.tga");
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
     glTexParameterf(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
 }
@@ -42,7 +42,7 @@ void loadTextures()
 void initialise()
 {
 	loadTextures();
-	GLuint program = createShaderProg("Trees.vert", "Trees.frag");
+	GLuint program = createShaderProg("II_Trees/Trees.vert", "II_Trees/Trees.frag");
 
 	//Assign values to sampler objects in the fragment shader
 	GLuint texLoc = glGetUniformLocation(program, "texRoad");

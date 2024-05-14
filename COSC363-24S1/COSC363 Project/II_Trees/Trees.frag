@@ -12,11 +12,13 @@ void main()
 {
       if(objIndex == 0)  //Road
       { 
-	   outputColor =  vec4(0.2, 0.2, 0.2, 1);
+	   outputColor =  texture(texRoad, oTexCoord);
       }
       else if(objIndex == 1)  //Trees
       {
-	   outputColor = vec4(1, 0, 0, 0);
+	   vec4 treeColor = texture(texTree, oTexCoord);
+	   if (treeColor.a == 0) discard;
+	   outputColor = treeColor;
       }
 
 

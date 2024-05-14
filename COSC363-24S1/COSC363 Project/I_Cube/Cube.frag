@@ -7,6 +7,9 @@ in float diffTerm;
 out vec4 outputColor;
 
 void main() 
-{ 
-   outputColor = (diffTerm + 0.2) * vec4(0, 1, 0, 1);   //Green
+{
+   vec4 texColor = texture(tSampler, oTexCoord);
+   // outputColor = (diffTerm + 0.2) * vec4(0, 1, 0, 1);   //Green
+   if ((texColor.g == 0) && (texColor.b == 0)) discard;
+   outputColor = (diffTerm + 0.2) * texColor;
 }
