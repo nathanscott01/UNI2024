@@ -1,0 +1,22 @@
+# =============== DELETEs =====================
+
+@app.route('/queue/<hostname>', methods=['DELETE'])
+def delete(hostname):
+    """Handle delete request from the given host"""
+    try:
+        data = json.loads(request.get_data())
+        mac_address = data['mac_address']
+    except:
+        abort(400, 'Missing or invalid user data')
+    status = queue.dequeue(hostname, mac_address)
+    return ('', status)
+@app.route('/queue/', methods=['DELETE'])
+def clear_queue():
+    """Clear the queue. Valid only if coming from tutor machine"""
+    if request.remote_addr.upper() != TUTOR_MACHINE.upper():
+        abort(403, "Only the tutor machine can clear the queue")
+    else:
+        queue.clear_queue()
+        response = jsonify({"message": "Queue cleared"})
+        response.status_code = 204
+        return response

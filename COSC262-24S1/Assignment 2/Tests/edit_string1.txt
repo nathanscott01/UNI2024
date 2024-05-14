@@ -1,0 +1,22 @@
+# =============== DELETEs =====================
+# TODO: add docstrings
+@app.route('/queue/<hostname>', methods=['DELETE'])
+def delete(hostname):
+
+    try:
+        data = json.loads(request.get_data())
+        mac_address = data['macAddress']
+    except:
+        abort(400, 'Missing or invalid user data')
+    status = queue.dequeue(hostname, mac_address)
+    return ('', status)
+@app.route('/queue/', methods=['DELETE'])
+
+def empty_queue():
+    if request.remote_addr.upper() != TUTOR_MACHINE.upper():
+        abort(403, "Not authorised")
+    else:
+        queue.clear_queue()
+        response = jsonify({"message": "Queue emptied"})
+        response.status_code = 204
+        return response
