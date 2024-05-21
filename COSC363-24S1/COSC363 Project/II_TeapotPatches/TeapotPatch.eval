@@ -1,0 +1,33 @@
+#version 400
+
+layout(quads, equal_spacing, ccw) in;
+uniform mat4 mvpMatrix;
+
+void main()
+{
+    vec4 posn = vec4(0); 
+    float u = gl_TessCoord.x;
+    float v = gl_TessCoord.y;
+
+//  Third degree Bernstein polynomials in u 
+    float Au = (1-u) * (1-u) * (1-u);
+    float Bu = 3 * u * (1-u) * (1-u);
+    float Cu = 3 * u * u * (1-u);
+    float Du = u * u * u;
+
+//  Third degree Bernstein polynomials in v
+    float Av = (1-v) * (1-v) * (1-v);
+    float Bv = 3 * v * (1-v) * (1-v);
+    float Cv = 3 * v * v * (1-v);
+    float Dv = v * v * v;
+
+    //Complete the following equation (and uncomment the statements) 
+
+    //posn = Av * ( Au * gl_in[0].gl_Position +  Bu * gl_in[1].gl_Position
+    //            + Cu * gl_in[2].gl_Position +  Du * gl_in[3].gl_Position )
+    //     + Bv * ( Au * ...
+    //          ...
+   
+    gl_Position = mvpMatrix * posn;
+	
+}
