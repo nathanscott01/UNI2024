@@ -82,11 +82,11 @@ class MyTestCase(unittest.TestCase):
             n = Vec.box_calls
         except AttributeError:
             self.fail(
-                "You must use the pre-loaded version of the Vec class in this question. It has an in_box method that counts calls to it.")
-        Vec.box_calls = 0
+                "You must use the pre-loaded version of the Vec class in this question. It has an in_box method that "
+                "counts calls to it.")
+        Vec.box_calls, Vec.point_num = 0, 0
         point_tuples = [(int(10000 * random.random()), int(10000 * random.random())) for i in range(50000)]
-        points = [Vec(*p) for p in point_tuples]
-        tree = KdTree(points, max_depth=20)
+        tree = build_tree(point_tuples, False, False, 20)
         in_range = tree.points_in_range((Vec(5, 19), Vec(100, 151)))
         result = sorted((p.x, p.y) for p in in_range)
         # Since we don't have the expected sorted list, just print the result for now

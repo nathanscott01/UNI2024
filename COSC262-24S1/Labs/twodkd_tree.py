@@ -6,7 +6,6 @@ COSC262 Lab 11
 
 import matplotlib.pyplot as plt
 import math
-import random
 
 
 class Vec:
@@ -67,8 +66,8 @@ class KdTree:
 
     def __init__(self, points, depth=0, max_depth=10):
         """Initialiser, given a list of points, each of type Vec, the current
-           depth within the tree (0 for root), used during recursion, and the
-           maximum depth allowable for a leaf node.
+           depth within the tree (0 for the root) and the maximum depth
+           allowable for a leaf node.
         """
         if len(points) < 2 or depth >= max_depth:  # Ensure at least one point per leaf
             self.is_leaf = True
@@ -76,7 +75,7 @@ class KdTree:
         else:
             self.is_leaf = False
             self.axis = depth % 2  # 0 for vertical divider (x-value), 1 for horizontal (y-value)
-            points.sort(key=lambda p: p[self.axis])
+            points = sorted(points, key=lambda p: p[self.axis])
             halfway = len(points) // 2
             self.coord = points[halfway - 1][self.axis]
             self.leftorbottom = KdTree(points[:halfway], depth + 1, max_depth)
@@ -91,19 +90,28 @@ class KdTree:
             return [p for p in self.points if p.in_box(query_rectangle[0], query_rectangle[1])]
         else:
             matches = []
-            # Check for intersection with left/bottom half space
-            if (self.axis == 0 and query_rectangle[0].x <= self.coord) or \
-                    (self.axis == 1 and query_rectangle[0].y <= self.coord):
-                matches.extend(self.leftorbottom.points_in_range(query_rectangle))
-            # Check for intersection with right/top half space
-            if (self.axis == 0 and query_rectangle[0].x >= self.coord) or \
-                    (self.axis == 1 and query_rectangle[0].y >= self.coord):
-                matches.extend(self.rightortop.points_in_range(query_rectangle))
+            # Check if x-axis
+            if self.axis == 0:
+                # Check if rectangle in left space
+                if query_rectangle[0].x <= self.coord:
+                    matches.extend(self.leftorbottom.points_in_range(query_rectangle))
+                # Check if in right space
+                if query_rectangle[1].x >= self.coord:
+                    matches.extend(self.rightortop.points_in_range(query_rectangle))
+            # If y-axis,
+            else:
+                # Check if rectangle in bottom space
+                if query_rectangle[0].y <= self.coord:
+                    matches.extend(self.leftorbottom.points_in_range(query_rectangle))
+                # Check if also in top space
+                if query_rectangle[1].y >= self.coord:
+                    matches.extend(self.rightortop.points_in_range(query_rectangle))
+            # Return the results
             return matches
 
     def plot(self, axes, top, right, bottom, left, depth=0):
         """Plot the kd tree. axes is the matplotlib axes object on
-           which to plot; top, right, bottom, left are the x or y coordinates
+           which to plot, top, right, bottom, left are the coordinates of
            the bounding box of the plot.
         """
 
@@ -138,9 +146,9 @@ class KdTree:
             return s
 
 
-def build_tree(point_tuples, plot_points=False, print_tree=False):
+def build_tree(point_tuples, plot_points=False, print_tree=False, max_depth=10):
     points = [Vec(*tup) for tup in point_tuples]
-    tree = KdTree(points)
+    tree = KdTree(points, 0, max_depth)
     if print_tree:
         print(tree)
     if plot_points:
@@ -152,6 +160,7 @@ def build_tree(point_tuples, plot_points=False, print_tree=False):
         tree.plot(axes, max_y_rounded, max_x_rounded, 0, 0)
         plt.show()
     return tree
+
 
 # Call to main provided from lab
 # Call is obselete as it is implemented in tests
