@@ -165,6 +165,12 @@ void special(int key, int x, int y)
 	else if (key == GLUT_KEY_DOWN) camDist++;
 	if (camDist < 10) camDist = 10;
 	else if (camDist > 50) camDist = 50;
+
+    level = static_cast<int>(-0.25 * camDist + 15.5);
+
+    // Clamp levels between 3 and 13
+    if (level < 3) level = 3;
+    else if (level > 13) level = 13;
 	glutPostRedisplay();
 
 }
