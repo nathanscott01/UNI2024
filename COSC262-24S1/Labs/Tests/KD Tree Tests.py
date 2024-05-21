@@ -1,5 +1,7 @@
 import unittest
+import random
 from kd_tree import *
+from twodkd_tree import *
 
 # Expected Outputs
 output1 = """\
@@ -65,6 +67,32 @@ class MyTestCase(unittest.TestCase):
         tree = binary_search_tree(nums)
         result = print_tree(tree)
         self.assertEqual(output3, result)
+
+    def test_twodkd1(self):
+        point_tuples = [(1, 3), (10, 20), (5, 19), (0, 11), (15, 22), (30, 5)]
+        tree = build_tree(point_tuples, False, False)
+        in_range = tree.points_in_range((Vec(0, 3), Vec(5, 19)))
+        result = sorted((p.x, p.y) for p in in_range)
+        expected = [(0, 11), (1, 3), (5, 19)]
+        self.assertEqual(expected, result)
+
+    def test_twodkd2(self):
+        random.seed(1234567)
+        try:
+            n = Vec.box_calls
+        except AttributeError:
+            self.fail(
+                "You must use the pre-loaded version of the Vec class in this question. It has an in_box method that counts calls to it.")
+        Vec.box_calls = 0
+        point_tuples = [(int(10000 * random.random()), int(10000 * random.random())) for i in range(50000)]
+        points = [Vec(*p) for p in point_tuples]
+        tree = KdTree(points, max_depth=20)
+        in_range = tree.points_in_range((Vec(5, 19), Vec(100, 151)))
+        result = sorted((p.x, p.y) for p in in_range)
+        # Since we don't have the expected sorted list, just print the result for now
+        print(result)
+        # Check plausible number of in_box calls
+        self.assertTrue(6 <= Vec.box_calls <= 10, f"Implausible number of in_box calls ({Vec.box_calls})")
 
 
 if __name__ == '__main__':
