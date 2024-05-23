@@ -5,7 +5,18 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07fcd518-aad0-4127-9a3f-dfb0c8614451" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/generate_string.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Character Edits Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Character Edits Tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/LCS Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LCS Tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/Line Edits Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Line Edits Tests.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/edit_string1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/edit_string1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/edit_string2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/edit_string2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/string1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/string1.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/string2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/string2.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/character_edits.py" beforeDir="false" afterPath="$PROJECT_DIR$/character_edits.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/line_edits.py" beforeDir="false" afterPath="$PROJECT_DIR$/line_edits.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/longest_common_string.py" beforeDir="false" afterPath="$PROJECT_DIR$/longest_common_string.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -15,14 +26,26 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Python Script" />
         <option value="Python Unit Test" />
+        <option value="Python Script" />
       </list>
     </option>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;nathanscott01&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/nathanscott01/UNI2024.git&quot;,
+    &quot;accountId&quot;: &quot;c3f1ce94-c86a-44f2-99ca-0e5230ca309b&quot;
+  }
+}</component>
   <component name="ProjectColorInfo">{
   &quot;associatedIndex&quot;: 4
 }</component>
@@ -31,23 +54,38 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Python tests.Python tests for LCS Tests.MyLCSTest.test_lcs_table.executor": "Run",
+    "Python tests.Python tests for LCS_Tests.MyLCSTest.test_lcs_table.executor": "Run",
+    "Python tests.Python tests for Tests.LCS_Tests.MyLCSTest.test_lcs_table.executor": "Run",
+    "Python tests.Python tests for test_lcs_table.executor": "Run",
+    "Python tests.Python tests in Character Edits Tests.py.executor": "Run",
+    "Python tests.Python tests in LCS Tests.py.executor": "Run",
+    "Python tests.Python tests in Line Edits Tests.py.executor": "Run",
+    "Python tests.Run test_lcs_table.executor": "Run",
+    "Python tests.Test LCS Table.executor": "Run",
+    "Python.character_edits.executor": "Run",
+    "Python.generate_string.executor": "Run",
+    "Python.longest_common_string.executor": "Run",
+    "RunOnceActivity.OpenProjectViewOnStart": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/nathan/Desktop/UNI2024/COSC262-24S1/Assignment 2",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "debugger.dataViews.python.type.renderers",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
-        <option value="bundled-python-sdk-d68999036c7f-b11f5e8da5ad-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-233.14475.56" />
+        <option value="bundled-js-predefined-1d06a55b98c1-91d5c284f522-JavaScript-PY-241.15989.155" />
+        <option value="bundled-python-sdk-babbdf50b680-7c6932dee5e4-com.jetbrains.pycharm.pro.sharedIndexes.bundled-PY-241.15989.155" />
       </set>
     </attachedChunks>
   </component>
@@ -61,10 +99,28 @@
       <updated>1715676264878</updated>
       <workItem from="1715676266477" duration="3739000" />
       <workItem from="1716182756017" duration="8000" />
+      <workItem from="1716439008163" duration="17672000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="com.intellij.coverage.CoverageDataManagerImpl">
+    <SUITE FILE_PATH="coverage/Assignment_2$character_edits.coverage" NAME="character_edits Coverage Results" MODIFIED="1716467965161" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Assignment_2$generate_string.coverage" NAME="generate_string Coverage Results" MODIFIED="1716444839203" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Assignment_2$.coverage" NAME=" Coverage Results" MODIFIED="1716468259096" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Tests" />
+    <SUITE FILE_PATH="coverage/Assignment_2$longest_common_string.coverage" NAME="longest_common_string Coverage Results" MODIFIED="1716443918650" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="false" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>

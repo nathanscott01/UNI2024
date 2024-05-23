@@ -1,8 +1,26 @@
 import unittest
 from longest_common_string import *
+import numpy as np
+import numpy.testing as npt
+
+lcs_values = [
+    [0, 0, 0, 0, 0, 0, 0, 0, 0],
+    [0, 0, 1, 1, 1, 1, 1, 1, 1],
+    [0, 0, 1, 1, 2, 2, 2, 2, 2],
+    [0, 0, 1, 1, 2, 2, 2, 3, 3],
+    [0, 0, 1, 1, 2, 2, 2, 3, 4],
+    [0, 1, 1, 2, 2, 2, 3, 3, 4],
+    [0, 1, 2, 2, 2, 2, 3, 4, 4]
+]
 
 
 class MyLCSTest(unittest.TestCase):
+    def test_lcs_table(self):
+        s1 = "xyxxzx"
+        s2 = "zxzyyzxx"
+        result = build_lcs_table(s1, s2)
+        self.assertEqual(result, lcs_values)
+
     def test_lcs1(self):
         s1 = "Look at me, I can fly!"
         s2 = "Look at that, it's a fly"
@@ -37,7 +55,7 @@ class MyLCSTest(unittest.TestCase):
         with open('string2.txt', 'r') as file:
             s2 = file.read()
         result = lcs(s1, s2)
-        expected = "CommonSubString"
+        expected = " commonsubstring20"
         self.assertEqual(expected, result)
 
 

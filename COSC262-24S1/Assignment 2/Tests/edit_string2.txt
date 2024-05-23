@@ -1,4 +1,4 @@
-# =============== DELETEs =====================
+# ============== DELETEs =====================
 
 @app.route('/queue/<hostname>', methods=['DELETE'])
 def delete(hostname):
