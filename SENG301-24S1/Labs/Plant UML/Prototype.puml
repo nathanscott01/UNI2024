@@ -1,0 +1,24 @@
+@startuml
+hide empty members
+
+interface Shape{
+Shape clone()
+void draw
+}
+
+class Circle implements Shape {
+-String color
++Circle(String color)
++Shape clone()
++void draw()
+}
+
+class ShapeClient {
+-Shape shapePrototype
++ShapeClient(Shape shapePrototype)
++Shape createShape()
+}
+
+ShapeClient --> Shape: uses
+
+@enduml

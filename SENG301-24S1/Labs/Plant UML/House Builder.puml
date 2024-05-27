@@ -1,0 +1,58 @@
+@startuml
+'hide circle
+hide empty members
+
+
+skinparam classAttributeIconSize 0
+
+class Director {
+    - HouseBuilder builder
+    +void setBuilder(HouseBuilder builder)
+    +House construct()
+}
+
+interface HouseBuilder{
+    +void buildWalls()
+    +void buildRoof()
+    +void buildWindows()
+    +void buildDoors()
+    +House getResult()
+}
+
+class House {
+    -String walls
+    -String roof
+    -String windows
+    -String doors
+    +void setWalls(String walls)
+    +void setRoof(String roof)
+    +void setWindows(String windows)
+    +void setDoors(String doors)
+    +String toString()
+}
+
+class StoneHouseBuilder implements HouseBuilder {
+    -House house = new House()
+    +void buildWalls()
+    +void buildRoof()
+    +void buildWindows()
+    +void buildDoors()
+    +House getResult()
+}
+
+class WoodenHouseBuilder implements HouseBuilder {
+    -House house = new House()
+    +void buildWalls()
+    +void buildRoof()
+    +void buildWindows()
+    +void buildDoors()
+    +House getResult()
+}
+
+Director --> HouseBuilder: uses
+'HouseBuilder <|-- StoneHouseBuilder
+'HouseBuilder <|-- WoodenHouseBuilder
+StoneHouseBuilder --> House: creates
+WoodenHouseBuilder --> House: creates
+
+@enduml

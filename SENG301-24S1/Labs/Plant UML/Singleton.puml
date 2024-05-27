@@ -1,0 +1,15 @@
+@startuml
+hide empty members
+
+class Singleton {
+-{static} Singleton
+-Singleton()
++{static} Singleton getInstance()
+}
+
+Client --> Singleton: uses
+Singleton --> Singleton
+
+
+
+@enduml

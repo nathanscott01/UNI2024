@@ -1,0 +1,31 @@
+@startuml
+hide empty members
+
+interface Printer {
++print()
+}
+
+class LegacyPrinter {
++printDocument()
+}
+
+class PrinterAdapter implements Printer {
+-LegacyPrinter legacyPrinter
++PrinterAdapter(LegacyPrinter legacyPrinter)
++print()
+}
+
+PrinterAdapter --> LegacyPrinter
+Client --> Printer: uses
+
+note left of LegacyPrinter
+Adaptee
+end note
+note left of PrinterAdapter
+Adapter
+end note
+note left of Printer
+Target
+end note
+
+@enduml

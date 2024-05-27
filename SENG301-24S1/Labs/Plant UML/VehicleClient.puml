@@ -1,0 +1,41 @@
+@startuml
+hide empty members
+skinparam groupInheritance 2
+
+
+abstract class Vehicle {
++abstract void printVehicle()
+}
+
+class TwoWheeler extends Vehicle {
++void printVehicle()
+}
+
+class FourWheeler extends Vehicle {
++void printVehicle
+}
+
+interface VehicleFactory {
+Vehicle createVehicle()
+}
+
+class TwoWheelerFactory implements VehicleFactory {
++Vehicle createVehicle()
+}
+
+class FourWheelerFactory implements VehicleFactory {
++Vehicle createVehicle()
+}
+
+class Client {
+-Vehicle pVehicle
++Client(VehicleFactory factory)
++Vehicle getVehicle()
+}
+
+Client --> VehicleFactory: uses
+TwoWheelerFactory --> TwoWheeler: creates
+FourWheelerFactory --> FourWheeler: creates
+
+
+@enduml
