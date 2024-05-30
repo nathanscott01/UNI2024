@@ -1,0 +1,650 @@
+[
+  {
+    "id": 1,
+    "name": "Ant",
+    "attack": 2,
+    "health": 1,
+    "tier": 1,
+    "emoji": "🐜"
+  },
+  {
+    "id": 2,
+    "name": "Beaver",
+    "attack": 2,
+    "health": 2,
+    "tier": 1,
+    "emoji": "🦫"
+  },
+  {
+    "id": 3,
+    "name": "Beetle",
+    "attack": 2,
+    "health": 3,
+    "tier": 1,
+    "emoji": "🪲"
+  },
+  {
+    "id": 4,
+    "name": "Bluebird",
+    "attack": 2,
+    "health": 1,
+    "tier": 1,
+    "emoji": "🐦"
+  },
+  {
+    "id": 5,
+    "name": "Cricket",
+    "attack": 1,
+    "health": 2,
+    "tier": 1,
+    "emoji": "🦗"
+  },
+  {
+    "id": 6,
+    "name": "Duck",
+    "attack": 1,
+    "health": 3,
+    "tier": 1,
+    "emoji": "🦆"
+  },
+  {
+    "id": 7,
+    "name": "Fish",
+    "attack": 2,
+    "health": 3,
+    "tier": 1,
+    "emoji": "🐟"
+  },
+  {
+    "id": 8,
+    "name": "Horse",
+    "attack": 2,
+    "health": 1,
+    "tier": 1,
+    "emoji": "🐎"
+  },
+  {
+    "id": 9,
+    "name": "Ladybug",
+    "attack": 1,
+    "health": 3,
+    "tier": 1,
+    "emoji": "🐞"
+  },
+  {
+    "id": 10,
+    "name": "Mosquito",
+    "attack": 2,
+    "health": 2,
+    "tier": 1,
+    "emoji": "🦟"
+  },
+  {
+    "id": 11,
+    "name": "Otter",
+    "attack": 1,
+    "health": 2,
+    "tier": 1,
+    "emoji": "🦦"
+  },
+  {
+    "id": 12,
+    "name": "Pig",
+    "attack": 3,
+    "health": 1,
+    "tier": 1,
+    "emoji": "🐖"
+  },
+  {
+    "id": 13,
+    "name": "Sloth",
+    "attack": 1,
+    "health": 1,
+    "tier": 1,
+    "emoji": "🦥"
+  },
+  {
+    "id": 14,
+    "name": "Bat",
+    "attack": 1,
+    "health": 2,
+    "tier": 2,
+    "emoji": "🦇"
+  },
+  {
+    "id": 15,
+    "name": "Crab",
+    "attack": 3,
+    "health": 3,
+    "tier": 2,
+    "emoji": "🦀"
+  },
+  {
+    "id": 16,
+    "name": "Dodo",
+    "attack": 2,
+    "health": 3,
+    "tier": 2,
+    "emoji": "🦤"
+  },
+  {
+    "id": 17,
+    "name": "Dog",
+    "attack": 2,
+    "health": 2,
+    "tier": 3,
+    "emoji": "🐕"
+  },
+  {
+    "id": 18,
+    "name": "Dromedary",
+    "attack": 2,
+    "health": 4,
+    "tier": 2,
+    "emoji": "🐪"
+  },
+  {
+    "id": 19,
+    "name": "Elephant",
+    "attack": 3,
+    "health": 5,
+    "tier": 2,
+    "emoji": "🐘"
+  },
+  {
+    "id": 20,
+    "name": "Flamingo",
+    "attack": 3,
+    "health": 1,
+    "tier": 2,
+    "emoji": "🦩"
+  },
+  {
+    "id": 21,
+    "name": "Hedgehog",
+    "attack": 3,
+    "health": 2,
+    "tier": 2,
+    "emoji": "🦔"
+  },
+  {
+    "id": 22,
+    "name": "Peacock",
+    "attack": 1,
+    "health": 5,
+    "tier": 2,
+    "emoji": "🦚"
+  },
+  {
+    "id": 23,
+    "name": "Rat",
+    "attack": 4,
+    "health": 5,
+    "tier": 2,
+    "emoji": "🐀"
+  },
+  {
+    "id": 24,
+    "name": "Shrimp",
+    "attack": 2,
+    "health": 3,
+    "tier": 2,
+    "emoji": "🦐"
+  },
+  {
+    "id": 25,
+    "name": "Spider",
+    "attack": 2,
+    "health": 2,
+    "tier": 2,
+    "emoji": "🕷"
+  },
+  {
+    "id": 26,
+    "name": "Swan",
+    "attack": 1,
+    "health": 3,
+    "tier": 2,
+    "emoji": "🦢"
+  },
+  {
+    "id": 27,
+    "name": "Tabby Cat",
+    "attack": 5,
+    "health": 3,
+    "tier": 2,
+    "emoji": "🐈"
+  },
+  {
+    "id": 28,
+    "name": "Badger",
+    "attack": 5,
+    "health": 4,
+    "tier": 3,
+    "emoji": "🦡"
+  },
+  {
+    "id": 29,
+    "name": "Blowfish",
+    "attack": 3,
+    "health": 5,
+    "tier": 3,
+    "emoji": "🐡"
+  },
+  {
+    "id": 30,
+    "name": "Caterpillar",
+    "attack": 1,
+    "health": 3,
+    "tier": 3,
+    "emoji": "🐛"
+  },
+  {
+    "id": 31,
+    "name": "Camel",
+    "attack": 2,
+    "health": 5,
+    "tier": 3,
+    "emoji": "🐫"
+  },
+  {
+    "id": 32,
+    "name": "Hatching Chick",
+    "attack": 1,
+    "health": 1,
+    "tier": 3,
+    "emoji": "🐣"
+  },
+  {
+    "id": 33,
+    "name": "Giraffe",
+    "attack": 2,
+    "health": 5,
+    "tier": 3,
+    "emoji": "🦒"
+  },
+  {
+    "id": 34,
+    "name": "Kangaroo",
+    "attack": 1,
+    "health": 2,
+    "tier": 3,
+    "emoji": "🦘"
+  },
+  {
+    "id": 35,
+    "name": "Owl",
+    "attack": 5,
+    "health": 3,
+    "tier": 3,
+    "emoji": "🦉"
+  },
+  {
+    "id": 36,
+    "name": "Ox",
+    "attack": 1,
+    "health": 4,
+    "tier": 3,
+    "emoji": "🐂"
+  },
+  {
+    "id": 37,
+    "name": "Puppy",
+    "attack": 1,
+    "health": 1,
+    "tier": 3,
+    "emoji": "🐕"
+  },
+  {
+    "id": 38,
+    "name": "Rabbit",
+    "attack": 3,
+    "health": 2,
+    "tier": 3,
+    "emoji": "🐇"
+  },
+  {
+    "id": 39,
+    "name": "Sheep",
+    "attack": 2,
+    "health": 2,
+    "tier": 3,
+    "emoji": "🐑"
+  },
+  {
+    "id": 40,
+    "name": "Snail",
+    "attack": 2,
+    "health": 2,
+    "tier": 3,
+    "emoji": "🐌"
+  },
+  {
+    "id": 41,
+    "name": "Tropical Fish",
+    "attack": 2,
+    "health": 4,
+    "tier": 3,
+    "emoji": "🐠"
+  },
+  {
+    "id": 42,
+    "name": "Turtle",
+    "attack": 1,
+    "health": 2,
+    "tier": 3,
+    "emoji": "🐢"
+  },
+  {
+    "id": 43,
+    "name": "Whale",
+    "attack": 3,
+    "health": 8,
+    "tier": 4,
+    "emoji": "🐋"
+  },
+  {
+    "id": 44,
+    "name": "Bison",
+    "attack": 6,
+    "health": 6,
+    "tier": 4,
+    "emoji": "🦬"
+  },
+  {
+    "id": 45,
+    "name": "Buffalo",
+    "attack": 5,
+    "health": 5,
+    "tier": 4,
+    "emoji": "🐃"
+  },
+  {
+    "id": 46,
+    "name": "Deer",
+    "attack": 1,
+    "health": 1,
+    "tier": 4,
+    "emoji": "🦌"
+  },
+  {
+    "id": 47,
+    "name": "Dolphin",
+    "attack": 4,
+    "health": 6,
+    "tier": 4,
+    "emoji": "🐬"
+  },
+  {
+    "id": 48,
+    "name": "Hippo",
+    "attack": 4,
+    "health": 7,
+    "tier": 4,
+    "emoji": "🦛"
+  },
+  {
+    "id": 49,
+    "name": "Llama",
+    "attack": 3,
+    "health": 6,
+    "tier": 4,
+    "emoji": "🦙"
+  },
+  {
+    "id": 50,
+    "name": "Lobster",
+    "attack": 4,
+    "health": 5,
+    "tier": 4,
+    "emoji": "🦞"
+  },
+  {
+    "id": 51,
+    "name": "Monkey",
+    "attack": 1,
+    "health": 2,
+    "tier": 5,
+    "emoji": "🐒"
+  },
+  {
+    "id": 52,
+    "name": "Penguin",
+    "attack": 1,
+    "health": 2,
+    "tier": 4,
+    "emoji": "🐧"
+  },
+  {
+    "id": 53,
+    "name": "Poodle",
+    "attack": 2,
+    "health": 2,
+    "tier": 5,
+    "emoji": "🐩"
+  },
+  {
+    "id": 54,
+    "name": "Rooster",
+    "attack": 5,
+    "health": 3,
+    "tier": 4,
+    "emoji": "🐓"
+  },
+  {
+    "id": 55,
+    "name": "Skunk",
+    "attack": 3,
+    "health": 6,
+    "tier": 4,
+    "emoji": "🦨"
+  },
+  {
+    "id": 56,
+    "name": "Squirrel",
+    "attack": 2,
+    "health": 2,
+    "tier": 4,
+    "emoji": "🐿"
+  },
+  {
+    "id": 57,
+    "name": "Worm",
+    "attack": 2,
+    "health": 2,
+    "tier": 4,
+    "emoji": "🪱"
+  },
+  {
+    "id": 58,
+    "name": "Chicken",
+    "attack": 1,
+    "health": 2,
+    "tier": 5,
+    "emoji": "🐓"
+  },
+  {
+    "id": 59,
+    "name": "Cow",
+    "attack": 4,
+    "health": 6,
+    "tier": 5,
+    "emoji": "🐄"
+  },
+  {
+    "id": 60,
+    "name": "Crocodile",
+    "attack": 8,
+    "health": 4,
+    "tier": 5,
+    "emoji": "🐊"
+  },
+  {
+    "id": 61,
+    "name": "Eagle",
+    "attack": 6,
+    "health": 5,
+    "tier": 5,
+    "emoji": "🦅"
+  },
+  {
+    "id": 62,
+    "name": "Goat",
+    "attack": 4,
+    "health": 6,
+    "tier": 5,
+    "emoji": "🐐"
+  },
+  {
+    "id": 63,
+    "name": "Microbe",
+    "attack": 1,
+    "health": 1,
+    "tier": 4,
+    "emoji": "🦠"
+  },
+  {
+    "id": 64,
+    "name": "Parrot",
+    "attack": 5,
+    "health": 3,
+    "tier": 4,
+    "emoji": "🦜"
+  },
+  {
+    "id": 65,
+    "name": "Rhino",
+    "attack": 5,
+    "health": 8,
+    "tier": 5,
+    "emoji": "🦏"
+  },
+  {
+    "id": 66,
+    "name": "Scorpion",
+    "attack": 1,
+    "health": 1,
+    "tier": 5,
+    "emoji": "🦂"
+  },
+  {
+    "id": 67,
+    "name": "Seal",
+    "attack": 3,
+    "health": 8,
+    "tier": 5,
+    "emoji": "🦭"
+  },
+  {
+    "id": 68,
+    "name": "Shark",
+    "attack": 4,
+    "health": 4,
+    "tier": 5,
+    "emoji": "🦈"
+  },
+  {
+    "id": 69,
+    "name": "Turkey",
+    "attack": 3,
+    "health": 4,
+    "tier": 5,
+    "emoji": "🦃"
+  },
+  {
+    "id": 70,
+    "name": "Cat",
+    "attack": 4,
+    "health": 5,
+    "tier": 6,
+    "emoji": "🐈‍⬛"
+  },
+  {
+    "id": 71,
+    "name": "Boar",
+    "attack": 8,
+    "health": 6,
+    "tier": 6,
+    "emoji": "🐗"
+  },
+  {
+    "id": 72,
+    "name": "Dragon",
+    "attack": 6,
+    "health": 8,
+    "tier": 6,
+    "emoji": "🐉"
+  },
+  {
+    "id": 73,
+    "name": "Fly",
+    "attack": 5,
+    "health": 5,
+    "tier": 6,
+    "emoji": "🪰"
+  },
+  {
+    "id": 74,
+    "name": "Gorilla",
+    "attack": 6,
+    "health": 9,
+    "tier": 6,
+    "emoji": "🦍"
+  },
+  {
+    "id": 75,
+    "name": "Leopard",
+    "attack": 10,
+    "health": 4,
+    "tier": 6,
+    "emoji": "🐆"
+  },
+  {
+    "id": 76,
+    "name": "Mammoth",
+    "attack": 3,
+    "health": 10,
+    "tier": 6,
+    "emoji": "🦣"
+  },
+  {
+    "id": 77,
+    "name": "Octopus",
+    "attack": 8,
+    "health": 8,
+    "tier": 6,
+    "emoji": "🐙"
+  },
+  {
+    "id": 78,
+    "name": "Sauropod",
+    "attack": 4,
+    "health": 12,
+    "tier": 6,
+    "emoji": "🦕"
+  },
+  {
+    "id": 79,
+    "name": "Snake",
+    "attack": 6,
+    "health": 6,
+    "tier": 6,
+    "emoji": "🐍"
+  },
+  {
+    "id": 80,
+    "name": "Tiger",
+    "attack": 4,
+    "health": 3,
+    "tier": 6,
+    "emoji": "🐅"
+  },
+  {
+    "id": 81,
+    "name": "Tyrannosaurus",
+    "attack": 9,
+    "health": 4,
+    "tier": 6,
+    "emoji": "🦖"
+  }
+]

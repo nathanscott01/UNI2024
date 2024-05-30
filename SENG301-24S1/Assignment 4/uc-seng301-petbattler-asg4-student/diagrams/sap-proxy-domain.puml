@@ -1,0 +1,31 @@
+@startuml
+
+left to right direction
+
+class Game <<Client>> {}
+
+interface PetGenerator <<Subject>> {
+    --
+    + getRandomPet(): Pet
+}
+
+class PetService <<RealSubject>> {
+    --
+    + getRandomPet(): Pet
+    + getResponseFromAPI(): String
+}
+
+class PetProxy <<Proxy>> {
+    - petService: PetService
+    --
+    + getRandomPet(): Pet
+}
+
+PetGenerator <|- PetProxy
+PetGenerator <|- PetService 
+PetProxy "1" *--- "1" PetService 
+' PetService "1" - "0..*" PetResponse : > unpack
+
+Game --> PetGenerator: > uses
+
+@enduml
