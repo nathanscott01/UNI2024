@@ -1,0 +1,33 @@
+@startuml
+hide empty members
+
+interface Handler {
+    +handleRequest()
+}
+
+class ConcreteHandler1 implements Handler {
+    -Handler next
+    +handleRequest()
+}
+
+class ConcreteHandler2 implements Handler {
+    -Handler next
+    +handleRequest()
+}
+
+class ConcreteHandler3 implements Handler {
+    -Handler next
+    +handleRequest()
+}
+
+class ConcreteHandler4 implements Handler {
+    -Handler next
+    +handleRequest()
+}
+
+Client --> ConcreteHandler1
+ConcreteHandler1 --> ConcreteHandler2 : next
+ConcreteHandler2 --> ConcreteHandler3 : next
+ConcreteHandler3 --> ConcreteHandler4 : next
+
+@enduml

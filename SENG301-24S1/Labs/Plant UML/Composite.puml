@@ -1,0 +1,23 @@
+@startuml
+interface Graphic {
+    +draw()
+}
+
+class Circle extends Graphic {
+    +draw()
+}
+
+class Rectangle extends Graphic {
+    +draw()
+}
+
+class CompositeGraphic extends Graphic {
+    -List<Graphic> children
+    +draw()
+    +add(Graphic graphic)
+    +remove(Graphic graphic)
+}
+
+CompositeGraphic o-- Graphic : contains
+
+@enduml

@@ -1,0 +1,23 @@
+@startuml
+interface Command {
+    +execute()
+}
+
+class ConcreteCommand implements Command {
+    -Receiver receiver
+    +execute()
+}
+
+class Invoker {
+    -Command command
+    +setCommand(Command cmd)
+    +invoke()
+}
+
+class Receiver {
+    +action()
+}
+
+ConcreteCommand --> Receiver
+Invoker --> Command
+@enduml

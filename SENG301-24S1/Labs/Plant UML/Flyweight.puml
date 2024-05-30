@@ -1,0 +1,20 @@
+@startuml
+interface Character {
+    +display(int fontSize, String fontColor)
+}
+
+class ConcreteCharacter implements Character {
+    -char symbol
+    +ConcreteCharacter(char symbol)
+    +display(int fontSize, String fontColor)
+}
+
+class CharacterFactory {
+    -Map<Character, Character> characters
+    +Character getCharacter(char symbol)
+}
+
+
+CharacterFactory o-- Character : creates
+
+@enduml

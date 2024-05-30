@@ -1,0 +1,27 @@
+@startuml
+interface Expression {
+    +interpret(Context context)
+}
+
+class NumberExpression implements Expression {
+    +interpret(Context context)
+}
+
+class AdditionExpression implements Expression {
+    -List<Expression> expressions
+    +interpret(Context context)
+}
+
+class MultiplicationExpression implements Expression {
+    -List<Expression> expressions
+    +interpret(Context context)
+}
+
+class Context {
+    -Map<String, Boolean> variables
+}
+
+Context --> Expression: uses
+
+
+@enduml

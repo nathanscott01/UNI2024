@@ -1,0 +1,36 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+class HomeTheaterFacade {
+    +watchMovie()
+    +endMovie()
+}
+
+class TV {
+    +on()
+    +off()
+}
+
+class DVDPlayer {
+    +on()
+    +off()
+    +play()
+}
+
+class SoundSystem {
+    +on()
+    +off()
+    +setVolume(int level)
+}
+
+class Lights {
+    +dim()
+    +on()
+}
+HomeTheaterFacade --> TV
+HomeTheaterFacade --> DVDPlayer
+HomeTheaterFacade --> SoundSystem
+HomeTheaterFacade --> Lights
+
+
+@enduml

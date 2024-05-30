@@ -1,0 +1,49 @@
+@startuml
+skinparam groupInheritance 2
+
+abstract class Remote {
++power()
++volumeUp()
++volumeDown()
+}
+
+interface Device {
++boolean isEnabled()
++power()
++int getVolume()
++setVolume(int volume)
+}
+
+class BasicRemote extends Remote {
+#Device device
++BasicRemote(Device device)
++power()
++volumeUp()
++volumeDown()
+}
+
+class AdvancedRemote extends BasicRemote {
++AdvancedRemote(Device device)
++mute()
+}
+
+class TV implements Device {
+-boolean on
+-int volume
++boolean isEnabled()
++power()
++int getVolume()
++setVolume(int volume)
+}
+
+class Radio implements Device {
+-boolean on
+-int volume
++boolean isEnabled()
++power()
++int getVolume()
++setVolume(int volume)
+}
+
+Remote o- Device
+@enduml

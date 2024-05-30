@@ -1,0 +1,41 @@
+@startuml
+interface Coffee {
+    +String getDescription()
+    +double getCost()
+}
+
+class SimpleCoffee implements Coffee {
+    +String getDescription()
+    +double getCost()
+}
+
+abstract class CoffeeDecorator implements Coffee {
+    - Coffee decoratedCoffee
+    + CoffeeDecorator(Coffee coffee)
+    +String getDescription()
+    +double getCost()
+}
+note bottom: Decorator Interface
+
+class MilkDecorator extends CoffeeDecorator {
+    + MilkDecorator(Coffee coffee)
+    +String getDescription()
+    +double getCost()
+}
+
+class SugarDecorator extends CoffeeDecorator {
+    + SugarDecorator(Coffee coffee)
+    +String getDescription()
+    +double getCost()
+}
+
+CoffeeDecorator o-- Coffee
+
+note top of Coffee
+Component Interface
+end note
+note top of SimpleCoffee
+Concrete Component
+end note
+
+@enduml
