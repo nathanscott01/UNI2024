@@ -1,0 +1,41 @@
+@startuml
+hide empty members
+
+interface State {
+    +void pressPowerButton(TVContext context)
+    +void pressMuteButton(TVContext context)
+    +void pressVolumeButton(TVContext context)
+}
+
+class OnState implements State {
+    +void pressPowerButton(TVContext context)
+    +void pressMuteButton(TVContext context)
+    +void pressVolumeButton(TVContext context)
+}
+
+class OffState implements State {
+    +void pressPowerButton(TVContext context)
+    +void pressMuteButton(TVContext context)
+    +void pressVolumeButton(TVContext context)
+}
+
+class MuteState implements State {
+    +void pressPowerButton(TVContext context)
+    +void pressMuteButton(TVContext context)
+    +void pressVolumeButton(TVContext context)
+}
+
+class TVContext {
+    -State state
+    +TVContext()
+    +void setState(State state)
+    +void pressPowerButton()
+    +void pressMuteButton()
+    +void pressVolumeButton()
+}
+
+TVContext --> State : maintains
+
+Client --> TVContext: creates and uses
+
+@enduml

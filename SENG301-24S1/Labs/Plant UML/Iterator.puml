@@ -1,25 +1,41 @@
 @startuml
-interface Iterator {
-    +hasNext()
-    +next()
+hide empty members
+
+interface Iterator<T> {
+    +boolean hasNext()
+    +T next()
 }
 
-class ConcreteIterator implements Iterator {
-    -List<ConcreteElement> collection
-    -int position
-    +hasNext()
-    +next()
+class BookIterator implements Iterator<Book> {
+    -List<Book> books
+    -int position = 0
+    +BookIterator(List<Book> books)
+    +boolean hasNext()
+    +Book next()
 }
 
-interface Aggregate {
-    +createIterator()
+interface BookCollection {
+    +Iterator<Book> createIterator()
 }
 
-class ConcreteAggregate implements Aggregate {
-    -List<ConcreteElement> collection
-    +createIterator()
+class Bookshelf implements BookCollection {
+    -List<Book> books = new ArrayList<>()
+    +void addBook(Book book)
+    +Iterator<Book> createIterator()
+}
+
+class Book {
+    -String title
+    +Book(String title)
+    +String getTitle()
 }
 
 
-ConcreteAggregate o-- ConcreteIterator
+Bookshelf "1" *-- "0..*" Book
+Bookshelf o-- BookIterator
+BookIterator *-- Book
+
+Client -> Book: creates
+
+
 @enduml

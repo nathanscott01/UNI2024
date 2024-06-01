@@ -1,0 +1,33 @@
+@startuml
+hide empty members
+
+interface Observer {
+    +void update(float price)
+}
+
+class StockObserver implements Observer {
+    -String stockName
+    +StockObserver(String stockName)
+    +void update(float price)
+}
+
+interface Subject {
+    +void registerObserver(Observer o)
+    +void unregisterObserver(Observer o)
+    +void notifyObservers()
+}
+
+class StockMarket implements Subject {
+    -List<Observer> observers = new ArrayList<>()
+    -float price
+    +void registerObserver(Observer o)
+    +void unregisterObserver(Observer o)
+    +void notifyObservers()
+    +void setPrice(float price)
+}
+
+StockMarket "1" --o "*" StockObserver : manages
+Client --right> StockMarket: creates and modifies
+Client --right> StockObserver: creates and uses
+
+@enduml

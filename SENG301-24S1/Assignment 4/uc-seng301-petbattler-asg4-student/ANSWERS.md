@@ -1,6 +1,6 @@
 # SENG301 Assignment 4 (2024) - Student answers
 
-**YOUR NAME**
+** NATHAN SCOTT **
 
 ## Task 1 - Identify the patterns in the code
 
@@ -37,7 +37,7 @@ Note that the association in the UML diagram contains a composition instead of a
 
 #### What pattern is it?
 
-**YOUR ANSWER**
+Prototype
 
 #### What is its goal in the code?
 

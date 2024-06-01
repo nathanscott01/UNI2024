@@ -1,0 +1,114 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+hide empty members
+
+'class Game {
+'    -{static} final Logger LOGGER
+'    -final CommandLineInterface cli;
+'    -final PlayerAccessor playerAccessor;
+'    -final PackAccessor packAccessor;
+'    -final PetAccessor petAccessor;
+'    -final PetGenerator petGenerator;
+'    -final HashMap<String, Team> teams;
+'    -final Random random;
+'
+'    +Game()
+'    +Game(PetGenerator customPetGenerator, CommandLineInterface commandLineInterface,
+'                SessionFactory sessionFactory)
+'    +loadDefault()
+'    +play()
+'    +createPlayer(String input)
+'    +createPack(String input)
+'    +addToPack(String input)
+'    +buildTeam(String input)
+'    +battle(String input)
+'    +printTeams()
+'    +print(String input)
+'    +help()
+'    -String[] splitCommandArguments(String commandArgs)
+'}
+
+class Pet implements CloneablePet {
+    -Long petID
+    -Pack pack
+    -String name
+    -String emoji
+    -int attack
+    -int health
+    -int tier
+
+    +Pet()
+    +Long getPetId()
+    +void setPetId(Long petId)
+    +Pack getPack()
+    +void setPack(Pack pack)
+    +String getName()
+    +void setName(String name)
+    +int getAttack()
+    +void setAttack(int attack)
+    +int getHealth()
+    +void setHealth(int health)
+    +int getTier()
+    +void setTier(int tier)
+    +void setEmoji(String emoji)
+    +String getEmoji()
+    +String toString()
+    +boolean equals(Object o)
+    +int hashCode()
+    +Long getPackId()
+    +GamePet getGamePet()
+}
+
+class GamePet extends Pet {
+    -final SpecialAbility specialAbility
+
+    +GamePet(String name, int attack, int health, String emoji)
+    +GamePet(String name, int attack, int health, String emoji, SpecialAbility specialAbility)
+    +void takeDamage(int damageAmount)
+    +void heal(int healAmount)
+    +void buffAttack(int buffAmount)
+    +void debuffAttack(int debuffAmount)
+    +boolean equals(Object o)
+    +int hashCode()
+    +GamePet getGamePet()
+    +void setAttack(int attack)
+    +void setHealth(int health)
+    +String getStatsString()
+    +SpecialAbility getSpecialAbility()
+    +String toString()
+}
+
+interface SpecialAbility {
+    +useSpecialAbility(GamePet self, GamePet other, CommandLineInterface cli)
+}
+
+class AbilityCreator {
+    -{static} final Random random
+    -AbilityCreator()
+    +{static} SpecialAbility getRandomAbility()
+}
+
+class BuffSelf implements SpecialAbility {
+    -{static} final int BUFF_AMOUNT
+    +useSpecialAbility(GamePet self, GamePet other, CommandLineInterface cli)
+}
+
+class DeBuffEnemy implements SpecialAbility {
+    -{static} final int DEBUFF_AMOUNT
+    +useSpecialAbility(GamePet self, GamePet other, CommandLineInterface cli)
+}
+
+class HealBoth implements SpecialAbility {
+    -{static} final int HEAL_AMOUNT
+    +useSpecialAbility(GamePet self, GamePet other, CommandLineInterface cli)
+}
+
+class HealSelf implements SpecialAbility {
+    -{static} final int HEAL_AMOUNT
+    +useSpecialAbility(GamePet self, GamePet other, CommandLineInterface cli)
+}
+
+AbilityCreator --> SpecialAbility: uses
+GamePet --> AbilityCreator: uses
+
+@enduml

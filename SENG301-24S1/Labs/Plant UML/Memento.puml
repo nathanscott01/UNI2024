@@ -1,0 +1,31 @@
+@startuml
+hide empty members
+
+class Document {
+    -String content
+    +setContent(String content)
+    +String getContent()
+    +Memento save()
+    +void restore(Memento memento)
+}
+
+class Memento {
+    -final String content
+    +Memento(String content)
+    +String getContent()
+}
+
+class Caretaker {
+    -List<Memento> mementoList = new ArrayList<>()
+    +void addMemento(Memento memento)
+    +Memento getMemento(int index)
+}
+
+Document --> Memento : creates
+Document --> Memento : restores
+Caretaker --> Memento : manages
+
+Client --> Document: creates/modifies
+Client --> Caretaker: creates and uses
+
+@enduml

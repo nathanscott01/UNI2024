@@ -1,0 +1,84 @@
+@startuml
+hide empty members
+
+    interface CloneablePet {
+        GamePet getGamePet()
+    }
+
+    class Pet implements CloneablePet {
+        -Long petID
+        -Pack pack
+        -String name
+        -String emoji
+        -int attack
+        -int health
+        -int tier
+
+        +Pet()
+        +Long getPetId()
+        +void setPetId(Long petId)
+        +Pack getPack()
+        +void setPack(Pack pack)
+        +String getName()
+        +void setName(String name)
+        +int getAttack()
+        +void setAttack(int attack)
+        +int getHealth()
+        +void setHealth(int health)
+        +int getTier()
+        +void setTier(int tier)
+        +void setEmoji(String emoji)
+        +String getEmoji()
+        +String toString()
+        +boolean equals(Object o)
+        +int hashCode()
+        +Long getPackId()
+        +GamePet getGamePet()
+    }
+
+    class GamePet extends Pet {
+        -final SpecialAbility specialAbility
+
+        +GamePet(String name, int attack, int health, String emoji)
+        +GamePet(String name, int attack, int health, String emoji, SpecialAbility specialAbility)
+        +void takeDamage(int damageAmount)
+        +void heal(int healAmount)
+        +void buffAttack(int buffAmount)
+        +void debuffAttack(int debuffAmount)
+        +boolean equals(Object o)
+        +int hashCode()
+        +GamePet getGamePet()
+        +void setAttack(int attack)
+        +void setHealth(int health)
+        +String getStatsString()
+        +SpecialAbility getSpecialAbility()
+        +String toString()
+    }
+
+Game -> CloneablePet:uses
+
+ class Game {
+    +Pack pack
+    +Player player
+    +void buildTeam(String input)
+}
+
+class Player {
+    -Long playerId
+    -List<Pack> packs
+    -String name
+}
+
+class Pack {
+    -Long packId
+    -Player player
+    -list<Pet> pets
+    -String name
+}
+
+Game "1" *-- "*" Player
+Player "1" *- "*" Pack
+Pack o- Pet
+
+
+@enduml

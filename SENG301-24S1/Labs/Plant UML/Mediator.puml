@@ -1,0 +1,33 @@
+@startuml
+hide empty members
+
+interface ChatRoomMediator {
+    +void showMessage(User user, String message)
+}
+
+class ChatRoom implements ChatRoomMediator {
+    +void showMessage(User user, String message)
+}
+
+abstract class User {
+    protected ChatRoomMediator mediator
+    protected String name
+    +User(ChatRoomMediator mediator, String name)
+    +abstract void send(String message)
+    +abstract void receive(String message)
+    +String getName()
+}
+
+class ChatUser extends User {
+    +ChatUser(ChatRoomMediator mediator, String name)
+    +void send(String message)
+    +void receive(String message)
+}
+
+
+ChatRoom --> ChatUser : coordinates
+
+Client --right> ChatRoom: creates
+Client --UP> ChatUser: creates and uses
+
+@enduml
