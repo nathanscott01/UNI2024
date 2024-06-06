@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="CMakePresetLoader"><![CDATA[{
+  "useNewFormat": true
+}]]></component>
+  <component name="CMakeReloadState">
+    <option name="reloaded" value="true" />
+  </component>
+  <component name="CMakeRunConfigurationManager">
+    <generated />
+  </component>
+  <component name="CMakeSettings">
+    <configurations>
+      <configuration PROFILE_NAME="Debug" ENABLED="true" CONFIG_NAME="Debug" />
+    </configurations>
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="95a31b48-1f9d-4351-b32d-4fa284ca4b05" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/../Alien World/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/Assignment 2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plane.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Plane.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ray.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Ray.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SceneObject.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/SceneObject.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sphere.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sphere.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/compile_main.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COSC363 Project/raytracer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/diagrams/add-to-pet-command.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/diagrams/clone-pet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/diagrams/special-ability-factory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/Strategy.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/Template.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/Visitor.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/add-to-pet-command.puml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Alien World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Alien World/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Alien World/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Alien World/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/ANSWERS.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/ANSWERS.md" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="ClangdSettings">
+    <option name="formatViaClangd" value="false" />
+  </component>
+  <component name="ExecutionTargetManager" SELECTED_TARGET="CMakeBuildProfile:Debug" />
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "nathanscott01"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nathanscott01/UNI2024.git",
+    "accountId": "c3f1ce94-c86a-44f2-99ca-0e5230ca309b"
+  }
+}]]></component>
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="ProjectErrors" />
+  </component>
+  <component name="ProjectApplicationVersion">
+    <option name="ide" value="CLion" />
+    <option name="majorVersion" value="2024" />
+    <option name="minorVersion" value="1.1" />
+    <option name="productBranch" value="Classic" />
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 7
+}]]></component>
+  <component name="ProjectId" id="2hU6ONvZUrKMWWf56FaJzCB604F" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "CMake Application.main.out.executor": "Run",
+    "OCFindUsagesOptions.isSearchForTextOccurrences": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.cidr.known.project.marker": "true",
+    "RunOnceActivity.readMode.enableVisualFormatting": "true",
+    "Shell Script.Run Main.executor": "Run",
+    "cf.first.check.clang-format": "false",
+    "cidr.known.project.marker": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/nathan/Desktop/UNI2024/COSC363-24S1/Assignment 2/compile_main.sh",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "CPPToolchains",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+    </key>
+  </component>
+  <component name="RunManager">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+      <method v="2">
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Run Main" type="ShConfigurationType">
+      <option name="SCRIPT_TEXT" value="" />
+      <option name="INDEPENDENT_SCRIPT_PATH" value="true" />
+      <option name="SCRIPT_PATH" value="$PROJECT_DIR$/compile_main.sh" />
+      <option name="SCRIPT_OPTIONS" value="" />
+      <option name="INDEPENDENT_SCRIPT_WORKING_DIRECTORY" value="true" />
+      <option name="SCRIPT_WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="INDEPENDENT_INTERPRETER_PATH" value="true" />
+      <option name="INTERPRETER_PATH" value="/bin/bash" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="EXECUTE_IN_TERMINAL" value="true" />
+      <option name="EXECUTE_SCRIPT_FILE" value="true" />
+      <envs />
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="95a31b48-1f9d-4351-b32d-4fa284ca4b05" name="Changes" comment="" />
+      <created>1717636275407</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1717636275407</updated>
+      <workItem from="1717636277031" duration="18987000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VCPKGProject">
+    <isAutomaticCheckingOnLaunch value="false" />
+    <isAutomaticFoundErrors value="true" />
+    <isAutomaticReloadCMake value="true" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>

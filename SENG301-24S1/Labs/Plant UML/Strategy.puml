@@ -1,0 +1,40 @@
+@startuml
+hide empty members
+
+interface PaymentStrategy {
+    +void pay(int amount)
+}
+
+class CreditCardPayment implements PaymentStrategy {
+    -String cardNumber
+    -String cardHolderName
+    -String cvv
+    +CreditCardPayment(String cardNumber, String cardHolderName, String cvv)
+    +void pay(int amount)
+}
+
+class PayPalPayment implements PaymentStrategy {
+    -String email
+    -String password
+    +PayPalPayment(String email, String password)
+    +void pay(int amount)
+}
+
+class BankTransferPayment implements PaymentStrategy {
+    -String accountNumber
+    -String bankName
+    +BankTransferPayment(String accountNumber, String bankName)
+    +void pay(int amount)
+}
+
+class ShoppingCart {
+    -PaymentStrategy paymentStrategy
+    +void setPaymentStrategy(PaymentStrategy paymentStrategy)
+    +void checkout(int amount)
+}
+
+ShoppingCart --> PaymentStrategy : uses
+
+Client --> ShoppingCart: creates and uses
+
+@enduml

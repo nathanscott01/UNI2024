@@ -1,0 +1,22 @@
+@startuml
+hide empty members
+
+abstract class EmployeeOnboarding {
+    +final void onboardEmployee()
+    -void verifyDocuments()
+    -void setupAccount()
+    -void finalizeOnboarding()
+    #abstract void departmentSpecificOnboarding()
+}
+
+class ITOnboarding extends EmployeeOnboarding {
+    +void departmentSpecificOnboarding()
+}
+
+class SupportOnboarding extends EmployeeOnboarding {
+    +void departmentSpecificOnboarding()
+}
+
+Client --> EmployeeOnboarding: creates and uses
+
+@enduml

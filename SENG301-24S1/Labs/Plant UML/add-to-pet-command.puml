@@ -1,0 +1,21 @@
+@startuml
+hide empty members
+
+class Pack {
+    -List<Pet> pets
+    -String name
+}
+
+class CommandLineInterface {
+-Scanner
+-printer
+}
+
+Game -> CommandLineInterface: uses
+Game -> addToPet: Invokes
+addToPet -> Pack: modifies
+
+
+
+
+@enduml

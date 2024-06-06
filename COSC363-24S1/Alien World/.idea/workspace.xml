@@ -21,7 +21,35 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b3ecb182-b8cf-424b-b094-8194e2af2a82" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/.idea/Assignment 2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/.idea/modules.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/Plane.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/Plane.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/Ray.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/Ray.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/SceneObject.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/SceneObject.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/Sphere.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/Sphere.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/compile_main.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/main" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Assignment 2/main.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../COSC363 Project/raytracer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/diagrams/add-to-pet-command.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/diagrams/clone-pet.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/diagrams/special-ability-factory.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/Strategy.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/Template.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/Visitor.puml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/add-to-pet-command.puml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/ANSWERS.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/ANSWERS.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -35,6 +63,18 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../.." />
   </component>
+  <component name="GitHubPullRequestSearchHistory"><![CDATA[{
+  "lastFilter": {
+    "state": "OPEN",
+    "assignee": "nathanscott01"
+  }
+}]]></component>
+  <component name="GithubPullRequestsUISettings"><![CDATA[{
+  "selectedUrlAndAccountId": {
+    "url": "https://github.com/nathanscott01/UNI2024.git",
+    "accountId": "c3f1ce94-c86a-44f2-99ca-0e5230ca309b"
+  }
+}]]></component>
   <component name="ProjectApplicationVersion">
     <option name="ide" value="CLion" />
     <option name="majorVersion" value="2023" />
@@ -81,9 +121,9 @@
     </key>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="CMakeRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
+    <configuration default="true" type="CLionExternalRunConfiguration" factoryName="Application" REDIRECT_INPUT="false" ELEVATE="false" USE_EXTERNAL_CONSOLE="false" EMULATE_TERMINAL="false" PASS_PARENT_ENVS_2="true">
       <method v="2">
-        <option name="com.jetbrains.cidr.execution.CidrBuildBeforeRunTaskProvider$BuildBeforeRunTask" enabled="true" />
+        <option name="CLION.EXTERNAL.BUILD" enabled="true" />
       </method>
     </configuration>
     <configuration name="Alien World" type="ShConfigurationType">
@@ -141,6 +181,7 @@
       <workItem from="1712790884609" duration="5243000" />
       <workItem from="1712912938527" duration="193000" />
       <workItem from="1714533348602" duration="10000" />
+      <workItem from="1717636375716" duration="1422000" />
     </task>
     <servers />
   </component>

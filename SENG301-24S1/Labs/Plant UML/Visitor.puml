@@ -1,0 +1,37 @@
+@startuml
+hide empty members
+
+interface ComputerPartVisitor {
+    +void visitCPU(CPU cpu)
+    +void visitGPU(GPU gpu)
+    +void visitRAM(RAM ram)
+}
+
+class PriceVisitor implements ComputerPartVisitor {
+    +void visitCPU(CPU cpu)
+    +void visitGPU(GPU gpu)
+    +void visitRAM(RAM ram)
+}
+
+interface ComputerPart {
+    +void accept(ComputerPartVisitor visitor)
+}
+
+class CPU implements ComputerPart {
+    +void accept(ComputerPartVisitor visitor)
+}
+
+class GPU implements ComputerPart {
+    +void accept(ComputerPartVisitor visitor)
+}
+
+class RAM implements ComputerPart {
+    +void accept(ComputerPartVisitor visitor)
+}
+
+ComputerPart --> ComputerPartVisitor : accept
+
+Client --> ComputerPart: creates and uses
+Client --> ComputerPartVisitor: creates and uses
+
+@enduml
