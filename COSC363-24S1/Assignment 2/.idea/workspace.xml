@@ -19,35 +19,15 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="95a31b48-1f9d-4351-b32d-4fa284ca4b05" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../Alien World/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/Assignment 2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plane.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Plane.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ray.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Ray.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SceneObject.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/SceneObject.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sphere.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sphere.h" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/compile_main.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../COSC363 Project/raytracer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/diagrams/add-to-pet-command.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/diagrams/clone-pet.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/diagrams/special-ability-factory.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/Strategy.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/Template.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/Visitor.puml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../SENG301-24S1/Labs/Plant UML/add-to-pet-command.puml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Alien World/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Alien World/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Alien World/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/../Alien World/main.cpp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/ANSWERS.md" beforeDir="false" afterPath="$PROJECT_DIR$/../../SENG301-24S1/Assignment 4/uc-seng301-petbattler-asg4-student/ANSWERS.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleTruncatedCone.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DoubleTruncatedCone.h" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Torus.cpp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Torus.h" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/SceneObject.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/SceneObject.cpp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/compile_main.sh" beforeDir="false" afterPath="$PROJECT_DIR$/compile_main.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main" beforeDir="false" afterPath="$PROJECT_DIR$/main" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.cpp" beforeDir="false" afterPath="$PROJECT_DIR$/main.cpp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -146,7 +126,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1717636275407</updated>
-      <workItem from="1717636277031" duration="18987000" />
+      <workItem from="1717636277031" duration="35190000" />
     </task>
     <servers />
   </component>

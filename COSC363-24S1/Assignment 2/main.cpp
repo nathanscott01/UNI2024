@@ -19,6 +19,10 @@
 #include "Sphere.h"
 #include "Plane.h"
 #include "SceneObject.h"
+#include "DoubleTruncatedCone.h"
+//#include "Torus.h"
+#include <algorithm>
+
 using namespace std;
 
 // Globals
@@ -31,21 +35,25 @@ const float YMIN = -10.0;
 const float YMAX = 10.0;
 
 vector<SceneObject*> sceneObjects;
+// Define spotlight properties
+//glm::vec3 spotlightPos1(10.0f, 10.0f, -3.0f);
+//glm::vec3 spotlightDir1(0.0f, -1.0f, 0.0f); // Pointing downwards
+//float spotlightAngle1 = glm::radians(30.0f); // 30-degree cone angle
+
+
 
 // Ray Tracer
-glm::vec3 trace(Ray ray, int step)
-{
+glm::vec3 trace(Ray ray, int step) {
     glm::vec3 backgroundCol(0);         // Background color is black
-    glm::vec3 lightPos(0, 10, -3); // Light position
+    glm::vec3 lightPos(10, 10, -3); // Light position
     glm::vec3 color(0);
-    SceneObject* obj;
+    SceneObject *obj;
 
     ray.closestPt(sceneObjects);            // Compare the ray with all objects in the scene
     if (ray.index == -1) return backgroundCol;  // No intersection
     obj = sceneObjects[ray.index];              // Object on which the closest point of intersection is found
 
-    if (ray.index == 1)
-    {
+    if (ray.index == 0) {
         // Function to make stripe/checkered pattern
         int stripWidth = 5;
         int iz = (ray.hit.z + 300) / stripWidth;
@@ -64,20 +72,50 @@ glm::vec3 trace(Ray ray, int step)
     Ray shadowRay(ray.hit, lightVec);
     shadowRay.closestPt(sceneObjects);
     float lightDist = glm::length(lightVec);
-    if ((shadowRay.index > 1) && (shadowRay.dist < lightDist))
-    {
-        color = 0.2f * obj->getColor();
+    if ((shadowRay.index > 1) && (shadowRay.dist < lightDist)) {
+        if (sceneObjects[shadowRay.index]->isTransparent()) {
+            color = color * (0.5f * sceneObjects[shadowRay.index]->getTransparencyCoeff()) + (1.0f - sceneObjects[shadowRay.index]->getTransparencyCoeff()) * obj->getColor();
+        } else {
+            color = 0.2f * obj->getColor();
+        }
     }
 
     // Reflection
-    if (obj->isReflective() && step < MAX_STEPS)
-    {
+    if (obj->isReflective() && step < MAX_STEPS) {
         float rho = obj->getReflectionCoeff();
         glm::vec3 normalVec = obj->normal(ray.hit);
         glm::vec3 reflectedDir = glm::reflect(ray.dir, normalVec);
         Ray reflectedRay(ray.hit, reflectedDir);
         glm::vec3 reflectedColor = trace(reflectedRay, step + 1);
         color = color + (rho * reflectedColor);
+    }
+
+    // Refraction
+    if (obj->isRefractive() && step < MAX_STEPS) {
+        float eta = obj->getRefractiveIndex();
+        glm::vec3 normalVec = obj->normal(ray.hit);
+        glm::vec3 refractedDir = glm::refract(ray.dir, normalVec, 1.0f / eta);
+        Ray refractedRay(ray.hit, refractedDir);
+        glm::vec3 refractedColor = trace(refractedRay, step + 1);
+        color = color * (1.0f - obj->getRefractionCoeff()) + refractedColor * obj->getRefractionCoeff();
+    }
+
+    // Transparency
+    if (obj->isTransparent() && step < MAX_STEPS) {
+        float rho = obj->getTransparencyCoeff();
+        vector<SceneObject*> sceneObjectsModified;
+        SceneObject *obj2;
+
+        for (size_t i = 0; i < sceneObjects.size(); ++i) {
+            if (i != ray.index) {
+                sceneObjectsModified.push_back(sceneObjects[i]);
+            }
+        }
+
+        ray.closestPt(sceneObjectsModified);
+        obj2 = sceneObjectsModified[ray.index];
+        glm::vec3 obj2_color = obj2->lighting(lightPos, -ray.dir, ray.hit);
+        color = color + (rho * obj2_color);
     }
 
     return color;
@@ -129,14 +167,6 @@ void initialise() {
 
     // Draw Scene
 
-    Sphere *sphere1 = new Sphere(glm::vec3(-3.0, 0, -60), 3);
-    sphere1->setColor(glm::vec3(0, 0.5, 0.5));
-    sphere1->setSpecularity(false);
-//    sphere1->setShininess(5);
-//    sphere1->setReflectivity(true, 0.8);
-    sphere1->setTransparency(true, 0.6);
-    sceneObjects.push_back(sphere1);
-
     Plane *plane1 = new Plane (glm::vec3(-30, -15, -14),
                               glm::vec3(30, -15, -14),
                               glm::vec3(30, -15, -200),
@@ -176,6 +206,41 @@ void initialise() {
     plane5->setColor(glm::vec3(1, 1, 1));
     plane5->setSpecularity(false);
     sceneObjects.push_back(plane5);
+
+    Sphere *sphere1 = new Sphere(glm::vec3(2, -3, -90), 3);
+    sphere1->setColor(glm::vec3(0, 1, 0));
+    sphere1->setSpecularity(false);
+    sphere1->setTransparency(true, 0.6);
+    sceneObjects.push_back(sphere1);
+
+    Sphere *sphere2 = new Sphere(glm::vec3(7.0, -5, -120.0), 4.0);
+	sphere2->setColor(glm::vec3(0, 0, 1));   //Set colour to blue
+    sphere2->setSpecularity(false);
+    sphere2->setShininess(5);
+    sphere2->setReflectivity(true, 0.6);
+    sceneObjects.push_back(sphere2);		 //Add sphere to scene objects
+
+    Plane *mirrorplane1 = new Plane(glm::vec3(-20, -5, -145),
+                                  glm::vec3(20, -5, -145),
+                                  glm::vec3(20, 10, -140),
+                                  glm::vec3(-20, 10, -140));
+    mirrorplane1->setColor(glm::vec3(0, 0, 0));
+    mirrorplane1->setSpecularity(false);
+//    mirrorplane1->setShininess(8);
+    mirrorplane1->setReflectivity(true, 1);
+    sceneObjects.push_back(mirrorplane1);
+
+        // Add a double truncated cone to the scene
+    DoubleTruncatedCone* cone = new DoubleTruncatedCone(glm::vec3(-5.0f, -15.0f, -70.0f), 3.0f, 0.0f, 12.0f);
+    cone->setColor(glm::vec3(1.0f, 1.0f, 0.0f));
+    cone->setRefractivity(true, 0.4f, 1.2f);
+    sceneObjects.push_back(cone);
+
+
+//        // Add a torus to the scene
+//    Torus* torus = new Torus(glm::vec3(0.0f, 0.0f, -150.0f), 10.0f, 5.0f, 30.0f);
+//    torus->setColor(glm::vec3(0.0f, 1.0f, 0.0f));
+//    sceneObjects.push_back(torus);
 }
 
 

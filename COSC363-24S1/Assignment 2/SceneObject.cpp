@@ -29,7 +29,6 @@ glm::vec3 SceneObject::lighting(glm::vec3 lightPos, glm::vec3 viewVec, glm::vec3
 		float rDotv = glm::dot(reflVec, viewVec);
 		if (rDotv > 0) specularTerm = pow(rDotv, shin_);
 	}
-//    if (tran_) lDotn = lDotn + lDotn * tranc_;
 	glm::vec3 colorSum = ambientTerm * color_ + lDotn * color_ + specularTerm * glm::vec3(1);
 	return colorSum;
 }
@@ -108,7 +107,7 @@ void SceneObject::setRefractivity(bool flag, float refr_coeff, float refr_index)
 	refrc_ = refr_coeff;
 	refri_ = refr_index;
 }
-`
+
 void SceneObject::setShininess(float shininess)
 {
 	shin_ = shininess;
