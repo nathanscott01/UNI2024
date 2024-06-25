@@ -5,18 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="07fcd518-aad0-4127-9a3f-dfb0c8614451" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/generate_string.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Character Edits Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Character Edits Tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/LCS Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/LCS Tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/Line Edits Tests.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/Line Edits Tests.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/edit_string1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/edit_string1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/edit_string2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/edit_string2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/string1.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/string1.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/string2.txt" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/string2.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/character_edits.py" beforeDir="false" afterPath="$PROJECT_DIR$/character_edits.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/line_edits.py" beforeDir="false" afterPath="$PROJECT_DIR$/line_edits.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/longest_common_string.py" beforeDir="false" afterPath="$PROJECT_DIR$/longest_common_string.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Labs/backtracking.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Labs/backtracking.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,33 +43,33 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Python tests.Python tests for LCS Tests.MyLCSTest.test_lcs_table.executor": "Run",
-    "Python tests.Python tests for LCS_Tests.MyLCSTest.test_lcs_table.executor": "Run",
-    "Python tests.Python tests for Tests.LCS_Tests.MyLCSTest.test_lcs_table.executor": "Run",
-    "Python tests.Python tests for test_lcs_table.executor": "Run",
-    "Python tests.Python tests in Character Edits Tests.py.executor": "Run",
-    "Python tests.Python tests in LCS Tests.py.executor": "Run",
-    "Python tests.Python tests in Line Edits Tests.py.executor": "Run",
-    "Python tests.Run test_lcs_table.executor": "Run",
-    "Python tests.Test LCS Table.executor": "Run",
-    "Python.character_edits.executor": "Run",
-    "Python.generate_string.executor": "Run",
-    "Python.longest_common_string.executor": "Run",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "main",
-    "last_opened_file_path": "/home/nathan/Desktop/UNI2024/COSC262-24S1/Assignment 2",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "settings.editor.selected.configurable": "debugger.dataViews.python.type.renderers",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python tests.Python tests for LCS Tests.MyLCSTest.test_lcs_table.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for LCS_Tests.MyLCSTest.test_lcs_table.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for Tests.LCS_Tests.MyLCSTest.test_lcs_table.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests for test_lcs_table.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in Character Edits Tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in LCS Tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Python tests in Line Edits Tests.py.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Run test_lcs_table.executor&quot;: &quot;Run&quot;,
+    &quot;Python tests.Test LCS Table.executor&quot;: &quot;Run&quot;,
+    &quot;Python.character_edits.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generate_string.executor&quot;: &quot;Run&quot;,
+    &quot;Python.longest_common_string.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/home/nathan/Desktop/UNI2024/COSC262-24S1/Assignment 2&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;debugger.dataViews.python.type.renderers&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="SharedIndexes">
     <attachedChunks>
       <set>
@@ -100,6 +89,7 @@
       <workItem from="1715676266477" duration="3739000" />
       <workItem from="1716182756017" duration="8000" />
       <workItem from="1716439008163" duration="17672000" />
+      <workItem from="1718627046067" duration="596000" />
     </task>
     <servers />
   </component>

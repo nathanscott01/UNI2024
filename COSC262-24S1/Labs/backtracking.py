@@ -51,3 +51,12 @@ def children(candidate, input_data):
                 perm.append(data[i])
             i += 1
     return tuple(tuple(perm) for perm in tuple_list)
+
+
+# """Alternative method for the children function"""
+# def children(candidate, input_data):
+#     candidate_set = set(candidate)
+#     return [candidate + (x,) for x in input_data if x not in candidate_set]
+
+
+print(permutations({"a", "b", "c"}))

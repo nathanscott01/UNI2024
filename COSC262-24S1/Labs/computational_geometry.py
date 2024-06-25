@@ -181,13 +181,23 @@ def graham_scan(points):
     return h_stack
 
 
+# points = [
+#     Vec(100, 100),
+#     Vec(0, 100),
+#     Vec(100, 0),
+#     Vec(0, 0),
+#     Vec(49, 50)]
+# verts = graham_scan(points)
+# for v in verts:
+#     print(v)
+
+
 points = [
     Vec(100, 100),
     Vec(0, 100),
     Vec(100, 0),
     Vec(0, 0),
     Vec(49, 50)]
-verts = graham_scan(points)
+verts = simple_polygon(points)
 for v in verts:
     print(v)
-
