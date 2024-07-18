@@ -7,11 +7,19 @@
 #include <stdlib.h>
 
 // Comparing function used by qsort
+int32_t compare(const void* a, const void* b) {
+  return(*(int*)a - *(int*)b);
+}
 
 // Function containing qsort
-
-
 int main() {
-  data[7] = [1, 5, 2, 7, 2, 8, 3];
-  return 0
+  size_t n = 7;
+  int32_t data[] = {1, 5, 2, 7, 4, 8, 3};
+  // Expected: [1, 2, 3, 4, 5, 7, 8]
+  qsort(data, n, sizeof(int32_t), compare);
+  for (int i = 0; i < n; i++) {
+    printf("%d ", data[i]);
+  }
+  printf("\n");
+  return 0;
 }
