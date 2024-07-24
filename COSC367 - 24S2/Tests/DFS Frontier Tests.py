@@ -1,5 +1,7 @@
+import io
 import unittest
 from dfs_frontier import *
+from contextlib import redirect_stdout
 
 # Input Graphs
 graph1 = ExplicitGraph(nodes=set('SAG'),
@@ -29,37 +31,46 @@ available_flights = ExplicitGraph(
 
 expected_1 = """Actions:
   S->G.
-Total cost: 1
-"""
+Total cost: 1"""
 
 expected_2 = """Actions:
   S->A,
   A->G.
-Total cost: 2
-"""
+Total cost: 2"""
 
 expected_3 = """Actions:
   Christchurch->Wellington,
   Wellington->Auckland,
   Auckland->Gold Coast.
-Total cost: 3
-"""
+Total cost: 3"""
 
 
 class MyTestCase(unittest.TestCase):
     def test_dfs_frontier_1(self):
-        solutions = generic_search(graph1, DFSFrontier())
-        solution = next(solutions, None)
-        self.assertEqual(print_actions(solution), expected_1)
+        f = io.StringIO()
+        with redirect_stdout(f):
+            solutions = generic_search(graph1, DFSFrontier())
+            solution = next(solutions, None)
+            print_actions(solution)
+        output = f.getvalue().strip()
+        self.assertEqual(expected_1, output)
 
     def test_dfs_frontier_2(self):
-        solutions = generic_search(graph2, DFSFrontier())
-        solution = next(solutions, None)
-        self.assertEqual(print_actions(solution), expected_2)
+        f = io.StringIO()
+        with redirect_stdout(f):
+            solutions = generic_search(graph2, DFSFrontier())
+            solution = next(solutions, None)
+            print_actions(solution)
+        output = f.getvalue().strip()
+        self.assertEqual(expected_2, output)
 
     def test_dfs_frontier_3s(self):
-        my_itinerary = next(generic_search(available_flights, DFSFrontier()), None)
-        self.assertEqual(print_actions(my_itinerary), expected_3)
+        f = io.StringIO()
+        with redirect_stdout(f):
+            my_itinerary = next(generic_search(available_flights, DFSFrontier()), None)
+            print_actions(my_itinerary)
+        output = f.getvalue().strip()
+        self.assertEqual(expected_3, output)
 
 
 if __name__ == '__main__':

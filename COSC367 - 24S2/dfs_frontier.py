@@ -20,7 +20,7 @@ class DFSFrontier(Frontier):
 
     def __next__(self):
         if len(self.container) > 0:
-            next_element = self.container.pop(0)
+            next_element = self.container.pop()
             return next_element
         else:
             raise StopIteration  # don't change this one
