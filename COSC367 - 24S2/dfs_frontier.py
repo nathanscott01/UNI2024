@@ -11,7 +11,7 @@ class DFSFrontier(Frontier):
         self.container = []
 
     def add(self, path):
-        raise NotImplementedError  # FIX THIS (store the given path)
+        self.container.append(path)
 
     def __iter__(self):
         """The object returns itself because it is implementing a __next__
@@ -20,6 +20,7 @@ class DFSFrontier(Frontier):
 
     def __next__(self):
         if len(self.container) > 0:
-            raise NotImplementedError  # FIX THIS (return something instead)
+            next_element = self.container.pop(0)
+            return next_element
         else:
             raise StopIteration  # don't change this one
