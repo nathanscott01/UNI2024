@@ -19,7 +19,7 @@ class SlidingPuzzleGraph(Graph):
         n = len(state)  # the size of the puzzle
 
         # Find i and j such that state[i][j] == BLANK
-        i, j =  # COMPLETE (or rewire as multiple statements)
+        i, j = next((i, j) for i, row in enumerate(state) for j, value in enumerate(row) if value == BLANK)
 
         arcs = []
         if i > 0:
@@ -38,7 +38,10 @@ class SlidingPuzzleGraph(Graph):
             new_state[i][j], new_state[i][j - 1] = new_state[i][j - 1], BLANK
             arcs.append(Arc(state, new_state, action, 1))
         if j < n - 1:
-        # COMPLETE (repeat the same pattern with some modifications)
+            action = "Move {} left".format(state[i][j + 1])
+            new_state = copy.deepcopy(state)
+            new_state[i][j], new_state[i][j + 1] = new_state[i][j + 1], BLANK
+            arcs.append(Arc(state, new_state, action, 1))
         return arcs
 
     def starting_nodes(self):
@@ -47,9 +50,9 @@ class SlidingPuzzleGraph(Graph):
     def is_goal(self, state):
         """Returns true if the given state is the goal state, False
         otherwise. There is only one goal state in this problem."""
-
-        n = len(state)
-        # COMPLETE
+        number_list = [item for sublist in state for item in sublist if item != BLANK]
+        numbers_ordered = all(number_list[i-1] <= number_list[i] for i in range(1, len(number_list)))
+        return numbers_ordered and state[0][0] == BLANK
 
 
 class BFSFrontier(Frontier):

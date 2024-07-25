@@ -6,7 +6,7 @@ from contextlib import redirect_stdout
 from itertools import dropwhile
 
 # Expected Outputs
-expected_1 = """1"""
+expected_1 = """4"""
 
 expected_2 = """Arc(tail=7, head=6, action='1down', cost=1)
 Arc(tail=7, head=9, action='2up', cost=1)"""

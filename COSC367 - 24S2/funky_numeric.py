@@ -12,18 +12,17 @@ class FunkyNumericGraph(Graph):
     def outgoing_arcs(self, tail_node):
         """Takes a node (which is an integer in this problem) and returns
         outgoing arcs (always two arcs in this problem)"""
-        return [Arc(tail_node,  # COMPLETE#, action="1down", cost=1),
-                    Arc(  # COMPLETE, # COMPLETE, # COMPLETE, cost=1)]
+        return [Arc(tail_node, tail_node - 1, action="1down", cost=1),
+                Arc(tail_node, tail_node + 2, action="2up", cost=1)]
 
     def starting_nodes(self):
         """Returns a sequence (list) of starting nodes. In this problem
         the seqence always has one element."""
-        return self.starting_number
+        return [self.starting_number]
 
     def is_goal(self, node):
         """Determine whether a given node (integer) is a goal."""
-        # COMPLETE
-
+        return node % 10 == 0
 
 
 class BFSFrontier(Frontier):
