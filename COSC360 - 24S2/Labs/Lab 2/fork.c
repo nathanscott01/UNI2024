@@ -24,15 +24,15 @@ int main() {
         local++;
         printf("[Child]  childPid: 0x%x\n", getpid());
         printf("[Child]  global: %d  local: %d\n", global, local);
-        sleep(4); /* Wait 4 seconds */
+        sleep(2); /* Wait 4 seconds */
     }
     else { /* Parent code */
         global--;
         local--;
-        /* waitpid(childPid, NULL, 0); // This waits until the child process exits. */ 
+        waitpid(childPid, NULL, 0); // This waits until the child process exits. */ 
         printf("[Parent] childPid: 0x%x  parent: 0x%x\n", childPid, getpid());
         printf("[Parent] global: %d  local: %d\n", global, local);
-        sleep(2); /* Wait 2 seconds */
+        sleep(6); /* Wait 2 seconds */
     }
 
     printf("[At end (0x%x)] global: %d  local: %d\n", getpid(), global, local);
