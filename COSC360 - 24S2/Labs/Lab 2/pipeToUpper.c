@@ -51,7 +51,7 @@ int main(int argc, char *argv[]) {
                 }
 
             if (write(child_to_parent[INP], message, strlen(message)) != -1) {
-                printf("CHILD: Sent response to Parent\n");
+                printf("CHILD: Sent %s\n", message);
             } else {
                 perror("Write");
                 exit(5);

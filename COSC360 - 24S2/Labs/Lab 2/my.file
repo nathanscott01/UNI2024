@@ -1,0 +1,10 @@
+total 614
+-rwx------ 1 nsc70 domain users  17640 Jul 27 18:06 dup2
+-rw------- 1 nsc70 domain users    689 Jul 27 18:00 dup2.c
+-rw------- 1 nsc70 domain users    828 Jul 25 16:51 dup2Pipe.c
+-rw------- 1 nsc70 domain users    672 Jul 27 18:04 dupe2Sort.c
+-rw------- 1 nsc70 domain users   1158 Jul 25 18:29 fork.c
+-rw------- 1 nsc70 domain users 150157 Jul 25 16:51 handout.pdf
+-rw------- 1 nsc70 domain users      0 Jul 27 18:06 my.file
+-rw------- 1 nsc70 domain users   1884 Jul 25 18:43 pipe.c
+-rw------- 1 nsc70 domain users   2533 Jul 27 17:05 pipeToUpper.c
