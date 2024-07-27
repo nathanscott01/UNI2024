@@ -22,8 +22,9 @@ int main(void) {
     }
 
     /* Replace the current process with "sort -k +7" */
-    execl("/bin/sort", "sort", "-k", "+7", NULL);
-
+    char *args[] = {"sort", "-k", "+7", NULL};
+    execvp("sort", args);
+    
     /* If we reach this line, execl must have failed */
     perror("Exec failed");
     exit(3);

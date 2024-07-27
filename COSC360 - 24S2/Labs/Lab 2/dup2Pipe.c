@@ -15,7 +15,8 @@ int main(void) {
         dup2(fd[INP], STDOUT_FILENO);
         close(fd[OUTP]);
         close(fd[INP]);
-        execl("/bin/ls", "ls", "-l", NULL);
+        char *args[] = {"ls", NULL};
+        execvp("ls", args);        
         perror("The exec of ls failed");
     }
 
@@ -23,7 +24,8 @@ int main(void) {
         dup2(fd[OUTP], STDIN_FILENO);
         close(fd[OUTP]);
         close(fd[INP]);
-        execl("/usr/bin/sort", "sort", "-k", "+8", NULL);
+        char *args[] = {"sort", "-k", "+7", NULL};
+        execvp("sort", args);
         /* Note: The location of sort depends on your distribution.
          * Use 'which sort' to find the correct location */
         perror("The exec of sort failed");
