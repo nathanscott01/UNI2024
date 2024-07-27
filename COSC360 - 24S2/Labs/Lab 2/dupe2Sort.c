@@ -15,9 +15,9 @@ int main(void) {
         exit(1);
     }
 
-    /* Redirect stdout to my.file */
-    if (dup2(STDOUT_FILENO, fd) == -1) {
-        perror("Could not redirect stdout");
+    /* Redirect stdin to my.file */
+    if (dup2(fd, STDIN_FILENO) == -1) {
+        perror("Could not redirect stdin");
         exit(2);
     }
 
