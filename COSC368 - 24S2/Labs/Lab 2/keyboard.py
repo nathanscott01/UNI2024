@@ -18,6 +18,7 @@ num_letters_per_block = 6  # Number of letters per block
 letter_set = []  # To store the current set of letters for a block
 start_time = None
 log = []
+dynamic = False
 
 name = "Geoffrey"
 condition = "static"
@@ -69,7 +70,6 @@ def write_log_to_csv(log):
         writer.writerow(["Name", "Condition", "Target Character", "Block Count", "Time Taken"])
         writer.writerows(log)
         
-    
 
 # Create table separating keyboard from output and clear button
 frame_top = Frame(window)
