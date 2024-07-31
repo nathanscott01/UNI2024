@@ -23,7 +23,15 @@ class LocationGraph(Graph):
         raise NotImplementedError()  # replace this line with a correct code
 
     def outgoing_arcs(self, tail):
-        raise NotImplementedError()  # replace this line with a correct code
+        """Iterate through each node. Check if node meets criterea and add to list"""
+        arcs = []
+        tail_coord = self.location[tail]    # The co-ordinates referenced by tail
+        for head, coord in self.location.items():
+            if head is not tail:
+                distance = sqrt((coord[0] - tail_coord[0]) ** 2 + (coord[1] - tail_coord[1]) ** 2)
+                if distance <= self.radius:
+                    arcs.append(Arc(tail, head, str(tail) + '->' + str(head), distance))
+        return sorted(arcs, key=lambda arc: arc.head)
 
 
 class LCFSFrontier(Frontier):
