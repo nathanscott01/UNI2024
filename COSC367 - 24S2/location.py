@@ -5,6 +5,7 @@ Location Graph
 LCFS Frontier
 """
 
+import heapq
 from search import *
 from math import sqrt
 
@@ -20,7 +21,7 @@ class LocationGraph(Graph):
         return self._starting_nodes
 
     def is_goal(self, node):
-        raise NotImplementedError()  # replace this line with a correct code
+        return node == self.goal_nodes
 
     def outgoing_arcs(self, tail):
         """Iterate through each node. Check if node meets criterea and add to list"""
@@ -35,16 +36,19 @@ class LocationGraph(Graph):
 
 
 class LCFSFrontier(Frontier):
-    """Implements a frontier container appropriate for breadth-first
+    """Implements a frontier container appropriate for lowest cost first
     search."""
 
     def __init__(self):
         """The constructor takes no argument. It initialises the
         container to an empty stack."""
-        raise NotImplementedError()  # replace this line with a correct code
+        self.container = []
+        self.counter = 0
 
     def add(self, path):
-        raise NotImplementedError()  # replace this line with a correct code
+        total_cost = sum(arc.cost for arc in path)
+        heapq.heappush(self.container, (total_cost, self.counter, path))
+        self.counter += 1
 
     def __iter__(self):
         """The object returns itself because it is implementing a __next__
@@ -52,4 +56,6 @@ class LCFSFrontier(Frontier):
         return self
 
     def __next__(self):
-        raise NotImplementedError()  # replace this line with a correct code
+        if not self.container:
+            raise StopIteration
+        return heapq.heappop(self.container)[2]

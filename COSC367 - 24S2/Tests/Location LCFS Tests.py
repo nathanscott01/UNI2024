@@ -113,19 +113,19 @@ class MyTestCase(unittest.TestCase):
         output = f.getvalue().strip()
         self.assertEqual(expected_1_2, output)
 
-    # def test_lcfs_1(self):
-    #     f = io.StringIO()
-    #     with redirect_stdout(f):
-    #         frontier = LCFSFrontier()
-    #         frontier.add((Arc(None, None, None, 17),))
-    #         frontier.add((Arc(None, None, None, 11), Arc(None, None, None, 4)))
-    #         frontier.add((Arc(None, None, None, 7), Arc(None, None, None, 8)))
-    #
-    #         for path in frontier:
-    #             print(path)
-    #     output = f.getvalue().strip()
-    #     self.assertEqual(expected_2, output)
-    #
+    def test_lcfs_1(self):
+        f = io.StringIO()
+        with redirect_stdout(f):
+            frontier = LCFSFrontier()
+            frontier.add((Arc(None, None, None, 17),))
+            frontier.add((Arc(None, None, None, 11), Arc(None, None, None, 4)))
+            frontier.add((Arc(None, None, None, 7), Arc(None, None, None, 8)))
+
+            for path in frontier:
+                print(path)
+        output = f.getvalue().strip()
+        self.assertEqual(expected_2, output)
+
     # def test_lcfs_2(self):
     #     f = io.StringIO()
     #     with redirect_stdout(f):
@@ -133,7 +133,7 @@ class MyTestCase(unittest.TestCase):
     #         print_actions(solution)
     #     output = f.getvalue().strip()
     #     self.assertEqual(expected_3, output)
-    #
+
     # def test_lcfs_3(self):
     #     f = io.StringIO()
     #     with redirect_stdout(f):
