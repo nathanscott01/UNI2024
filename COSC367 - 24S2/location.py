@@ -21,7 +21,7 @@ class LocationGraph(Graph):
         return self._starting_nodes
 
     def is_goal(self, node):
-        return node == self.goal_nodes
+        return node in self.goal_nodes
 
     def outgoing_arcs(self, tail):
         """Iterate through each node. Check if node meets criterea and add to list"""
@@ -44,11 +44,18 @@ class LCFSFrontier(Frontier):
         container to an empty stack."""
         self.container = []
         self.counter = 0
+        self.node_tracker = {}
 
     def add(self, path):
         total_cost = sum(arc.cost for arc in path)
-        heapq.heappush(self.container, (total_cost, self.counter, path))
-        self.counter += 1
+        head = path[-1].head
+        if head is None:
+            heapq.heappush(self.container, (total_cost, self.counter, path))
+            self.counter += 1
+        elif head not in self.node_tracker or total_cost < self.node_tracker[head]:
+            heapq.heappush(self.container, (total_cost, self.counter, path))
+            self.counter += 1
+            self.node_tracker[head] = total_cost
 
     def __iter__(self):
         """The object returns itself because it is implementing a __next__

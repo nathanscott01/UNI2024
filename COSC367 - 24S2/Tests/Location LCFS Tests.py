@@ -126,21 +126,21 @@ class MyTestCase(unittest.TestCase):
         output = f.getvalue().strip()
         self.assertEqual(expected_2, output)
 
-    # def test_lcfs_2(self):
-    #     f = io.StringIO()
-    #     with redirect_stdout(f):
-    #         solution = next(generic_search(graph3, LCFSFrontier()))
-    #         print_actions(solution)
-    #     output = f.getvalue().strip()
-    #     self.assertEqual(expected_3, output)
+    def test_lcfs_2(self):
+        f = io.StringIO()
+        with redirect_stdout(f):
+            solution = next(generic_search(graph3, LCFSFrontier()))
+            print_actions(solution)
+        output = f.getvalue().strip()
+        self.assertEqual(expected_3, output)
 
-    # def test_lcfs_3(self):
-    #     f = io.StringIO()
-    #     with redirect_stdout(f):
-    #         solution = next(generic_search(graph4, LCFSFrontier()))
-    #         print_actions(solution)
-    #     output = f.getvalue().strip()
-    #     self.assertEqual(expected_4, output)
+    def test_lcfs_3(self):
+        f = io.StringIO()
+        with redirect_stdout(f):
+            solution = next(generic_search(graph4, LCFSFrontier()))
+            print_actions(solution)
+        output = f.getvalue().strip()
+        self.assertEqual(expected_4, output)
 
 
 if __name__ == '__main__':
