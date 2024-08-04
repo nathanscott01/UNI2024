@@ -114,4 +114,4 @@ text_output.set("")
 input_text = Label(master, textvariable=text_output)
 input_text.pack()
 
-master.mainloop()        
+master.mainloop()
