@@ -13,7 +13,6 @@ data_file = pd.read_csv('fitts_tests.csv', usecols=columns)
 
 # Filter the data to include only block numbers 3 to 8
 filtered_data = data_file[(data_file["Block Count"] >= 3) & (data_file["Block Count"] <= 8)]
-
 averaged_data = filtered_data.groupby(["Distance", "Width"]).agg({"Time Taken" : "mean"}).reset_index()
 
 time_dict = {}
