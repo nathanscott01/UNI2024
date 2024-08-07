@@ -28,7 +28,7 @@ int main(void)
 	char data[512] = {'\0'};
 	ssize_t numBytes = 511;
 	while (numBytes > 0) { // Loop while we get a response. 
-		numBytes = sprintf(data, "Hello server! Client 1 on this end!!");
+		numBytes = sprintf(data, "Hello server! Client 2 over here!!");
 		write(sockfd, data, numBytes);
 		numBytes = read(sockfd, data, 511);
 		data[numBytes] = '\0';
