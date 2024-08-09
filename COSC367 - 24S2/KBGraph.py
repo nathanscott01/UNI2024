@@ -32,19 +32,18 @@ def clauses(knowledge_base):
 class KBGraph(Graph):
     def __init__(self, kb, query):
         self.clauses = list(clauses(kb))
-        self.query = query
+        self.query = list(query)
 
     def starting_nodes(self):
         return self.query
 
     def is_goal(self, node):
-        if self.query:
-            return False
-        return True
+        return len(self.query) == 0
 
     def outgoing_arcs(self, tail_node):
         new_arcs = []
         new_atoms = []
+
         for head, body in self.clauses:
             if head == tail_node:
                 if body:
@@ -53,8 +52,11 @@ class KBGraph(Graph):
                         new_arcs.append(Arc(tail_node, child, str(tail_node) + "->" + str(child), None))
                 else:
                     new_arcs.append(Arc(tail_node, [], str(tail_node) + "->" + str([]), None))
-        self.query.add(atom for atom in new_atoms[::-1])
-        self.query.remove(tail_node)
+
+        self.query = new_atoms + self.query
+        if tail_node in self.query:
+            self.query.remove(tail_node)
+
         return new_arcs[::-1]
 
 
@@ -81,3 +83,16 @@ class DFSFrontier(Frontier):
             return next_element
         else:
             raise StopIteration
+
+
+
+kb = """
+a :- c, d.
+c.
+"""
+
+query = {'a'}
+if next(generic_search(KBGraph(kb, query), DFSFrontier()), None):
+    print("The query is true.")
+else:
+    print("The query is not provable.")
