@@ -3,7 +3,7 @@ Nathan Scott
 COSC367 Lab 3
 KBGraph
 """
-
+import copy
 import re
 from search import *
 
@@ -35,13 +35,27 @@ class KBGraph(Graph):
         self.query = query
 
     def starting_nodes(self):
-        return ["** FIX THIS **"]
+        return self.query
 
     def is_goal(self, node):
-        " ** COMPLETE ** "
+        if self.query:
+            return False
+        return True
 
     def outgoing_arcs(self, tail_node):
-        " ** COMPLETE ** "
+        new_arcs = []
+        new_atoms = []
+        for head, body in self.clauses:
+            if head == tail_node:
+                if body:
+                    for child in body:
+                        new_atoms.append(child)
+                        new_arcs.append(Arc(tail_node, child, str(tail_node) + "->" + str(child), None))
+                else:
+                    new_arcs.append(Arc(tail_node, [], str(tail_node) + "->" + str([]), None))
+        self.query.add(atom for atom in new_atoms[::-1])
+        self.query.remove(tail_node)
+        return new_arcs[::-1]
 
 
 class DFSFrontier(Frontier):
