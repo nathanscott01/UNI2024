@@ -29,12 +29,41 @@ def clauses(knowledge_base):
 
 
 def forward_deduce(knowledge_base):
-    """Return a strign of atoms that can be derived to be true from knowledge base."""
+    """Return a string of atoms that can be derived to be true from knowledge base."""
+    kb_list = list(clauses(knowledge_base))
+    atom_set = set()
+    new_atom_set = set()
+    kb_rules = list()
+
+    # Find atomic facts
+    for head, body in kb_list:
+        if not body:
+            atom_set.add(head)
+        else:
+            kb_rules.append([head, body])
+
+    # Check through rules and extract the true atoms
+    atom_set_updated = True
+    new_atom_set.update(atom_set)
+    while atom_set_updated:
+        for head, body in kb_rules:
+            if head not in new_atom_set and all(body_atom in new_atom_set for body_atom in body):
+                new_atom_set.update(head)
+        if new_atom_set == atom_set:
+            atom_set_updated = False
+        else:
+            atom_set.update(new_atom_set)
+    return new_atom_set
 
 
 # kb = """
 # a :- b.
 # b.
+# """
+
+# kb = """
+# good_programmer :- correct_code.
+# correct_code :- good_programmer.
 # """
 
 kb = """
@@ -48,4 +77,10 @@ f :- a,
      g.
 """
 
-print(list(clauses(kb)))
+# kb = """
+# wet :- is_raining.
+# wet :- sprinkler_is_going.
+# wet.
+# """
+
+print(", ".join(sorted(forward_deduce(kb))))
