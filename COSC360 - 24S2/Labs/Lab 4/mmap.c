@@ -22,17 +22,22 @@ size_t fileSize(int fd) {
 
 int main(int argc, char *argv[])
 {
+	char *addr1;
+	char *addr2;
+	
 	if (argc < 2) {
 		fprintf(stderr, "usage: %s <repeats>\n", argv[0]);
 		exit(EXIT_FAILURE);
 	}
-	
+
 	size_t repeats = atoi(argv[1]);
 	
+
 	for (uint32_t i = 0; i < repeats; ++i) {
 
 		int src = open("test.dat", O_RDONLY);
 		if (src == -1) {
+			printf("Success\n");
 			HANDLE_ERROR("fstat");
 		}
 
@@ -61,8 +66,29 @@ int main(int argc, char *argv[])
 		 * We need MAP_SHARED on the destination so that our writes are written back to the file
 		 * 
 		 */
-		
-		
+
+		// Map both files to memory
+		addr1 = mmap(NULL, size, PROT_READ, MAP_PRIVATE, src, 0);
+		if (addr1 == MAP_FAILED) {
+			HANDLE_ERROR("mmap src");
+		}
+
+		addr2 = mmap(NULL, size, PROT_WRITE, MAP_SHARED, dst, 0);
+		if (addr2 == MAP_FAILED) {
+			HANDLE_ERROR("mmap dst");
+		}
+
+		// Copy contents
+		memcpy(addr2, addr1, size);
+
+		// Unmap files
+		if (munmap(addr1, size) == -1) {
+			HANDLE_ERROR("munmap src");
+		}
+
+		if (munmap(addr2, size) == -1) {
+			HANDLE_ERROR("munmap dest");
+		}
 
 		close(src);
 		close(dst);
