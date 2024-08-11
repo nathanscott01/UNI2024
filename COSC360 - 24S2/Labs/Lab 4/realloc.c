@@ -24,8 +24,23 @@ typedef struct {
  */
 Buffer *newBuffer(size_t reserved) {
 	/* TODO */
-	
-	assert(0 && "not implemented");
+	Buffer *buffer = malloc(sizeof(Buffer));
+	if (buffer == NULL) {
+		perror("Failed to allocate space for buffer");
+		exit(EXIT_FAILURE);
+	}
+
+	buffer->data = malloc(reserved);
+	if (buffer->data == NULL) {
+		free(buffer);
+		perror("Failed to allocate space for data");
+		exit(EXIT_FAILURE);
+	}
+
+	buffer->length = 0;
+	buffer->reserved = reserved;
+
+	return buffer;
 }
 
 
@@ -45,8 +60,17 @@ void freeBuffer(Buffer *buffer) {
  */
 void appendBuffer(Buffer *buffer, char *data, size_t length) {
 	/* TODO */
-	
-	assert(0 && "not implemented");
+	while (buffer->length + length > buffer->reserved) {
+		buffer->reserved *= 2;
+		char *new_data = realloc(buffer->data, buffer->reserved);
+		if (new_data == NULL) {
+            perror("Failed to reallocate space for buffer data");
+            exit(EXIT_FAILURE);
+        }
+        buffer->data = new_data;
+	}
+	memcpy(buffer->data + buffer->length, data, length);
+	buffer->length += length;
 }
 
 
