@@ -83,6 +83,8 @@ size_t min(size_t a, size_t b) {
 void matrix_mul_blocked(double *res, double *a, double *b, size_t n, size_t block) {
 	
 	zero_matrix(res, n);
+	double *bt = alloc_matrix(n);
+	matrix_transpose(bt, b, n);
 	
 	// loop over outer blocks 
 	for (size_t i = 0; i < n; i += block) {
@@ -100,13 +102,14 @@ void matrix_mul_blocked(double *res, double *a, double *b, size_t n, size_t bloc
 				for (size_t ii = i; ii < i_end; ii++) {
 					for (size_t jj = j; jj < j_end; jj++)
 						for (size_t kk = k; kk < k_end; kk++) {
-							res[ii * n + jj] += a[ii * n + kk] * b[kk * n + jj];
+							// res[ii * n + jj] += a[ii * n + kk] * b[kk * n + jj];
+							res[ii * n + jj] += a[ii * n + kk] * bt[jj * n + kk];
 						}
 				}
 			}
 		}
 	}
-	
+	free(bt);
 	
 }
 
