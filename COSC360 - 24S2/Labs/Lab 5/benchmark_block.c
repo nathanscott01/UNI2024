@@ -19,7 +19,7 @@ void benchmark_blocks(size_t n, int repeats) {
 	struct timespec start, stop;
 
 	
-	for (size_t blocks = 4; blocks <= 1024; blocks *= 2) {
+	for (size_t blocks = 4; blocks <= n; blocks *= 2) {
 		clock_gettime( CLOCK_REALTIME, &start);
 		for (size_t i = 0; i < repeats; ++i) {
 			matrix_mul_blocked(res, a, b, n, blocks);
