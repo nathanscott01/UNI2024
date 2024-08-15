@@ -42,8 +42,13 @@ void benchmark_blocks(size_t n, int repeats) {
 int main(int argc, char**argv) {
 	
 
-
-	benchmark_blocks(1024, 1);
+	size_t size = 32;
+	for (int i = 0; i < 7; i++) {
+		benchmark_blocks(size, 1);
+		size *= 2;
+		printf("\n\n");
+	}
+	// benchmark_blocks(1024, 1);
 
 	return 0;
 }

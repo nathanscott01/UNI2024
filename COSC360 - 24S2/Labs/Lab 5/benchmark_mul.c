@@ -52,6 +52,8 @@ void benchmark_mul(size_t n, uint32_t repeats) {
 	
 	
 	printf("%zu basic: %.5lf, transposed: %.5lf, blocked: %.5lf\n", n, basic, transposed, blocked);
+	// printf("%zu\n", n);
+	// printf("%.5lf\n", basic);
 	
 	free(a);
 	free(b);

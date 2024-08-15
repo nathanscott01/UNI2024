@@ -46,6 +46,18 @@ void matrix_mul_transposed(double *res, double *a, double *b, size_t n) {
 	matrix_transpose(bt, b, n);
 	
 	// TODO: implement matrix multiplication between a and transposed matrix bt
+	for (size_t i = 0; i < n; i++) {
+		for (size_t j = 0; j < n; j++) {
+
+			double r = 0.0;
+
+			for (size_t k = 0; k < n; k++) {
+				r += a[i * n + k] * bt[j * n + k];
+			}
+
+			res[i * n + j] = r;
+		}
+	}
 
 	free(bt);
 	
@@ -84,6 +96,13 @@ void matrix_mul_blocked(double *res, double *a, double *b, size_t n, size_t bloc
 				// loop over inner block (indices ii, jj, kk)
 				
 				//TODO: finish blocked matrix implementation
+
+				for (size_t ii = i; ii < i_end; ii++) {
+					for (size_t jj = j; jj < j_end; jj++)
+						for (size_t kk = k; kk < k_end; kk++) {
+							res[ii * n + jj] += a[ii * n + kk] * b[kk * n + jj];
+						}
+				}
 			}
 		}
 	}
