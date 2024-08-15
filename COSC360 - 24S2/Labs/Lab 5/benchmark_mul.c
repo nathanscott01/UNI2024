@@ -44,7 +44,7 @@ void benchmark_mul(size_t n, uint32_t repeats) {
 	
 	clock_gettime( CLOCK_REALTIME, &start);
 	for (uint32_t i = 0; i < repeats; ++i) {
-		matrix_mul_blocked(res, a, b, n, 16);
+		matrix_mul_blocked(res, a, b, n, 8);
 	}
 	
 	clock_gettime( CLOCK_REALTIME, &stop);
