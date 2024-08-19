@@ -18,8 +18,7 @@ csp2 = CSP(var_domains={x:set(range(10)) for x in 'abc'},
 # Expected Outputs
 expected1 = """a: [1, 2]
 b: [2, 3]
-c: [3, 4]
-"""
+c: [3, 4]"""
 
 expected2 = """a: [0, 1, 2, 3, 4, 5]
 b: [0, 2, 4, 6, 8]

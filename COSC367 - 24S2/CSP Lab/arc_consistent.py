@@ -19,7 +19,7 @@ def arc_consistent(csp):
             assignment = {x: xval}
             for yvals in itertools.product(*[csp.var_domains[y] for y in ys]):
                 assignment.update({y: yval for y, yval in zip(ys, yvals)})
-                if (satisfies(assignment, c) for c in csp.constraints):  # COMPLETE
+                if satisfies(assignment, c):  # COMPLETE
                     new_domain.add(assignment[x])  # COMPLETE
                     break
         if csp.var_domains[x] != new_domain:
@@ -30,14 +30,3 @@ def arc_consistent(csp):
                             to_do.add((z, cprime))
             csp.var_domains[x] = new_domain  # COMPLETE
     return csp
-
-simple_csp = CSP(
-    var_domains={x: set(range(1, 5)) for x in 'abc'},
-    constraints={
-        lambda a, b: a < b,
-        lambda b, c: b < c,
-        })
-
-csp = arc_consistent(simple_csp)
-for var in sorted(csp.var_domains.keys()):
-    print("{}: {}".format(var, sorted(csp.var_domains[var])))
