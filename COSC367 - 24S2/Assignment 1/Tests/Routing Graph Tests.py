@@ -222,11 +222,11 @@ class MyRoutingTests3(unittest.TestCase):
 
 
 if __name__ == '__main__':
-    # Individual Tests
-    suite = unittest.TestLoader().loadTestsFromTestCase(MyRoutingTests1)
-    # suite = unittest.TestLoader().loadTestsFromTestCase(MyRoutingTests2)
+    # # Individual Tests
+    # # suite = unittest.TestLoader().loadTestsFromTestCase(MyRoutingTests1)
+    # # suite = unittest.TestLoader().loadTestsFromTestCase(MyRoutingTests2)
     # suite = unittest.TestLoader().loadTestsFromTestCase(MyRoutingTests3)
-    unittest.TextTestRunner().run(suite)
+    # unittest.TextTestRunner().run(suite)
 
     # All Tests
-    # unittest.main()
+    unittest.main()
