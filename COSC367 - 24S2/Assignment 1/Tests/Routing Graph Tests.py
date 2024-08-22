@@ -2,7 +2,7 @@ import unittest
 import math
 import io
 from contextlib import redirect_stdout
-from routing import RoutingGraph
+from routing_table import RoutingGraph
 
 # Input Graphs
 
