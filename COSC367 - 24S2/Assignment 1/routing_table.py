@@ -3,7 +3,7 @@ Nathan Scott
 Assignment 1
 Routing
 """
-
+import heapq
 from search import *
 import math
 
@@ -79,13 +79,24 @@ class RoutingGraph(Graph):
 class AStarFrontier(Frontier):
 
     def __init__(self, str_map):
-        raise NotImplementedError
+        self.container = []
+        self.nodes = {}
+        self.str_map = str_map
 
     def add(self, path):
-        raise NotImplementedError
+        path_cost = sum(arc.cost for arc in path)
+        head = path[-1].head
+        goal_cost = self.str_map.estimated_cost_to_goal(head)
+        total_cost = path_cost + goal_cost
+        if head not in self.nodes or total_cost < self.nodes[head]:
+            heapq.heappush(self.container, (total_cost, path))
+            self.nodes[head] = total_cost
+
 
     def __iter__(self):
-        raise NotImplementedError
+        return self
 
     def __next__(self):
-        raise NotImplementedError
+        if not self.container:
+            raise StopIteration
+        return heapq.heappop(self.container)[1]

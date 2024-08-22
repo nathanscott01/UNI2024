@@ -65,6 +65,33 @@ map_str8 = """\
 +---------+
 """
 
+map_str9 = """\
++---+
+| F |
+| 1 |
+|   |
+| G |
++---+
+"""
+
+map_str10 = """\
++-----+
+|  X  |
+|  XSG|
+|  X  |
+| SX  |
++-----+"""
+
+map_str11 = """\
++------------+
+|    P       |
+| 7          |
+|XXXXXXXXX   |
+|P F X  G    |
++------------+
+"""
+
+
 
 # Expected outputs
 expected1 = """Actions:
@@ -111,6 +138,38 @@ expected7 = """Actions:
 Total cost: 7"""
 
 expected8 = """There is no solution!"""
+
+expected9 = """Actions:
+  N,
+  Fuel up,
+  S,
+  S,
+  S.
+Total cost: 35"""
+
+expected10 = """Actions:
+  E.
+Total cost: 5"""
+
+expected11 = """Actions:
+  E,
+  E,
+  NE,
+  Teleport to (4, 1),
+  E,
+  E,
+  Fuel up,
+  W,
+  W,
+  Teleport to (1, 5),
+  E,
+  E,
+  E,
+  SE,
+  SE,
+  SW,
+  W.
+Total cost: 113"""
 
 
 class MyTestCase(unittest.TestCase):
@@ -192,7 +251,37 @@ class MyTestCase(unittest.TestCase):
             solution = next(generic_search(map_graph, frontier), None)
             print_actions(solution)
         output = f.getvalue().strip()
-        self.assertEqual(expected7, output)
+        self.assertEqual(expected8, output)
+
+    def test_map9(self):
+        f = io.StringIO()
+        with redirect_stdout(f):
+            map_graph = RoutingGraph(map_str9)
+            frontier = AStarFrontier(map_graph)
+            solution = next(generic_search(map_graph, frontier), None)
+            print_actions(solution)
+        output = f.getvalue().strip()
+        self.assertEqual(expected9, output)
+
+    def test_map10(self):
+        f = io.StringIO()
+        with redirect_stdout(f):
+            map_graph = RoutingGraph(map_str10)
+            frontier = AStarFrontier(map_graph)
+            solution = next(generic_search(map_graph, frontier), None)
+            print_actions(solution)
+        output = f.getvalue().strip()
+        self.assertEqual(expected10, output)
+
+    def test_map11(self):
+        f = io.StringIO()
+        with redirect_stdout(f):
+            map_graph = RoutingGraph(map_str11)
+            frontier = AStarFrontier(map_graph)
+            solution = next(generic_search(map_graph, frontier), None)
+            print_actions(solution)
+        output = f.getvalue().strip()
+        self.assertEqual(expected11, output)
 
 
 if __name__ == '__main__':
