@@ -74,3 +74,18 @@ class RoutingGraph(Graph):
 
     def estimated_cost_to_goal(self, node):
         return 0
+
+
+class AStarFrontier(Frontier):
+
+    def __init__(self, str_map):
+        raise NotImplementedError
+
+    def add(self, path):
+        raise NotImplementedError
+
+    def __iter__(self):
+        raise NotImplementedError
+
+    def __next__(self):
+        raise NotImplementedError
