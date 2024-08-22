@@ -3,6 +3,7 @@ Nathan Scott
 Assignment 1
 Routing
 """
+import copy
 import heapq
 from search import *
 import math
@@ -73,7 +74,18 @@ class RoutingGraph(Graph):
         return outgoing
 
     def estimated_cost_to_goal(self, node):
-        return 0
+        row, col, f = node
+        min_distance = float('inf')
+        for i in range(len(self.str_map)):
+            for j in range(len(self.str_map[i])):
+                if self.str_map[i][j] == 'G':
+                    # Calculate the Euclidean distance between current node and goal node
+                    max_traverse = abs(abs(i - row) - abs(j - col))
+                    min_diagonal = min(abs(i - row), abs(j - col))
+                    distance = max_traverse * 5 + min_diagonal * 7
+                    if distance < min_distance:
+                        min_distance = distance
+        return min_distance
 
 
 class AStarFrontier(Frontier):
@@ -81,15 +93,18 @@ class AStarFrontier(Frontier):
     def __init__(self, str_map):
         self.container = []
         self.nodes = {}
+        self.expanded = []
         self.str_map = str_map
+        self.counter = 0
 
     def add(self, path):
         path_cost = sum(arc.cost for arc in path)
         head = path[-1].head
         goal_cost = self.str_map.estimated_cost_to_goal(head)
         total_cost = path_cost + goal_cost
+        self.counter += 1
         if head not in self.nodes or total_cost < self.nodes[head]:
-            heapq.heappush(self.container, (total_cost, path))
+            heapq.heappush(self.container, (total_cost, self.counter, path))
             self.nodes[head] = total_cost
 
 
@@ -99,4 +114,55 @@ class AStarFrontier(Frontier):
     def __next__(self):
         if not self.container:
             raise StopIteration
-        return heapq.heappop(self.container)[1]
+        path = heapq.heappop(self.container)[2]
+        head = path[-1].head
+        if head not in self.expanded:
+            self.expanded.append(head)
+        return path
+
+
+def print_map(map_graph, frontier, solution):
+    """Print a map"""
+    expanded_list = []
+    for head in frontier.expanded:
+        row, col, f = head
+        point = tuple((row, col))
+        expanded_list.append(point)
+
+    path_list = []
+    if solution:
+        for arc in solution[1:-1]:
+            row, col, f = arc.head
+            point = tuple((row, col))
+            path_list.append(point)
+
+
+    new_map = copy.deepcopy(map_graph.str_map)
+    new_map = [list(row) for row in new_map]
+    for row, col in expanded_list:
+        if (row, col) in path_list:
+            new_map[row][col] = '*'
+        elif new_map[row][col] not in 'SG':
+            new_map[row][col] = '.'
+
+
+    new_map = ["".join(row) for row in new_map]
+    for row in new_map:
+        print(row)
+
+
+map_str = """\
++------------+
+|         X  |
+| S       X G|
+|         X  |
+|         X  |
+|         X  |
++------------+
+"""
+
+map_graph = RoutingGraph(map_str)
+frontier = AStarFrontier(map_graph)
+solution = next(generic_search(map_graph, frontier), None)
+print_map(map_graph, frontier, solution)
+# print_actions(solution)
