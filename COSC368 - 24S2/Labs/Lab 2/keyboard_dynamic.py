@@ -86,7 +86,7 @@ def run_test():
             duration = (end_time - start_time) * 1000
             duration = f"{duration:.2f}"
             block_count = n + 1
-            log_entry = [name.get(), condition, selected_key, block_count, duration]
+            log_entry = [name.get(), condition, selected_key, n, duration]
             log.append(log_entry)
             if letter_set:
                 choose_and_display_random_letter()
