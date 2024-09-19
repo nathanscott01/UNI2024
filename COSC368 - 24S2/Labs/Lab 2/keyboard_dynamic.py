@@ -17,7 +17,7 @@ window.minsize(300, 200)
 name = StringVar()
 dynamic = BooleanVar()
 
-target = "qwertyuiop"   # Target letters
+target = "qwerty"   # Target letters
 n = 6  # Number of blocks
 num_letters_per_block = 6  # Number of letters per block
 letter_set = []  # To store the current set of letters for a block
