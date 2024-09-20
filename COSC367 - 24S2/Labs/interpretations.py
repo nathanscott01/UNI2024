@@ -19,3 +19,5 @@ def interpretations(atoms):
     atom_permutations = list(itertools.product([False, True], repeat=n))
     atom_interpretations = [dict(zip(atom_list, permutation)) for permutation in atom_permutations]
     return atom_interpretations
+
+

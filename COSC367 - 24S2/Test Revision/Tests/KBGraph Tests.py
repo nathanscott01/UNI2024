@@ -2,6 +2,7 @@ import unittest
 import io
 from contextlib import redirect_stdout
 from KBGraph import *
+from search import *
 
 # Inputs
 kb1 = """
