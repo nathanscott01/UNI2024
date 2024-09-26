@@ -24,7 +24,11 @@ void *runSummation(void *ptr)
 	for (size_t i = 0; i < worker->n; i++) {
 		//TODO: make this thread safe!!
 
+		pthread_mutex_lock(worker->lock);
+
 		(*worker->total)++;
+
+		pthread_mutex_unlock(worker->lock);
 	}
 
 	return NULL;
@@ -52,7 +56,9 @@ int main(void)
 		worker->n = N;
 
 		//TODO: Make this run in a thread!
-		runSummation((void*)worker);
+		// runSummation((void*)worker);
+
+		pthread_create(&worker->thread, NULL, runSummation, (void*)worker);
 	}
 
 
@@ -60,6 +66,11 @@ int main(void)
 	// Wait for all the threads we created
 	// for (size_t i = ...)
 	////////////////////////////////
+	for (size_t i = 0; i < NUM_THREADS; i++) {
+		pthread_join(workers[i].thread, NULL);
+	}
+
+	
 
 	printf("Final total: %f \n", total);
 
