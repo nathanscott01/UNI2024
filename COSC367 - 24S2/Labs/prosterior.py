@@ -8,9 +8,6 @@ Prosterior
 def posterior(prior, likelihood, observation):
     """Return the prosterior probability of the class variable being true"""
     n = len(likelihood)
-    # prob_true = prior * prod([likelihood[i][1] for i in range(n)])
-    # prob_false = (1 - prior) * prod([likelihood[i][0] for i in range(n)])
-    # alpha = 1 / (prob_false + prob_true)
     prob_true = 1
     prob_false = 1
     for i in range(n):

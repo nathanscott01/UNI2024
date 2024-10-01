@@ -32,12 +32,41 @@ def learn_likelihood(file_name, pseudo_count=0):
     """Learn the likelihood of the variables"""
     entries = open_file(file_name)
     n_variables = len(entries[0]) - 1
-    true_spam_count = [0 for _ in range(n_variables)]
+    true_spam_v_count = [0 for _ in range(n_variables)]
     true_count = 0
-    false_spam_count = [0 for _ in range(n_variables)]
+    false_spam_v_count = [0 for _ in range(n_variables)]
     false_count = 0
     for email in entries[1:]:
         if email[-1] == '1':
             true_count += 1
+            for i in range(n_variables):
+                if email[i] == '1':
+                    true_spam_v_count[i] += 1
+        else:
+            false_count += 1
+            for i in range(n_variables):
+                if email[i] == '1':
+                    false_spam_v_count[i] += 1
+    likelihood = []
+    for i in range(n_variables):
+        element_class_t = (true_spam_v_count[i] + pseudo_count) / (true_count + 2 * pseudo_count)
+        element_class_f = (false_spam_v_count[i] + pseudo_count) / (false_count + 2 * pseudo_count)
+        likelihood.append(tuple((element_class_f, element_class_t)))
+    return likelihood
 
 
+def nb_classify(prior, likelihood, input_vector):
+    """Return a tuple (Instance, Certainty) for the input vector"""
+    n = len(likelihood)
+    prob_true = 1
+    prob_false = 1
+    for i in range(n):
+        prob_true *= likelihood[i][1] if input_vector[i] else (1 - likelihood[i][1])
+        prob_false *= likelihood[i][0] if input_vector[i] else (1 - likelihood[i][0])
+    alpha = 1 / (prior * prob_true + (1 - prior) * prob_false)
+    prosterior_prob_t = alpha * prob_true * prior
+    prosterior_prob_f = alpha * prob_false * (1 - prior)
+    if prosterior_prob_t <= prosterior_prob_f:
+        return "Not Spam", prosterior_prob_f
+    else:
+        return "Spam", prosterior_prob_t
