@@ -91,10 +91,7 @@ int main(void)
 
     sem_init(&numFreeChildren, 0, MAX_CHILDREN);
 
-    struct sigaction sa;
-    sa.sa_handler = waitChild;
-    sa.sa_flags = SA_RESTART;
-    sigaction(SIGCHLD, &sa, NULL);
+    signal(SIGCHLD, waitChild);
 
 	printf("Query format: [func] [start] [end] [numSteps]\n");
 
@@ -110,9 +107,13 @@ int main(void)
         } else if (pid == 0) {
             double area = integrateTrap(func, rangeStart, rangeEnd, numSteps);
             printf("Child (PID %d): The integral of function \"%s\" in range %g to %g with %ld steps is %.10g\n", getpid(), funcName, rangeStart, rangeEnd, numSteps, area);
+            _exit(0);
         }
 
     }
 
-	_exit(0); // Forces more immediate exit than normal - **Use this to exit processes throughout the assignment!**
+    while (wait(NULL) > 0);
+
+//	_exit(0); // Forces more immediate exit than normal - **Use this to exit processes throughout the assignment!**
+    return 0;
 }
