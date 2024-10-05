@@ -7,7 +7,7 @@
 #include <math.h>
 #include <pthread.h>
 
-#define NUM_THREADS 4
+#define NUM_THREADS 8
 
 typedef double MathFunc_t(double);
 
@@ -42,9 +42,6 @@ double chargeDecay(double x)
 }
 
 
-
-
-
 // Integrate using the trapezoid method. 
 void *integrateTrap(void *ptr)
 {
@@ -53,23 +50,20 @@ void *integrateTrap(void *ptr)
 
 	double rangeSize = worker->rangeEnd - worker->rangeStart;
 	double dx = rangeSize / worker->numSteps;
+    double areax = 0;
 
 	for (size_t i = 0; i < worker->numSteps; i++) {
 		double smallx = worker->rangeStart + i*dx;
 		double bigx = worker->rangeStart + (i+1)*dx;
-        
-		pthread_mutex_lock(worker->lock);
-		(*worker->area) += dx * (worker->func(smallx) + worker->func(bigx) ) / 2; // Would be more efficient to multiply area by dx once at the end. 
-        pthread_mutex_unlock(worker->lock);
-
+        areax += dx * (worker->func(smallx) + worker->func(bigx) ) / 2;
 	}
 
-
+    pthread_mutex_lock(worker->lock);
+    (*worker->area) += areax;
+    pthread_mutex_unlock(worker->lock);
 
 	return NULL;
 }
-
-
 
 
 bool getValidInput(MathFunc_t** func, char* funcName, double* start, double* end, size_t* numSteps)
@@ -94,7 +88,6 @@ bool getValidInput(MathFunc_t** func, char* funcName, double* start, double* end
 }
 
 
-
 int main(void)
 {
 	double rangeStart;
@@ -111,12 +104,12 @@ int main(void)
 
 	while (getValidInput(&func, funcName, &rangeStart, &rangeEnd, &numSteps)) {
 		double area = 0;
-		// double area = integrateTrap(func, rangeStart, rangeEnd, numSteps);
 
 		// TODO
 		// - Determine range and num_steps for each thread
 		double rangeSize_t = (rangeEnd - rangeStart) / NUM_THREADS;
 		double numSteps_t = numSteps / NUM_THREADS;
+
 		// - Create a thread for each range
 		for (size_t i = 0; i < NUM_THREADS; i++) {
 			Worker *worker = &workers[i];
