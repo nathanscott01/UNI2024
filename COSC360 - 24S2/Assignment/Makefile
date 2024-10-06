@@ -4,7 +4,7 @@ CFLAGS = -g -Wall -Werror -lm
 
 .PHONY: default all clean
 
-all: serial thread process proc_thread
+all: serial thread process proc_thread run_time
 
 serial: serial.c
 	@$(CC) serial.c -o serial $(CFLAGS)
@@ -18,6 +18,9 @@ process: process.c
 proc_thread: processThread.c
 	@$(CC) processThread.c -o proc_thread $(CFLAGS) $(PTHREAD_LIB)
 
+run_time: run_timing.c
+	@$(CC) run_timing.c -o run_time $(CFLAGS)
+
 clean:
 	@-rm -f *.o
-	@-rm -f serial thread process proc_thread
+	@-rm -f serial thread process proc_thread run_time
