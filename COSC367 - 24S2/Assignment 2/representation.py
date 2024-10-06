@@ -37,6 +37,3 @@ def depth(expression):
     else:
         return 1 + max(depth(expression[1]), depth(expression[2]))
 
-
-expression = ['+', ['*', 2, 'i'], ['*', -3, 'x']]
-print(depth(expression))

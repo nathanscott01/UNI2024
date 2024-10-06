@@ -17,6 +17,17 @@ Pruned Expression:  !"""
 expected_4 = """a
 a"""
 
+expected_6 = """['+', ['+', ['+', '!', 9998], 9999], 10000]"""
+
+
+def make_staircase_tree(n):  # bottom up so we don't hit recursion depth
+    i = 1
+    tree = ['+', 0, i]
+    while i < n:
+        tree = ['+', tree, i + 1]
+        i += 1
+    return tree
+
 
 class MyPrunedTestCase(unittest.TestCase):
     def test_pruned_1(self):
@@ -62,6 +73,22 @@ class MyPrunedTestCase(unittest.TestCase):
             print(pruned)
         output = f.getvalue().strip()
         self.assertEqual(expected_4, output)
+
+    def test_pruned_5(self):
+        expression = ['*', 'x', ['+', 'y', 1]]
+        max_depth = 2
+        pruned = prune(expression, max_depth, ['!'])
+        self.assertEqual(expression, pruned)
+
+    def test_pruned_6(self):
+        f = io.StringIO()
+        with redirect_stdout(f):
+            expression = make_staircase_tree(10000)
+            max_depth = 3
+            pruned = prune(expression, max_depth, ['!']) # This should not blow the stack
+            print(pruned)
+        output = f.getvalue().strip()
+        self.assertEqual(expected_6, output)
 
 
 if __name__ == '__main__':
