@@ -5,12 +5,12 @@ Generation and Manipulation
 """
 
 
-def check_distintness(expressions):
+def check_distinctness(expressions):
     """Check that there are at least 1000 distinct expressions"""
     return NotImplementedError
 
 
-def check_diversity(expressions):
+def check_diversity(expressions, max_depth):
     """Check that there are at least 100 expressions each for depths 0 upto max depth"""
     return NotImplementedError
 
