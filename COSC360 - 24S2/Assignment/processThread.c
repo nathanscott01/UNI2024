@@ -10,8 +10,8 @@
 #include <signal.h>
 #include <sys/wait.h>
 
-#define MAX_CHILDREN 3
-#define NUM_THREADS 8
+#define MAX_CHILDREN 12
+#define NUM_THREADS 16
 
 static sem_t numFreeChildren;
 typedef double MathFunc_t(double);
