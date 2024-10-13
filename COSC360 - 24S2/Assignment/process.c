@@ -9,7 +9,7 @@
 #include <signal.h>
 #include <sys/wait.h>
 
-#define MAX_CHILDREN 3
+#define MAX_CHILDREN 12
 
 static sem_t numFreeChildren;
 typedef double MathFunc_t(double);

@@ -7,7 +7,7 @@
 #include <math.h>
 #include <pthread.h>
 
-#define NUM_THREADS 8
+#define NUM_THREADS 16
 
 typedef double MathFunc_t(double);
 
