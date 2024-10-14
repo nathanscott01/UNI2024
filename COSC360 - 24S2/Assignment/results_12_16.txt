@@ -1,0 +1,110 @@
+Running ./serial with input_10.txt
+real 268.67
+user 268.02
+sys 0.12
+---------------------------------
+Running ./serial with input_20.txt
+real 1470.02
+user 1468.28
+sys 0.15
+---------------------------------
+Running ./serial with input_30.txt
+real 896.69
+user 895.94
+sys 0.04
+---------------------------------
+Running ./serial with input_40.txt
+real 4656.03
+user 2152.18
+sys 0.97
+---------------------------------
+Running ./serial with input_50.txt
+real 2422.00
+user 2418.72
+sys 0.73
+---------------------------------
+Running ./thread with input_10.txt
+real 38.84
+user 271.45
+sys 0.19
+---------------------------------
+Running ./thread with input_20.txt
+real 77.61
+user 552.28
+sys 0.31
+---------------------------------
+Running ./thread with input_30.txt
+real 111.06
+user 821.35
+sys 0.56
+---------------------------------
+Running ./thread with input_40.txt
+real 151.91
+user 1105.34
+sys 0.66
+---------------------------------
+Running ./thread with input_50.txt
+real 195.33
+user 1390.44
+sys 1.06
+---------------------------------
+Running ./process with input_10.txt
+Query format: [func] [start] [end] [numSteps]
+real 37.99
+user 266.17
+sys 0.17
+---------------------------------
+Running ./process with input_20.txt
+Query format: [func] [start] [end] [numSteps]
+real 84.75
+user 608.11
+sys 0.36
+---------------------------------
+Running ./process with input_30.txt
+Query format: [func] [start] [end] [numSteps]
+real 179.65
+user 1128.25
+sys 0.65
+---------------------------------
+Running ./process with input_40.txt
+Query format: [func] [start] [end] [numSteps]
+real 207.03
+user 1291.44
+sys 0.91
+---------------------------------
+Running ./process with input_50.txt
+Query format: [func] [start] [end] [numSteps]
+real 214.28
+user 1555.14
+sys 0.96
+---------------------------------
+Running ./proc_thread with input_10.txt
+Query format: [func] [start] [end] [numSteps]
+real 36.80
+user 270.72
+sys 0.16
+---------------------------------
+Running ./proc_thread with input_20.txt
+Query format: [func] [start] [end] [numSteps]
+real 71.76
+user 546.89
+sys 0.39
+---------------------------------
+Running ./proc_thread with input_30.txt
+Query format: [func] [start] [end] [numSteps]
+real 107.88
+user 817.76
+sys 0.47
+---------------------------------
+Running ./proc_thread with input_40.txt
+Query format: [func] [start] [end] [numSteps]
+real 146.20
+user 1100.78
+sys 0.73
+---------------------------------
+Running ./proc_thread with input_50.txt
+Query format: [func] [start] [end] [numSteps]
+real 181.80
+user 1386.59
+sys 0.99
+---------------------------------
