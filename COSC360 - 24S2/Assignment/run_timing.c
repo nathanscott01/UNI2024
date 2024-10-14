@@ -3,19 +3,21 @@
 #include <string.h>
 
 #define NUM_FILES 4
-#define NUM_TEST_CASES 5
+#define NUM_TEST_CASES 2
 
 // Filenames for executables and input sizes
 char *files[] = { "./serial", "./thread", "./process", "./proc_thread" };
 // char *files[] = {"./proc_thread"};
 
-char *inputFiles[] = {"input_10.txt", "input_20.txt", "input_30.txt", "input_40.txt", "input_50.txt" };
+// char *inputFiles[] = {"input_10.txt", "input_20.txt", "input_30.txt", "input_40.txt", "input_50.txt" };
+char *inputFiles[] = {"input_5.txt", "input_10.txt"};
+
 
 // Run the time command on each file for each input
 void run_timing() {
     char command[256];  // Buffer for system commands
     
-    FILE *outputFile = fopen("results_12_16.txt", "w");
+    FILE *outputFile = fopen("results.txt", "w");
 
     if (outputFile == NULL) {
         perror("Unable to open results.txt");
@@ -24,15 +26,15 @@ void run_timing() {
 
     for (int i = 0; i < NUM_FILES; i++) {
         for (int j = 0; j < NUM_TEST_CASES; j++) {
-            snprintf(command, sizeof(command), "echo 'Running %s with %s' >> results_12_16.txt", files[i], inputFiles[j]);
+            snprintf(command, sizeof(command), "echo 'Running %s with %s' >> results.txt", files[i], inputFiles[j]);
             system(command);
 
             // Format: time command output to results.txt, redirecting both stdout and stderr
-            snprintf(command, sizeof(command), "(/usr/bin/time -p %s < %s) >> results_12_16.txt 2>&1", files[i], inputFiles[j]);
+            snprintf(command, sizeof(command), "(/usr/bin/time -p %s < %s) >> results.txt 2>&1", files[i], inputFiles[j]);
             system(command);
 
             // Adding a separator between runs for clarity
-            system("echo '---------------------------------' >> results_12_16.txt");
+            system("echo '---------------------------------' >> results.txt");
         }
     }
 

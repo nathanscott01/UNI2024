@@ -1,0 +1,44 @@
+Running ./serial with input_5.txt
+real 336.03
+user 335.49
+sys 0.20
+---------------------------------
+Running ./serial with input_10.txt
+real 357.65
+user 357.35
+sys 0.02
+---------------------------------
+Running ./thread with input_5.txt
+real 36.46
+user 159.26
+sys 0.69
+---------------------------------
+Running ./thread with input_10.txt
+real 55.56
+user 297.39
+sys 1.42
+---------------------------------
+Running ./process with input_5.txt
+Query format: [func] [start] [end] [numSteps]
+real 51.76
+user 162.09
+sys 0.12
+---------------------------------
+Running ./process with input_10.txt
+Query format: [func] [start] [end] [numSteps]
+real 63.06
+user 348.21
+sys 0.15
+---------------------------------
+Running ./proc_thread with input_5.txt
+Query format: [func] [start] [end] [numSteps]
+real 18.86
+user 139.85
+sys 0.67
+---------------------------------
+Running ./proc_thread with input_10.txt
+Query format: [func] [start] [end] [numSteps]
+real 42.04
+user 278.99
+sys 1.21
+---------------------------------
