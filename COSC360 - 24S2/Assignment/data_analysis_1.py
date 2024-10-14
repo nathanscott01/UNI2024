@@ -2,14 +2,14 @@ import matplotlib.pyplot as plt
 import re
 
 # Define input sizes and programs
-input_sizes = [10, 20, 30, 40, 50]
+input_sizes = [5, 10]
 programs = ['serial', 'thread', 'process', 'proc_thread']
 
 # Initialize dictionary to hold real times for each program and input size
 real_times = {program: [] for program in programs}
 
 # Read and parse the file
-with open('results_12_16.txt', 'r') as file:
+with open('results.txt', 'r') as file:
     current_program = None
     for line in file:
         # Detect the program being run
