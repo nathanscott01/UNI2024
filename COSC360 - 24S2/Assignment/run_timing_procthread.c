@@ -6,7 +6,7 @@ void run_timing() {
     int children[] = {3, 6, 9};
     int threads[] = {4, 8, 16};
     const char *inputFile = "input_10.txt";
-    const char *file = "./proc_thread_input";  // Adjusted to only test this executable
+    const char *file = "./procthread_input";  // Adjusted to only test this executable
     
     FILE *outputFile = fopen("procthread_results.txt", "w");
     if (outputFile == NULL) {
