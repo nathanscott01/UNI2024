@@ -3,8 +3,8 @@ import numpy as np
 import re
 
 # Define the parameters for children and threads
-threads = [4, 8, 12, 16]
-children = [3, 6, 12, 16]
+threads = [4, 8, 16]
+children = [3, 6, 9, 12]
 data_file = 'procthread_results.txt'
 
 # Initialize a dictionary to store real times
@@ -24,6 +24,8 @@ with open(data_file, 'r') as file:
         if match_time and current_child is not None:
             real_times[current_child].append(float(match_time.group(1)))
             current_child = None  # Reset for next configuration
+
+print(real_times)
 
 # Define the plot dimensions
 x = np.arange(len(threads))  # Number of thread configurations
