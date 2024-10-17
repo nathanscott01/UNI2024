@@ -1,54 +1,72 @@
-Running ./procthread_input with input_10.txt, n_child = 3, n_thread = 4
+Running ./procthread_input with input_50.txt, n_child = 3, n_thread = 4
 Query format: [func] [start] [end] [numSteps]
-real 39.94
-user 273.87
-sys 0.94
+real 323.04
+user 3712.85
+sys 0.85
 ---------------------------------
-Running ./procthread_input with input_10.txt, n_child = 3, n_thread = 8
+Running ./procthread_input with input_50.txt, n_child = 3, n_thread = 8
 Query format: [func] [start] [end] [numSteps]
-real 36.36
-user 271.13
-sys 1.29
+real 162.92
+user 3717.81
+sys 0.38
 ---------------------------------
-Running ./procthread_input with input_10.txt, n_child = 3, n_thread = 16
+Running ./procthread_input with input_50.txt, n_child = 3, n_thread = 16
 Query format: [func] [start] [end] [numSteps]
-real 36.98
-user 277.29
-sys 1.36
+real 108.80
+user 4535.94
+sys 0.98
 ---------------------------------
-Running ./procthread_input with input_10.txt, n_child = 6, n_thread = 4
+Running ./procthread_input with input_50.txt, n_child = 6, n_thread = 4
 Query format: [func] [start] [end] [numSteps]
-real 36.95
-user 272.61
-sys 0.86
+real 168.78
+user 3717.96
+sys 0.26
 ---------------------------------
-Running ./procthread_input with input_10.txt, n_child = 6, n_thread = 8
+Running ./procthread_input with input_50.txt, n_child = 6, n_thread = 8
 Query format: [func] [start] [end] [numSteps]
-real 35.87
-user 272.23
-sys 0.18
+real 108.97
+user 4443.93
+sys 0.23
 ---------------------------------
-Running ./procthread_input with input_10.txt, n_child = 6, n_thread = 16
+Running ./procthread_input with input_50.txt, n_child = 6, n_thread = 16
 Query format: [func] [start] [end] [numSteps]
-real 35.53
-user 270.79
+real 87.97
+user 5320.42
+sys 1.51
+---------------------------------
+Running ./procthread_input with input_50.txt, n_child = 9, n_thread = 4
+Query format: [func] [start] [end] [numSteps]
+real 123.72
+user 3903.29
+sys 0.14
+---------------------------------
+Running ./procthread_input with input_50.txt, n_child = 9, n_thread = 8
+Query format: [func] [start] [end] [numSteps]
+real 91.42
+user 5213.66
+sys 1.56
+---------------------------------
+Running ./procthread_input with input_50.txt, n_child = 9, n_thread = 16
+Query format: [func] [start] [end] [numSteps]
+real 86.96
+user 5382.97
+sys 1.42
+---------------------------------
+Running ./procthread_input with input_50.txt, n_child = 12, n_thread = 4
+Query format: [func] [start] [end] [numSteps]
+real 114.45
+user 4454.66
 sys 0.15
 ---------------------------------
-Running ./procthread_input with input_10.txt, n_child = 9, n_thread = 4
+Running ./procthread_input with input_50.txt, n_child = 12, n_thread = 8
 Query format: [func] [start] [end] [numSteps]
-real 40.99
-user 291.22
-sys 0.20
+real 89.92
+user 5316.42
+sys 1.37
 ---------------------------------
-Running ./procthread_input with input_10.txt, n_child = 9, n_thread = 8
+Running ./procthread_input with input_50.txt, n_child = 12, n_thread = 16
 Query format: [func] [start] [end] [numSteps]
-real 35.42
-user 269.79
-sys 0.18
----------------------------------
-Running ./procthread_input with input_10.txt, n_child = 9, n_thread = 16
-Query format: [func] [start] [end] [numSteps]
-real 35.22
-user 269.31
-sys 0.18
+real 87.00
+user 5380.43
+sys 1.69
 ---------------------------------
