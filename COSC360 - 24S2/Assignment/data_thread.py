@@ -24,13 +24,19 @@ for filename in os.listdir(directory):
         if n_thread in threads and n_child in children:
             with open(os.path.join(directory, filename), 'r') as file:
                 # Extract the real time for input_50.txt
+                input_found = False
                 for line in file:
+                    if "input_50.txt" in line:
+                        # print(line)
+                        input_found = True
                     real_time_match = re.search(r"real\s+([\d.]+)", line)
-                    if real_time_match:
+                    # if real_time_match:
+                    if real_time_match and input_found:
                         real_time = float(real_time_match.group(1))
                         results[n_thread].append(real_time)
                         break  # Only take the first 'real' time encountered for input_50.txt
 
+# print(results)
 # Plotting
 x = np.arange(len(threads))  # the label locations
 width = 0.2  # the width of the bars

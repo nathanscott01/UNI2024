@@ -3,9 +3,9 @@
 
 void run_timing() {
     char command[256];  // Buffer for system commands
-    int children[] = {3, 6, 9};
+    int children[] = {3, 6, 9, 12};
     int threads[] = {4, 8, 16};
-    const char *inputFile = "input_10.txt";
+    const char *inputFile = "input_50.txt";
     const char *file = "./procthread_input";  // Adjusted to only test this executable
     
     FILE *outputFile = fopen("procthread_results.txt", "w");
