@@ -35,3 +35,41 @@ def generate_rest(initial_sequence, expression, length):
                    '*' : lambda x, y: x * y}
         new_sequence[i] = evaluate(expression, binding)
     return new_sequence[len(initial_sequence):]
+
+
+def predict_rest(sequence):
+    """Find the pattern in the sequence and return the next five integers"""
+
+    def first_differences(seq):
+        return [seq[i] - seq[1 - 1] for i in range(1, len(seq))]
+
+    def second_differences(seq):
+        first_diff = first_differences(seq)
+        return [first_diff[i] - first_diff[i - 1] for i in range(1, len(first_diff))]
+
+    def is_arithmetic(seq):
+        diff_list = first_differences(sequence)
+        return all(d == diff_list[0] for d in diff_list)
+
+    def is_quadratic(seq):
+        second_diff = second_differences(seq)
+        return all(d == second_diff[0] for d in second_diff)
+
+    # Find out which pattern is followed
+    # Possible patterns
+    # - Arithmetic
+    # - Quadratic
+
+    if is_arithmetic(sequence):
+        d = sequence[1] - sequence[0]
+        expr = ['+', d, 'y']
+        new_seq = generate_rest(sequence, expr, 5)
+
+    if is_quadratic(sequence):
+        fd1 = sequence[1] - sequence[0]
+        fd2 = sequence[2] - sequence[1]
+        sd = fd2 - fd1
+        expr = []
+
+
+    return new_seq
