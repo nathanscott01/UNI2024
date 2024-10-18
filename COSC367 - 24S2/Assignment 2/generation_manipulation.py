@@ -56,33 +56,42 @@ def prune(expression, max_depth, leaf_symbols):
         return [e1, e2_p, e3_p]
 
 
+# def attach(expression1, expression2, position):
+#     """Return the expression that results from replacing the node at position
+#     in expression1 with expression2"""
+#     if position == 0:
+#         return expression2
+#     elif type(expression1) is int:
+#         return expression1
+#     elif len(expression1) == 1:
+#         return expression1
+#     else:
+#         e1, e2, e3 = expression1
+#         e2_d = depth(e2)
+#         if 2 ** e2_d + 1 >= position:
+#             e2_a = attach(e2, expression2, position - 1)
+#             return [e1, e2_a, e3]
+#         else:
+#             position -= (2 ** e2_d + 1)
+#             e3_a = attach(e3, expression2, position)
+#             return [e1, e2, e3_a]
+
+
 def attach(expression1, expression2, position):
     """Return the expression that results from replacing the node at position
     in expression1 with expression2"""
-    if position == 0:
-        return expression2
-    elif type(expression1) is int:
-        return expression1
-    elif len(expression1) == 1:
-        return expression1
-    else:
-        e1, e2, e3 = expression1
-        e2_d = depth(e2)
-        print(expression1)
-        print(position)
-        print(2 ** e2_d + 1)
-        print("\n")
-        if 2 ** e2_d + 1 >= position:
-            e2_a = attach(e2, expression2, position - 1)
-            return [e1, e2_a, e3]
-        else:
-            position -= (2 ** e2_d + 1)
-            e3_a = attach(e3, expression2, position)
-            return [e1, e2, e3_a]
+    def replace_node(expr, pos):
+        """Perform a preorder traversal to find the node at position"""
+        if pos[0] == position:
+            return expression2
 
+        if isinstance(expr, list) and len(expr) == 3:
+            pos[0] += 1
+            l = replace_node(expr[1], pos)
+            pos[0] += 1
+            r = replace_node(expr[2], pos)
+            return [expr[0], l, r]
 
-expression = ['+', ['g', 3, 4], ['f', 'x', 2]]
-sub_expression = ['h', 'i', 'j']
-position = 3
+        return expr
 
-print(f"Attached at position {position}:", attach(expression, sub_expression, position))
+    return replace_node(expression1, [0])
