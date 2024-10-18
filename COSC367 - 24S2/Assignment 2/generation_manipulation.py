@@ -56,27 +56,6 @@ def prune(expression, max_depth, leaf_symbols):
         return [e1, e2_p, e3_p]
 
 
-# def attach(expression1, expression2, position):
-#     """Return the expression that results from replacing the node at position
-#     in expression1 with expression2"""
-#     if position == 0:
-#         return expression2
-#     elif type(expression1) is int:
-#         return expression1
-#     elif len(expression1) == 1:
-#         return expression1
-#     else:
-#         e1, e2, e3 = expression1
-#         e2_d = depth(e2)
-#         if 2 ** e2_d + 1 >= position:
-#             e2_a = attach(e2, expression2, position - 1)
-#             return [e1, e2_a, e3]
-#         else:
-#             position -= (2 ** e2_d + 1)
-#             e3_a = attach(e3, expression2, position)
-#             return [e1, e2, e3_a]
-
-
 def attach(expression1, expression2, position):
     """Return the expression that results from replacing the node at position
     in expression1 with expression2"""
