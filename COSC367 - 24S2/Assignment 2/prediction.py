@@ -27,5 +27,11 @@ def evaluate(expression, bindings):
 def generate_rest(initial_sequence, expression, length):
     """Using the input expression and the initial sequence, return a list with
     the given length containing values that extend the initial sequence."""
-    return NotImplementedError
-
+    new_sequence = initial_sequence + [None] * length
+    start = len(initial_sequence)
+    for i in range(start, len(new_sequence)):
+        binding = {'x' : new_sequence[i - 2], 'y' : new_sequence[i - 1], 'i' : i,
+                   '+' : lambda x, y: x + y, '-' : lambda x, y: x - y,
+                   '*' : lambda x, y: x * y}
+        new_sequence[i] = evaluate(expression, binding)
+    return new_sequence[len(initial_sequence):]
